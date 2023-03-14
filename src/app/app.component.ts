@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {AngularFireRemoteConfig} from '@angular/fire/compat/remote-config';
+import {map, Observable} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +11,19 @@ import { Component } from '@angular/core';
   }
 })
 export class AppComponent {
-  title = 'biz-landing';
+  public readonly link$: Observable<string | undefined> = this.angularFireRemoteConfig.strings.pipe(
+    map((result: { [key: string]: string | undefined }) => {
+      if (Reflect.has(result, 'registrationWaitingListLink')) {
+        return result['registrationWaitingListLink'];
+      }
+      return undefined;
+    })
+  );
+
+  constructor(
+    private readonly angularFireRemoteConfig: AngularFireRemoteConfig,
+  ) {
+
+  }
+
 }

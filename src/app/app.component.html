@@ -76,9 +76,11 @@
   </div>
   <p class="lead">Is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</p>
   <p class="lead">
-    <button disabled class="btn btn-lg btn-light fw-bold border-white bg-white">
-      Coming Soon
-    </button>
+    <ng-container *ngIf="link$ | async as link">
+      <a [href]="link" disabled class="btn btn-lg btn-light fw-bold border-white bg-white">
+        Notify me
+      </a>
+    </ng-container>
   </p>
 </main>
 
