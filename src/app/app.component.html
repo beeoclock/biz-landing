@@ -1,91 +1,503 @@
-<!--<ion-content color="dark">-->
-<!--  <ion-grid class="ion-margin-top">-->
-<!--    <ion-row class="ion-margin-top">-->
-<!--      <ion-col class="ion-margin-top" size="12" offset="0" size-md="6" offset-md="3" size-lg="4" offset-lg="4">-->
+<nav class="bg-transparent absolute w-full z-20 top-0 left-0 text-white">
 
-<!--        <ion-card mode="ios">-->
+  <div class="max-w-screen-xl mx-auto">
+    <div class="grid grid-cols-12 text-white">
 
-<!--          <ion-grid class="ion-margin-top ion-padding-top">-->
-<!--            <ion-row class="ion-justify-content-center">-->
-<!--              <ion-avatar>-->
-<!--                <img src="/assets/icon/logo.black.svg" alt="Bee O`clock Logo">-->
-<!--              </ion-avatar>-->
-<!--            </ion-row>-->
-<!--          </ion-grid>-->
-
-<!--          <ion-card-header class="ion-text-center">-->
-<!--            <ion-card-title>Bee O`clock</ion-card-title>-->
-<!--          </ion-card-header>-->
-
-<!--          <ion-card-content  class="ion-text-center">-->
-<!--            <ion-text>-->
-<!--              Is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.-->
-<!--            </ion-text>-->
-
-<!--            <div class="ion-margin-top ion-padding-top ion-margin-bottom">-->
-<!--              &lt;!&ndash;              <h2>&ndash;&gt;-->
-<!--              &lt;!&ndash;                Coming Soon&ndash;&gt;-->
-<!--              &lt;!&ndash;              </h2>&ndash;&gt;-->
-<!--              &lt;!&ndash;              <h4>&ndash;&gt;-->
-<!--              &lt;!&ndash;                Get Notified when we launch.&ndash;&gt;-->
-<!--              &lt;!&ndash;              </h4>&ndash;&gt;-->
-<!--              <h2>-->
-<!--                Coming Soon-->
-<!--              </h2>-->
-<!--              <h4>-->
-<!--                The first version will be available later, but you can already start using certain features-->
-<!--              </h4>-->
-<!--            </div>-->
-<!--            &lt;!&ndash;            <form [formGroup]="form" (ngSubmit)="subscribe()">&ndash;&gt;-->
-<!--            <ion-list class="ion-no-padding">-->
-<!--              &lt;!&ndash;                <ion-item class="ion-padding-bottom">&ndash;&gt;-->
-<!--              &lt;!&ndash;                  <ion-label position="floating">E-mail</ion-label>&ndash;&gt;-->
-<!--              &lt;!&ndash;                  <ion-input formControlName="email" placeholder="name.surname@example.com"></ion-input>&ndash;&gt;-->
-<!--              &lt;!&ndash;                </ion-item>&ndash;&gt;-->
-<!--              &lt;!&ndash;                <ion-button type="submit" color="dark" expand="block" [disabled]="form.invalid">Subscribe</ion-button>&ndash;&gt;-->
-<!--              <ion-button [queryParams]="{segment: 'sign-up'}" [routerLink]="['/authorization']" color="link"-->
-<!--                          expand="block">Start to use &nbsp;-->
-<!--                <ion-icon name="rocket-outline"></ion-icon>-->
-<!--              </ion-button>-->
-<!--            </ion-list>-->
-<!--            &lt;!&ndash;            </form>&ndash;&gt;-->
-<!--          </ion-card-content>-->
-<!--        </ion-card>-->
-<!--      </ion-col>-->
-<!--    </ion-row>-->
-<!--  </ion-grid>-->
-<!--</ion-content>-->
-
-
-<header class="mb-auto">
-  <div>
-    <h3 class="mb-0">
-      Bee O`clock
-    </h3>
-<!--    <nav class="nav nav-masthead justify-content-center float-md-end">-->
-<!--      <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>-->
-<!--      <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>-->
-<!--      <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>-->
-<!--    </nav>-->
+      <div class="2xl:hidden col-span-1">
+      </div>
+      <div class="2xl:col-span-12 col-span-10">
+        <div class="flex flex-wrap items-center justify-between mx-auto py-4">
+          <a href="/" class="flex items-center">
+            <img src="assets/logo.svg" class="h-8 mr-3" alt="Bee O`clock Logo">
+            <span class="self-center text-2xl font-bold whitespace-nowrap">Bee O<span
+              class="text-beeoclock-primary">`</span>clock - Biz</span>
+          </a>
+          <div class="flex md:order-2 md:hidden ">
+            <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 text-sm text-[#5D6E82] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                      clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="justify-end hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+              <li>
+                <a href="#"
+                   class="block py-2 pl-3 pr-4 md:p-0 hover:text-beeoclock-primary"
+                   aria-current="page">
+                  Login
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                   class="block py-2 pl-3 pr-4 md:p-0 hover:text-beeoclock-primary">
+                  Register
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</nav>
+
+
+<!-- Header -->
+<header class="h-[700px] pt-24 md:pt-36 mb-4 md:mb-20 overflow-hidden"
+        style="background-image: url('/assets/banner-1.jpg');background-repeat: no-repeat; background-size: cover;">
+
+  <div class="max-w-screen-xl mx-auto">
+
+    <div class="flex flex-wrap items-center justify-between">
+
+      <div class="grid grid-cols-12 text-white">
+
+        <div class="2xl:hidden col-span-1">
+          <!-- SPACING -->
+        </div>
+        <div class="col-span-10 md:col-span-4 pb-10">
+          <h1 class="text-5xl font-display font-light">
+            Focus on
+            <strong class="font-bold">your&nbsp;work</strong>
+            We’ll cover the rest
+          </h1>
+          <p class="mt-4 text-[#748194]">
+            Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can
+            also keep track of your performance to become the best version of yourself.
+          </p>
+
+          <div class="mt-8">
+            <a href=""
+               class="rounded-full text-lg md:text-xl px-3 py-2 w-full block flex justify-between bg-beeoclock-primary hover:underline font-bold text-black">
+              <span>Create an account in Bee O’clock</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <!-- SPACING -->
+        </div>
+        <div class="col-span-12 md:col-span-6 2xl:col-span-7">
+          <img src="assets/screen.png" class="object-cover object-left-top w-full h-[560px]"
+               alt="Screen of Bee O`clock panel">
+        </div>
+
+      </div>
+
+      <!-- TODO Add inside shadow -->
+
+    </div>
+
+  </div>
+
 </header>
 
-<main class="px-3">
-  <div class="col-2 offset-5 mb-4">
-    <img src="/assets/icon/logo.yellow.black.svg" class="rounded-circle" alt="Bee O`clock Logo">
+<!-- Business we support -->
+<section class="h-[1400px] md:h-auto md:mb-36">
+
+  <div class="text-center w-full mb-20">
+    <h2 class="text-3xl font-display">
+      Businesses we support
+    </h2>
+    <p class="text-[#748194]">
+      Our product has been praised by businesses that have achieved remarkable growth and success after
+      implementing
+      it
+    </p>
   </div>
-  <p class="lead">Is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</p>
-  <p class="lead">
-    <ng-container *ngIf="link$ | async as link">
-      <a [href]="link" disabled class="btn btn-lg btn-light fw-bold border-white bg-white">
-        Notify me
+
+  <div class="max-w-screen-xl mx-auto">
+
+    <div class="grid grid-cols-24 md:gap-4 p-8 md:p-0">
+
+      <div class="hidden md:block col-span-1">
+
+      </div>
+
+      <div class="col-span-24 md:col-span-8 mb-8 md:mb-0">
+
+        <img src="assets/examples/business-1.jpg" class="w-full h-full rounded-xl" alt="">
+
+      </div>
+
+      <div class="col-span-24 md:col-span-8 relative">
+
+        <img src="assets/examples/business-2.jpg" class="w-full h-full rounded-xl" alt="">
+
+        <div class="absolute top-[calc(100%-60px)] right-8 md:top-8 md:right-[-80%] 2xl:-right-full">
+
+          <div class="bg-white border rounded-xl p-8 min-h-[350px] w-[300px] md:w-[500px]">
+
+            <img src="assets/double-quotes.svg" class="absolute -top-4 right-20" alt="">
+
+            <div class="font-bold mb-4 mt-4 text-xl md:text-3xl">
+              “Bee O’clock has been
+              a life-changer for me”
+            </div>
+
+            <p class="text-[#344050] mb-4">
+              Curly Barber offers a range of haircuts and grooming services, including beard trims, hot towel shaves,
+              and
+              eyebrow grooming, using high-quality tools and equipment.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-between mb-4">
+              <div class="flex flex-col mb-4 md:mb-0">
+                <div class="font-bold">
+                  Nikolas Stokoskyi
+                </div>
+                <div class="text-[#344050]">
+                  Head Barber in Curly Barber
+                </div>
+              </div>
+              <div>
+                <div class="rounded-full bg-[#16BDCA] text-white text-center py-1">
+                  4 hr/week
+                </div>
+                <span class="text-[#748194] text-sm">
+                saved with Bee O’clock
+              </span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+
+              <a href="" class="rounded-full bg-white shadow px-3 py-2">
+                <i class="bi bi-linkedin"></i>
+              </a>
+
+              <a href="" class="rounded-full bg-white shadow px-3 py-2">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="" class="rounded-full bg-white shadow px-3 py-2">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Features -->
+<section class="">
+
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+    <div class="text-center w-full mb-20">
+      <h2 class="text-3xl font-display">
+        Appointments, calendar, and clients on the go
+      </h2>
+      <p class="text-[#748194]">
+        Boost your business performance with an all-in-one solution
+      </p>
+    </div>
+
+    <section>
+      <div
+        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+        <img class="w-full" src="assets/sections/plan.svg" alt="PLAN Image">
+        <div class="mt-4 md:mt-0">
+          <p class="text-[#E63756]">
+            <i class="bi bi-lightbulb-fill"></i>
+            PLAN
+          </p>
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            Calendar & appointment
+          </h2>
+          <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
+            Don’t get bothered by constant phone calls asking about availability. Focus on what you are good at, and
+            we’ll
+            take care of the rest.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div
+        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+        <img class="md:hidden w-full" src="assets/sections/build.svg" alt="BUILD Image">
+        <div class="mt-4 md:mt-0">
+          <p class="text-[#27BCFE]">
+            <i class="bi bi-box-fill"></i>
+            BUILD
+          </p>
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            Customizable online page
+          </h2>
+          <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
+            Having an Instagram or Facebook page with your work is great. Let’s get you a professional online page now,
+            so
+            customers can book and pay for their next appointment with you.
+          </p>
+        </div>
+        <img class="w-full hidden md:block" src="assets/sections/build.svg" alt="BUILD Image">
+      </div>
+    </section>
+
+    <section>
+      <div
+        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+        <img class="w-full" src="assets/sections/organize.svg" alt="ORGANIZE Image">
+        <div class="mt-4 md:mt-0">
+          <p class="text-beeoclock-primary">
+            <i class="bi bi-diagram-3-fill"></i>
+            ORGANIZE
+          </p>
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            Payments management
+          </h2>
+          <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
+            Keep you personal and professional finances separate. Receive in-app payments before, during, or after
+            you’ve
+            given the service, including prepayments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div
+        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+        <img class="w-full md:hidden" src="assets/sections/secure.svg" alt="SECURE Image">
+        <div class="mt-4 md:mt-0">
+          <p class="text-[#9B51E0]">
+            <i class="bi bi-shield-shaded"></i>
+            SECURE
+          </p>
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            No-show protection
+          </h2>
+          <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
+            We value your time. Select a custom prepayment rate and cancellation policy for each service. Get a no-show
+            protection if your customer doesn’t show up.
+          </p>
+        </div>
+        <img class="w-full hidden md:block" src="assets/sections/secure.svg" alt="SECURE Image">
+      </div>
+    </section>
+
+    <section>
+      <div
+        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+        <img class="w-full" src="assets/sections/monitor.svg" alt="MONITOR Image">
+        <div class="mt-4 md:mt-0">
+          <p class="text-[#16BDCA]">
+            <i class="bi bi-graph-up-arrow"></i>
+            MONITOR
+          </p>
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            Insights & analytics
+          </h2>
+          <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
+            Keep track of previous visits. Get summary results of your monthly performance. Identify your core customers
+            and
+            services. Plan your schedule based on busy days and hours statistics. Maximize your efficiency.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</section>
+
+<!-- Media about creators -->
+<section class="bg-white border-y dark:bg-gray-900">
+  <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+    <div class="mb-8 lg:mb-16 text-center">
+      <h2 class="text-3xl font-display tracking-tight leading-tight text-gray-900 dark:text-white md:text-4xl">
+        Media about creators
+      </h2>
+      <p class="text-[#748194]">
+        We create product in which people believe
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-8 text-[#5D6E82] sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
+      <a href="#" class="flex justify-center items-center">
+        <img src="assets/media/newsweek.svg" class="h-9 hover:text-gray-900 dark:hover:text-white" alt="Newsweek">
       </a>
-    </ng-container>
-  </p>
-</main>
+      <a href="#" class="flex justify-center items-center">
+        <img src="assets/media/cnn.svg" class="h-9 hover:text-gray-900 dark:hover:text-white" alt="CNN">
+      </a>
+      <a href="#" class="flex justify-center items-center">
+        <img src="assets/media/insider.svg" class="h-9 hover:text-gray-900 dark:hover:text-white" alt="INSIDER">
+      </a>
+      <a href="#" class="flex justify-center items-center">
+        <img src="assets/media/the-telegraph.svg" class="h-9 hover:text-gray-900 dark:hover:text-white"
+             alt="The Telegraph">
+      </a>
+      <a href="#" class="flex justify-center items-center">
+        <img src="assets/media/kyivpost.svg" class="h-9 hover:text-gray-900 dark:hover:text-white" alt="Kyiv Post">
+      </a>
+      <a href="#" class="flex justify-center items-center">
+        <img src="assets/media/yahoo.svg" class="h-9 hover:text-gray-900 dark:hover:text-white" alt="yahoo!">
+      </a>
+    </div>
+  </div>
+</section>
 
-<footer class="mt-auto text-white-50">
-  <p>Project <a href="https://beeoclock.com/biz" class="text-white">Bee O`clock</a> by <a
-    href="https://car4ukraine.com/" class="text-white">car4ukraine.com</a>.</p>
+<!-- Footer -->
+<footer class="mt-20 p-8">
+
+  <div class="bg-[#0B1828] dark:bg-gray-900 rounded-2xl">
+    <div class="mx-auto w-full max-w-screen-xl lg:py-8">
+      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+        <div class="col-span-2 md:col-span-1">
+          <h2 class="mb-6 font-semibold uppercase text-white">
+            OUR MISSION
+          </h2>
+          <ul class="text-[#5D6E82] dark:text-gray-400 font-medium">
+            <li class="mb-4">
+              Bee O'clock helps professionals focus on their strengths by providing services and tools, such as
+              bookkeeping, tax planning, and event management, to delegate
+              time-consuming tasks. Their mission is to empower professionals, reduce stress, and increase productivity
+              by eliminating distractions and frustrations that come with running a business.
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <h2 class="mb-6 font-semibold uppercase text-white">
+            FROM THE BLOG
+          </h2>
+          <ul class="text-[#5D6E82] dark:text-gray-400 font-medium">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">
+                <p class="">
+                  How to start teaching online with
+                </p>
+                <div class="text-sm flex text-[#344050]">
+                  <span>Jan 15</span>
+                  <i class="bi bi-dot"></i>
+                  <span>8min read</span>
+                </div>
+              </a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">
+                <p class="">
+                  Grow your business with zero extra
+                </p>
+                <div class="text-sm flex text-[#344050]">
+                  <span>Jan 15</span>
+                  <i class="bi bi-dot"></i>
+                  <span>3min read</span>
+                </div>
+              </a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">
+                <p class="">
+                  Automate the workflow and enjoy
+                </p>
+                <div class="text-sm flex text-[#344050]">
+                  <span>Jan 15</span>
+                  <i class="bi bi-dot"></i>
+                  <span>3min read</span>
+                </div>
+              </a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">
+                <p class="">
+                  Connect to the globe
+                </p>
+                <div class="text-sm flex text-[#344050]">
+                  <span>Jan 15</span>
+                  <i class="bi bi-dot"></i>
+                  <span>3min read</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <h2 class="mb-6 font-semibold uppercase text-white">
+            Biz’s Features
+          </h2>
+          <ul class="text-[#5D6E82] dark:text-gray-400 font-medium">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Calendar & Appointment</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Customizable Online Page</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Payments Management</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">No-Show Protection</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Insights & Analytics</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <h2 class="mb-6 font-semibold uppercase text-white">
+            Pro’s Features
+          </h2>
+          <ul class="text-[#5D6E82] dark:text-gray-400 font-medium">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Manage Team and Resources</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Inventory Tracking</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Revenue Boost</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Seamless Transactions</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Seamless Transactions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="px-4 py-6 flex md:items-center justify-center md:justify-between">
+        <a href="/" class="flex items-center text-white">
+          <img src="assets/logo.svg" class="h-8 mr-3" alt="Bee O`clock Logo">
+          <span class="self-center text-2xl font-bold whitespace-nowrap">Bee O<span
+            class="text-beeoclock-primary">`</span>clock</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-between flex-col md:flex-row mt-2 text-sm">
+    <div class="flex gap-4">
+      <a class="hover:underline text-[#2A7BE4]" href="">Cookies</a>
+      <a class="hover:underline text-[#2A7BE4]" href="">Terms of User</a>
+      <a class="hover:underline text-[#2A7BE4]" href="">Privacy Policy</a>
+    </div>
+    <div class="flex gap-4 text-[#748194]">
+      <div>
+        © 2023 Bee O’clock All Rights Reserved
+      </div>
+      <div>
+        v1.0.0
+      </div>
+    </div>
+  </div>
+
+
 </footer>
-
