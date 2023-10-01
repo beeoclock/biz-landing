@@ -50,8 +50,8 @@
 </nav>
 
 
-<!-- Header -->
-<header class="h-[700px] pt-24 md:pt-36 mb-4 md:mb-20 overflow-hidden"
+<!-- Header h-[700px] -->
+<header class="pt-24 md:pt-36 mb-4 md:mb-20 overflow-hidden"
         style="background-image: url('/assets/banner-1.jpg');background-repeat: no-repeat; background-size: cover;">
 
   <div class="max-w-screen-xl mx-auto">
@@ -64,20 +64,17 @@
           <!-- SPACING -->
         </div>
         <div class="col-span-10 md:col-span-4 pb-10">
-          <h1 class="text-5xl font-display font-light">
-            Focus on
-            <strong class="font-bold">your&nbsp;work</strong>
-            We’ll cover the rest
+          <h1 class="text-5xl font-display font-light" [innerHtml]="'header.titleHTML' | translate">
+
           </h1>
           <p class="mt-4 text-[#748194]">
-            Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can
-            also keep track of your performance to become the best version of yourself.
+            {{ 'header.description' | translate }}
           </p>
 
           <div class="mt-8">
             <a href="https://panel.beeoclock.com/identity/sign-up"
                class="rounded-full text-lg md:text-xl px-3 py-2 w-full block flex justify-between bg-beeoclock-primary hover:underline font-bold text-black">
-              <span>Create an account in Bee O’clock</span>
+              <span>{{ 'header.button.label' | translate }}</span>
               <i class="bi bi-chevron-right"></i>
             </a>
           </div>
@@ -86,7 +83,8 @@
           <!-- SPACING -->
         </div>
         <div class="col-span-12 md:col-span-6 2xl:col-span-7">
-          <img src="assets/screen.png" class="object-cover object-left-top w-full h-[560px]"
+<!--           h-[560px]-->
+          <img src="../assets/screen.png" class="object-cover object-left-top w-full"
                alt="Screen of Bee O`clock panel">
         </div>
 
@@ -105,12 +103,10 @@
 
   <div class="text-center w-full mb-20">
     <h2 class="text-3xl font-display">
-      Businesses we support
+      {{ 'businessSupport.title' | translate }}
     </h2>
     <p class="text-[#748194]">
-      Our product has been praised by businesses that have achieved remarkable growth and success after
-      implementing
-      it
+      {{ 'businessSupport.description' | translate }}
     </p>
   </div>
 
@@ -139,31 +135,29 @@
             <img src="assets/double-quotes.svg" class="absolute -top-4 right-20" alt="">
 
             <div class="font-bold mb-4 mt-4 text-xl md:text-3xl">
-              “Bee O’clock has been
-              a life-changer for me”
+              {{ 'businessSupport.example.title' | translate }}
             </div>
 
             <p class="text-[#344050] mb-4">
-              Curly Barber offers a range of haircuts and grooming services, including beard trims, hot towel shaves,
-              and
-              eyebrow grooming, using high-quality tools and equipment.
+              {{ 'businessSupport.example.description' | translate }}
             </p>
 
             <div class="flex flex-col md:flex-row justify-between mb-4">
               <div class="flex flex-col mb-4 md:mb-0">
                 <div class="font-bold">
-                  Nikolas Stokoskyi
+                  {{ 'businessSupport.example.fullName' | translate }}
                 </div>
                 <div class="text-[#344050]">
-                  Head Barber in Curly Barber
+                  {{ 'businessSupport.example.service.title' | translate }}
                 </div>
               </div>
               <div>
                 <div class="rounded-full bg-[#16BDCA] text-white text-center py-1">
-                  4 hr/week
+                  {{ 'businessSupport.example.service.duration' | translate }}
                 </div>
                 <span class="text-[#748194] text-sm">
-                saved with Bee O’clock
+                  {{ 'businessSupport.example.service.comment' | translate }}
+
               </span>
               </div>
             </div>
@@ -202,10 +196,10 @@
 
     <div class="text-center w-full mb-20">
       <h2 class="text-3xl font-display">
-        Appointments, calendar, and clients on the go
+        {{ 'features.title' | translate }}
       </h2>
       <p class="text-[#748194]">
-        Boost your business performance with an all-in-one solution
+        {{ 'features.description' | translate }}
       </p>
     </div>
 
@@ -216,15 +210,13 @@
         <div class="mt-4 md:mt-0">
           <p class="text-[#E63756]">
             <i class="bi bi-lightbulb-fill"></i>
-            PLAN
+            {{ 'features.plan.title' | translate }}
           </p>
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Calendar & appointment
+            {{ 'features.plan.description' | translate }}
           </h2>
           <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
-            Don’t get bothered by constant phone calls asking about availability. Focus on what you are good at, and
-            we’ll
-            take care of the rest.
+            {{ 'features.plan.content' | translate }}
           </p>
         </div>
       </div>
@@ -237,15 +229,13 @@
         <div class="mt-4 md:mt-0">
           <p class="text-[#27BCFE]">
             <i class="bi bi-box-fill"></i>
-            BUILD
+            {{ 'features.build.title' | translate }}
           </p>
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Customizable online page
+            {{ 'features.build.description' | translate }}
           </h2>
           <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
-            Having an Instagram or Facebook page with your work is great. Let’s get you a professional online page now,
-            so
-            customers can book and pay for their next appointment with you.
+            {{ 'features.build.content' | translate }}
           </p>
         </div>
         <img class="w-full hidden md:block" src="assets/sections/build.svg" alt="BUILD Image">
@@ -259,15 +249,13 @@
         <div class="mt-4 md:mt-0">
           <p class="text-beeoclock-primary">
             <i class="bi bi-diagram-3-fill"></i>
-            ORGANIZE
+            {{ 'features.organize.title' | translate }}
           </p>
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Payments management
+            {{ 'features.organize.description' | translate }}
           </h2>
           <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
-            Keep you personal and professional finances separate. Receive in-app payments before, during, or after
-            you’ve
-            given the service, including prepayments.
+            {{ 'features.organize.content' | translate }}
           </p>
         </div>
       </div>
@@ -280,14 +268,13 @@
         <div class="mt-4 md:mt-0">
           <p class="text-[#9B51E0]">
             <i class="bi bi-shield-shaded"></i>
-            SECURE
+            {{ 'features.secure.title' | translate }}
           </p>
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            No-show protection
+            {{ 'features.secure.description' | translate }}
           </h2>
           <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
-            We value your time. Select a custom prepayment rate and cancellation policy for each service. Get a no-show
-            protection if your customer doesn’t show up.
+            {{ 'features.secure.content' | translate }}
           </p>
         </div>
         <img class="w-full hidden md:block" src="assets/sections/secure.svg" alt="SECURE Image">
@@ -301,15 +288,13 @@
         <div class="mt-4 md:mt-0">
           <p class="text-[#16BDCA]">
             <i class="bi bi-graph-up-arrow"></i>
-            MONITOR
+            {{ 'features.monitor.title' | translate }}
           </p>
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Insights & analytics
+            {{ 'features.monitor.description' | translate }}
           </h2>
           <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
-            Keep track of previous visits. Get summary results of your monthly performance. Identify your core customers
-            and
-            services. Plan your schedule based on busy days and hours statistics. Maximize your efficiency.
+            {{ 'features.monitor.content' | translate }}
           </p>
         </div>
       </div>
@@ -324,10 +309,10 @@
   <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
     <div class="mb-8 lg:mb-16 text-center">
       <h2 class="text-3xl font-display tracking-tight leading-tight text-gray-900 dark:text-white md:text-4xl">
-        Media about creators
+        {{ 'media.title' | translate }}
       </h2>
       <p class="text-[#748194]">
-        We create product in which people believe
+        {{ 'media.description' | translate }}
       </p>
     </div>
     <div class="grid grid-cols-2 gap-8 text-[#5D6E82] sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
@@ -368,26 +353,23 @@
       <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
         <div class="col-span-2 md:col-span-1">
           <h2 class="mb-6 font-semibold uppercase text-white">
-            OUR MISSION
+            {{ 'footer.title' | translate }}
           </h2>
           <ul class="text-[#5D6E82] dark:text-gray-400 font-medium">
             <li class="mb-4">
-              Bee O'clock helps professionals focus on their strengths by providing services and tools, such as
-              bookkeeping, tax planning, and event management, to delegate
-              time-consuming tasks. Their mission is to empower professionals, reduce stress, and increase productivity
-              by eliminating distractions and frustrations that come with running a business.
+              {{ 'footer.description' | translate }}
             </li>
           </ul>
         </div>
         <div class="col-span-2 md:col-span-1">
           <h2 class="mb-6 font-semibold uppercase text-white">
-            FROM THE BLOG
+            {{ 'footer.blog.title' | translate }}
           </h2>
           <ul class="text-[#5D6E82] dark:text-gray-400 font-medium">
             <li class="mb-4">
               <a href="#" class="hover:underline">
                 <p class="">
-                  How to start teaching online with
+                  {{ 'footer.blog.firstPost' | translate }}
                 </p>
                 <div class="text-sm flex text-[#344050]">
                   <span>Jan 15</span>
@@ -399,7 +381,7 @@
             <li class="mb-4">
               <a href="#" class="hover:underline">
                 <p class="">
-                  Grow your business with zero extra
+                  {{ 'footer.blog.secondPost' | translate }}
                 </p>
                 <div class="text-sm flex text-[#344050]">
                   <span>Jan 15</span>
@@ -411,7 +393,7 @@
             <li class="mb-4">
               <a href="#" class="hover:underline">
                 <p class="">
-                  Automate the workflow and enjoy
+                  {{ 'footer.blog.thirdPost' | translate }}
                 </p>
                 <div class="text-sm flex text-[#344050]">
                   <span>Jan 15</span>
@@ -423,7 +405,7 @@
             <li class="mb-4">
               <a href="#" class="hover:underline">
                 <p class="">
-                  Connect to the globe
+                  {{ 'footer.blog.fourthPost' | translate }}
                 </p>
                 <div class="text-sm flex text-[#344050]">
                   <span>Jan 15</span>
