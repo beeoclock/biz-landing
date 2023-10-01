@@ -10,9 +10,18 @@ import {
   SETTINGS
 } from '@angular/fire/compat/remote-config';
 import {AngularFireModule} from '@angular/fire/compat';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
+import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
+import {environment} from '../environments/environment';
+import {getRemoteConfig, provideRemoteConfig} from '@angular/fire/remote-config';
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {HttpClient} from "@angular/common/http";
+import {LanguageCodeEnum} from "./enum/language-code.enum";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './asset/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -24,7 +33,16 @@ import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireRemoteConfigModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideRemoteConfig(() => getRemoteConfig())
+    provideRemoteConfig(() => getRemoteConfig()),
+    TranslateModule.forRoot({
+      useDefaultLang: true,
+      defaultLanguage: LanguageCodeEnum.uk,
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     {

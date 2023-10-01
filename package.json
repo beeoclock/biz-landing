@@ -19,11 +19,13 @@
     "@angular/platform-browser": "16.2.7",
     "@angular/platform-browser-dynamic": "16.2.7",
     "@angular/router": "16.2.7",
+    "@ngx-translate/core": "15.0.0",
+    "@ngx-translate/http-loader": "8.0.0",
     "bootstrap-icons": "1.11.1",
     "flowbite": "1.8.1",
     "rxjs": "7.8.1",
     "tslib": "2.6.2",
-    "zone.js": "0.14.0"
+    "zone.js": "0.13.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "16.2.4",
