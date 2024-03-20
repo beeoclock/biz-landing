@@ -60,6 +60,12 @@
     "description": "Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.",
     "titleHTML": "Focus on <strong class=\"font-bold\">your&nbsp;work</strong> We’ll cover the rest"
   },
+  "keyword": {
+    "capitalize": {
+      "login": "Login",
+      "register": "Register"
+    }
+  },
   "media": {
     "description": "We create product in which people believe",
     "title": "Media about creators"

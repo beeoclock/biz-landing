@@ -6,7 +6,7 @@
       <div class="2xl:hidden col-span-1">
       </div>
       <div class="2xl:col-span-12 col-span-10">
-        <div class="flex flex-wrap items-center justify-between mx-auto py-4">
+        <div class="flex flex-wrap items-center justify-between mx-auto py-6">
           <a href="/" class="flex items-center">
             <img src="assets/logo.svg" class="h-8 mr-3" alt="Bee O`clock Logo">
             <span class="self-center text-2xl font-bold whitespace-nowrap">Bee O<span
@@ -14,7 +14,22 @@
           </a>
           <div class="flex md:order-2 md:hidden ">
             <button data-collapse-toggle="navbar-sticky" type="button"
-                    class="inline-flex items-center p-2 text-sm text-[#5D6E82] rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    class="text-white
+        text-xl
+        transition-all
+        hover:bg-white/20
+        focus:ring-4
+        focus:outline-none
+        focus:ring-beeColor-400
+        font-medium
+        rounded-lg
+        px-4
+        py-2.5
+        text-center
+        inline-flex
+        items-center
+        active:scale-95
+        duration-100"
                     aria-controls="navbar-sticky" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -25,21 +40,54 @@
               </svg>
             </button>
           </div>
-          <div class="justify-end hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <div class="justify-end hidden w-full md:flex md:w-auto md:order-1 bg-[#0B1828] md:bg-transparent rounded-2xl mt-4 md:mt-0" id="navbar-sticky">
             <ul
-              class="flex flex-col p-4 md:p-0 mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+              class="flex flex-col p-4 md:p-0 font-medium md:flex-row md:space-x-8">
               <li>
                 <a href="https://panel.beeoclock.com/"
-                   class="block py-2 pl-3 pr-4 md:p-0 hover:text-beeoclock-primary"
+                   class="text-white
+        text-xl
+        transition-all
+        hover:bg-white/20
+        focus:ring-4
+        focus:outline-none
+        focus:ring-beeColor-400
+        font-medium
+        rounded-lg
+        px-4
+        py-2.5
+        text-center
+        inline-flex
+        items-center
+        active:scale-95
+        duration-100"
                    aria-current="page">
-                  Login
+                  {{ 'keyword.capitalize.login' | translate }}
                 </a>
               </li>
               <li>
                 <a href="https://panel.beeoclock.com/identity/sign-up"
-                   class="block py-2 pl-3 pr-4 md:p-0 hover:text-beeoclock-primary">
-                  Register
+                   class="text-white
+        text-xl
+        transition-all
+        hover:bg-white/20
+        focus:ring-4
+        focus:outline-none
+        focus:ring-beeColor-400
+        font-medium
+        rounded-lg
+        px-4
+        py-2.5
+        text-center
+        inline-flex
+        items-center
+        active:scale-95
+        duration-100">
+                  {{ 'keyword.capitalize.register' | translate }}
                 </a>
+              </li>
+              <li>
+                <utility-change-language-component/>
               </li>
             </ul>
           </div>
@@ -73,7 +121,7 @@
 
           <div class="mt-8">
             <a href="https://panel.beeoclock.com/identity/sign-up"
-               class="rounded-full text-lg md:text-xl px-3 py-2 w-full block flex justify-between bg-beeoclock-primary hover:underline font-bold text-black">
+               class="rounded-full text-lg md:text-xl px-3 py-2 w-full flex justify-between bg-beeoclock-primary hover:underline font-bold text-black">
               <span>{{ 'header.button.label' | translate }}</span>
               <i class="bi bi-chevron-right"></i>
             </a>
@@ -82,7 +130,7 @@
         <div class="col-span-1">
           <!-- SPACING -->
         </div>
-        <div class="col-span-12 md:col-span-6 2xl:col-span-7">
+        <div class="col-span-12 md:col-span-5 2xl:col-span-7">
 <!--           h-[560px]-->
           <img src="../assets/screen.png" class="object-cover object-left-top w-full"
                alt="Screen of Bee O`clock panel">
@@ -212,10 +260,10 @@
             <i class="bi bi-lightbulb-fill"></i>
             {{ 'features.plan.title' | translate }}
           </p>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
             {{ 'features.plan.description' | translate }}
           </h2>
-          <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
+          <p class="mb-6 font-light text-[#5D6E82] md:text-lg">
             {{ 'features.plan.content' | translate }}
           </p>
         </div>
@@ -231,10 +279,10 @@
             <i class="bi bi-box-fill"></i>
             {{ 'features.build.title' | translate }}
           </p>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
             {{ 'features.build.description' | translate }}
           </h2>
-          <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
+          <p class="mb-6 font-light text-[#5D6E82] md:text-lg">
             {{ 'features.build.content' | translate }}
           </p>
         </div>
@@ -251,10 +299,10 @@
             <i class="bi bi-diagram-3-fill"></i>
             {{ 'features.organize.title' | translate }}
           </p>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
             {{ 'features.organize.description' | translate }}
           </h2>
-          <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
+          <p class="mb-6 font-light text-[#5D6E82] md:text-lg">
             {{ 'features.organize.content' | translate }}
           </p>
         </div>
@@ -270,10 +318,10 @@
             <i class="bi bi-shield-shaded"></i>
             {{ 'features.secure.title' | translate }}
           </p>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
             {{ 'features.secure.description' | translate }}
           </h2>
-          <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
+          <p class="mb-6 font-light text-[#5D6E82] md:text-lg">
             {{ 'features.secure.content' | translate }}
           </p>
         </div>
@@ -290,10 +338,10 @@
             <i class="bi bi-graph-up-arrow"></i>
             {{ 'features.monitor.title' | translate }}
           </p>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
             {{ 'features.monitor.description' | translate }}
           </h2>
-          <p class="mb-6 font-light text-[#5D6E82] md:text-lg dark:text-gray-400">
+          <p class="mb-6 font-light text-[#5D6E82] md:text-lg">
             {{ 'features.monitor.content' | translate }}
           </p>
         </div>
@@ -305,41 +353,41 @@
 </section>
 
 <!-- Media about creators -->
-<section class="bg-white border-y dark:bg-gray-900">
+<section class="bg-white border-y">
   <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
     <div class="mb-8 lg:mb-16 text-center">
-      <h2 class="text-3xl font-display tracking-tight leading-tight text-gray-900 dark:text-white md:text-4xl">
+      <h2 class="text-3xl font-display tracking-tight leading-tight text-gray-900 md:text-4xl">
         {{ 'media.title' | translate }}
       </h2>
       <p class="text-[#748194]">
         {{ 'media.description' | translate }}
       </p>
     </div>
-    <div class="grid grid-cols-2 gap-8 text-[#5D6E82] sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
+    <div class="grid grid-cols-2 gap-8 text-[#5D6E82] sm:gap-12 md:grid-cols-3 lg:grid-cols-6">
       <a href="https://www.newsweek.com/ukrainian-fighters-using-crowdsourced-ford-rangers-armored-battle-1724417"
          class="flex justify-center items-center">
-        <img src="assets/media/newsweek.svg" class="h-9 hover:text-gray-900 dark:hover:text-white" alt="Newsweek">
+        <img src="assets/media/newsweek.svg" class="h-9 hover:text-gray-900 d" alt="Newsweek">
       </a>
       <a href="https://www.youtube.com/watch?v=0ZBULtaRSMs" class="flex justify-center items-center">
-        <img src="assets/media/cnn.svg" class="h-9 hover:text-gray-900 dark:hover:text-white" alt="CNN">
+        <img src="assets/media/cnn.svg" class="h-9 hover:text-gray-900 " alt="CNN">
       </a>
       <a
         href="https://www.businessinsider.com/civilian-fords-and-toyotas-turned-into-battle-trucks-for-ukraines-forces-2022-6?IR=T"
         class="flex justify-center items-center">
-        <img src="assets/media/insider.svg" class="h-9 hover:text-gray-900 dark:hover:text-white" alt="INSIDER">
+        <img src="assets/media/insider.svg" class="h-9 hover:text-gray-900 " alt="INSIDER">
       </a>
       <a href="https://www.telegraph.co.uk/cars/features/british-farming-vehicles-turned-ukrainian-rocket-launchers/"
          class="flex justify-center items-center">
-        <img src="assets/media/the-telegraph.svg" class="h-9 hover:text-gray-900 dark:hover:text-white"
+        <img src="assets/media/the-telegraph.svg" class="h-9 hover:text-gray-900 "
              alt="The Telegraph">
       </a>
       <a href="https://www.kyivpost.com/post/5293" class="flex justify-center items-center">
-        <img src="assets/media/kyivpost.svg" class="h-9 hover:text-gray-900 dark:hover:text-white" alt="Kyiv Post">
+        <img src="assets/media/kyivpost.svg" class="h-9 hover:text-gray-900 " alt="Kyiv Post">
       </a>
       <a
         href="https://tw.news.yahoo.com/%E8%B2%A8%E5%8D%A1%E8%AE%8A%E6%88%B0%E8%BB%8A-car4ukraine-%E4%BB%96%E5%80%91%E7%94%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%B9%E5%BC%8F%E7%82%BA%E7%83%8F%E5%85%8B%E8%98%AD%E8%80%8C%E6%88%B0-111417739.html"
         class="flex justify-center items-center">
-        <img src="assets/media/yahoo.svg" class="h-9 hover:text-gray-900 dark:hover:text-white" alt="yahoo!">
+        <img src="assets/media/yahoo.svg" class="h-9 hover:text-gray-900 " alt="yahoo!">
       </a>
     </div>
   </div>
@@ -348,14 +396,14 @@
 <!-- Footer -->
 <footer class="mt-20 p-8">
 
-  <div class="bg-[#0B1828] dark:bg-gray-900 rounded-2xl">
+  <div class="bg-[#0B1828] rounded-2xl">
     <div class="mx-auto w-full max-w-screen-xl lg:py-8">
       <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
         <div class="col-span-2 md:col-span-1">
           <h2 class="mb-6 font-semibold uppercase text-white">
             {{ 'footer.title' | translate }}
           </h2>
-          <ul class="text-[#5D6E82] dark:text-gray-400 font-medium">
+          <ul class="text-[#5D6E82] font-medium">
             <li class="mb-4">
               {{ 'footer.description' | translate }}
             </li>
@@ -365,7 +413,7 @@
           <h2 class="mb-6 font-semibold uppercase text-white">
             {{ 'footer.blog.title' | translate }}
           </h2>
-          <ul class="text-[#5D6E82] dark:text-gray-400 font-medium">
+          <ul class="text-[#5D6E82] font-medium">
             <li class="mb-4">
               <a href="#" class="hover:underline">
                 <p class="">
@@ -420,7 +468,7 @@
           <h2 class="mb-6 font-semibold uppercase text-white">
             Biz’s Features
           </h2>
-          <ul class="text-[#5D6E82] dark:text-gray-400 font-medium">
+          <ul class="text-[#5D6E82] font-medium">
             <li class="mb-4">
               <a href="#" class="hover:underline">Calendar & Appointment</a>
             </li>
@@ -442,7 +490,7 @@
           <h2 class="mb-6 font-semibold uppercase text-white">
             Pro’s Features
           </h2>
-          <ul class="text-[#5D6E82] dark:text-gray-400 font-medium">
+          <ul class="text-[#5D6E82] font-medium">
             <li class="mb-4">
               <a href="#" class="hover:underline">Manage Team and Resources</a>
             </li>

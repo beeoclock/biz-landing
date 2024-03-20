@@ -1,0 +1,73 @@
+{
+  "businessSupport": {
+    "description": "Vores produkt er blevet rost af virksomheder, som har opnået bemærkelsesværdig vækst og succes efter at have implementeret det",
+    "example": {
+      "description": "Curly Barber tilbyder en række frisurer og plejetjenester, herunder skægtrimning, varme håndklædebarberinger og brynpleje, ved brug af værktøjer og udstyr af høj kvalitet.",
+      "fullName": "Nikolas Stokoskyi",
+      "service": {
+        "comment": "gemt med Bee O’clock",
+        "duration": "4 timer/uge",
+        "title": "Chefbarber hos Curly Barber"
+      },
+      "title": "“Bee O’clock har været en gamechanger for mig”"
+    },
+    "title": "Virksomheder, vi støtter"
+  },
+  "features": {
+    "build": {
+      "content": "At have en Instagram- eller Facebook-side med dit arbejde er fantastisk. Lad os nu få dig en professionel online side, så kunderne kan booke og betale for deres næste aftale med dig.",
+      "description": "Tilpasningsvenlig online side",
+      "title": "BYG"
+    },
+    "description": "Forøg din forretningspræstation med en alt-i-en-løsning",
+    "monitor": {
+      "content": "Hold styr på tidligere besøg. Få resuméresultater af din månedlige præstation. Identificer dine kernekunder og tjenester. Planlæg din tidsplan baseret på statistik over travle dage og timer. Maksimer din effektivitet.",
+      "description": "Indsigt & analyser",
+      "title": "OVERVÅG"
+    },
+    "organize": {
+      "content": "Hold dine personlige og professionelle finanser adskilt. Modtag betalinger i appen før, under eller efter at du har leveret tjenesten, inklusiv forudbetalinger.",
+      "description": "Betalingsstyring",
+      "title": "ORGANISER"
+    },
+    "plan": {
+      "content": "Lad dig ikke genere af konstante telefonopkald, der spørger om tilgængelighed. Fokuser på det, du er god til, og vi tager os af resten.",
+      "description": "Kalender & aftaler",
+      "title": "PLANLÆG"
+    },
+    "secure": {
+      "content": "Vi værdsætter din tid. Vælg en brugerdefineret forudbetalingsrate og afbestillingspolitik for hver tjeneste. Få beskyttelse mod udeblivelser, hvis din kunde ikke dukker op.",
+      "description": "Beskyttelse mod udeblivelse",
+      "title": "SIKKERHED"
+    },
+    "title": "Aftaler, kalender og kunder på farten"
+  },
+  "footer": {
+    "blog": {
+      "firstPost": "Sådan starter du med at undervise online med",
+      "fourthPost": "Forbind til verden",
+      "secondPost": "Vokse din forretning med nul ekstra",
+      "thirdPost": "Automatiser arbejdsprocessen og nyd",
+      "title": "FRA BLOGGEN"
+    },
+    "description": "Bee O’clock hjælper fagfolk med at fokusere på deres styrker ved at tilbyde tjenester og værktøjer, såsom bogføring, skatteplanlægning og eventmanagement, for at delegere tidskrævende opgaver. Deres mission er at bemyndige fagfolk, reducere stress og øge produktiviteten ved at eliminere distraktioner og frustrationer, der følger med at drive en virksomhed.",
+    "title": "VORES MISSION"
+  },
+  "header": {
+    "button": {
+      "label": "Opret en konto hos Bee O’clock"
+    },
+    "description": "Bee O’clock er et unikt ledelsesværktøj, der giver dine kunder mulighed for at booke og betale for dine tjenester. Du kan også holde styr på din præstation for at blive den bedste version af dig selv.",
+    "titleHTML": "Fokuser på <strong class=\"font-bold\">dit&nbsp;arbejde</strong> Vi klarer resten"
+  },
+  "keyword": {
+    "capitalize": {
+      "login": "Login",
+      "register": "Tilmeld dig"
+    }
+  },
+  "media": {
+    "description": "Vi skaber et produkt, som folk tror på",
+    "title": "Medier om skabere"
+  }
+}

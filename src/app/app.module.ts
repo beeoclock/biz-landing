@@ -1,4 +1,4 @@
-import {isDevMode, NgModule} from '@angular/core';
+import {isDevMode, LOCALE_ID, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -15,8 +15,10 @@ import {environment} from '../environments/environment';
 import {getRemoteConfig, provideRemoteConfig} from '@angular/fire/remote-config';
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {LanguageCodeEnum} from "./enum/language-code.enum";
+import {isSupportedLanguageCodeEnum, LanguageCodeEnum} from "./enum/language-code.enum";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {AppService} from "./app.service";
+import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -43,9 +45,34 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    ChangeLanguageComponent
   ],
   providers: [
+    {
+      provide: LOCALE_ID,
+      deps: [AppService],
+      useFactory: (appService: AppService) => {
+
+        const userLang = (() => {
+          const userLangByLocalStorage: string | null = localStorage.getItem('language');
+
+          if (userLangByLocalStorage) {
+            return userLangByLocalStorage;
+          }
+
+          const userLangByNavigator: string | undefined = navigator?.language?.split?.('-')?.[0];
+
+          if (isSupportedLanguageCodeEnum(userLangByNavigator)) {
+            return userLangByNavigator;
+          }
+
+          return environment.config.language;
+        })();
+        appService.translateService.use(userLang);
+        return appService.translateService.currentLang;
+      },
+    },
     {
       provide: DEFAULTS,
       useValue: {
