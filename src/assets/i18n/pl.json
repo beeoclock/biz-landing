@@ -60,6 +60,12 @@
     "description": "Bee O’cloc kto unikalne narzędzie do zarządzania, dzięki któremu Twoi klienci mogą rezerwować i płacić za Twoje usługi. Możesz także śledzić swoje wyniki, aby stać się najlepszą wersją siebie.",
     "titleHTML": "Skupić się na <strong class=\"font-bold\">swojej&nbsp;pracy</strong> Resztę załatwimy"
   },
+  "keyword": {
+    "capitalize": {
+      "login": "Logowanie",
+      "register": "Zarejestrować się"
+    }
+  },
   "media": {
     "description": "Tworzymy produkt, w który ludzie wierzą",
     "title": "Media o twórcach"

@@ -12,6 +12,9 @@ export const environment = {
     messagingSenderId: '188732223564',
   },
   production: false,
+  config: {
+    language: 'en',
+  },
 };
 
 /*

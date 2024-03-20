@@ -1,10 +1,11 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./src/**/*.{html,ts}",
-    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     fontFamily: {
@@ -21,6 +22,9 @@ module.exports = {
       }
     },
     colors: {
+      ...colors,
+      beeColor: colors.neutral,
+      beeDarkColor: colors.neutral,
       beeoclock: {
         primary: {
           DEFAULT: '#FF8A4C',
@@ -29,7 +33,9 @@ module.exports = {
     }
   },
   plugins: [
-    require('flowbite/plugin')
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
   ],
 }
 

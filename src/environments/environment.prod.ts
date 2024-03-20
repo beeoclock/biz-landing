@@ -8,4 +8,7 @@ export const environment = {
     messagingSenderId: '188732223564',
   },
   production: true,
+  config: {
+    language: 'en',
+  },
 };
