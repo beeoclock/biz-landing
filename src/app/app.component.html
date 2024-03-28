@@ -44,7 +44,7 @@
             <ul
               class="flex flex-col p-4 md:p-0 font-medium md:flex-row lg:space-x-8">
               <li>
-                <a href="https://panel.beeoclock.com/"
+                <a [href]="host"
                    class="text-white
         text-xl
         transition-all
@@ -66,7 +66,7 @@
                 </a>
               </li>
               <li>
-                <a href="https://panel.beeoclock.com/identity/sign-up"
+                <a [href]="host + 'identity/sign-up'"
                    class="text-white
         text-xl
         transition-all
@@ -120,7 +120,7 @@
           </p>
 
           <div class="mt-8">
-            <a href="https://panel.beeoclock.com/identity/sign-up"
+            <a [href]="host + 'identity/sign-up'"
                class="rounded-full text-lg md:text-xl px-3 py-2 w-full flex justify-between bg-beeoclock-primary hover:underline font-bold text-black">
               <span>{{ 'header.button.label' | translate }}</span>
               <i class="bi bi-chevron-right"></i>

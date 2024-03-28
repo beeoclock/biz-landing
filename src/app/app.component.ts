@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {AngularFireRemoteConfig} from '@angular/fire/compat/remote-config';
 import {map, Observable} from 'rxjs';
+import {environment} from "../environment/environment";
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,8 @@ export class AppComponent {
       return undefined;
     })
   );
+
+  public readonly host = environment.config.host
 
   constructor(
     private readonly angularFireRemoteConfig: AngularFireRemoteConfig,

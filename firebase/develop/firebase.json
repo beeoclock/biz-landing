@@ -1,8 +1,9 @@
 {
   "hosting": {
-    "public": "dist/biz-landing",
+    "site": "biz-dev-beeoclock",
+    "public": "dist",
     "ignore": [
-      "firebase.json",
+      "**/firebase/**",
       "**/.*",
       "**/node_modules/**"
     ],
