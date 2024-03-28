@@ -16,6 +16,6 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BEE_O_CLOCK }}'
-          target: panel-beeoclock
+          target: bee-o-clock
           projectId: bee-o-clock
           entrypoint: ./firebase/production
