@@ -10,5 +10,6 @@ export const environment = {
   production: true,
   config: {
     language: 'en',
+    host: 'https://panel.dev.beeoclock.com/'
   },
 };

@@ -14,6 +14,7 @@ export const environment = {
   production: false,
   config: {
     language: 'en',
+    host: 'http://localhost:4200',
   },
 };
 
