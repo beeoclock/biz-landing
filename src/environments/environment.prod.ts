@@ -7,7 +7,7 @@ export const environment = {
     authDomain: 'bee-o-clock.firebaseapp.com',
     messagingSenderId: '188732223564',
   },
-  production: true,
+  production: false,
   config: {
     language: 'en',
   },
