@@ -11,7 +11,7 @@ import {
 } from '@angular/fire/compat/remote-config';
 import {AngularFireModule} from '@angular/fire/compat';
 import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
-import {environment} from '../environments/environment';
+import {environment} from '../environment/environment';
 import {getRemoteConfig, provideRemoteConfig} from '@angular/fire/remote-config';
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
