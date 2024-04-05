@@ -49,3 +49,4 @@ Thumbs.db
 
 # Scully
 scully.log
+/firebase/production/dist/

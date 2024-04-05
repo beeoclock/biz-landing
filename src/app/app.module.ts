@@ -47,6 +47,15 @@ export function HttpLoaderFactory(http: HttpClient) {
       useFactory: (appService: AppService) => {
 
         const userLang = (() => {
+
+          // Get language from url
+          const url = new URL(window.location.href);
+          const userLangByUrl = url.pathname.split('/')[1];
+
+          if (isSupportedLanguageCodeEnum(userLangByUrl)) {
+            return userLangByUrl;
+          }
+
           const userLangByLocalStorage: string | null = localStorage.getItem('language');
 
           if (userLangByLocalStorage) {
