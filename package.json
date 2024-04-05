@@ -6,7 +6,16 @@
     "start": "ng serve",
     "build": "ng build",
     "build:develop": "ng build --configuration develop",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "dev:ssr": "ng run biz-landing:serve-ssr",
+    "serve:ssr": "node dist/biz-landing/server/main.js",
+    "build:ssr": "ng build && ng run biz-landing:server",
+    "prerender": "ng run biz-landing:prerender"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   },
   "private": true,
   "dependencies": {
@@ -18,10 +27,13 @@
     "@angular/forms": "17.3.0",
     "@angular/platform-browser": "17.3.0",
     "@angular/platform-browser-dynamic": "17.3.0",
+    "@angular/platform-server": "17.3.0",
     "@angular/router": "17.3.0",
+    "@angular/ssr": "^17.3.0",
     "@ngx-translate/core": "15.0.0",
     "@ngx-translate/http-loader": "8.0.0",
     "bootstrap-icons": "1.11.3",
+    "express": "^4.18.2",
     "flowbite": "2.3.0",
     "rxjs": "7.8.1",
     "tslib": "2.6.2",
@@ -34,7 +46,10 @@
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/typography": "0.5.10",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.18.0",
     "autoprefixer": "10.4.18",
+    "browser-sync": "^3.0.0",
     "postcss": "8.4.37",
     "tailwindcss": "3.4.1",
     "typescript": "5.4.2"

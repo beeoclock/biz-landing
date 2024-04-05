@@ -1,5 +1,5 @@
-import {isDevMode, LOCALE_ID, NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {inject, isDevMode, LOCALE_ID, NgModule} from '@angular/core';
+import {BrowserModule, provideClientHydration} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -19,10 +19,25 @@ import {isSupportedLanguageCodeEnum, LanguageCodeEnum} from "./enum/language-cod
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {AppService} from "./app.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
+import {LOCAL_STORAGE, NAVIGATOR} from "./tokens";
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
+export function getLocalStorage() {
+  return (typeof window !== "undefined") ? window.localStorage : {
+    getItem: () => null,
+    setItem: () => null,
+    removeItem: () => null
+  };
+}
+
+export function getNavigator() {
+    return (typeof window !== "undefined") ? window.navigator : {
+        language: undefined
+    };
 }
 
 @NgModule({
@@ -50,18 +65,26 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   providers: [
     {
+      provide: LOCAL_STORAGE,
+      useFactory: getLocalStorage
+    },
+    {
+      provide: NAVIGATOR,
+      useFactory: getLocalStorage
+    },
+    {
       provide: LOCALE_ID,
-      deps: [AppService],
-      useFactory: (appService: AppService) => {
+      deps: [AppService, LOCAL_STORAGE, NAVIGATOR],
+      useFactory: (appService: AppService, LOCAL_STORAGE: Storage, NAVIGATOR: Navigator) => {
 
         const userLang = (() => {
-          const userLangByLocalStorage: string | null = localStorage.getItem('language');
+          const userLangByLocalStorage: string | null = LOCAL_STORAGE.getItem('language');
 
           if (userLangByLocalStorage) {
             return userLangByLocalStorage;
           }
 
-          const userLangByNavigator: string | undefined = navigator?.language?.split?.('-')?.[0];
+          const userLangByNavigator: string | undefined = NAVIGATOR?.language?.split?.('-')?.[0];
 
           if (isSupportedLanguageCodeEnum(userLangByNavigator)) {
             return userLangByNavigator;
@@ -82,7 +105,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     {
       provide: SETTINGS,
       useFactory: () => isDevMode() ? {minimumFetchIntervalMillis: 10_000} : {}
-    }
+    },
+    provideClientHydration()
   ],
   bootstrap: [AppComponent]
 })
