@@ -1,4 +1,15 @@
 {
+  "seo": {
+    "page": {
+      "main": {
+        "title": "Bee O’clock",
+        "description": "Bee O’clock er et unikt ledelsesværktøj, der giver dine kunder mulighed for at booke og betale for dine tjenester. Du kan også holde styr på din præstation for at blive den bedste version af dig selv.",
+        "keywords": "Bee O’clock, ledelsesværktøj, tjenester, præstation, version",
+        "image": "https://beeoclock.com/asset/logo.png",
+        "author": "Bee O’clock"
+      }
+    }
+  },
   "businessSupport": {
     "description": "Vores produkt er blevet rost af virksomheder, som har opnået bemærkelsesværdig vækst og succes efter at have implementeret det",
     "example": {

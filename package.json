@@ -4,21 +4,23 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "build:develop": "ng build --configuration develop",
-    "watch": "ng build --watch --configuration development"
+    "build": "ng build && npm run scully",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "scully": "npx scully -- --nw",
+    "scully:serve": "npx scully serve --"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "17.3.0",
-    "@angular/common": "17.3.0",
-    "@angular/compiler": "17.3.0",
-    "@angular/core": "17.3.0",
+    "@angular/animations": "17.3.3",
+    "@angular/common": "17.3.3",
+    "@angular/compiler": "17.3.3",
+    "@angular/core": "17.3.3",
     "@angular/fire": "17.0.1",
-    "@angular/forms": "17.3.0",
-    "@angular/platform-browser": "17.3.0",
-    "@angular/platform-browser-dynamic": "17.3.0",
-    "@angular/router": "17.3.0",
+    "@angular/forms": "17.3.3",
+    "@angular/platform-browser": "17.3.3",
+    "@angular/platform-browser-dynamic": "17.3.3",
+    "@angular/router": "17.3.3",
     "@ngx-translate/core": "15.0.0",
     "@ngx-translate/http-loader": "8.0.0",
     "bootstrap-icons": "1.11.3",
@@ -28,15 +30,17 @@
     "zone.js": "0.14.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "17.3.0",
-    "@angular/cli": "17.3.0",
-    "@angular/compiler-cli": "17.3.0",
+    "@scullyio/init": "2.1.41",
+    "@angular-devkit/build-angular": "17.3.3",
+    "@angular/cli": "17.3.3",
+    "@angular/compiler-cli": "17.3.3",
+    "@scullyio/scully-plugin-puppeteer": "2.1.41",
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/forms": "0.5.7",
-    "@tailwindcss/typography": "0.5.10",
-    "autoprefixer": "10.4.18",
-    "postcss": "8.4.37",
-    "tailwindcss": "3.4.1",
-    "typescript": "5.4.2"
+    "@tailwindcss/typography": "0.5.12",
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.38",
+    "tailwindcss": "3.4.3",
+    "typescript": "5.4.4"
   }
 }

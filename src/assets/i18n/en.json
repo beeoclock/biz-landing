@@ -1,4 +1,15 @@
 {
+  "seo": {
+    "page": {
+      "main": {
+        "title": "Bee O’clock",
+        "description": "Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.",
+        "keywords": "appointment, calendar, clients, business, management, tool, bookkeeping, tax planning, event management, delegate, time-consuming tasks, empower, professionals, reduce stress, increase productivity, eliminate distractions, frustrations, running a business",
+        "image": "https://beeoclock.com/asset/logo.png",
+        "author": "Bee O’clock"
+      }
+    }
+  },
   "businessSupport": {
     "description": "Our product has been praised by businesses that have achieved remarkable growth and success after implementing it",
     "example": {

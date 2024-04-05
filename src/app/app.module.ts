@@ -3,16 +3,10 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {
-  AngularFireRemoteConfig,
-  AngularFireRemoteConfigModule,
-  DEFAULTS,
-  SETTINGS
-} from '@angular/fire/compat/remote-config';
+import {DEFAULTS, SETTINGS} from '@angular/fire/compat/remote-config';
 import {AngularFireModule} from '@angular/fire/compat';
 import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
 import {environment} from '../environment/environment';
-import {getRemoteConfig, provideRemoteConfig} from '@angular/fire/remote-config';
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {isSupportedLanguageCodeEnum, LanguageCodeEnum} from "./enum/language-code.enum";
@@ -34,9 +28,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireRemoteConfigModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideRemoteConfig(() => getRemoteConfig()),
     TranslateModule.forRoot({
       useDefaultLang: true,
       defaultLanguage: LanguageCodeEnum.uk,
@@ -87,9 +79,4 @@ export function HttpLoaderFactory(http: HttpClient) {
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(
-    private readonly remoteConfig: AngularFireRemoteConfig
-  ) {
-    this.remoteConfig.fetchAndActivate();
-  }
 }

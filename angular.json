@@ -108,5 +108,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "biz-landing"
 }

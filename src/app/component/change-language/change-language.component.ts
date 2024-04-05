@@ -9,7 +9,7 @@ import {
     ViewChild,
     ViewEncapsulation
 } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import {NgForOf} from "@angular/common";
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Dropdown, DropdownInterface, DropdownOptions} from "flowbite";
@@ -84,6 +84,8 @@ export class ChangeLanguageComponent implements AfterViewInit {
 
     public readonly languages = LANGUAGES;
 
+    private readonly router = inject(Router);
+    private readonly activatedRoute = inject(ActivatedRoute);
     private readonly translateService = inject(TranslateService);
 
     public readonly form = new FormGroup({
@@ -141,6 +143,14 @@ export class ChangeLanguageComponent implements AfterViewInit {
         this.form.controls.language.valueChanges.subscribe((languageCode: LanguageCodeEnum | null) => {
             if (languageCode) {
                 this.translateService.use(languageCode);
+                // Update the language code in the URL but language code is not a query parameter, it is a path parameter i.g. /en/home
+                this.router.navigate([
+                    languageCode,
+                    ...this.router.url.split('/').slice(2)
+                ], {
+                    queryParamsHandling: 'merge',
+                    relativeTo: this.activatedRoute
+                }).then()
             }
         });
 
