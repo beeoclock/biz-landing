@@ -45,6 +45,7 @@ Thumbs.db
 .firebase
 *-debug.log
 .runtimeconfig.json
+/firebase/develop/dist/
 
 # Scully
 scully.log

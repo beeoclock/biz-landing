@@ -8,7 +8,8 @@ export const config: ScullyConfig = {
   projectRoot: "./src",
   projectName: "biz-landing",
   // add spsModulePath when using de Scully Platform Server,
-  outDir: './dist/static',
+  outDir: '/firebase/develop/dist/static',
+  distFolder: './firebase/develop/dist/biz-landing',
   routes: {},
   extraRoutes: [
     '/pl',

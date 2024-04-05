@@ -5,8 +5,8 @@ reloadPort: 2667
 hostName: localhost
 projectName: biz-landing
 homeFolder: /Users/ivankarbashevskyi/Projects/Organizations/beeoclock/biz-landing
-distFolder: dist/biz-landing
+distFolder: ./firebase/develop/dist/biz-landing
 outDir: >-
-  /Users/ivankarbashevskyi/Projects/Organizations/beeoclock/biz-landing/dist/static
+  /Users/ivankarbashevskyi/Projects/Organizations/beeoclock/biz-landing/firebase/develop/dist/static
 handle404: ''
 allowErrorCollect: false
