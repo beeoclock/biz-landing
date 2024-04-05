@@ -1,4 +1,15 @@
 {
+  "seo": {
+    "page": {
+      "main": {
+        "title": "Bee O’clock",
+        "description": "Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży",
+        "keywords": "zarządzanie spotkaniami, kalendarz, klienci, podróże",
+        "image": "https://beeoclock.com/asset/logo.png",
+        "author": "Bee O’clock"
+      }
+    }
+  },
   "businessSupport": {
     "description": "Nasz produkt został doceniony przez firmy, które po jego wdrożeniu osiągnęły niezwykły rozwój i sukces",
     "example": {
