@@ -4,7 +4,7 @@ import {ScullyConfig} from '@scullyio/scully';
 import '@scullyio/scully-plugin-puppeteer'
 
 export const config: ScullyConfig = {
-  maxRenderThreads: 2,
+  maxRenderThreads: 4,
   projectRoot: "./src",
   projectName: "biz-landing",
   // add spsModulePath when using de Scully Platform Server,
@@ -12,9 +12,10 @@ export const config: ScullyConfig = {
   distFolder: './firebase/production/dist/biz-landing',
   routes: {},
   extraRoutes: [
-    '/pl',
-    '/en',
-    '/uk',
-    '/da',
+    '/pl/barbershop_brooklyn',
+    '/en/barbershop_brooklyn',
+    '/uk/barbershop_brooklyn',
+    '/da/barbershop_brooklyn',
+    '/barbershop_brooklyn',
   ]
 };
