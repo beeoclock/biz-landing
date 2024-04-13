@@ -226,6 +226,9 @@ export class SocialShareSeoService {
   public setLocale(locale?: string): void {
     if (locale) {
       this.metaService.updateTag({property: 'og:locale', content: locale});
+      this.setLanguage(locale);
+      // Update lang attribute on html element
+      this.document.documentElement.lang = locale;
     } else {
       this.metaService.removeTag(`property='og:locale'`);
     }

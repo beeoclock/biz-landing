@@ -4,7 +4,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {DEFAULTS, SETTINGS} from '@angular/fire/compat/remote-config';
-import {AngularFireModule} from '@angular/fire/compat';
 import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
 import {environment} from '../environment/environment';
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
@@ -13,6 +12,8 @@ import {isSupportedLanguageCodeEnum, LanguageCodeEnum} from "./enum/language-cod
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {AppService} from "./app.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
+import {getAnalytics, provideAnalytics} from "@angular/fire/analytics";
+import {tokens} from "./token";
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -27,8 +28,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
     TranslateModule.forRoot({
       useDefaultLang: true,
       defaultLanguage: LanguageCodeEnum.uk,
@@ -41,6 +42,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ChangeLanguageComponent
   ],
   providers: [
+    ...tokens,
     {
       provide: LOCALE_ID,
       deps: [AppService],

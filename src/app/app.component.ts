@@ -40,6 +40,7 @@ export class AppComponent implements OnInit {
         this.socialShareSeoService.setKeywords(keywords);
         this.socialShareSeoService.setImage(image);
         this.socialShareSeoService.setAuthor(author);
+        this.socialShareSeoService.setLocale(this.translateService.currentLang);
     }
 
 
