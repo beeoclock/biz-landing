@@ -4,10 +4,6 @@ import {AppComponent} from './app.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: AppComponent
-  },
-  {
     path: ':language',
     children: [
       {
@@ -15,7 +11,11 @@ const routes: Routes = [
         component: AppComponent
       }
     ]
-  }
+  },
+  {
+    path: '',
+    component: AppComponent
+  },
 ];
 
 @NgModule({

@@ -159,21 +159,15 @@ export class ChangeLanguageComponent implements OnInit, AfterViewInit {
   }
 
   private updateUrlLanguage(languageCode: LanguageCodeEnum): void {
-    const {language} = this.activatedRoute.snapshot.params;
     const urlObject = new URL(this.window.location.href);
     // @ts-ignore
     let queryParams = {};
     // @ts-ignore
     urlObject.searchParams.size && (queryParams = Object.fromEntries(urlObject.searchParams.entries()))
 
-    let url = urlObject.pathname.split('/').slice(1);
-    if (language) {
-      url[0] = languageCode;
-    } else {
-      url.unshift(languageCode);
-    }
-    this.router.navigate(url, {
+    this.router.navigate([languageCode], {
       queryParams,
+      fragment: this.activatedRoute.snapshot.fragment ?? undefined,
       queryParamsHandling: 'merge',
     }).then();
 
