@@ -13,6 +13,7 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {AppService} from "./app.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
 import {getAnalytics, provideAnalytics} from "@angular/fire/analytics";
+import {tokens} from "./token";
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -41,6 +42,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ChangeLanguageComponent
   ],
   providers: [
+    ...tokens,
     {
       provide: LOCALE_ID,
       deps: [AppService],

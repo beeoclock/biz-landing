@@ -17,6 +17,7 @@ import {Dropdown, DropdownInterface, DropdownOptions} from "flowbite";
 import {TranslateService} from "@ngx-translate/core";
 import {LanguageCodeEnum, LanguageRecord, LANGUAGES} from "../../enum/language-code.enum";
 import {DropdownComponent} from "../dropdown/dropdown.component";
+import {WINDOW} from "../../token";
 
 @Component({
   selector: 'utility-change-language-component',
@@ -88,6 +89,7 @@ export class ChangeLanguageComponent implements OnInit, AfterViewInit {
   private readonly router = inject(Router);
   private readonly activatedRoute = inject(ActivatedRoute);
   private readonly translateService = inject(TranslateService);
+  private readonly window = inject(WINDOW);
 
   public readonly form = new FormGroup({
     language: new FormControl<LanguageCodeEnum>(LANGUAGES[0].code)
@@ -158,18 +160,23 @@ export class ChangeLanguageComponent implements OnInit, AfterViewInit {
 
   private updateUrlLanguage(languageCode: LanguageCodeEnum): void {
     const {language} = this.activatedRoute.snapshot.params;
+    const urlObject = new URL(this.window.location.href);
+    // @ts-ignore
+    let queryParams = {};
+    // @ts-ignore
+    urlObject.searchParams.size && (queryParams = Object.fromEntries(urlObject.searchParams.entries()))
 
-    let url = [languageCode, this.router.url];
+    let url = urlObject.pathname.split('/').slice(1);
     if (language) {
-      url = this.router.url.split('/').slice(1);
       url[0] = languageCode;
     } else {
-      // Delete first element, perhaps it is "/"
-      url[1] = url[1].split('/').slice(1).join('/');
+      url.unshift(languageCode);
     }
     this.router.navigate(url, {
+      queryParams,
       queryParamsHandling: 'merge',
     }).then();
+
   }
 
 }
