@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     public readonly host = [environment.config.host, this.translateService.currentLang];
 
     public get hostString(): string {
-        return this.host.join('/');
+        return environment.config.host;
     }
 
     public ngOnInit() {
