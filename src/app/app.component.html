@@ -126,11 +126,6 @@
               <span [innerHtml]="'header.button.label' | translate"></span>
               <i class="bi bi-chevron-right"></i>
             </a>
-            <a [href]="consultationLink"
-               class="rounded-full text-lg md:text-xl px-4 py-2 w-full flex justify-between bg-beeoclock-primary hover:underline font-bold text-black">
-              <span [innerHtml]="'header.button.consultationLink.label' | translate"></span>
-              <i class="bi bi-chevron-right"></i>
-            </a>
             <div>
               <a [href]="demoAccountUrl"
                  class="rounded-full text-lg md:text-xl px-4 py-2 w-full flex justify-between bg-white hover:underline font-bold text-black">
@@ -364,6 +359,29 @@
 
   </div>
 
+</section>
+
+<!-- Do you need consultation -->
+<section class="mb-4">
+  <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+    <div class="mb-8 lg:mb-16 text-center">
+      <h2 class="text-3xl font-display tracking-tight leading-tight text-gray-900 md:text-4xl">
+        {{ 'consultation.title' | translate }}
+      </h2>
+      <p class="text-[#748194]">
+        {{ 'consultation.description' | translate }}
+      </p>
+    </div>
+    <div class="flex items-center justify-center gap-8 text-[#5D6E82]">
+      <div>
+        <a [href]="consultationLink"
+           class="rounded-full gap-2 text-lg md:text-xl px-4 py-2 w-full flex justify-between bg-beeoclock-primary hover:underline font-bold text-black">
+          <span [innerHtml]="'header.button.consultationLink.label' | translate"></span>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Media about creators -->

@@ -13,6 +13,10 @@
     },
     "title": "Firmy, które wspieramy"
   },
+  "consultation": {
+    "description": "Umów się na konsultację z wybranym specjalistą w dogodnym dla Ciebie terminie. Nasi eksperci dokonają szczegółowej prezentacji, udzielą wyczerpujących odpowiedzi na wszystkie pytania i pomogą wybrać najlepsze rozwiązania dla Twoich potrzeb.",
+    "title": "Potrzebujesz konsultacji?"
+  },
   "features": {
     "build": {
       "content": "Świetnie jest mieć stronę na Instagramie lub Facebooku ze swoimi pracami. Stwórzmy teraz profesjonalną stronę internetową,              Więc              klienci mogą zarezerwować i zapłacić za kolejne spotkanie z Tobą.",
@@ -56,7 +60,7 @@
   "header": {
     "button": {
       "consultationLink": {
-        "label": "Konsultacje"
+        "label": "Umówić się na konsultację"
       },
       "label": "Utwórz konto"
     },
@@ -66,8 +70,8 @@
         "label": "Sprawdź profil demonstracyjny"
       }
     },
-    "description": "Bee O’cloc kto unikalne narzędzie do zarządzania, dzięki któremu Twoi klienci mogą rezerwować i płacić za Twoje usługi. Możesz także śledzić swoje wyniki, aby stać się najlepszą wersją siebie.",
-    "titleHTML": "Skupić się na <strong class=\"font-bold\">swojej&nbsp;pracy</strong> Resztę załatwimy"
+    "description": "Bee O'clock to usługa online umożliwiająca wygodne umawianie spotkań z klientami. Nie trać klientów: daj im możliwość umówienia się na spotkanie w dowolnym momencie. Zautomatyzuj swój biznes - zarządzaj spotkaniami, klientami, płatnościami i pracownikami łatwo i wydajnie dzięki Bee O'clock.",
+    "titleHTML": "Rejestrowanie klientów online - automatyzacja biznesu!"
   },
   "keyword": {
     "capitalize": {

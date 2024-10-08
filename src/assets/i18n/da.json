@@ -13,6 +13,10 @@
     },
     "title": "Virksomheder, vi støtter"
   },
+  "consultation": {
+    "description": "Planlæg en konsultation med en specialist efter eget valg på en dato og et tidspunkt, der passer dig. Vores eksperter vil give en detaljeret præsentation, give omfattende svar på alle dine spørgsmål og hjælpe dig med at vælge de bedste løsninger til dine behov.",
+    "title": "Har du brug for en konsultation?"
+  },
   "features": {
     "build": {
       "content": "At have en Instagram- eller Facebook-side med dit arbejde er fantastisk. Lad os nu få dig en professionel online side, så kunderne kan booke og betale for deres næste aftale med dig.",
@@ -56,7 +60,7 @@
   "header": {
     "button": {
       "consultationLink": {
-        "label": "Konsultation"
+        "label": "Bestil en konsultation"
       },
       "label": "Opret en konto"
     },
@@ -66,8 +70,8 @@
         "label": "Tjek demoprofilen ud"
       }
     },
-    "description": "Bee O’clock er et unikt ledelsesværktøj, der giver dine kunder mulighed for at booke og betale for dine tjenester. Du kan også holde styr på din præstation for at blive den bedste version af dig selv.",
-    "titleHTML": "Fokuser på <strong class=\"font-bold\">dit&nbsp;arbejde</strong> Vi klarer resten"
+    "description": "Bee O'clock er en onlinetjeneste til bekvemme kundeaftaler. Mist ikke nogen kunder: Giv dem mulighed for at lave en aftale når som helst. Automatiser din virksomhed - administrer aftaler, kunder, betalinger og medarbejdere nemt og effektivt med Bee O'clock.",
+    "titleHTML": "Online kundeoptagelse - automatisering af forretningen!"
   },
   "keyword": {
     "capitalize": {

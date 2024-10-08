@@ -13,6 +13,10 @@
     },
     "title": "Businesses we support"
   },
+  "consultation": {
+    "description": "Sign up for a consultation with a specialist of your choice at a date and time convenient for you. Our experts will give a detailed presentation, provide comprehensive answers to all your questions, and help you choose the best solutions for your needs.",
+    "title": "Do you need a consultation?"
+  },
   "features": {
     "build": {
       "content": "Having an Instagram or Facebook page with your work is great. Let’s get you a professional online page now,             so             customers can book and pay for their next appointment with you.",
@@ -56,7 +60,7 @@
   "header": {
     "button": {
       "consultationLink": {
-        "label": "Consultation"
+        "label": "Make an appointment for a consultation"
       },
       "label": "Create an account"
     },
@@ -66,8 +70,8 @@
         "label": "Try a demo profile"
       }
     },
-    "description": "Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.",
-    "titleHTML": "Focus on <strong class=\"font-bold\">your&nbsp;work</strong> We’ll cover the rest"
+    "description": "Bee O'clock is an online service for convenient customer appointments. Don't lose any clients: give them the opportunity to make an appointment at any time. Automate your business - manage appointments, clients, payments, and employees easily and efficiently with Bee O'clock.",
+    "titleHTML": "Online customer recording - business automation!"
   },
   "keyword": {
     "capitalize": {
