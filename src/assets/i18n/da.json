@@ -66,7 +66,7 @@
     },
     "demoAccount": {
       "link": {
-        "helper": "Ingen registrering eller bankkort påkrævet",
+        "helper": "* Ingen registrering",
         "label": "Tjek demoprofilen ud"
       }
     },
