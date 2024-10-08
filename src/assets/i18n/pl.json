@@ -1,15 +1,4 @@
 {
-  "seo": {
-    "page": {
-      "main": {
-        "title": "Bee O’clock",
-        "description": "Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży",
-        "keywords": "zarządzanie spotkaniami, kalendarz, klienci, podróże",
-        "image": "https://beeoclock.com/asset/logo.png",
-        "author": "Bee O’clock"
-      }
-    }
-  },
   "businessSupport": {
     "description": "Nasz produkt został doceniony przez firmy, które po jego wdrożeniu osiągnęły niezwykły rozwój i sukces",
     "example": {
@@ -66,7 +55,16 @@
   },
   "header": {
     "button": {
-      "label": "Utwórz konto w Bee O’clock"
+      "consultationLink": {
+        "label": "Konsultacje"
+      },
+      "label": "Utwórz konto"
+    },
+    "demoAccount": {
+      "link": {
+        "helper": "Nie wymaga rejestracji ani kart bankowych",
+        "label": "Sprawdź profil demonstracyjny"
+      }
     },
     "description": "Bee O’cloc kto unikalne narzędzie do zarządzania, dzięki któremu Twoi klienci mogą rezerwować i płacić za Twoje usługi. Możesz także śledzić swoje wyniki, aby stać się najlepszą wersją siebie.",
     "titleHTML": "Skupić się na <strong class=\"font-bold\">swojej&nbsp;pracy</strong> Resztę załatwimy"
@@ -80,5 +78,16 @@
   "media": {
     "description": "Tworzymy produkt, w który ludzie wierzą",
     "title": "Media o twórcach"
+  },
+  "seo": {
+    "page": {
+      "main": {
+        "author": "Bee O’clock",
+        "description": "Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży",
+        "image": "https://beeoclock.com/asset/logo.png",
+        "keywords": "zarządzanie spotkaniami, kalendarz, klienci, podróże",
+        "title": "Bee O’clock"
+      }
+    }
   }
 }

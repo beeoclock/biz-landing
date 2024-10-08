@@ -1,15 +1,4 @@
 {
-  "seo": {
-    "page": {
-      "main": {
-        "title": "Bee O’clock",
-        "description": "Bee O’clock er et unikt ledelsesværktøj, der giver dine kunder mulighed for at booke og betale for dine tjenester. Du kan også holde styr på din præstation for at blive den bedste version af dig selv.",
-        "keywords": "Bee O’clock, ledelsesværktøj, tjenester, præstation, version",
-        "image": "https://beeoclock.com/asset/logo.png",
-        "author": "Bee O’clock"
-      }
-    }
-  },
   "businessSupport": {
     "description": "Vores produkt er blevet rost af virksomheder, som har opnået bemærkelsesværdig vækst og succes efter at have implementeret det",
     "example": {
@@ -66,7 +55,16 @@
   },
   "header": {
     "button": {
-      "label": "Opret en konto hos Bee O’clock"
+      "consultationLink": {
+        "label": "Konsultation"
+      },
+      "label": "Opret en konto"
+    },
+    "demoAccount": {
+      "link": {
+        "helper": "Ingen registrering eller bankkort påkrævet",
+        "label": "Tjek demoprofilen ud"
+      }
     },
     "description": "Bee O’clock er et unikt ledelsesværktøj, der giver dine kunder mulighed for at booke og betale for dine tjenester. Du kan også holde styr på din præstation for at blive den bedste version af dig selv.",
     "titleHTML": "Fokuser på <strong class=\"font-bold\">dit&nbsp;arbejde</strong> Vi klarer resten"
@@ -80,5 +78,16 @@
   "media": {
     "description": "Vi skaber et produkt, som folk tror på",
     "title": "Medier om skabere"
+  },
+  "seo": {
+    "page": {
+      "main": {
+        "author": "Bee O’clock",
+        "description": "Bee O’clock er et unikt ledelsesværktøj, der giver dine kunder mulighed for at booke og betale for dine tjenester. Du kan også holde styr på din præstation for at blive den bedste version af dig selv.",
+        "image": "https://beeoclock.com/asset/logo.png",
+        "keywords": "Bee O’clock, ledelsesværktøj, tjenester, præstation, version",
+        "title": "Bee O’clock"
+      }
+    }
   }
 }

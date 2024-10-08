@@ -1,15 +1,4 @@
 {
-  "seo": {
-    "page": {
-      "main": {
-        "title": "Bee O’clock",
-        "description": "Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.",
-        "keywords": "appointment, calendar, clients, business, management, tool, bookkeeping, tax planning, event management, delegate, time-consuming tasks, empower, professionals, reduce stress, increase productivity, eliminate distractions, frustrations, running a business",
-        "image": "https://beeoclock.com/asset/logo.png",
-        "author": "Bee O’clock"
-      }
-    }
-  },
   "businessSupport": {
     "description": "Our product has been praised by businesses that have achieved remarkable growth and success after implementing it",
     "example": {
@@ -66,7 +55,16 @@
   },
   "header": {
     "button": {
-      "label": "Create an account in Bee O’clock"
+      "consultationLink": {
+        "label": "Consultation"
+      },
+      "label": "Create an account"
+    },
+    "demoAccount": {
+      "link": {
+        "helper": "No registration and no bank cards",
+        "label": "Try a demo profile"
+      }
     },
     "description": "Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.",
     "titleHTML": "Focus on <strong class=\"font-bold\">your&nbsp;work</strong> We’ll cover the rest"
@@ -80,5 +78,16 @@
   "media": {
     "description": "We create product in which people believe",
     "title": "Media about creators"
+  },
+  "seo": {
+    "page": {
+      "main": {
+        "author": "Bee O’clock",
+        "description": "Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.",
+        "image": "https://beeoclock.com/asset/logo.png",
+        "keywords": "appointment, calendar, clients, business, management, tool, bookkeeping, tax planning, event management, delegate, time-consuming tasks, empower, professionals, reduce stress, increase productivity, eliminate distractions, frustrations, running a business",
+        "title": "Bee O’clock"
+      }
+    }
   }
 }
