@@ -15,6 +15,12 @@ export const environment = {
   config: {
     language: 'en',
     host: 'http://localhost:4200',
+    consultationLink: 'https://beeoclock.com/office',
+    demoAccount: {
+      panelUrl: 'https://panel.dev.beeoclock.com/identity',
+      login: 'demo@beeoclock.com',
+      password: 'ItIckBeRSOLDENZYGosicirE'
+    }
   },
 };
 

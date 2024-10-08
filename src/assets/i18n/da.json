@@ -1,15 +1,4 @@
 {
-  "seo": {
-    "page": {
-      "main": {
-        "title": "Bee O’clock",
-        "description": "Bee O’clock er et unikt ledelsesværktøj, der giver dine kunder mulighed for at booke og betale for dine tjenester. Du kan også holde styr på din præstation for at blive den bedste version af dig selv.",
-        "keywords": "Bee O’clock, ledelsesværktøj, tjenester, præstation, version",
-        "image": "https://beeoclock.com/asset/logo.png",
-        "author": "Bee O’clock"
-      }
-    }
-  },
   "businessSupport": {
     "description": "Vores produkt er blevet rost af virksomheder, som har opnået bemærkelsesværdig vækst og succes efter at have implementeret det",
     "example": {
@@ -23,6 +12,10 @@
       "title": "“Bee O’clock har været en gamechanger for mig”"
     },
     "title": "Virksomheder, vi støtter"
+  },
+  "consultation": {
+    "description": "Planlæg en konsultation med en specialist efter eget valg på en dato og et tidspunkt, der passer dig. Vores eksperter vil give en detaljeret præsentation, give omfattende svar på alle dine spørgsmål og hjælpe dig med at vælge de bedste løsninger til dine behov.",
+    "title": "Har du brug for en konsultation?"
   },
   "features": {
     "build": {
@@ -66,10 +59,19 @@
   },
   "header": {
     "button": {
-      "label": "Opret en konto hos Bee O’clock"
+      "consultationLink": {
+        "label": "Bestil en konsultation"
+      },
+      "label": "Opret en konto"
     },
-    "description": "Bee O’clock er et unikt ledelsesværktøj, der giver dine kunder mulighed for at booke og betale for dine tjenester. Du kan også holde styr på din præstation for at blive den bedste version af dig selv.",
-    "titleHTML": "Fokuser på <strong class=\"font-bold\">dit&nbsp;arbejde</strong> Vi klarer resten"
+    "demoAccount": {
+      "link": {
+        "helper": "* Ingen registrering påkrævet",
+        "label": "Tjek demoprofilen ud"
+      }
+    },
+    "description": "Bee O'clock er en onlinetjeneste til bekvemme kundeaftaler. Mist ikke nogen kunder: Giv dem mulighed for at lave en aftale når som helst. Automatiser din virksomhed - administrer aftaler, kunder, betalinger og medarbejdere nemt og effektivt med Bee O'clock.",
+    "titleHTML": "Online kundeoptagelse - automatisering af forretningen!"
   },
   "keyword": {
     "capitalize": {
@@ -80,5 +82,16 @@
   "media": {
     "description": "Vi skaber et produkt, som folk tror på",
     "title": "Medier om skabere"
+  },
+  "seo": {
+    "page": {
+      "main": {
+        "author": "Bee O’clock",
+        "description": "Bee O’clock er et unikt ledelsesværktøj, der giver dine kunder mulighed for at booke og betale for dine tjenester. Du kan også holde styr på din præstation for at blive den bedste version af dig selv.",
+        "image": "https://beeoclock.com/asset/logo.png",
+        "keywords": "Bee O’clock, ledelsesværktøj, tjenester, præstation, version",
+        "title": "Bee O’clock"
+      }
+    }
   }
 }
