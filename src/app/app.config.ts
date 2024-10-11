@@ -1,47 +1,45 @@
-import {isDevMode, LOCALE_ID, NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {ApplicationConfig, importProvidersFrom, isDevMode, LOCALE_ID} from '@angular/core';
+import { provideRouter } from '@angular/router';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {DEFAULTS, SETTINGS} from '@angular/fire/compat/remote-config';
-import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
-import {environment} from '../environment/environment';
-import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {isSupportedLanguageCodeEnum, LanguageCodeEnum} from "./enum/language-code.enum";
-import {TranslateHttpLoader} from "@ngx-translate/http-loader";
-import {AppService} from "./app.service";
-import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
+import { routes } from './app.routes';
+import {BrowserModule, provideClientHydration} from '@angular/platform-browser';
+import {HttpClient, provideHttpClient} from "@angular/common/http";
+import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
+import {environment} from "../environment/environment";
 import {getAnalytics, provideAnalytics} from "@angular/fire/analytics";
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {isSupportedLanguageCodeEnum, LanguageCodeEnum} from "./enum/language-code.enum";
 import {tokens} from "./token";
+import {AppService} from "./app.service";
+import {DEFAULTS, SETTINGS} from "@angular/fire/compat/remote-config";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    HttpClientModule,
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideRouter(routes),
+    provideClientHydration(),
+
+    provideHttpClient(),
     BrowserModule,
-    AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
-    TranslateModule.forRoot({
-      useDefaultLang: true,
-      defaultLanguage: LanguageCodeEnum.uk,
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
-    ChangeLanguageComponent
-  ],
-  providers: [
+    importProvidersFrom(
+      TranslateModule.forRoot({
+        useDefaultLang: true,
+        defaultLanguage: LanguageCodeEnum.uk,
+        loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+        }
+      })
+    ),
+
     ...tokens,
     {
       provide: LOCALE_ID,
@@ -85,9 +83,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     {
       provide: SETTINGS,
       useFactory: () => isDevMode() ? {minimumFetchIntervalMillis: 10_000} : {}
-    }
-  ],
-  bootstrap: [AppComponent]
-})
-export class AppModule {
-}
+    },
+    provideClientHydration()
+  ]
+};
