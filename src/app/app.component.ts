@@ -2,11 +2,16 @@ import {Component, inject, OnInit} from '@angular/core';
 import {environment} from "../environment/environment";
 import {TranslateService} from "@ngx-translate/core";
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
+import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [
+    ChangeLanguageComponent
+  ],
   host: {
     'class': 'flex flex-col'
   }
