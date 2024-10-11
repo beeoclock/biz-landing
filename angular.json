@@ -13,15 +13,30 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "da": {
+            "translation": "src/locale/messages.da.xlf"
+          },
+          "uk": {
+            "translation": "src/locale/messages.uk.xlf"
+          },
+          "pl": {
+            "translation": "src/locale/messages.pl.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/biz-landing/browser",
+            "outputPath": "dist/biz-landing",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -32,7 +47,14 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            },
+            "localize": true,
+            "i18nMissingTranslation": "warning"
           },
           "configurations": {
             "production": {
@@ -48,42 +70,24 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all",
-              "fileReplacements": [
-                {
-                  "replace": "src/environment/environment.ts",
-                  "with": "src/environment/environment.prod.ts"
-                }
-              ]
-            },
-            "develop": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "src/environment/environment.ts",
-                  "with": "src/environment/environment.dev.ts"
-                }
-              ],
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "sourceMap": true
+            },
+            "en-US": {
+              "localize": ["en-US"]
+            },
+            "pl": {
+              "localize": ["pl"]
+            },
+            "da": {
+              "localize": ["da"]
+            },
+            "uk": {
+              "localize": ["uk"]
             }
           },
           "defaultConfiguration": "production"
@@ -92,89 +96,38 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "biz-landing:build:production"
+              "buildTarget": "biz-landing:build:production"
             },
             "development": {
-              "browserTarget": "biz-landing:build:development"
+              "buildTarget": "biz-landing:build:development"
+            },
+            "en-US": {
+              "buildTarget": "angular-i18n-example:build:development,en-US"
+            },
+            "da": {
+              "buildTarget": "angular-i18n-example:build:development,da"
+            },
+            "uk": {
+              "buildTarget": "angular-i18n-example:build:development,uk"
+            },
+            "pl": {
+              "buildTarget": "angular-i18n-example:build:development,pl"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "ng-extract-i18n-merge:ng-extract-i18n-merge",
           "options": {
-            "browserTarget": "biz-landing:build"
-          }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/biz-landing/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "inlineStyleLanguage": "scss"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environment/environment.ts",
-                  "with": "src/environment/environment.prod.ts"
-                }
-              ]
-            },
-            "develop": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environment/environment.ts",
-                  "with": "src/environment/environment.dev.ts"
-                }
-              ]
-            },
-            "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "sourceMap": true,
-              "extractLicenses": false,
-              "vendorChunk": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve-ssr": {
-          "builder": "@angular-devkit/build-angular:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "biz-landing:build:development",
-              "serverTarget": "biz-landing:server:development"
-            },
-            "production": {
-              "browserTarget": "biz-landing:build:production",
-              "serverTarget": "biz-landing:server:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@angular-devkit/build-angular:prerender",
-          "options": {
-            "routes": [
-              "/"
+            "buildTarget": "biz-landing:build",
+            "format": "xlf2",
+            "outputPath": "src/locale",
+            "targetFiles": [
+              "messages.da.xlf",
+              "messages.uk.xlf",
+              "messages.pl.xlf"
             ]
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "biz-landing:build:production",
-              "serverTarget": "biz-landing:server:production"
-            },
-            "development": {
-              "browserTarget": "biz-landing:build:development",
-              "serverTarget": "biz-landing:server:development"
-            }
-          },
-          "defaultConfiguration": "production"
+          }
         }
       }
     }

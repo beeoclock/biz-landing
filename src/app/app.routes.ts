@@ -4,15 +4,6 @@ import {AppComponent} from "./app.component";
 
 export const routes: Routes = [
   {
-    path: ':language',
-    children: [
-      {
-        path: '',
-        component: AppComponent
-      }
-    ]
-  },
-  {
     path: '',
     component: AppComponent
   },

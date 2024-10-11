@@ -13,6 +13,7 @@ import {tokens} from "./token";
 import {AppService} from "./app.service";
 import {DEFAULTS, SETTINGS} from "@angular/fire/compat/remote-config";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {DOCUMENT} from "@angular/common";
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -43,29 +44,39 @@ export const appConfig: ApplicationConfig = {
     ...tokens,
     {
       provide: LOCALE_ID,
-      deps: [AppService],
-      useFactory: (appService: AppService) => {
+      deps: [AppService, DOCUMENT],
+      useFactory: (appService: AppService, document: Document) => {
 
         const userLang = (() => {
 
+          // TODO use $localize to set default language
           // Get language from url
-          const url = new URL(window.location.href);
-          const userLangByUrl = url.pathname.split('/')[1];
+          // if (isSupportedLanguageCodeEnum(userLangByUrl)) {
+          //   return userLangByUrl;
+          // }
 
-          if (isSupportedLanguageCodeEnum(userLangByUrl)) {
-            return userLangByUrl;
+          const localStorage = document.defaultView?.localStorage;
+
+          if (localStorage) {
+
+            const userLangByLocalStorage: string | null = localStorage.getItem('language');
+
+            if (userLangByLocalStorage) {
+              return userLangByLocalStorage;
+            }
+
           }
 
-          const userLangByLocalStorage: string | null = localStorage.getItem('language');
+          const navigator = document.defaultView?.navigator;
 
-          if (userLangByLocalStorage) {
-            return userLangByLocalStorage;
-          }
+          if (navigator) {
 
-          const userLangByNavigator: string | undefined = navigator?.language?.split?.('-')?.[0];
+            const userLangByNavigator: string | undefined = navigator?.language?.split?.('-')?.[0];
 
-          if (isSupportedLanguageCodeEnum(userLangByNavigator)) {
-            return userLangByNavigator;
+            if (isSupportedLanguageCodeEnum(userLangByNavigator)) {
+              return userLangByNavigator;
+            }
+
           }
 
           return environment.config.language;
@@ -83,7 +94,6 @@ export const appConfig: ApplicationConfig = {
     {
       provide: SETTINGS,
       useFactory: () => isDevMode() ? {minimumFetchIntervalMillis: 10_000} : {}
-    },
-    provideClientHydration()
+    }
   ]
 };
