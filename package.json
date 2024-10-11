@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open --port 4200",
     "build": "ng build && npm run scully",
     "build:develop": "ng build --configuration develop",
     "build:firebase:develop": "ng build --configuration develop --output-path=./firebase/develop/dist/biz-landing && npm run scully:firebase:develop",
