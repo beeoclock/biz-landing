@@ -10,16 +10,16 @@ export class SocialShareSeoService {
 
   private readonly metaService = inject(Meta);
   private readonly titleService = inject(Title);
-  private readonly rendererFactory2 = inject(RendererFactory2);
+  /*private readonly rendererFactory2 = inject(RendererFactory2);*/
   private readonly document = inject(DOCUMENT);
   private readonly platformId = inject(PLATFORM_ID);
-  private renderer2 = this.rendererFactory2.createRenderer(this.document, null);
+  /*private renderer2 = this.rendererFactory2.createRenderer(this.document, null);*/
 
   public constructor() {
 
     if (isPlatformBrowser(this.platformId)) {
 
-      this.renderer2 = inject(Renderer2);
+      /*this.renderer2 = inject(Renderer2);*/
 
     }
 
@@ -241,7 +241,7 @@ export class SocialShareSeoService {
       this.metaService.updateTag({property: 'og:locale', content: locale});
       this.setLanguage(locale);
       // Update lang attribute on html element
-      this.renderer2.setAttribute(this.document.documentElement, 'lang', locale);
+      /*this.renderer2.setAttribute(this.document.documentElement, 'lang', locale);*/
     } else {
       this.metaService.removeTag(`property='og:locale'`);
     }
@@ -324,10 +324,10 @@ export class SocialShareSeoService {
     // first remove potential previous url
     const selector = `link[rel='alternate'][hreflang='${lang}']`;
     // this.document.head.querySelector(selector);
-    const languageAlternativeElement = this.renderer2.selectRootElement(selector);
+    /*const languageAlternativeElement = this.renderer2.selectRootElement(selector);
     if (languageAlternativeElement) {
       this.renderer2.removeChild(this.document.head, languageAlternativeElement);
-    }
+    }*/
 
     if (url && url.length) {
       const link: HTMLLinkElement = this.document.createElement('link');
@@ -335,7 +335,7 @@ export class SocialShareSeoService {
       link.setAttribute('hreflang', lang);
       link.setAttribute('href', url);
       // this.document.head.appendChild(link);
-      this.renderer2.appendChild(this.document.head, link);
+      /*this.renderer2.appendChild(this.document.head, link);*/
     }
   }
 
@@ -345,7 +345,7 @@ export class SocialShareSeoService {
     const canonicalElement = this.document.head.querySelector(selector);
     if (canonicalElement) {
       // this.document.head.removeChild(canonicalElement);
-      this.renderer2.removeChild(this.document.head, canonicalElement);
+      /*this.renderer2.removeChild(this.document.head, canonicalElement);*/
     }
 
     if (url && url.length) {
@@ -353,7 +353,7 @@ export class SocialShareSeoService {
       link.setAttribute('rel', 'canonical');
       link.setAttribute('href', url);
       // this.document.head.appendChild(link);
-      this.renderer2.appendChild(this.document.head, link);
+      /*this.renderer2.appendChild(this.document.head, link);*/
     }
   }
 
