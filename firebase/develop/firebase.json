@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "biz-dev-beeoclock",
-    "public": "dist/static",
+    "public": "dist/browser",
     "ignore": [
       "**/firebase/**",
       "**/.*",
