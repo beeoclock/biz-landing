@@ -6,15 +6,17 @@
     "start": "ng serve --open --port 4200",
     "build": "ng build",
     "build:develop": "ng build --configuration develop",
-    "build:firebase:develop": "ng build --configuration develop --output-path=./firebase/develop/dist/biz-landing",
-    "build:firebase:production": "ng build --configuration production --output-path=./firebase/production/dist/biz-landing",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run biz-landing:serve-ssr",
     "serve:ssr": "node dist/biz-landing/server/main.js",
     "build:ssr": "ng build && ng run biz-landing:server",
     "prerender": "ng run biz-landing:prerender",
-    "i18n:extract": "ng extract-i18n"
+    "i18n:extract": "ng extract-i18n",
+    "build:firebase:development": "ng build --configuration development --output-path=./firebase/develop/dist && npm run build:firebase:prepare_development_base --output-path=./firebase/develop/dist",
+    "build:firebase:prepare_development_base": "ng build --configuration prepare_development_base --output-path=./firebase/develop/dist",
+    "build:firebase:production": "ng build --configuration production --output-path=./firebase/production/dist && npm run build:firebase:prepare_production_base --output-path=./firebase/production/dist",
+    "build:firebase:prepare_production_base": "ng build --configuration prepare_production_base --output-path=./firebase/production/dist"
   },
   "private": true,
   "dependencies": {
