@@ -3,6 +3,7 @@ import {environment} from "../environment/environment";
 import {TranslateService} from "@ngx-translate/core";
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-root',
@@ -10,11 +11,12 @@ import {ChangeLanguageComponent} from "./component/change-language/change-langua
   styleUrls: ['./app.component.scss'],
   standalone: true,
   imports: [
-    ChangeLanguageComponent
+    ChangeLanguageComponent,
+    NgOptimizedImage
   ],
   host: {
     'class': 'flex flex-col'
-  }
+  },
 })
 export class AppComponent implements OnInit {
 
