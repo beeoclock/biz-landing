@@ -1,22 +1,49 @@
-<nav class="bg-transparent absolute w-full z-20 top-0 left-0 text-white">
-  <div class="nav-bar">
-    <div class="nav-bar-block">
-      <a href="#">
-        <img src="assets/log_new.png" alt="Bee O`clock Logo">
-      </a>
-      <div class="justify-end flex w-auto order-1 bg-transparent rounded-2xl mt-0">
-        <ul
-          class="flex flex-col p-4 md:p-0 font-medium md:flex-row lg:space-x-8">
-          <li>
-            <utility-change-language-component/>
-          </li>
+<div class="wrapper  w-full flex justify-center">
+  <div class="w-full max-w-[1440px]">
+    <nav class="bg-transparent w-full z-20 text-black flex justify-between items-center h-[90px] max-w-[1200px] mx-auto mb-[57px]">
+      <div class="h-[70px] justify-between items-center w-full flex">
+        <div class="flex items-center">
+          <a href="#">
+            <img src="assets/new_logo.svg" alt="Bee O`clock Logo">
+          </a>
+        </div>
+        <ul class="hidden md:flex gap-[60px]">
+          <li><a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">Послуги</a></li>
+          <li><a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">Тарифи</a></li>
+          <li><a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">Відгуки</a></li>
+          <li><a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">FAQ</a></li>
+          <li><a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">Про нас</a></li>
         </ul>
-      </div>
-    </div>
-  </div>
-  <section>
 
-  </section>
-</nav>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">Вхід</a>
+          <utility-change-language-component></utility-change-language-component>
+        </div>
+      </div>
+    </nav>
+
+    <section class="flex w-full justify-center">
+      <div class="flex justify-between items-center w-full max-w-[1200px]">
+        <div class="text-wrapper w-full mx-auto flex flex-wrap items-center max-w-[40%]">
+          <div class="max-w-[469px] mb-10">
+            <p class="font-[FixelDisplay-Bold] text-[40px]">Запис клієнтів онлайн.</p>
+            <p class="font-[FixelDisplay-Medium] text-[20px]">Простий та ефективний інструмент для управління записами
+              клієнтів у салонах краси та інших бізнесах</p>
+          </div>
+          <button type="button" class="font-[FixelDisplay-Bold] text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px]">
+            Спробувати безкоштовно
+          </button>
+        </div>
+        <div class="relative">
+          <img ngSrc="assets/img/group.webp" priority alt="Bee O`clock service details image" height="715" width="721">
+          <img class="absolute top-[30%] right-[90%]" ngSrc="assets/img/vector_1.png" alt="Bee O`clock service schedule" height="78" width="40">
+          <img class="absolute top-[67%]" ngSrc="assets/img/vector_2.png" alt="line" height="48" width="78">
+          <img class="absolute top-[4%] right-[67%]" src="assets/img/service_details.png" alt="line">
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
 
 

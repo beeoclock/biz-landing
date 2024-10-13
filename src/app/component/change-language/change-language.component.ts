@@ -25,7 +25,7 @@ import {WINDOW} from "../../token";
     <button
       #dropdownButton
       class="
-        text-white
+        text-black
         text-xl
         transition-all
         hover:bg-white/20
