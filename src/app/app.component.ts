@@ -1,9 +1,10 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, Inject, inject, OnDestroy, OnInit} from '@angular/core';
 import {environment} from "../environment/environment";
 import {TranslateService} from "@ngx-translate/core";
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
-import {NgOptimizedImage} from "@angular/common";
+import {DOCUMENT, NgOptimizedImage} from "@angular/common";
+import {NgIcon} from "@ng-icons/core";
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import {NgOptimizedImage} from "@angular/common";
   standalone: true,
   imports: [
     ChangeLanguageComponent,
-    NgOptimizedImage
+    NgOptimizedImage,
+    NgIcon
   ],
   host: {
     'class': 'flex flex-col'
@@ -27,13 +29,13 @@ export class AppComponent implements OnInit {
 
   public readonly host = [environment.config.host, this.translateService.currentLang];
   public readonly consultationLink = environment.config.consultationLink;
+  public isMobileMenuOpen = false;
 
   constructor() {
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
     console.log($localize`:@@appComponent.ngOnInit:App component initialized`);
   }
-
 
   public get hostString(): string {
     return environment.config.host;
@@ -60,5 +62,7 @@ export class AppComponent implements OnInit {
     this.socialShareSeoService.setLocale(this.translateService.currentLang);
   }
 
-
+  public toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 }
