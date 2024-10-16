@@ -4,7 +4,7 @@ import {TranslateService} from "@ngx-translate/core";
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
 import {NgOptimizedImage} from "@angular/common";
-import {NgIcon, provideIcons} from "@ng-icons/core";
+import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
 import {bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
 
 enum MenuName {
@@ -34,7 +34,10 @@ interface MenuItem {
     NgIcon,
   ],
   viewProviders: [
-    provideIcons({bootstrapXLg, bootstrapThreeDots})
+    provideIcons({bootstrapXLg, bootstrapThreeDots}),
+    provideNgIconsConfig({
+      size: '1.5em',
+    }),
   ],
   host: {
     'class': 'flex flex-col'
