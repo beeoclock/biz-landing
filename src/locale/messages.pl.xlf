@@ -1,9 +1,21 @@
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US" trgLang="pl">
   <file id="ngi18n" original="ng.template">
-    <unit id="appComponent.ngOnInit">
+    <unit id="2023484548631819319">
       <segment state="initial">
-        <source>App component initialized</source>
-        <target>App component initialized</target>
+        <source>Hello world</source>
+        <target>Cześć świat</target>
+      </segment>
+    </unit>
+    <unit id="my.nameIsIvan">
+      <segment state="initial">
+        <source>My name is Ivan</source>
+        <target>My name is Ivan</target>
+      </segment>
+    </unit>
+    <unit id="3044375770210666349">
+      <segment state="initial">
+        <source> Online appointment booking for clients. </source>
+        <target> Rezerwacja spotkań online dla klientów. </target>
       </segment>
     </unit>
   </file>
