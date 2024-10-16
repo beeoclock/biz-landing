@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US">
   <file id="ngi18n" original="ng.template">
-    <unit id="appComponent.ngOnInit">
+    <unit id="2023484548631819319">
       <segment>
-        <source>App component initialized</source>
+        <source>Hello world</source>
+      </segment>
+    </unit>
+    <unit id="my.nameIsIvan">
+      <segment>
+        <source>My name is Ivan</source>
+      </segment>
+    </unit>
+    <unit id="3044375770210666349">
+      <segment>
+        <source> Online appointment booking for clients. </source>
       </segment>
     </unit>
   </file>

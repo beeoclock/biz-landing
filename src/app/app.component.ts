@@ -69,7 +69,8 @@ export class AppComponent implements OnInit {
   constructor() {
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
-    console.log($localize`:@@appComponent.ngOnInit:App component initialized`);
+    console.log($localize`Hello world`);
+    console.log($localize`:@@my.nameIsIvan:My name is Ivan`);
   }
 
   public get hostString(): string {
