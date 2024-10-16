@@ -1,10 +1,27 @@
-import {Component, Inject, inject, OnDestroy, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {environment} from "../environment/environment";
 import {TranslateService} from "@ngx-translate/core";
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
-import {DOCUMENT, NgOptimizedImage} from "@angular/common";
-import {NgIcon} from "@ng-icons/core";
+import {NgOptimizedImage} from "@angular/common";
+import {NgIcon, provideIcons} from "@ng-icons/core";
+import {bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
+
+enum MenuName {
+  SERVICES = 'Послуги',
+  TRAFFICS = 'Тарифи',
+  REVIEWS = 'Відгуки',
+  FAQ = 'FAQ',
+  ABOUT_US = 'Про нас',
+  CONSULTATION= 'Замовити консультацію',
+  DEMO_ACCOUNT= 'Спробувати демо-аккаунт',
+  LOGIN= 'Вхід'
+}
+interface MenuItem {
+  name: MenuName;
+  link: string;
+  id: number;
+}
 
 @Component({
   selector: 'app-root',
@@ -14,13 +31,28 @@ import {NgIcon} from "@ng-icons/core";
   imports: [
     ChangeLanguageComponent,
     NgOptimizedImage,
-    NgIcon
+    NgIcon,
+  ],
+  viewProviders: [
+    provideIcons({bootstrapXLg, bootstrapThreeDots})
   ],
   host: {
     'class': 'flex flex-col'
   },
 })
 export class AppComponent implements OnInit {
+
+
+  menuItems: MenuItem[] = [
+    { id: 1, name: MenuName.SERVICES, link: '#' },
+    { id: 2, name: MenuName.TRAFFICS, link: '#' },
+    { id: 3, name: MenuName.REVIEWS, link: '#' },
+    { id: 4, name: MenuName.FAQ, link: '#' },
+    { id: 5, name: MenuName.ABOUT_US, link: '#' },
+    { id: 6, name: MenuName.CONSULTATION, link: '#' },
+    { id: 7, name: MenuName.DEMO_ACCOUNT, link: '#' },
+    { id: 8, name: MenuName.LOGIN, link: '#' },
+  ];
 
   private readonly translateService = inject(TranslateService);
   private readonly socialShareSeoService = inject(SocialShareSeoService);
