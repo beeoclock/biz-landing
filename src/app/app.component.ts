@@ -4,6 +4,14 @@ import {TranslateService} from "@ngx-translate/core";
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
 import {NgOptimizedImage} from "@angular/common";
+import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
+import {bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
+
+interface MenuItem {
+  name: string;
+  link: string;
+  id: number;
+}
 
 @Component({
   selector: 'app-root',
@@ -12,13 +20,32 @@ import {NgOptimizedImage} from "@angular/common";
   standalone: true,
   imports: [
     ChangeLanguageComponent,
-    NgOptimizedImage
+    NgOptimizedImage,
+    NgIcon,
+  ],
+  viewProviders: [
+    provideIcons({bootstrapXLg, bootstrapThreeDots}),
+    provideNgIconsConfig({
+      size: '1.5em',
+    }),
   ],
   host: {
     'class': 'flex flex-col'
   },
 })
+
 export class AppComponent implements OnInit {
+
+  public readonly menuItems: MenuItem[] = [
+    { id: 1, name: 'Services', link: '#' },
+    { id: 2, name: 'Tariffs', link: '#' },
+    { id: 3, name: 'Reviews', link: '#' },
+    { id: 4, name: 'FAQ', link: '#' },
+    { id: 5, name: 'About Us', link: '#' },
+    { id: 6, name: 'Order a consultation', link: '#' },
+    { id: 7, name: 'Try a demo account', link: '#' },
+    { id: 8, name: 'Login', link: '#' },
+  ];
 
   private readonly translateService = inject(TranslateService);
   private readonly socialShareSeoService = inject(SocialShareSeoService);
@@ -27,13 +54,12 @@ export class AppComponent implements OnInit {
 
   public readonly host = [environment.config.host, this.translateService.currentLang];
   public readonly consultationLink = environment.config.consultationLink;
+  public isMobileMenuOpen = false;
 
   constructor() {
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
-    console.log($localize`:@@appComponent.ngOnInit:App component initialized`);
   }
-
 
   public get hostString(): string {
     return environment.config.host;
@@ -60,5 +86,7 @@ export class AppComponent implements OnInit {
     this.socialShareSeoService.setLocale(this.translateService.currentLang);
   }
 
-
+  public toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
 }
