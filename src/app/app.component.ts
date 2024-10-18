@@ -7,18 +7,8 @@ import {NgOptimizedImage} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
 import {bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
 
-enum MenuName {
-  SERVICES = 'Послуги',
-  TRAFFICS = 'Тарифи',
-  REVIEWS = 'Відгуки',
-  FAQ = 'FAQ',
-  ABOUT_US = 'Про нас',
-  CONSULTATION= 'Замовити консультацію',
-  DEMO_ACCOUNT= 'Спробувати демо-аккаунт',
-  LOGIN= 'Вхід'
-}
 interface MenuItem {
-  name: MenuName;
+  name: string;
   link: string;
   id: number;
 }
@@ -43,18 +33,18 @@ interface MenuItem {
     'class': 'flex flex-col'
   },
 })
+
 export class AppComponent implements OnInit {
 
-
-  menuItems: MenuItem[] = [
-    { id: 1, name: MenuName.SERVICES, link: '#' },
-    { id: 2, name: MenuName.TRAFFICS, link: '#' },
-    { id: 3, name: MenuName.REVIEWS, link: '#' },
-    { id: 4, name: MenuName.FAQ, link: '#' },
-    { id: 5, name: MenuName.ABOUT_US, link: '#' },
-    { id: 6, name: MenuName.CONSULTATION, link: '#' },
-    { id: 7, name: MenuName.DEMO_ACCOUNT, link: '#' },
-    { id: 8, name: MenuName.LOGIN, link: '#' },
+  public readonly menuItems: MenuItem[] = [
+    { id: 1, name: 'Services', link: '#' },
+    { id: 2, name: 'Tariffs', link: '#' },
+    { id: 3, name: 'Reviews', link: '#' },
+    { id: 4, name: 'FAQ', link: '#' },
+    { id: 5, name: 'About Us', link: '#' },
+    { id: 6, name: 'Order a consultation', link: '#' },
+    { id: 7, name: 'Try a demo account', link: '#' },
+    { id: 8, name: 'Login', link: '#' },
   ];
 
   private readonly translateService = inject(TranslateService);
@@ -69,8 +59,6 @@ export class AppComponent implements OnInit {
   constructor() {
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
-    console.log($localize`Hello world`);
-    console.log($localize`:@@my.nameIsIvan:My name is Ivan`);
   }
 
   public get hostString(): string {

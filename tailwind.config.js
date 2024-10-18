@@ -19,6 +19,12 @@ module.exports = {
       gridColumn: {
         'span-14': 'span 14 / span 14',
         'span-24': 'span 24 / span 24',
+      },
+      screens: {
+        'landscape': {'raw': '(orientation: landscape)'},
+        'phone': {'max': '968px'},
+        'tablet': {'max': '1280px'}
+
       }
     },
     colors: {

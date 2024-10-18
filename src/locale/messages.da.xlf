@@ -1,21 +1,15 @@
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US" trgLang="da">
   <file id="ngi18n" original="ng.template">
-    <unit id="2023484548631819319">
-      <segment state="initial">
-        <source>Hello world</source>
-        <target>Hello world</target>
-      </segment>
-    </unit>
-    <unit id="my.nameIsIvan">
-      <segment state="initial">
-        <source>My name is Ivan</source>
-        <target>My name is Ivan</target>
-      </segment>
-    </unit>
     <unit id="3044375770210666349">
       <segment state="initial">
         <source> Online appointment booking for clients. </source>
         <target> Online appointment booking for clients. </target>
+      </segment>
+    </unit>
+    <unit id="7143579180750436311">
+      <segment state="initial">
+        <source>Services</source>
+        <target>Services</target>
       </segment>
     </unit>
   </file>
