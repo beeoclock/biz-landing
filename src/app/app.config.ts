@@ -3,13 +3,13 @@ import {
   enableProdMode,
   isDevMode,
   LOCALE_ID,
-  provideExperimentalZonelessChangeDetection, provideZoneChangeDetection
+  provideExperimentalZonelessChangeDetection
 } from '@angular/core';
 import {provideRouter} from '@angular/router';
 
 import {routes} from './app.routes';
 import {BrowserModule, provideClientHydration} from '@angular/platform-browser';
-import {HttpClient, provideHttpClient} from "@angular/common/http";
+import {provideHttpClient} from "@angular/common/http";
 import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
 import {environment} from "../environment/environment";
 import {getAnalytics, provideAnalytics} from "@angular/fire/analytics";
@@ -76,8 +76,7 @@ export const appConfig: ApplicationConfig = {
           return environment.config.language;
         })();
         return userLang;
-        // appService.translateService.use(userLang);
-        // return appService.translateService.currentLang;
+
       },
     },
     {
