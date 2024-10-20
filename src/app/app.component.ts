@@ -37,14 +37,14 @@ interface MenuItem {
 export class AppComponent implements OnInit {
 
   public readonly menuItems: MenuItem[] = [
-    { id: 1, name: 'Services', link: '#' },
-    { id: 2, name: 'Tariffs', link: '#' },
-    { id: 3, name: 'Reviews', link: '#' },
-    { id: 4, name: 'FAQ', link: '#' },
-    { id: 5, name: 'About Us', link: '#' },
-    { id: 6, name: 'Order a consultation', link: '#' },
-    { id: 7, name: 'Try a demo account', link: '#' },
-    { id: 8, name: 'Login', link: '#' },
+    { id: 1, name: $localize`Services`, link: '#' },
+    { id: 2, name: $localize`Tariffs`, link: '#' },
+    { id: 3, name: $localize`Reviews`, link: '#' },
+    { id: 4, name: $localize`FAQ`, link: '#' },
+    { id: 5, name: $localize`About Us`, link: '#' },
+    { id: 6, name: $localize`Order a consultation`, link: '#' },
+    { id: 7, name: $localize`Try a demo account`, link: '#' },
+    { id: 8, name: $localize`Login`, link: '#' },
   ];
 
   private readonly translateService = inject(TranslateService);
@@ -59,6 +59,8 @@ export class AppComponent implements OnInit {
   constructor() {
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
+    console.log($localize`Login`)
+
   }
 
   public get hostString(): string {

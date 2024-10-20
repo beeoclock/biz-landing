@@ -9,7 +9,77 @@
     <unit id="7143579180750436311">
       <segment state="initial">
         <source>Services</source>
-        <target>Services</target>
+        <target>Usługi</target>
+      </segment>
+    </unit>
+    <unit id="2454050363478003966">
+      <segment state="initial">
+        <source>Login</source>
+        <target/>
+      </segment>
+    </unit>
+    <unit id="6254764080441478187">
+      <segment state="initial">
+        <source> A simple and effective tool for managing customer records in beauty salons and other businesses </source>
+        <target>Proste i skuteczne narzędzie do zarządzania dokumentacją klientów w salonach kosmetycznych i innych firmach</target>
+      </segment>
+    </unit>
+    <unit id="3652697872793402667">
+      <segment state="initial">
+        <source> Try it for free </source>
+        <target>Wypróbuj za darmo</target>
+      </segment>
+    </unit>
+    <unit id="7708270344948043036">
+      <segment state="initial">
+        <source>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+        </source>
+        <target>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+        </target>
+      </segment>
+    </unit>
+    <unit id="1908285951500318953">
+      <segment state="initial">
+        <source> Login </source>
+        <target> Login </target>
+      </segment>
+    </unit>
+    <unit id="4937917695205691719">
+      <segment state="initial">
+        <source>Tariffs</source>
+        <target>Tariffs</target>
+      </segment>
+    </unit>
+    <unit id="9029286143304711365">
+      <segment state="initial">
+        <source>Reviews</source>
+        <target>Reviews</target>
+      </segment>
+    </unit>
+    <unit id="2806917038528218276">
+      <segment state="initial">
+        <source>FAQ</source>
+        <target>FAQ</target>
+      </segment>
+    </unit>
+    <unit id="5736481176444461852">
+      <segment state="initial">
+        <source>About Us</source>
+        <target>About Us</target>
+      </segment>
+    </unit>
+    <unit id="1561634790975642473">
+      <segment state="initial">
+        <source>Order a consultation</source>
+        <target>Order a consultation</target>
+      </segment>
+    </unit>
+    <unit id="6159873727198464508">
+      <segment state="initial">
+        <source>Try a demo account</source>
+        <target>Try a demo account</target>
       </segment>
     </unit>
   </file>

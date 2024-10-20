@@ -125,17 +125,14 @@
             "development": {
               "buildTarget": "biz-landing:build:development"
             },
-            "en-US": {
-              "buildTarget": "angular-i18n-example:build:development,en-US"
-            },
             "da": {
-              "buildTarget": "angular-i18n-example:build:development,da"
+              "buildTarget": "biz-landing:build:development,da"
             },
             "uk": {
-              "buildTarget": "angular-i18n-example:build:development,uk"
+              "buildTarget": "biz-landing:build:development,uk"
             },
             "pl": {
-              "buildTarget": "angular-i18n-example:build:development,pl"
+              "buildTarget": "biz-landing:build:development,pl"
             }
           },
           "defaultConfiguration": "development"

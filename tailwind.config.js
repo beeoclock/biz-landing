@@ -21,10 +21,7 @@ module.exports = {
         'span-24': 'span 24 / span 24',
       },
       screens: {
-        'landscape': {'raw': '(orientation: landscape)'},
-        'phone': {'max': '968px'},
-        'tablet': {'max': '1280px'}
-
+        'phone': {'max': '1023px'},
       }
     },
     colors: {
