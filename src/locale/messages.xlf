@@ -68,5 +68,30 @@
         <source>Reviews</source>
       </segment>
     </unit>
+    <unit id="seo.header.author">
+      <segment>
+        <source>Bee O&apos;clock</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.description">
+      <segment>
+        <source>Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.image">
+      <segment>
+        <source>https://beeoclock.com/asset/logo.png</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.keywords">
+      <segment>
+        <source>appointment, calendar, clients, business, management, tool, bookkeeping, tax planning, event management, delegate, time-consuming tasks, empower, professionals, reduce stress, increase productivity, eliminate distractions, frustrations, running a business</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.title">
+      <segment>
+        <source>Bee O&apos;clock</source>
+      </segment>
+    </unit>
   </file>
 </xliff>

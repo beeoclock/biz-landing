@@ -82,5 +82,35 @@
         <target>Спробувати демо-акаунт</target>
       </segment>
     </unit>
+    <unit id="seo.header.title">
+      <segment state="initial">
+        <source>Bee O&apos;clock</source>
+        <target>Bee O&apos;clock</target>
+      </segment>
+    </unit>
+    <unit id="seo.header.description">
+      <segment state="initial">
+        <source>Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
+        <target>Управління зустрічами та клієнтами для професіоналів</target>
+      </segment>
+    </unit>
+    <unit id="seo.header.keywords">
+      <segment state="initial">
+        <source>appointment, calendar, clients, business, management, tool, bookkeeping, tax planning, event management, delegate, time-consuming tasks, empower, professionals, reduce stress, increase productivity, eliminate distractions, frustrations, running a business</source>
+        <target>зустрічі, календар, клієнти, бізнес</target>
+      </segment>
+    </unit>
+    <unit id="seo.header.image">
+      <segment state="initial">
+        <source>https://beeoclock.com/asset/logo.png</source>
+        <target>https://beeoclock.com/asset/logo.png</target>
+      </segment>
+    </unit>
+    <unit id="seo.header.author">
+      <segment state="initial">
+        <source>Bee O&apos;clock</source>
+        <target>Bee O&apos;clock</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
