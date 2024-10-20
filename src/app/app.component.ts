@@ -1,24 +1,13 @@
-import {Component, HostListener, inject, OnInit} from '@angular/core';
+import {Component, HostListener, Inject, inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {environment} from "../environment/environment";
 import {TranslateService} from "@ngx-translate/core";
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
-import {NgOptimizedImage} from "@angular/common";
+import {isPlatformBrowser, NgOptimizedImage} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
 import {bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
-
-enum MenuUseCase {
-  Desktop,
-  Mobile,
-  Both
-}
-
-interface MenuItem {
-  id: number;
-  name: string;
-  link: string;
-  useCase: MenuUseCase;
-}
+import {IMenuItem} from "../common/interface/i.menu-item";
+import {MenuUseCase} from "./enum/menu-use-case.enum";
 
 @Component({
   selector: 'app-root',
@@ -44,7 +33,7 @@ interface MenuItem {
 export class AppComponent implements OnInit {
   public MenuUseCase = MenuUseCase;
 
-  public readonly menuItems: MenuItem[] = [
+  public readonly menuItems: IMenuItem[] = [
     { id: 1, name: $localize`Services`, link: '#', useCase: MenuUseCase.Both },
     { id: 2, name: $localize`Tariffs`, link: '#', useCase: MenuUseCase.Both },
     { id: 3, name: $localize`Reviews`, link: '#', useCase: MenuUseCase.Desktop },
@@ -59,6 +48,7 @@ export class AppComponent implements OnInit {
   private readonly translateService = inject(TranslateService);
   private readonly socialShareSeoService = inject(SocialShareSeoService);
   public aspectRatio: number | null = null;
+  private readonly isBrowser: boolean;
 
   public readonly demoAccountUrl = new URL(environment.config.demoAccount.panelUrl);
 
@@ -68,7 +58,7 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
-    if (this.isBrowser()) {
+    if (this.isBrowser) {
       this.aspectRatio = window.innerWidth / window.innerHeight;
       if (this.aspectRatio > 1 && this.isMobileMenuOpen) {
         this.closeMobileMenu();
@@ -76,7 +66,10 @@ export class AppComponent implements OnInit {
     }
   }
 
-  constructor() {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
   }
@@ -91,7 +84,7 @@ export class AppComponent implements OnInit {
       this.host[1] = event.lang;
       this.initializeSocialShareSeoService();
     });
-    if (this.isBrowser()) {
+    if (this.isBrowser) {
       this.aspectRatio = window.innerWidth / window.innerHeight;
     }
   }
@@ -107,10 +100,6 @@ export class AppComponent implements OnInit {
     this.socialShareSeoService.setImage(image);
     this.socialShareSeoService.setAuthor(author);
     this.socialShareSeoService.setLocale(this.translateService.currentLang);
-  }
-
-  private isBrowser(): boolean {
-    return typeof window !== 'undefined';
   }
 
   private closeMobileMenu() {
