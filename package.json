@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "start:pl": "ng serve --open --port 4200 --configuration pl",
+    "start:uk": "ng serve --open --port 4200 --configuration uk",
+    "start:da": "ng serve --open --port 4200 --configuration da",
     "start": "ng serve --open --port 4200",
     "build": "ng build",
     "build:develop": "ng build --configuration develop",
