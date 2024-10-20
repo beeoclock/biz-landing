@@ -8,7 +8,7 @@ import {
 import {provideRouter} from '@angular/router';
 
 import {routes} from './app.routes';
-import {BrowserModule, provideClientHydration} from '@angular/platform-browser';
+import {BrowserModule, provideClientHydration, withI18nSupport} from '@angular/platform-browser';
 import {provideHttpClient} from "@angular/common/http";
 import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
 import {environment} from "../environment/environment";
@@ -26,12 +26,13 @@ if (environment.production) {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    provideClientHydration(),
+    provideClientHydration(
+      withI18nSupport(),
+    ),
 
     provideExperimentalZonelessChangeDetection(),
 
     provideHttpClient(),
-    BrowserModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
 
