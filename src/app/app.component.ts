@@ -75,8 +75,6 @@ export class AppComponent implements OnInit {
   constructor() {
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
-    console.log($localize`Login`)
-
   }
 
   public get hostString(): string {
