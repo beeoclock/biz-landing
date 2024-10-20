@@ -58,6 +58,7 @@ export class AppComponent implements OnInit {
 
   private readonly translateService = inject(TranslateService);
   private readonly socialShareSeoService = inject(SocialShareSeoService);
+  public aspectRatio: number | null = null;
 
   public readonly demoAccountUrl = new URL(environment.config.demoAccount.panelUrl);
 
@@ -67,8 +68,11 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
-    if (window.innerWidth >= 1024 && this.isMobileMenuOpen) {
-      this.closeMobileMenu();
+    if (this.isBrowser()) {
+      this.aspectRatio = window.innerWidth / window.innerHeight;
+      if (this.aspectRatio > 1 && this.isMobileMenuOpen) {
+        this.closeMobileMenu();
+      }
     }
   }
 
@@ -87,6 +91,9 @@ export class AppComponent implements OnInit {
       this.host[1] = event.lang;
       this.initializeSocialShareSeoService();
     });
+    if (this.isBrowser()) {
+      this.aspectRatio = window.innerWidth / window.innerHeight;
+    }
   }
 
   public initializeSocialShareSeoService() {
@@ -100,6 +107,10 @@ export class AppComponent implements OnInit {
     this.socialShareSeoService.setImage(image);
     this.socialShareSeoService.setAuthor(author);
     this.socialShareSeoService.setLocale(this.translateService.currentLang);
+  }
+
+  private isBrowser(): boolean {
+    return typeof window !== 'undefined';
   }
 
   private closeMobileMenu() {
