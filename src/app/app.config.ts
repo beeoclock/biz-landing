@@ -1,4 +1,10 @@
-import {ApplicationConfig, enableProdMode, isDevMode, LOCALE_ID} from '@angular/core';
+import {
+  ApplicationConfig,
+  enableProdMode,
+  isDevMode,
+  LOCALE_ID,
+  provideExperimentalZonelessChangeDetection, provideZoneChangeDetection
+} from '@angular/core';
 import {provideRouter} from '@angular/router';
 
 import {routes} from './app.routes';
@@ -21,6 +27,8 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideClientHydration(),
+
+    provideExperimentalZonelessChangeDetection(),
 
     provideHttpClient(),
     BrowserModule,
