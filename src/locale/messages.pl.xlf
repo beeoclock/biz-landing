@@ -15,7 +15,7 @@
     <unit id="2454050363478003966">
       <segment state="initial">
         <source>Login</source>
-        <target/>
+        <target>Login<target/>
       </segment>
     </unit>
     <unit id="6254764080441478187">
@@ -40,22 +40,16 @@
         </target>
       </segment>
     </unit>
-    <unit id="1908285951500318953">
-      <segment state="initial">
-        <source> Login </source>
-        <target> Login </target>
-      </segment>
-    </unit>
     <unit id="4937917695205691719">
       <segment state="initial">
         <source>Tariffs</source>
-        <target>Tariffs</target>
+        <target>Taryfy</target>
       </segment>
     </unit>
     <unit id="9029286143304711365">
       <segment state="initial">
         <source>Reviews</source>
-        <target>Reviews</target>
+        <target>Recenzje</target>
       </segment>
     </unit>
     <unit id="2806917038528218276">
@@ -67,19 +61,19 @@
     <unit id="5736481176444461852">
       <segment state="initial">
         <source>About Us</source>
-        <target>About Us</target>
+        <target>O nas</target>
       </segment>
     </unit>
     <unit id="1561634790975642473">
       <segment state="initial">
         <source>Order a consultation</source>
-        <target>Order a consultation</target>
+        <target>Zamów konsultację</target>
       </segment>
     </unit>
     <unit id="6159873727198464508">
       <segment state="initial">
         <source>Try a demo account</source>
-        <target>Try a demo account</target>
+        <target>Wypróbuj konto demonstracyjne</target>
       </segment>
     </unit>
   </file>

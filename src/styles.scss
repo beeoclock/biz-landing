@@ -2,23 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'FixelDisplay-Bold';
-  src: url('./assets/fonts/FixelDisplay-Bold.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
+@layer base {
 
-@font-face {
-  font-family: 'FixelDisplay-Medium';
-  src: url('./assets/fonts/FixelDisplay-Medium.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
+  /*@font-face {
+    font-family: 'FixelDisplay-Bold';
+    src: url('./assets/fonts/FixelDisplay-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: 'FixelDisplay-Regular';
-  src: url('./assets/fonts/FixelDisplay-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+  @font-face {
+    font-family: 'FixelDisplay-Medium';
+    src: url('./assets/fonts/FixelDisplay-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'FixelDisplay-Regular';
+    src: url('./assets/fonts/FixelDisplay-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }*/
+  @font-face {
+    font-family: 'FixelDisplay';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url('./assets/fonts/FixelDisplay-Medium.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'FixelDisplay';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url('./assets/fonts/FixelDisplay-Regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'FixelDisplay';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url('./assets/fonts/FixelDisplay-Bold.woff2') format('woff2');
+  }
 }

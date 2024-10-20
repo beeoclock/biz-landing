@@ -8,9 +8,6 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    fontFamily: {
-      'display': ['Poppins', ...defaultTheme.fontFamily.sans]
-    },
     extend: {
       gridTemplateColumns: {
         // Simple 24 column grid
@@ -22,6 +19,9 @@ module.exports = {
       },
       screens: {
         'phone': {'max': '1023px'},
+      },
+      fontFamily: {
+        sans: ['FixelDisplay', ...defaultTheme.fontFamily.sans],
       }
     },
     colors: {
