@@ -1,49 +1,112 @@
-<div class="wrapper  w-full flex justify-center">
+<div class="wrapper w-full flex justify-center">
   <div class="w-full max-w-[1440px]">
-    <nav class="bg-transparent w-full z-20 text-black flex justify-between items-center h-[90px] max-w-[1200px] mx-auto mb-[57px]">
-      <div class="h-[70px] justify-between items-center w-full flex">
-        <div class="flex items-center">
-          <a href="#">
-            <img src="assets/new_logo.svg" alt="Bee O`clock Logo">
+    <nav class="phone:landscape:px-5 max-lg:landscape:px:5 phone:px-5 w-full lg:px-5 xl:px-0 bg-[#FFFFFF] fixed md:static z-20
+                text-black flex justify-between items-center h-[60px] md:h-[90px] max-w-[1200px] mx-auto lg:mb-[58px] md:mb-0"
+    >
+      <div class="h-[60px] md:h-[70px] justify-between items-center w-full flex">
+        <div class="flex items-center w-[200px]">
+          <a href="#" id="logo-link" class="flex gap-[14px]">
+            <img ngSrc="assets/new_logo.svg" alt="Bee O`clock Logo" height="38" width="38">
+            <img class="phone:hidden lg:block max-lg:hidden" ngSrc="assets/logo_text.svg" alt="Bee O`clock" height="16"
+                 width="119"
+            >
           </a>
         </div>
-        <ul class="hidden md:flex gap-[60px]">
-          <li><a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">Послуги</a></li>
-          <li><a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">Тарифи</a></li>
-          <li><a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">Відгуки</a></li>
-          <li><a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">FAQ</a></li>
-          <li><a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">Про нас</a></li>
-        </ul>
-
-        <div class="flex items-center space-x-4">
-          <a href="#" class="hover:text-yellow-500 font-[FixelDisplay-Medium] text-[15px]">Вхід</a>
-          <utility-change-language-component></utility-change-language-component>
+        <div class="flex justify-center lg:hidden w-full">
+          <img ngSrc="assets/logo_text.svg" alt="Bee O`clock" height="16" width="119">
         </div>
+        <div class="flex lg:hidden w-[200px] justify-end">
+          <button (click)="toggleMobileMenu()" id="mobile-menu-button"
+                  class="text-black focus:outline-none h-[100%] flex">
+            @if (isMobileMenuOpen) {
+              <ng-icon name="bootstrapXLg"/>
+            } @else {
+              <ng-icon name="bootstrapThreeDots"/>
+            }
+          </button>
+        </div>
+        <div class="phone:hidden md:flex gap-[20px] font-medium">
+          @for (item of menuItems; track item.id) {
+            @if (item.useCase === MenuUseCase.Desktop || item.useCase === MenuUseCase.Both) {
+              <a [href]="item.link" id="{{item.name}}-link-nav"
+                 class="hover:bg-[#FFC907] hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px]"
+                 i18n
+              >
+                {{ item.name }}
+              </a>
+            }
+          }
+        </div>
+        <div class="phone:hidden justify-end hidden md:flex font-medium w-[200px]">
+          <a href="#"
+             class="hover:bg-[#FFC907] hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px]"
+             i18n
+          >
+            Login
+          </a>
+        </div>
+        @if (isMobileMenuOpen) {
+          <div class="fixed inset-0 bg-white z-30 mt-[70px] overflow-auto transition-all duration-400 ease-in-out">
+            <ul
+              class="flex flex-col items-center px-5 pt-4 [&>li]:flex [&>li]:items-center [&>li]:h-[51px] [&>li]:w-full
+                     [&>li]:border-b [&>li]:border-[#F4F4F5]"
+            >
+              @for (item of menuItems; track item.name) {
+                <li>
+                  <a [href]="item.link" id="{{item.name}}-mobile-link"
+                     class="hover:text-yellow-500 font-medium"
+                     i18n
+                  >
+                    {{ item.name }}
+                  </a>
+                </li>
+              }
+            </ul>
+          </div>
+        }
       </div>
     </nav>
 
-    <section class="flex w-full justify-center">
-      <div class="flex justify-between items-center w-full max-w-[1200px]">
-        <div class="text-wrapper w-full mx-auto flex flex-wrap items-center max-w-[40%]">
-          <div class="max-w-[469px] mb-10">
-            <p class="font-[FixelDisplay-Bold] text-[40px]">Запис клієнтів онлайн.</p>
-            <p class="font-[FixelDisplay-Medium] text-[20px]">Простий та ефективний інструмент для управління записами
-              клієнтів у салонах краси та інших бізнесах</p>
+    <section class="flex w-full justify-center mt-[90px] md:mt-0">
+      <div class="flex flex-col landscape:flex-row md:flex-row items-center w-full max-w-[1200px] max-lg:px-5 landscape:gap-2.5
+                  phone:landscape:px-5 phone:px-5 lg:px-5 xl:px-0"
+      >
+        <div class="flex lg:hidden relative w-full lg:mb-[20px] mb-0">
+          <img ngSrc="assets/img/main_mob.webp" priority alt="Bee O`clock service details image" height="286"
+               width="335">
+        </div>
+        <div class="text-wrapper mx-auto flex flex-wrap items-center w-full sm:max-w-[100%] lg:max-w-[40%] sm:px-0">
+          <div class="max-w-[469px] mb-[30px] md:mb-10 landscape:h-full">
+            <p
+              class="font-bold leading-[34px] text-[40px] phone:text-[32px] landscape:text-[30px] landscape:mb-2.5"
+              i18n
+            >
+              Online appointment booking for clients.
+            </p>
+            <p class="font-medium md:text-[20px]"
+               i18n
+            >
+              A simple and effective tool for managing customer records in beauty salons and other businesses
+            </p>
           </div>
-          <button type="button" class="font-[FixelDisplay-Bold] text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px]">
-            Спробувати безкоштовно
+          <button type="button"
+                  id="try-free-button"
+                  class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto"
+                  i18n
+          >
+            Try it for free
           </button>
         </div>
-        <div class="relative">
+        <div class="relative hidden lg:block">
           <img ngSrc="assets/img/group.webp" priority alt="Bee O`clock service details image" height="715" width="721">
-          <img class="absolute top-[30%] right-[90%]" ngSrc="assets/img/vector_1.png" alt="Bee O`clock service schedule" height="78" width="40">
+          <img class="absolute top-[30%] right-[90%]" ngSrc="assets/img/vector_1.png" alt="Bee O`clock service schedule"
+               height="78" width="40">
           <img class="absolute top-[67%]" ngSrc="assets/img/vector_2.png" alt="line" height="48" width="78">
-          <img class="absolute top-[4%] right-[67%]" src="assets/img/service_details.png" alt="line">
+          <img class="absolute top-[4%] right-[67%]" ngSrc="assets/img/service_details.png" alt="line" height="137"
+               width="200"
+          >
         </div>
       </div>
     </section>
   </div>
 </div>
-
-
-

@@ -8,7 +8,7 @@ export const environment = {
     appId: "1:188732223564:web:55b1c0d719fc1af20504e9",
     measurementId: "G-HM469DJ76D"
   },
-  production: false,
+  production: true,
   config: {
     language: 'en',
     host: 'https://panel.beeoclock.com',

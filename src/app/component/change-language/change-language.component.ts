@@ -6,13 +6,14 @@ import {
   HostBinding,
   inject,
   Input,
-  OnInit, PLATFORM_ID,
+  LOCALE_ID,
+  OnInit,
+  PLATFORM_ID,
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
 import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
-import {TranslateService} from "@ngx-translate/core";
 import {LanguageCodeEnum, LanguageRecord, LANGUAGES} from "../../enum/language-code.enum";
 import {WINDOW} from "../../token";
 
@@ -85,8 +86,8 @@ export class ChangeLanguageComponent implements OnInit, AfterViewInit {
 
   private readonly router = inject(Router);
   private readonly activatedRoute = inject(ActivatedRoute);
-  private readonly translateService = inject(TranslateService);
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly localeId = inject(LOCALE_ID);
   private readonly window = inject(WINDOW);
 
   public readonly form = new FormGroup({
@@ -157,7 +158,8 @@ export class ChangeLanguageComponent implements OnInit, AfterViewInit {
 
   private get currentLanguage(): LanguageCodeEnum {
     const {language} = this.activatedRoute.snapshot.params;
-    return language ?? this.translateService.currentLang as LanguageCodeEnum;
+    // this.translateService.currentLang as LanguageCodeEnum
+    return language ?? this.localeId;
   }
 
   private updateUrlLanguage(languageCode: LanguageCodeEnum): void {
