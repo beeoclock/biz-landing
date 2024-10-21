@@ -1,9 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US">
   <file id="ngi18n" original="ng.template">
-    <unit id="appComponent.ngOnInit">
+    <unit id="3044375770210666349">
       <segment>
-        <source>App component initialized</source>
+        <source> Online appointment booking for clients. </source>
+      </segment>
+    </unit>
+    <unit id="2454050363478003966">
+      <segment>
+        <source>Login</source>
+      </segment>
+    </unit>
+    <unit id="7143579180750436311">
+      <segment>
+        <source>Services</source>
+      </segment>
+    </unit>
+    <unit id="6254764080441478187">
+      <segment>
+        <source> A simple and effective tool for managing customer records in beauty salons and other businesses </source>
+      </segment>
+    </unit>
+    <unit id="3652697872793402667">
+      <segment>
+        <source> Try it for free </source>
+      </segment>
+    </unit>
+    <unit id="1908285951500318953">
+      <segment>
+        <source> Login </source>
+      </segment>
+    </unit>
+    <unit id="7708270344948043036">
+      <segment>
+        <source>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+        </source>
+      </segment>
+    </unit>
+    <unit id="1561634790975642473">
+      <segment>
+        <source>Order a consultation</source>
+      </segment>
+    </unit>
+    <unit id="2806917038528218276">
+      <segment>
+        <source>FAQ</source>
+      </segment>
+    </unit>
+    <unit id="4937917695205691719">
+      <segment>
+        <source>Tariffs</source>
+      </segment>
+    </unit>
+    <unit id="5736481176444461852">
+      <segment>
+        <source>About Us</source>
+      </segment>
+    </unit>
+    <unit id="6159873727198464508">
+      <segment>
+        <source>Try a demo account</source>
+      </segment>
+    </unit>
+    <unit id="9029286143304711365">
+      <segment>
+        <source>Reviews</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.author">
+      <segment>
+        <source>Bee O&apos;clock</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.description">
+      <segment>
+        <source>Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.image">
+      <segment>
+        <source>https://beeoclock.com/asset/logo.png</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.keywords">
+      <segment>
+        <source>appointment, calendar, clients, business, management, tool, bookkeeping, tax planning, event management, delegate, time-consuming tasks, empower, professionals, reduce stress, increase productivity, eliminate distractions, frustrations, running a business</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.title">
+      <segment>
+        <source>Bee O&apos;clock</source>
       </segment>
     </unit>
   </file>

@@ -1,45 +1,40 @@
-import {ApplicationConfig, importProvidersFrom, isDevMode, LOCALE_ID} from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {
+  ApplicationConfig,
+  enableProdMode,
+  isDevMode,
+  LOCALE_ID,
+  provideExperimentalZonelessChangeDetection
+} from '@angular/core';
+import {provideRouter} from '@angular/router';
 
-import { routes } from './app.routes';
-import {BrowserModule, provideClientHydration} from '@angular/platform-browser';
-import {HttpClient, provideHttpClient} from "@angular/common/http";
+import {routes} from './app.routes';
+import {BrowserModule, provideClientHydration, withI18nSupport} from '@angular/platform-browser';
+import {provideHttpClient} from "@angular/common/http";
 import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
 import {environment} from "../environment/environment";
 import {getAnalytics, provideAnalytics} from "@angular/fire/analytics";
-import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
-import {isSupportedLanguageCodeEnum, LanguageCodeEnum} from "./enum/language-code.enum";
+import {isSupportedLanguageCodeEnum} from "./enum/language-code.enum";
 import {tokens} from "./token";
 import {AppService} from "./app.service";
 import {DEFAULTS, SETTINGS} from "@angular/fire/compat/remote-config";
-import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {DOCUMENT} from "@angular/common";
 
-// AoT requires an exported function for factories
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+if (environment.production) {
+  enableProdMode();
 }
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    provideClientHydration(),
+    provideClientHydration(
+      withI18nSupport(),
+    ),
+
+    provideExperimentalZonelessChangeDetection(),
 
     provideHttpClient(),
-    BrowserModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
-    importProvidersFrom(
-      TranslateModule.forRoot({
-        useDefaultLang: true,
-        defaultLanguage: LanguageCodeEnum.uk,
-        loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-        }
-      })
-    ),
 
     ...tokens,
     {
@@ -81,8 +76,8 @@ export const appConfig: ApplicationConfig = {
 
           return environment.config.language;
         })();
-        appService.translateService.use(userLang);
-        return appService.translateService.currentLang;
+        return userLang;
+
       },
     },
     {
