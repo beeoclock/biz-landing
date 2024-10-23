@@ -1,19 +1,18 @@
 <div class="wrapper w-full flex justify-center">
   <div class="w-full max-w-[1440px]">
     <nav class="phone:landscape:px-5 max-lg:landscape:px:5 phone:px-5 w-full lg:px-5 xl:px-0 bg-[#FFFFFF] fixed md:static z-20
-                text-black flex justify-between items-center h-[60px] md:h-[90px] max-w-[1200px] mx-auto lg:mb-[58px] md:mb-0"
+                text-black flex justify-between items-center h-[70px] md:h-[90px] max-w-[1200px] mx-auto lg:mb-[58px] md:mb-0"
     >
       <div class="h-[60px] md:h-[70px] justify-between items-center w-full flex">
         <div class="flex items-center w-[200px]">
           <a href="#" id="logo-link" class="flex gap-[14px]">
             <img ngSrc="assets/new_logo.svg" alt="Bee O`clock Logo" height="38" width="38">
-            <img class="phone:hidden lg:block max-lg:hidden" ngSrc="assets/logo_text.svg" alt="Bee O`clock" height="16"
-                 width="119"
-            >
+            <img ngSrc="assets/logo_text.svg" class="phone:hidden lg:block max-lg:hidden" alt="Bee O`clock"
+                 height="38" width="119">
           </a>
         </div>
         <div class="flex justify-center lg:hidden w-full">
-          <img ngSrc="assets/logo_text.svg" alt="Bee O`clock" height="16" width="119">
+          <img ngSrc="assets/logo_text.svg" alt="Bee O`clock" height="38" width="119">
         </div>
         <div class="flex lg:hidden w-[200px] justify-end">
           <button (click)="toggleMobileMenu()" id="mobile-menu-button"
@@ -91,7 +90,7 @@
           </div>
           <button type="button"
                   id="try-free-button"
-                  class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto"
+                  class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800] transition-all"
                   i18n
           >
             Try it for free
@@ -105,6 +104,55 @@
           <img class="absolute top-[4%] right-[67%]" ngSrc="assets/img/service_details.png" alt="line" height="137"
                width="200"
           >
+        </div>
+      </div>
+    </section>
+    <section class="flex w-full justify-center">
+      <div class="flex w-full max-w-[1200px] items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0">
+        <div class="flex">
+          <img ngSrc="assets/img/img.webp" alt="Bee O`clock service details" height="756" width="748">
+        </div>
+        <div class="text-4xl flex items-center flex-col">
+          <div class="flex justify-start w-full mb-[30px] phone:flex-col">
+            <h2 class="font-bold text-black mr-2 md:mr-1">Можливості</h2>
+            <h2 class="font-bold text-[#FFD429]">Bee o'clock</h2></div>
+          <div>
+            <ul class="flex flex-col gap-[20px]  [&>div>li>h3]:font-bold [&>div>li>h3]:text-[20px] [%>div>li>p]:font-medium
+                       [&>div>li>p]:text-[16px] [&>div>li]:max-w-[524px] leading-7 [&>div]:flex">
+              <div>
+                <ng-icon name="bootstrapCheck" class="pr-12"/>
+                <li>
+                  <h3>Автоматизація записів</h3>
+                  <p>Забудьте про плутанину з записами. Наш сервіс автоматизує процеси запису клієнтів, дозволяючи вам
+                    зосередитися на роботі, а не на адмініструванні записів.</p>
+                </li>
+              </div>
+              <div>
+                <ng-icon name="bootstrapCheck" class="pr-12"/>
+                <li>
+                  <h3>Нагадування клієнтам</h3>
+                  <p>Впевніться, що ваші клієнти завжди пам’ятають про візит! Автоматичні SMS та email-нагадування
+                    забезпечать своєчасний прихід клієнтів і зменшать кількість пропущених зустрічей.</p>
+                </li>
+              </div>
+              <div>
+                <ng-icon name="bootstrapCheck" class="pr-12"/>
+                <li>
+                  <h3>Кастомізація під ваш бізнес</h3>
+                  <p>Зробіть Bee o’clock частиною вашого бренду! Ви можете налаштувати кожний інтерфейс сервісу під свій
+                    стиль і бренд, що дозволяє індивідуалізувати робочі процеси.</p>
+                </li>
+              </div>
+              <div>
+                <ng-icon name="bootstrapCheck" class="pr-12"/>
+                <li>
+                  <h3>Управління записами онлайн</h3>
+                  <p>Вся інформація під рукою — ви маєте доступ до історії клієнтів, розкладу та записів з будь-якого
+                    пристрою. Ви зможете приймати рішення будь-де і будь-коли.</p>
+                </li>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
