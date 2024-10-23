@@ -2,7 +2,6 @@ import {
   Component,
   LOCALE_ID,
   HostListener,
-  Inject,
   inject,
   OnInit,
   PLATFORM_ID,
@@ -13,7 +12,7 @@ import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
 import {isPlatformBrowser, isPlatformServer, NgOptimizedImage} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
-import {bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
+import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
 
@@ -28,9 +27,9 @@ import {MenuUseCase} from "./enum/menu-use-case.enum";
     NgIcon,
   ],
   viewProviders: [
-    provideIcons({bootstrapXLg, bootstrapThreeDots}),
+    provideIcons({bootstrapXLg, bootstrapThreeDots, bootstrapCheck}),
     provideNgIconsConfig({
-      size: '1.5em',
+
     }),
   ],
   host: {
@@ -42,21 +41,19 @@ export class AppComponent implements OnInit {
   public MenuUseCase = MenuUseCase;
 
   public readonly menuItems: IMenuItem[] = [
-    { id: 1, name: $localize`Services`, link: '#', useCase: MenuUseCase.Both },
-    { id: 2, name: $localize`Tariffs`, link: '#', useCase: MenuUseCase.Both },
-    { id: 3, name: $localize`Reviews`, link: '#', useCase: MenuUseCase.Desktop },
-    { id: 4, name: $localize`FAQ`, link: '#', useCase: MenuUseCase.Both },
-    { id: 5, name: $localize`About Us`, link: '#', useCase: MenuUseCase.Desktop },
+    { id: 1, name: $localize`Services`, link: '#services', useCase: MenuUseCase.Both },
+    { id: 2, name: $localize`Tariffs`, link: '#tariffs', useCase: MenuUseCase.Both },
+    { id: 3, name: $localize`Reviews`, link: '#reviews', useCase: MenuUseCase.Desktop },
+    { id: 4, name: $localize`FAQ`, link: '#faq', useCase: MenuUseCase.Both },
+    { id: 5, name: $localize`About Us`, link: '#about-us', useCase: MenuUseCase.Desktop },
     { id: 6, name: $localize`Order a consultation`, link: '#', useCase: MenuUseCase.Mobile },
     { id: 7, name: $localize`Try a demo account`, link: '#', useCase: MenuUseCase.Mobile },
     { id: 8, name: $localize`Login`, link: '#', useCase: MenuUseCase.Mobile },
   ];
 
-
   private readonly localeId = inject(LOCALE_ID);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly socialShareSeoService = inject(SocialShareSeoService);
-  public aspectRatio: number | null = null;
   private readonly isBrowser: boolean;
 
   public readonly demoAccountUrl = new URL(environment.config.demoAccount.panelUrl);
@@ -64,6 +61,7 @@ export class AppComponent implements OnInit {
   public readonly host = [environment.config.host, this.localeId];
   public readonly consultationLink = environment.config.consultationLink;
   public isMobileMenuOpen = false;
+  public aspectRatio: number | null = null;
 
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
