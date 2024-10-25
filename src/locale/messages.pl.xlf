@@ -84,8 +84,8 @@
     </unit>
     <unit id="seo.header.description">
       <segment state="initial">
-        <source>Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
-        <target>Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży</target>
+        <source id='1'>Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
+        <target id='1'>Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży</target>
       </segment>
     </unit>
     <unit id="seo.header.keywords">
@@ -106,6 +106,59 @@
         <target>Bee O&apos;clock</target>
       </segment>
     </unit>
+    <unit id="368381012328092097">
+      <segment state="initial">
+        <source>Opportunities</source>
+        <target>Właściwości</target>
+      </segment>
+    </unit>
+    <unit id="6891840319588833020">
+      <segment state="initial">
+        <source>Automate records</source>
+        <target>Automatyzacja publikacji</target>
+      </segment>
+    </unit>
+    <unit id="5452253478250635820">
+      <segment state="initial">
+        <source>Forget about confusion with records. Our service automates customer onboarding processes, allowing you to focus on your work, not on record administration.</source>
+        <target>Zapomnij o zagmatwanych rejestrach. Nasza usługa automatyzuje procesy wdrażania klientów, pozwalając skupić sięna swojej pracy, a nie na zadaniach administracyjnych.</target>
+      </segment>
+    </unit>
+    <unit id="3732033756571014582">
+      <segment state="initial">
+        <source>Reminder to clients</source>
+        <target>Przypomnienia dla klientów</target>
+      </segment>
+    </unit>
+    <unit id="1740823155458190052">
+      <segment state="initial">
+        <source>Make sure your customers always remember their visit! Automatic SMS and email reminders will ensure that your clients arrive on time and reduce the number of missed appointments.</source>
+        <target>Od teraz Twoi klienci zawsze będą pamiętać o swojej wizycie! Automatyczne przypomnienia SMS i e-mail zapewnią punktualne przybycie klientów i zmniejszą liczbę nieodebranych wizyt.</target>
+      </segment>
+    </unit>
+    <unit id="5162287718938938685">
+      <segment state="initial">
+        <source>Customized for your business</source>
+        <target>Dostosowanie do potrzeb Twojej firmy</target>
+      </segment>
+    </unit>
+    <unit id="3838889887687918421">
+      <segment state="initial">
+        <source>Make Bee o&apos;clock a part of your brand! You can customize each interface of the service to your style and brand, which allows you to individualize your workflows.</source>
+        <target>Uczyń Bee o'clock częścią swojej marki! Możesz dostosować kolory interfejsu usługi, aby pasowały do stylu Twojej biznesu, co doda indywidualności i harmonii Twojej pracy.</target>
+      </segment>
+    </unit>
+    <unit id="5457809380934707352">
+      <segment state="initial">
+        <source>Manage your records online</source>
+        <target>Zarządzanie zapisami online</target>
+      </segment>
+    </unit>
+    <unit id="4018557285768677174">
+      <segment state="initial">
+        <source>All information is at your fingertips - you can access customer history, schedules, and records from any device. You can make decisions anywhere and anytime.</source>
+        <target>Wszystkie informacje są na wyciągnięcie ręki - od klientów po historię wizyt. Uzyskaj dostęp do swojego harmonogramu i zapisów z dowolnego urządzenia, umożliwiając pracę w dowolnym miejscu i czasie.</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
-

@@ -32,7 +32,8 @@ module.exports = {
         primary: {
           DEFAULT: '#FF8A4C',
         }
-      }
+      },
+      'main-hover': '#FFC907'
     }
   },
   plugins: [
