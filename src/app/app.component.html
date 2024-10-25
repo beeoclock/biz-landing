@@ -28,7 +28,7 @@
           @for (item of menuItems; track item.id) {
             @if (item.useCase === MenuUseCase.Desktop || item.useCase === MenuUseCase.Both) {
               <a [href]="item.link" id="{{item.name}}-link-nav"
-                 class="hover:bg-[#FFC907] hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px]"
+                 class="hover:bg-main-hover hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px]"
                  i18n
               >
                 {{ item.name }}
@@ -37,7 +37,7 @@
           }
         </div>
         <div class="phone:hidden justify-end hidden md:flex font-medium w-[200px]">
-          <a href="#" class="hover:bg-[#FFC907] hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px]" i18n>
+          <a href="#" class="hover:bg-main-hover hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px]" i18n>
             Login
           </a>
         </div>
