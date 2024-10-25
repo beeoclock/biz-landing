@@ -26,11 +26,6 @@
         <source> Try it for free </source>
       </segment>
     </unit>
-    <unit id="1908285951500318953">
-      <segment>
-        <source> Login </source>
-      </segment>
-    </unit>
     <unit id="7708270344948043036">
       <segment>
         <source>
@@ -91,6 +86,51 @@
     <unit id="seo.header.title">
       <segment>
         <source>Bee O&apos;clock</source>
+      </segment>
+    </unit>
+    <unit id="1740823155458190052">
+      <segment>
+        <source>Make sure your customers always remember their visit! Automatic SMS and email reminders will ensure that your clients arrive on time and reduce the number of missed appointments.</source>
+      </segment>
+    </unit>
+    <unit id="368381012328092097">
+      <segment>
+        <source>Opportunities</source>
+      </segment>
+    </unit>
+    <unit id="3732033756571014582">
+      <segment>
+        <source>Reminder to clients</source>
+      </segment>
+    </unit>
+    <unit id="3838889887687918421">
+      <segment>
+        <source>Make Bee o&apos;clock a part of your brand! You can customize each interface of the service to your style and brand, which allows you to individualize your workflows.</source>
+      </segment>
+    </unit>
+    <unit id="4018557285768677174">
+      <segment>
+        <source>All information is at your fingertips - you can access customer history, schedules, and records from any device. You can make decisions anywhere and anytime.</source>
+      </segment>
+    </unit>
+    <unit id="5162287718938938685">
+      <segment>
+        <source>Customized for your business</source>
+      </segment>
+    </unit>
+    <unit id="5452253478250635820">
+      <segment>
+        <source>Forget about confusion with records. Our service automates customer onboarding processes, allowing you to focus on your work, not on record administration.</source>
+      </segment>
+    </unit>
+    <unit id="5457809380934707352">
+      <segment>
+        <source>Manage your records online</source>
+      </segment>
+    </unit>
+    <unit id="6891840319588833020">
+      <segment>
+        <source>Automate records</source>
       </segment>
     </unit>
   </file>
