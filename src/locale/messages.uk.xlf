@@ -120,14 +120,8 @@
     </unit>
     <unit id="5452253478250635820">
       <segment state="initial">
-        <source>
-          Forget about confusion with records. Our service automates customer onboarding processes, allowing you to
-          focus on your work, not on record administration.
-        </source>
-        <target>
-          Забудьте про плутанину в записах. Наш сервіс автоматизує процеси запису клієнтів, дозволяючи вам зосередитися
-          на роботі, а не на адміністративних завданнях.
-        </target>
+        <source>Forget about confusion with records. Our service automates customer onboarding processes, allowing you to focus on your work, not on record administration.</source>
+        <target>Забудьте про плутанину в записах. Наш сервіс автоматизує процеси запису клієнтів, дозволяючи вам зосередитися на роботі, а не на адміністративних завданнях.</target>
       </segment>
     </unit>
     <unit id="3732033756571014582">
@@ -138,14 +132,8 @@
     </unit>
     <unit id="1740823155458190052">
       <segment state="initial">
-        <source>
-          Make sure your customers always remember their visit! Automatic SMS and email reminders will ensure that
-          your clients arrive on time and reduce the number of missed appointments.
-        </source>
-        <target>
-          Відтепер ваші клієнти завжди пам’ятатимуть про візит! Автоматичні SMS та email-нагадування забезпечать
-          своєчасний прихід клієнтів і зменшать кількість пропущених зустрічей.
-        </target>
+        <source>Make sure your customers always remember their visit! Automatic SMS and email reminders will ensure that your clients arrive on time and reduce the number of missed appointments.</source>
+        <target>Відтепер ваші клієнти завжди пам’ятатимуть про візит! Автоматичні SMS та email-нагадування забезпечать своєчасний прихід клієнтів і зменшать кількість пропущених зустрічей.</target>
       </segment>
     </unit>
     <unit id="5162287718938938685">
@@ -156,14 +144,8 @@
     </unit>
     <unit id="3838889887687918421">
       <segment state="initial">
-        <source>
-          Make Bee o&apos;clock a part of your brand! You can customize each interface of the service to your style
-          and brand, which allows you to individualize your workflows.
-        </source>
-        <target>
-          Зробіть Bee o’clock частиною вашого бренду! Ви можете налаштувати кольори інтерфейсу сервісу під стиль вашого
-          бізнесу, що додасть індивідуальності й гармонії в роботі.
-        .</target>
+        <source>Make Bee o&apos;clock a part of your brand! You can customize each interface of the service to your style and brand, which allows you to individualize your workflows.</source>
+        <target>Зробіть Bee o’clock частиною вашого бренду! Ви можете налаштувати кольори інтерфейсу сервісу під стиль вашого бізнесу, що додасть індивідуальності й гармонії в роботі.</target>
       </segment>
     </unit>
     <unit id="5457809380934707352">
@@ -174,14 +156,8 @@
     </unit>
     <unit id="4018557285768677174">
       <segment state="initial">
-        <source>
-          All information is at your fingertips - you can access customer history, schedules, and records from any
-          device. You can make decisions anywhere and anytime.
-        </source>
-        <target>
-          Вся інформація під рукою — від клієнтів до історії відвідувань. Доступ до розкладу та записів із
-          будь-якого пристрою, що дозволяє працювати будь-де і будь-коли.
-        </target>
+        <source>All information is at your fingertips - you can access customer history, schedules, and records from any device. You can make decisions anywhere and anytime.</source>
+        <target>Вся інформація під рукою — від клієнтів до історії відвідувань. Доступ до розкладу та записів із будь-якого пристрою, що дозволяє працювати будь-де і будь-коли.</target>
       </segment>
     </unit>
   </file>
