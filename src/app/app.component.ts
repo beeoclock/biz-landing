@@ -29,7 +29,7 @@ import {MenuUseCase} from "./enum/menu-use-case.enum";
   viewProviders: [
     provideIcons({bootstrapXLg, bootstrapThreeDots, bootstrapCheck}),
     provideNgIconsConfig({
-      size: '1em',
+      size: '1.5em',
     }),
   ],
   host: {

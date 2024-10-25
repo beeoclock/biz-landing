@@ -106,5 +106,83 @@
         <target>Bee O&apos;clock</target>
       </segment>
     </unit>
+    <unit id="368381012328092097">
+      <segment state="initial">
+        <source>Opportunities</source>
+        <target>Mulighederne</target>
+      </segment>
+    </unit>
+    <unit id="6891840319588833020">
+      <segment state="initial">
+        <source>Automate records</source>
+        <target>Automatiser registreringer</target>
+      </segment>
+    </unit>
+    <unit id="5452253478250635820">
+      <segment state="initial">
+        <source>
+          Forget about confusion with records. Our service automates customer onboarding processes, allowing you to focus
+          on your work, not on record administration.
+        </source>
+        <target>
+          Glem alt om forvirring med registreringer. Vores service automatiserer onboarding-processer for kunder, så du
+          kan fokusere på dit arbejde, ikke på administration af journaler.
+        </target>
+      </segment>
+    </unit>
+    <unit id="3732033756571014582">
+      <segment state="initial">
+        <source>Reminder to clients</source>
+        <target>Reminder to clients</target>
+      </segment>
+    </unit>
+    <unit id="1740823155458190052">
+      <segment state="initial">
+        <source>
+          Make sure your customers always remember their visit! Automatic SMS and email reminders will ensure that your
+          clients arrive on time and reduce the number of missed appointments.
+        </source>
+        <target>
+          Sørg for, at dine kunder altid husker deres besøg! Automatiske SMS- og e-mail-påmindelser sikrer, at dine
+          kunder kommer til tiden og reducerer antallet af ubesvarede aftaler.
+        </target>
+      </segment>
+    </unit>
+    <unit id="5162287718938938685">
+      <segment state="initial">
+        <source>Customized for your business</source>
+        <target>Skræddersyet til din virksomhed</target>
+      </segment>
+    </unit>
+    <unit id="3838889887687918421">
+      <segment state="initial">
+        <source>
+          Make Bee o&apos;clock a part of your brand! You can customize each interface of the service to your style and
+          brand, which allows you to individualize your workflows.
+        </source>
+        <target>
+          Gør Bee o&apos;clock til en del af dit brand! Du kan tilpasse hver grænseflade i tjenesten til din stil og dit
+          brand, hvilket giver dig mulighed for at individualisere dine arbejdsgange.
+        </target>
+      </segment>
+    </unit>
+    <unit id="5457809380934707352">
+      <segment state="initial">
+        <source>Manage your records online</source>
+        <target>Håndter dine optegnelser online</target>
+      </segment>
+    </unit>
+    <unit id="4018557285768677174">
+      <segment state="initial">
+        <source>
+          All information is at your fingertips - you can access customer history, schedules, and records from any device.
+          You can make decisions anywhere and anytime.
+        </source>
+        <target>
+          Alle oplysninger er lige ved hånden - du kan få adgang til kundehistorik, tidsplaner og optegnelser fra enhver enhed.
+          Du kan træffe beslutninger hvor som helst og når som helst.
+        </target>
+      </segment>
+    </unit>
   </file>
 </xliff>
