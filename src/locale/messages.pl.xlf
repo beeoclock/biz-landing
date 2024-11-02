@@ -84,8 +84,8 @@
     </unit>
     <unit id="seo.header.description">
       <segment state="initial">
-        <source id='1'>Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
-        <target id='1'>Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży</target>
+        <source id="1">Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
+        <target id="1">Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży</target>
       </segment>
     </unit>
     <unit id="seo.header.keywords">
@@ -145,7 +145,7 @@
     <unit id="3838889887687918421">
       <segment state="initial">
         <source>Make Bee o&apos;clock a part of your brand! You can customize each interface of the service to your style and brand, which allows you to individualize your workflows.</source>
-        <target>Uczyń Bee o'clock częścią swojej marki! Możesz dostosować kolory interfejsu usługi, aby pasowały do stylu Twojej biznesu, co doda indywidualności i harmonii Twojej pracy.</target>
+        <target>Uczyń Bee o&apos;clock częścią swojej marki! Możesz dostosować kolory interfejsu usługi, aby pasowały do stylu Twojej biznesu, co doda indywidualności i harmonii Twojej pracy.</target>
       </segment>
     </unit>
     <unit id="5457809380934707352">
@@ -158,6 +158,12 @@
       <segment state="initial">
         <source>All information is at your fingertips - you can access customer history, schedules, and records from any device. You can make decisions anywhere and anytime.</source>
         <target>Wszystkie informacje są na wyciągnięcie ręki - od klientów po historię wizyt. Uzyskaj dostęp do swojego harmonogramu i zapisów z dowolnego urządzenia, umożliwiając pracę w dowolnym miejscu i czasie.</target>
+      </segment>
+    </unit>
+    <unit id="1908285951500318953">
+      <segment state="initial">
+        <source> Login </source>
+        <target> Login </target>
       </segment>
     </unit>
   </file>
