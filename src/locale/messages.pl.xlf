@@ -87,7 +87,7 @@
         <source id="1">Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
         <target id="1">Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży</target>
 
-        
+
 
       </segment>
     </unit>
@@ -169,8 +169,6 @@
         <target> Login </target>
       </segment>
     </unit>
-  </file>
-</xliff>
   </file>
 </xliff>
 
