@@ -31,9 +31,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "allowedCommonJsDependencies": [
-              "@firebase/auth"
-            ],
             "outputPath": "dist/biz-landing",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -44,7 +41,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "robots.txt",
+                "input": "environments/develop/",
+                "output": "./"
+              }
             ],
             "styles": [
               "src/styles.scss"
@@ -74,8 +76,21 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "src/environment/environment.ts",
-                  "with": "src/environment/environment.production.ts"
+                  "replace": "src/environments/environment.ts",
+                  "with": "environments/production/environment.ts"
+                }
+              ],
+              "prerender": {
+                "discoverRoutes": true,
+                "routesFile": "environments/production/routes.txt"
+              },
+              "assets": [
+                "src/favicon.ico",
+                "src/assets",
+                {
+                  "glob": "robots.txt",
+                  "input": "environments/production/",
+                  "output": "./"
                 }
               ],
               "outputHashing": "all"
@@ -97,20 +112,58 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "src/environment/environment.ts",
-                  "with": "src/environment/environment.production.ts"
+                  "replace": "src/environments/environment.ts",
+                  "with": "environments/production/environment.ts"
                 }
               ],
+              "assets": [
+                "src/favicon.ico",
+                "src/assets",
+                {
+                  "glob": "robots.txt",
+                  "input": "environments/production/",
+                  "output": "./"
+                }
+              ],
+              "prerender": {
+                "discoverRoutes": true,
+                "routesFile": "environments/production/routes.txt"
+              },
               "outputHashing": "all"
             },
-            "development": {
+            "develop": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "environments/develop/environment.ts"
+                }
+              ],
+              "prerender": {
+                "discoverRoutes": true,
+                "routesFile": "environments/develop/routes.txt"
+              }
             },
-            "prepare_development_base": {
+            "prepare_develop_base": {
               "localize": false,
               "deleteOutputPath": false,
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "environments/develop/environment.ts"
+                }
+              ],
+              "prerender": {
+                "discoverRoutes": true,
+                "routesFile": "environments/develop/routes.txt"
+              }
+            },
+            "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true

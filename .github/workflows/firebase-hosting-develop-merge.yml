@@ -23,4 +23,4 @@ jobs:
           channelId: live
           target: biz-dev-beeoclock
           projectId: beeoclock-develop
-          entrypoint: ./firebase/develop
+          entrypoint: ./environments/develop/firebase

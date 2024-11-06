@@ -8,16 +8,16 @@ import {
 import {provideRouter} from '@angular/router';
 
 import {routes} from './app.routes';
-import {BrowserModule, provideClientHydration, withI18nSupport} from '@angular/platform-browser';
+import {provideClientHydration, withI18nSupport} from '@angular/platform-browser';
 import {provideHttpClient} from "@angular/common/http";
 import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
-import {environment} from "../environment/environment";
 import {getAnalytics, provideAnalytics} from "@angular/fire/analytics";
 import {isSupportedLanguageCodeEnum} from "./enum/language-code.enum";
 import {tokens} from "./token";
 import {AppService} from "./app.service";
 import {DEFAULTS, SETTINGS} from "@angular/fire/compat/remote-config";
 import {DOCUMENT} from "@angular/common";
+import {environment} from "../environments/environment";
 
 if (environment.production) {
   enableProdMode();

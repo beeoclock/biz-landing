@@ -7,7 +7,6 @@ import {
   PLATFORM_ID,
   ViewEncapsulation
 } from '@angular/core';
-import {environment} from "../environment/environment";
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
 import {isPlatformBrowser, isPlatformServer, NgOptimizedImage} from "@angular/common";
@@ -15,6 +14,7 @@ import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
 import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
+import {environment} from "../environments/environment";
 
 @Component({
   selector: 'app-root',
