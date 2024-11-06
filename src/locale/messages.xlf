@@ -133,5 +133,10 @@
         <source>Automate records</source>
       </segment>
     </unit>
+    <unit id="1908285951500318953">
+      <segment>
+        <source> Login </source>
+      </segment>
+    </unit>
   </file>
 </xliff>

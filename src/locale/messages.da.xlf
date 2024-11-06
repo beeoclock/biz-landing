@@ -160,5 +160,11 @@
         <target>Alle oplysninger er lige ved hånden - du kan få adgang til kundehistorik, tidsplaner og optegnelser fra enhver enhed. Du kan træffe beslutninger hvor som helst og når som helst.</target>
       </segment>
     </unit>
+    <unit id="1908285951500318953">
+      <segment state="initial">
+        <source> Login </source>
+        <target> Log ind </target>
+      </segment>
+    </unit>
   </file>
 </xliff>
