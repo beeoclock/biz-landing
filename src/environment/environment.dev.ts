@@ -5,7 +5,8 @@ export const environment = {
     projectId: "beeoclock-develop",
     storageBucket: "beeoclock-develop.appspot.com",
     messagingSenderId: "957741407419",
-    appId: "1:957741407419:web:4c7e90f6e06f697daa5d9e"
+    appId: "1:957741407419:web:4c7e90f6e06f697daa5d9e",
+    measurementId: "G-CS1RTNPTP2"
   },
   production: true,
   config: {
