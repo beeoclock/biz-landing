@@ -84,8 +84,11 @@
     </unit>
     <unit id="seo.header.description">
       <segment state="initial">
-        <source id='1'>Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
-        <target id='1'>Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży</target>
+        <source id="1">Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
+        <target id="1">Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży</target>
+
+
+
       </segment>
     </unit>
     <unit id="seo.header.keywords">
@@ -160,5 +163,12 @@
         <target>Wszystkie informacje są na wyciągnięcie ręki - od klientów po historię wizyt. Uzyskaj dostęp do swojego harmonogramu i zapisów z dowolnego urządzenia, umożliwiając pracę w dowolnym miejscu i czasie.</target>
       </segment>
     </unit>
+    <unit id="1908285951500318953">
+      <segment state="initial">
+        <source> Login </source>
+        <target> Login </target>
+      </segment>
+    </unit>
   </file>
 </xliff>
+
