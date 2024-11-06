@@ -1,12 +1,12 @@
 export const environment = {
   firebase: {
-    apiKey: "AIzaSyDwj-I3xgErbKnJqMVGqd1uqIb20qRlS44",
+    apiKey: "AIzaSyB-RziOp9SMEldE8K5c6alrXTk6XnJ5fHA",
     authDomain: "bee-o-clock.firebaseapp.com",
     projectId: "bee-o-clock",
     storageBucket: "bee-o-clock.appspot.com",
     messagingSenderId: "188732223564",
-    appId: "1:188732223564:web:1e02037c639de2f20504e9",
-    measurementId: "G-K8P2YKJSPF"
+    appId: "1:188732223564:web:55b1c0d719fc1af20504e9",
+    measurementId: "G-HM469DJ76D"
   },
   production: true,
   config: {
