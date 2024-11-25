@@ -131,7 +131,7 @@
               },
               "outputHashing": "all"
             },
-            "develop": {
+            "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
@@ -146,7 +146,7 @@
                 "routesFile": "environments/develop/routes.txt"
               }
             },
-            "prepare_develop_base": {
+            "prepare_development_base": {
               "localize": false,
               "deleteOutputPath": false,
               "optimization": false,
@@ -163,7 +163,7 @@
                 "routesFile": "environments/develop/routes.txt"
               }
             },
-            "development": {
+            "develop": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,

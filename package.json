@@ -16,7 +16,7 @@
     "build:ssr": "ng build && ng run biz-landing:server",
     "prerender": "ng run biz-landing:prerender",
     "i18n:extract": "ng extract-i18n",
-    "build:firebase:development": "ng build --configuration development --output-path=./environments/develop/firebasedist && npm run build:firebase:prepare_development_base --output-path=./environments/develop/firebase/dist",
+    "build:firebase:development": "ng build --configuration development --output-path=./environments/develop/firebase/dist && npm run build:firebase:prepare_development_base --output-path=./environments/develop/firebase/dist",
     "build:firebase:prepare_development_base": "ng build --configuration prepare_development_base --output-path=./environments/develop/firebase/dist",
     "build:firebase:production": "ng build --configuration production --output-path=./environments/production/firebase/dist && npm run build:firebase:prepare_production_base --output-path=./environments/production/firebase/dist",
     "build:firebase:prepare_production_base": "ng build --configuration prepare_production_base --output-path=./environments/production/firebase/dist"
