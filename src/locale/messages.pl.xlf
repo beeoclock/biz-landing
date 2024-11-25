@@ -86,9 +86,6 @@
       <segment state="initial">
         <source id="1">Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
         <target id="1">Zarządzaj swoimi spotkaniami, kalendarzem i klientami w podróży</target>
-
-
-
       </segment>
     </unit>
     <unit id="seo.header.keywords">
@@ -148,7 +145,7 @@
     <unit id="3838889887687918421">
       <segment state="initial">
         <source>Make Bee o&apos;clock a part of your brand! You can customize each interface of the service to your style and brand, which allows you to individualize your workflows.</source>
-        <target>Uczyń Bee o'clock częścią swojej marki! Możesz dostosować kolory interfejsu usługi, aby pasowały do stylu Twojej biznesu, co doda indywidualności i harmonii Twojej pracy.</target>
+        <target>Uczyń Bee o&apos;clock częścią swojej marki! Możesz dostosować kolory interfejsu usługi, aby pasowały do stylu Twojej biznesu, co doda indywidualności i harmonii Twojej pracy.</target>
       </segment>
     </unit>
     <unit id="5457809380934707352">
@@ -169,6 +166,77 @@
         <target> Login </target>
       </segment>
     </unit>
+    <unit id="879650116501482755">
+      <segment state="initial">
+        <source>How does it work?</source>
+        <target>Jak to działa?</target>
+      </segment>
+    </unit>
+    <unit id="6075954856904697133">
+      <segment state="initial">
+        <source>Registration on the platform</source>
+        <target>Rejestracja na platformie</target>
+      </segment>
+    </unit>
+    <unit id="8794739238241286861">
+      <segment state="initial">
+        <source>Create an account: Fill in basic information about your business, add address and contact details.</source>
+        <target>Utwórz konto: Podaj podstawowe informacje o swojej firmie, dodaj adres i dane kontaktowe.</target>
+      </segment>
+    </unit>
+    <unit id="5095119527158275841">
+      <segment state="initial">
+        <source>Service settings</source>
+        <target>Ustawienia usługi</target>
+      </segment>
+    </unit>
+    <unit id="7736403083717360411">
+      <segment state="initial">
+        <source>Add your services: Specify the list of services, their duration and cost.</source>
+        <target>Dodaj swoje usługi: Określ listę usług, czas ich trwania i koszt.</target>
+      </segment>
+    </unit>
+    <unit id="2292486472487615617">
+      <segment state="initial">
+        <source>Customer invitations</source>
+        <target>Zaproszenia klientów</target>
+      </segment>
+    </unit>
+    <unit id="1436694444410203003">
+      <segment state="initial">
+        <source>Control your schedule: Get notified about new recordings, view and manage your schedule in a convenient interface.</source>
+        <target>Kontroluj swój harmonogram: Otrzymuj powiadomienia o nowych nagraniach, przeglądaj harmonogram i zarządzaj nim w wygodnym interfejsie.</target>
+      </segment>
+    </unit>
+    <unit id="7123634690175978938">
+      <segment state="initial">
+        <source>Online customer registration</source>
+        <target>Rejestracja klienta on-line</target>
+      </segment>
+    </unit>
+    <unit id="5916941698320460151">
+      <segment state="initial">
+        <source>Convenient booking: Customers book a service and a convenient time online, without calling or waiting.</source>
+        <target>Wygodna rezerwacja: Klienci rezerwują usługę i dogodny termin online, bez dzwonienia i czekania.</target>
+      </segment>
+    </unit>
+    <unit id="6363114221294606387">
+      <segment state="initial">
+        <source>Managing records</source>
+        <target>Zarządzanie rekordami</target>
+      </segment>
+    </unit>
+    <unit id="7687221152441169151">
+      <segment state="initial">
+        <source>Analysis and development</source>
+        <target>Analiza i rozwój</target>
+      </segment>
+    </unit>
+    <unit id="8970166395194601366">
+      <segment state="initial">
+        <source>Track your success: Analyze your record and customer activity statistics to improve your service.</source>
+        <target>Śledź swój sukces: analizuj swoje dane i statystyki aktywności klientów, aby ulepszyć swoje usługi.</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
-
