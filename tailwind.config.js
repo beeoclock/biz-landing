@@ -1,5 +1,5 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -25,7 +25,13 @@ module.exports = {
       }
     },
     colors: {
-      ...colors,
+      gray: colors.gray,
+      neutral: colors.neutral,
+      slate: colors.slate,
+      stone: colors.stone,
+      sky: colors.sky,
+      rose: colors.rose,
+      amber: colors.amber,
       beeColor: colors.neutral,
       beeDarkColor: colors.neutral,
       beeoclock: {
@@ -41,5 +47,4 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
   ],
-}
-
+};
