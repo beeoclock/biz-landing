@@ -9,7 +9,7 @@
             <img ngSrc="assets/new_logo.svg" alt="Bee O`clock Logo" height="38" width="38">
 
 
-             <img ngSrc="assets/logo_text.svg" class="phone:hidden lg:block max-lg:hidden" alt="Bee O`clock"
+            <img ngSrc="assets/logo_text.svg" class="phone:hidden lg:block max-lg:hidden" alt="Bee O`clock"
                  height="38" width="119">
           </a>
         </div>
@@ -17,7 +17,8 @@
           <img ngSrc="assets/logo_text.svg" alt="Bee O`clock" height="38" width="119">
         </div>
         <div class="flex lg:hidden w-[200px] justify-end">
-          <button (click)="toggleMobileMenu()" id="mobile-menu-button" class="text-black focus:outline-none h-[100%] flex">
+          <button (click)="toggleMobileMenu()" id="mobile-menu-button" aria-label="close-open"
+                  class="text-black focus:outline-none h-[100%] flex">
             @if (isMobileMenuOpen) {
               <ng-icon name="bootstrapXLg"/>
             } @else {
@@ -38,7 +39,9 @@
           }
         </div>
         <div class="phone:hidden justify-end hidden md:flex font-medium w-[200px]">
-          <a href="#" class="hover:bg-main-hover hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px]" i18n>
+          <a href="#"
+             class="hover:bg-main-hover hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px]"
+             i18n>
             Login
           </a>
         </div>
@@ -61,35 +64,42 @@
       </div>
     </nav>
 
-    <section class="flex w-full justify-center mt-[90px] md:mt-0 phone:mb-7">
+    <section class="flex w-full justify-center mt-[90px] md:mt-0 phone:mb-7 xl:min-h-[810px]">
       <div class="flex flex-col landscape:flex-row md:flex-row items-center w-full max-w-[1200px] max-lg:px-5 landscape:gap-2.5
                   phone:landscape:px-5 phone:px-5 lg:px-5 xl:px-0"
       >
         <div class="flex lg:hidden relative w-full lg:mb-[20px] mb-0">
-          <img ngSrc="assets/img/main_mob.webp" priority alt="Bee O`clock service details image" height="286" width="335">
+          <img ngSrc="assets/img/main_mob.webp" priority alt="Bee O`clock service details image" height="286"
+               width="335">
         </div>
         <div class="text-wrapper mx-auto flex flex-wrap items-center w-full sm:max-w-[100%] lg:max-w-[40%] sm:px-0">
           <div class="max-w-[469px] mb-[30px] md:mb-10 landscape:h-full">
-            <p class="font-bold leading-[34px] text-[40px] phone:text-[32px] landscape:text-[30px] landscape:mb-2.5" i18n>
+            <p class="font-bold leading-[34px] text-[40px] phone:text-[32px] landscape:text-[30px] landscape:mb-2.5"
+               i18n>
               Online appointment booking for clients.
             </p>
             <p class="font-medium md:text-[20px]" i18n>
               A simple and effective tool for managing customer records in beauty salons and other businesses
             </p>
           </div>
-          <button type="button" id="try-free-button" class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800] transition-all" i18n>
+          <button type="button" id="try-free-button"
+                  class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800] transition-all"
+                  i18n>
             Try it for free
           </button>
         </div>
         <div class="relative hidden lg:block">
           <img ngSrc="assets/img/group.webp" priority alt="Bee O`clock service details image" height="715" width="721">
-          <img class="absolute top-[30%] right-[90%]" ngSrc="assets/img/vector_1.png" alt="Bee O`clock service schedule" height="78" width="40">
+          <img class="absolute top-[30%] right-[90%]" ngSrc="assets/img/vector_1.png" alt="Bee O`clock service schedule"
+               height="78" width="40">
           <img class="absolute top-[67%]" ngSrc="assets/img/vector_2.png" alt="line" height="48" width="78">
-          <img class="absolute top-[4%] right-[67%]" ngSrc="assets/img/service_details.png" alt="line" height="137" width="200">
+          <img class="absolute top-[4%] right-[67%]" ngSrc="assets/img/service_details.png" alt="line" height="137"
+               width="200">
         </div>
       </div>
     </section>
-    <section class="flex w-full justify-center">
+
+    <section class="flex w-full justify-center xl:min-h-[810px]">
       <div class="flex w-full max-w-[1200px] items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0 justify-between">
         <div class="flex">
           <img ngSrc="assets/img/img.webp" alt="Bee O`clock service details" height="614" width="542">
@@ -99,38 +109,106 @@
             <h2 class="font-bold text-black mr-2 md:mr-2" i18n>Opportunities</h2>
             <h2 class="font-bold text-[#FFD429]">Bee o'clock</h2></div>
           <div class="flex">
-            <ul class="flex flex-col gap-[20px] [&>li>div>h3]:font-bold [&>li>div>h3]:text-[20px] [&>li>div>p]:font-medium
+            <ul class="flex flex-col gap-[20px] [&>li>div>h3]:font-bold [&>li>div>h3]:text-xl [&>li>div>p]:font-medium
                        [&>li>div>p]:text-[16px] [&>li>div]:max-w-[524px] leading-7 [&>li]:flex"
             >
               <li>
                 <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"></ng-icon>
                 <div>
                   <h3 i18n>Automate records</h3>
-                  <p i18n>Forget about confusion with records. Our service automates customer onboarding processes, allowing you to focus on your work, not on record administration.</p>
+                  <p i18n>Forget about confusion with records. Our service automates customer onboarding processes,
+                    allowing you to focus on your work, not on record administration.</p>
                 </div>
               </li>
               <li>
                 <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
                 <div>
                   <h3 i18n>Reminder to clients</h3>
-                  <p i18n>Make sure your customers always remember their visit! Automatic SMS and email reminders will ensure that your clients arrive on time and reduce the number of missed appointments.</p>
+                  <p i18n>Make sure your customers always remember their visit! Automatic SMS and email reminders will
+                    ensure that your clients arrive on time and reduce the number of missed appointments.</p>
                 </div>
               </li>
               <li>
                 <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
                 <div>
                   <h3 i18n>Customized for your business</h3>
-                  <p i18n>Make Bee o'clock a part of your brand! You can customize each interface of the service to your style and brand, which allows you to individualize your workflows.</p>
+                  <p i18n>Make Bee o'clock a part of your brand! You can customize each interface of the service to your
+                    style and brand, which allows you to individualize your workflows.</p>
                 </div>
               </li>
               <li>
                 <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
                 <div>
                   <h3 i18n>Manage your records online</h3>
-                  <p i18n>All information is at your fingertips - you can access customer history, schedules, and records from any device. You can make decisions anywhere and anytime.</p>
+                  <p i18n>All information is at your fingertips - you can access customer history, schedules, and
+                    records from any device. You can make decisions anywhere and anytime.</p>
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex w-full justify-center xl:min-h-[810px]">
+      <div class="flex w-full max-w-[1040px] items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0 justify-between">
+        <div class="w-full flex flex-col">
+          <h2 class="font-bold text-4xl text-black mb-[26px] phone:pt-12 phone:flex" i18n>How does it work?</h2>
+          <div class="flex gap-5 flex-wrap [&>div]:bg-[#F4F4F4] [&>div]:rounded-[32px] [&>div]:flex [&>div]:max-w-[510px]
+                      [&>div]:w-full [&>div]:h-[180px] [&>div>p]:font-bold [&>div>p]:text-[128px] [&>div>p]:text-[#CACACA]
+                      [&>div>div>h3]:font-bold [&>div>div>h3]:text-x [&>div>div]:flex [&>div>div]:flex-col [&>div>div]:item-center
+                      [&>div>div]:justify-center [&>div>div>p]:max-w-[268px] [&>div]:justify-around [&>div>div:last-child]:phone:hidden
+                      [&>div>div>p]:phone:text-[16px] [&>div]:phone:h-[170px] [&>div>p]:phone:mr-2 [&>div>p]:flex
+                      [&>div>p]:w-[90px] [&>div>p]:justify-center [&>div]:items-center"
+          >
+            <div>
+              <p>1</p>
+              <div>
+                <h3 i18n>Registration on the platform</h3>
+                <p i18n>Create an account: Fill in basic information about your business, add address and contact details.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/1.png" alt="registration" height="120" width="120"></div>
+            </div>
+            <div>
+              <p>2</p>
+              <div>
+                <h3 i18n>Service settings</h3>
+                <p i18n>Add your services: Specify the list of services, their duration and cost.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/2.png" alt="service settings" height="120" width="120"></div>
+            </div>
+            <div>
+              <p>3</p>
+              <div>
+                <h3 i18n>Customer invitations</h3>
+                <p i18n>Control your schedule: Get notified about new recordings, view and manage your schedule in a convenient interface.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/3.png" alt="customer" height="120" width="120"></div>
+            </div>
+            <div>
+              <p>4</p>
+              <div>
+                <h3 i18n>Online customer registration</h3>
+                <p i18n>Convenient booking: Customers book a service and a convenient time online, without calling or waiting.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/4.png" alt="customer" height="120" width="120"></div>
+            </div>
+            <div>
+              <p>5</p>
+              <div>
+                <h3 i18n>Managing records</h3>
+                <p i18n>Control your schedule: Get notified about new recordings, view and manage your schedule in a convenient interface.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/5.png" alt="records" height="120" width="120"></div>
+            </div>
+            <div>
+              <p>6</p>
+              <div>
+                <h3 i18n>Analysis and development</h3>
+                <p i18n>Track your success: Analyze your record and customer activity statistics to improve your service.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/6.png" alt="analytics" height="120" width="120"></div>
+            </div>
           </div>
         </div>
       </div>

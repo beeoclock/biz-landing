@@ -166,5 +166,77 @@
         <target> Вхід </target>
       </segment>
     </unit>
+    <unit id="879650116501482755">
+      <segment state="initial">
+        <source>How does it work?</source>
+        <target>Як це працює?</target>
+      </segment>
+    </unit>
+    <unit id="6075954856904697133">
+      <segment state="initial">
+        <source>Registration on the platform</source>
+        <target>Реєстрація на платформі</target>
+      </segment>
+    </unit>
+    <unit id="8794739238241286861">
+      <segment state="initial">
+        <source>Create an account: Fill in basic information about your business, add address and contact details.</source>
+        <target>Створіть обліковий запис: Заповніть основну інформацію про ваш бізнес, додайте адресу та контактні дані.</target>
+      </segment>
+    </unit>
+    <unit id="5095119527158275841">
+      <segment state="initial">
+        <source>Service settings</source>
+        <target>Налаштування послуг</target>
+      </segment>
+    </unit>
+    <unit id="7736403083717360411">
+      <segment state="initial">
+        <source>Add your services: Specify the list of services, their duration and cost.</source>
+        <target>Додайте свої послуги: Вкажіть перелік послуг, їх тривалість та вартість.</target>
+      </segment>
+    </unit>
+    <unit id="2292486472487615617">
+      <segment state="initial">
+        <source>Customer invitations</source>
+        <target>Запрошення клієнтів</target>
+      </segment>
+    </unit>
+    <unit id="1436694444410203003">
+      <segment state="initial">
+        <source>Control your schedule: Get notified about new recordings, view and manage your schedule in a convenient interface.</source>
+        <target>Контролюйте розклад: Отримуйте сповіщення про нові записи, переглядайте та керуйте розкладом у зручному інтерфейсі.</target>
+      </segment>
+    </unit>
+    <unit id="7123634690175978938">
+      <segment state="initial">
+        <source>Online customer registration</source>
+        <target>Онлайн запис клієнтів</target>
+      </segment>
+    </unit>
+    <unit id="5916941698320460151">
+      <segment state="initial">
+        <source>Convenient booking: Customers book a service and a convenient time online, without calling or waiting.</source>
+        <target>Зручне бронювання: Клієнти бронюють послугу та зручний час онлайн, без дзвінків та очікувань.</target>
+      </segment>
+    </unit>
+    <unit id="6363114221294606387">
+      <segment state="initial">
+        <source>Managing records</source>
+        <target>Керування записами</target>
+      </segment>
+    </unit>
+    <unit id="7687221152441169151">
+      <segment state="initial">
+        <source>Analysis and development</source>
+        <target>Аналіз та розвиток</target>
+      </segment>
+    </unit>
+    <unit id="8970166395194601366">
+      <segment state="initial">
+        <source>Track your success: Analyze your record and customer activity statistics to improve your service.</source>
+        <target>Відстежуйте успіхи: Аналізуйте статистику записів та клієнтської активності для покращення вашого сервісу.</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

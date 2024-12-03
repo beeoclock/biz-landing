@@ -138,5 +138,65 @@
         <source> Login </source>
       </segment>
     </unit>
+    <unit id="1436694444410203003">
+      <segment>
+        <source>Control your schedule: Get notified about new recordings, view and manage your schedule in a convenient interface.</source>
+      </segment>
+    </unit>
+    <unit id="2292486472487615617">
+      <segment>
+        <source>Customer invitations</source>
+      </segment>
+    </unit>
+    <unit id="5095119527158275841">
+      <segment>
+        <source>Service settings</source>
+      </segment>
+    </unit>
+    <unit id="5916941698320460151">
+      <segment>
+        <source>Convenient booking: Customers book a service and a convenient time online, without calling or waiting.</source>
+      </segment>
+    </unit>
+    <unit id="6075954856904697133">
+      <segment>
+        <source>Registration on the platform</source>
+      </segment>
+    </unit>
+    <unit id="6363114221294606387">
+      <segment>
+        <source>Managing records</source>
+      </segment>
+    </unit>
+    <unit id="7123634690175978938">
+      <segment>
+        <source>Online customer registration</source>
+      </segment>
+    </unit>
+    <unit id="7687221152441169151">
+      <segment>
+        <source>Analysis and development</source>
+      </segment>
+    </unit>
+    <unit id="7736403083717360411">
+      <segment>
+        <source>Add your services: Specify the list of services, their duration and cost.</source>
+      </segment>
+    </unit>
+    <unit id="8794739238241286861">
+      <segment>
+        <source>Create an account: Fill in basic information about your business, add address and contact details.</source>
+      </segment>
+    </unit>
+    <unit id="879650116501482755">
+      <segment>
+        <source>How does it work?</source>
+      </segment>
+    </unit>
+    <unit id="8970166395194601366">
+      <segment>
+        <source>Track your success: Analyze your record and customer activity statistics to improve your service.</source>
+      </segment>
+    </unit>
   </file>
 </xliff>
