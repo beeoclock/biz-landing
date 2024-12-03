@@ -166,5 +166,77 @@
         <target> Log ind </target>
       </segment>
     </unit>
+    <unit id="879650116501482755">
+      <segment state="initial">
+        <source>How does it work?</source>
+        <target>Hvordan virker det?</target>
+      </segment>
+    </unit>
+    <unit id="6075954856904697133">
+      <segment state="initial">
+        <source>Registration on the platform</source>
+        <target>Tilmelding på platformen</target>
+      </segment>
+    </unit>
+    <unit id="8794739238241286861">
+      <segment state="initial">
+        <source>Create an account: Fill in basic information about your business, add address and contact details.</source>
+        <target>Opret en konto: Udfyld grundlæggende oplysninger om din virksomhed, tilføj adresse og kontaktoplysninger.</target>
+      </segment>
+    </unit>
+    <unit id="5095119527158275841">
+      <segment state="initial">
+        <source>Service settings</source>
+        <target>Tjenesteindstillinger</target>
+      </segment>
+    </unit>
+    <unit id="7736403083717360411">
+      <segment state="initial">
+        <source>Add your services: Specify the list of services, their duration and cost.</source>
+        <target>Tilføj dine tjenester: Angiv listen over tjenester, deres varighed og pris.</target>
+      </segment>
+    </unit>
+    <unit id="2292486472487615617">
+      <segment state="initial">
+        <source>Customer invitations</source>
+        <target>Kunde invitationer</target>
+      </segment>
+    </unit>
+    <unit id="1436694444410203003">
+      <segment state="initial">
+        <source>Control your schedule: Get notified about new recordings, view and manage your schedule in a convenient interface.</source>
+        <target>Styr din tidsplan: Få besked om nye optagelser, se og administrer din tidsplan i en praktisk grænseflade.</target>
+      </segment>
+    </unit>
+    <unit id="7123634690175978938">
+      <segment state="initial">
+        <source>Online customer registration</source>
+        <target>Online kunderegistrering</target>
+      </segment>
+    </unit>
+    <unit id="5916941698320460151">
+      <segment state="initial">
+        <source>Convenient booking: Customers book a service and a convenient time online, without calling or waiting.</source>
+        <target>Praktisk booking: Kunder bestiller en service og en bekvem tid online uden at ringe eller vente.</target>
+      </segment>
+    </unit>
+    <unit id="6363114221294606387">
+      <segment state="initial">
+        <source>Managing records</source>
+        <target>Håndtering af poster</target>
+      </segment>
+    </unit>
+    <unit id="7687221152441169151">
+      <segment state="initial">
+        <source>Analysis and development</source>
+        <target>Analyse og udvikling</target>
+      </segment>
+    </unit>
+    <unit id="8970166395194601366">
+      <segment state="initial">
+        <source>Track your success: Analyze your record and customer activity statistics to improve your service.</source>
+        <target>Spor din succes: Analyser din rekord og kundeaktivitetsstatistikker for at forbedre din service.</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
