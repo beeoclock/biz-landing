@@ -9,8 +9,8 @@ import {
   LOCALE_ID,
   OnInit,
   PLATFORM_ID,
-  ViewChild,
-  ViewEncapsulation
+  ViewEncapsulation,
+  viewChild
 } from '@angular/core';
 import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
@@ -94,11 +94,9 @@ export class ChangeLanguageComponent implements OnInit, AfterViewInit {
     language: new FormControl<LanguageCodeEnum>(LANGUAGES[0].code)
   });
 
-  @ViewChild('dropdownButton')
-  public dropdownButton!: ElementRef<HTMLButtonElement>;
+  readonly dropdownButton = viewChild.required<ElementRef<HTMLButtonElement>>('dropdownButton');
 
-  @ViewChild('dropdownMenu')
-  public dropdownMenu!: ElementRef<HTMLDivElement>;
+  readonly dropdownMenu = viewChild.required<ElementRef<HTMLDivElement>>('dropdownMenu');
 
   @Input()
   @HostBinding()
