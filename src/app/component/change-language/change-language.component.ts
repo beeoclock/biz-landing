@@ -9,10 +9,10 @@ import {
   LOCALE_ID,
   OnInit,
   PLATFORM_ID,
-  ViewEncapsulation,
-  viewChild
+  viewChild,
+  ViewEncapsulation
 } from '@angular/core';
-import {ActivatedRoute, Router, RouterLink} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {LanguageCodeEnum, LanguageRecord, LANGUAGES} from "../../enum/language-code.enum";
 import {WINDOW} from "../../token";
@@ -75,7 +75,6 @@ import {WINDOW} from "../../token";
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    RouterLink,
     ReactiveFormsModule
   ],
   encapsulation: ViewEncapsulation.None
