@@ -1,14 +1,5 @@
-import {
-  Component,
-  LOCALE_ID,
-  HostListener,
-  inject,
-  OnInit,
-  PLATFORM_ID,
-  ViewEncapsulation
-} from '@angular/core';
+import {Component, HostListener, inject, LOCALE_ID, OnInit, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
-import {ChangeLanguageComponent} from "./component/change-language/change-language.component";
 import {isPlatformBrowser, isPlatformServer, NgOptimizedImage} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
 import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
@@ -22,7 +13,6 @@ import {environment} from "../environments/environment";
   encapsulation: ViewEncapsulation.None,
   standalone: true,
   imports: [
-    ChangeLanguageComponent,
     NgOptimizedImage,
     NgIcon,
   ],
