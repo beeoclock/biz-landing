@@ -238,5 +238,11 @@
         <target>Відстежуйте успіхи: Аналізуйте статистику записів та клієнтської активності для покращення вашого сервісу.</target>
       </segment>
     </unit>
+    <unit id="7230578029671330213">
+      <segment state="initial">
+        <source>Get a unique link to your record page and share it via website, social media, or email.</source>
+        <target>Отримайте унікальне посилання на вашу сторінку запису та поділіться ним через сайт, соціальні мережі або електронну пошту.</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

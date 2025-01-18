@@ -238,5 +238,11 @@
         <target>Śledź swój sukces: analizuj swoje dane i statystyki aktywności klientów, aby ulepszyć swoje usługi.</target>
       </segment>
     </unit>
+    <unit id="7230578029671330213">
+      <segment state="initial">
+        <source>Get a unique link to your record page and share it via website, social media, or email.</source>
+        <target>Uzyskaj unikalny link do swojej strony z rekordami i udostępnij go za pośrednictwem swojej witryny internetowej, mediów społecznościowych lub poczty e-mail.</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
