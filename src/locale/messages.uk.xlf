@@ -238,5 +238,23 @@
         <target>Відстежуйте успіхи: Аналізуйте статистику записів та клієнтської активності для покращення вашого сервісу.</target>
       </segment>
     </unit>
+    <unit id="6509061853376529873">
+      <segment state="initial">
+        <source> Service for business: Simple online customer registration. </source>
+        <target> Сервіс для бізнесу: Простий онлайн запис клієнтів. </target>
+      </segment>
+    </unit>
+    <unit id="844020319655550932">
+      <segment state="initial">
+        <source> Order a demo access to the online customer recording service, a convenient solution without registration. </source>
+        <target> Безкоштовний демо доступ до сервісу онлайн запису клієнтів, оцініть переваги до реєстрації. </target>
+      </segment>
+    </unit>
+    <unit id="4223732254391797153">
+      <segment state="initial">
+        <source> Demo account </source>
+        <target> Демо акаунт </target>
+      </segment>
+    </unit>
   </file>
 </xliff>
