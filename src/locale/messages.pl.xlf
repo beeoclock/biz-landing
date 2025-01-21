@@ -244,5 +244,23 @@
         <target>Uzyskaj unikalny link do swojej strony z rekordami i udostępnij go za pośrednictwem swojej witryny internetowej, mediów społecznościowych lub poczty e-mail.</target>
       </segment>
     </unit>
+    <unit id="6509061853376529873">
+      <segment state="initial">
+        <source> Service for business: Simple online customer registration. </source>
+        <target> Usługa dla firm: Prosta rejestracja klientów online. </target>
+      </segment>
+    </unit>
+    <unit id="844020319655550932">
+      <segment state="initial">
+        <source> Order a demo access to the online customer recording service, a convenient solution without registration. </source>
+        <target> Zamów dostęp demo do usługi nagrywania klientów online, wygodnego rozwiązania bez rejestracji. </target>
+      </segment>
+    </unit>
+    <unit id="4223732254391797153">
+      <segment state="initial">
+        <source> Demo account </source>
+        <target> Konto demo </target>
+      </segment>
+    </unit>
   </file>
 </xliff>

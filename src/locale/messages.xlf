@@ -203,5 +203,20 @@
         <source>Get a unique link to your record page and share it via website, social media, or email.</source>
       </segment>
     </unit>
+    <unit id="4223732254391797153">
+      <segment>
+        <source> Demo account </source>
+      </segment>
+    </unit>
+    <unit id="6509061853376529873">
+      <segment>
+        <source> Service for business: Simple online customer registration. </source>
+      </segment>
+    </unit>
+    <unit id="844020319655550932">
+      <segment>
+        <source> Order a demo access to the online customer recording service, a convenient solution without registration. </source>
+      </segment>
+    </unit>
   </file>
 </xliff>
