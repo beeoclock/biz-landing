@@ -238,22 +238,10 @@
         <target>Śledź swój sukces: analizuj swoje dane i statystyki aktywności klientów, aby ulepszyć swoje usługi.</target>
       </segment>
     </unit>
-    <unit id="6509061853376529873">
+    <unit id="7230578029671330213">
       <segment state="initial">
-        <source> Service for business: Simple online customer registration. </source>
-        <target> Usługa dla firm: Prosta rejestracja klientów online. </target>
-      </segment>
-    </unit>
-    <unit id="844020319655550932">
-      <segment state="initial">
-        <source> Order a demo access to the online customer recording service, a convenient solution without registration. </source>
-        <target> Bezpłatny dostęp demonstracyjny do usługi nagrywania klientów online, ocena korzyści przed rejestracją. </target>
-      </segment>
-    </unit>
-    <unit id="4223732254391797153">
-      <segment state="initial">
-        <source> Demo account </source>
-        <target> Konto demo </target>
+        <source>Get a unique link to your record page and share it via website, social media, or email.</source>
+        <target>Uzyskaj unikalny link do swojej strony z rekordami i udostępnij go za pośrednictwem swojej witryny internetowej, mediów społecznościowych lub poczty e-mail.</target>
       </segment>
     </unit>
   </file>

@@ -238,6 +238,12 @@
         <target>Spor din succes: Analyser din rekord og kundeaktivitetsstatistikker for at forbedre din service.</target>
       </segment>
     </unit>
+    <unit id="7230578029671330213">
+      <segment state="initial">
+        <source>Get a unique link to your record page and share it via website, social media, or email.</source>
+        <target>Få et unikt link til din rekordside, og del det via din hjemmeside, sociale medier eller e-mail.</target>
+      </segment>
+    </unit>
     <unit id="6509061853376529873">
       <segment state="initial">
         <source> Service for business: Simple online customer registration. </source>
