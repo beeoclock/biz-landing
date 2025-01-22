@@ -216,10 +216,11 @@
     </section>
     <section class="flex w-full justify-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0">
       <div class="flex w-full max-w-[1040px] justify-center flex-col items-center phone:flex-col phone:gap-7 gap-4">
-        <div class="w-full flex justify-center">
-          <iframe class="max-w-[925px] w-full h-[569px] phone:h-[230px]"
+        <div class="w-full flex justify-center relative">
+          <img ngSrc="assets/img/demo.webp" alt="" height="569" width="926" priority class="phone:hidden">
+          <iframe class="max-w-[609px] w-full h-[440px] phone:h-[230px] absolute top-[10%] rounded-2xl phone:relative"
             src="https://www.youtube.com/embed/Z5L5FoGcnrY"
-            frameborder="0"
+            frameborder="1"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           >
