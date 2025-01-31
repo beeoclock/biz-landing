@@ -10,11 +10,11 @@ export class CurrencyCodePipe implements PipeTransform {
    * It is a USER language not country!!!
    * @private
    */
-  private readonly localId = inject(LOCALE_ID);
+  readonly #localId = inject(LOCALE_ID);
 
   public transform(currency: string, options: Intl.NumberFormatOptions = {}): string {
     const parts = new Intl.NumberFormat(
-      this.localId,
+      this.#localId,
       {
         ...options,
         style: 'currency',
