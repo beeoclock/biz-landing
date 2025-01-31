@@ -1,6 +1,6 @@
 import {Component, HostListener, inject, LOCALE_ID, OnInit, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
-import {isPlatformBrowser, isPlatformServer, NgOptimizedImage} from "@angular/common";
+import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
 import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
@@ -15,6 +15,7 @@ import {environment} from "../environments/environment";
   imports: [
     NgOptimizedImage,
     NgIcon,
+    NgClass
   ],
   viewProviders: [
     provideIcons({bootstrapXLg, bootstrapThreeDots, bootstrapCheck}),
@@ -37,7 +38,7 @@ export class AppComponent implements OnInit {
     { id: 4, name: $localize`FAQ`, link: '#faq', useCase: MenuUseCase.Both },
     { id: 5, name: $localize`About Us`, link: '#about-us', useCase: MenuUseCase.Desktop },
     { id: 6, name: $localize`Order a consultation`, link: '#', useCase: MenuUseCase.Mobile },
-    { id: 7, name: $localize`Try a demo account`, link: '#', useCase: MenuUseCase.Mobile },
+    { id: 7, name: $localize`Try a demo account`, link: 'https://panel.dev.beeoclock.com/66f9378141ed7954254c40c8/event/calendar-with-specialists', useCase: MenuUseCase.Mobile },
     { id: 8, name: $localize`Login`, link: '#', useCase: MenuUseCase.Mobile },
   ];
 
@@ -52,6 +53,25 @@ export class AppComponent implements OnInit {
   public readonly consultationLink = environment.config.consultationLink;
   public isMobileMenuOpen = false;
   public aspectRatio: number | null = null;
+  public subscriptionType: 'monthly' | 'annual' = 'monthly';
+  public currencyCode: string = 'USD';
+
+  pricing = {
+    free: {
+      monthly: 0,
+      annual: 0
+    },
+    basic: {
+      monthly: 59,
+      annual: 53,
+      discountBasic:59
+    },
+    pro: {
+      monthly: 189,
+      annual: 170,
+      discountPro:189
+    }
+  };
 
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
@@ -67,6 +87,7 @@ export class AppComponent implements OnInit {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
+    console.log("Current locale:", this.localeId);
   }
 
   public get hostString(): string {
@@ -80,6 +101,7 @@ export class AppComponent implements OnInit {
     if (this.isBrowser) {
       this.aspectRatio = window.innerWidth / window.innerHeight;
     }
+    this.setCurrencyByLocale(this.localeId);
   }
 
   public initializeSocialShareSeoService() {
@@ -94,11 +116,25 @@ export class AppComponent implements OnInit {
     this.socialShareSeoService.setLocale(this.localeId);
   }
 
+  public setCurrencyByLocale(locale: string) {
+    const currencyMap: { [key: string]: string } = {
+      'en-US': 'USD',
+      'pl-PL': 'zl',
+      'da-DA': 'dkk',
+      'uk-UA': 'UAH'
+    };
+    this.currencyCode = currencyMap[locale] || 'USD';
+  }
+
   private closeMobileMenu() {
     this.isMobileMenuOpen = false;
   }
 
   public toggleMobileMenu(): void {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  public toggleSubscription(type: 'monthly' | 'annual') {
+    this.subscriptionType = type;
   }
 }

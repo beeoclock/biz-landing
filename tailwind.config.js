@@ -22,6 +22,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['FixelDisplay', ...defaultTheme.fontFamily.sans],
+        inter: ['Inter', 'sans-serif'],
       }
     },
     colors: {
