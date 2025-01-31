@@ -1,11 +1,12 @@
 import {Component, HostListener, inject, LOCALE_ID, OnInit, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
-import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage} from "@angular/common";
+import {CurrencyPipe, isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
 import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
 import {environment} from "../environments/environment";
+import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,9 @@ import {environment} from "../environments/environment";
   imports: [
     NgOptimizedImage,
     NgIcon,
-    NgClass
+    NgClass,
+    CurrencyPipe,
+    CurrencyCodePipe
   ],
   viewProviders: [
     provideIcons({bootstrapXLg, bootstrapThreeDots, bootstrapCheck}),
@@ -54,7 +57,7 @@ export class AppComponent implements OnInit {
   public isMobileMenuOpen = false;
   public aspectRatio: number | null = null;
   public subscriptionType: 'monthly' | 'annual' = 'monthly';
-  public currencyCode: string = 'USD';
+  public readonly currencyCode: string = $localize`currencyCode`;
 
   pricing = {
     free: {
@@ -101,7 +104,7 @@ export class AppComponent implements OnInit {
     if (this.isBrowser) {
       this.aspectRatio = window.innerWidth / window.innerHeight;
     }
-    this.setCurrencyByLocale(this.localeId);
+    // this.setCurrencyByLocale(this.localeId);
   }
 
   public initializeSocialShareSeoService() {
@@ -116,15 +119,16 @@ export class AppComponent implements OnInit {
     this.socialShareSeoService.setLocale(this.localeId);
   }
 
-  public setCurrencyByLocale(locale: string) {
-    const currencyMap: { [key: string]: string } = {
-      'en-US': 'USD',
-      'pl-PL': 'zl',
-      'da-DA': 'dkk',
-      'uk-UA': 'UAH'
-    };
-    this.currencyCode = currencyMap[locale] || 'USD';
-  }
+  // public setCurrencyByLocale(locale: string) {
+  //   const currencyMap: { [key: string]: string } = {
+  //     'en-US': 'USD',
+  //     'pl-PL': 'PLN',
+  //     'da-DA': 'DKK',
+  //     'uk-UA': 'UAH',
+  //     'pl': ''
+  //   };
+  //   this.currencyCode = currencyMap[locale] || 'USD';
+  // }
 
   private closeMobileMenu() {
     this.isMobileMenuOpen = false;

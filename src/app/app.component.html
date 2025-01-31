@@ -390,8 +390,9 @@
               @if (subscriptionType === 'annual') {
                 <p class="font-light line-through">{{ pricing.pro.discountPro }} {{ currencyCode }}</p>
               }
-              <p class="flex font-bold mb-1 text-[64px] items-baseline">{{ pricing.pro[subscriptionType] }}
-                <span class="font-bold mb-1 text-2xl">{{ currencyCode }}</span>
+              <p class="flex font-bold mb-1 text-[64px] items-baseline">
+                {{ pricing.pro[subscriptionType] }}
+                <span class="font-bold mb-1 text-2xl">{{ 'PLN' | currencyCode }}</span>
               </p>
               <ul
                 class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center [&>li:nth-last-child(2)]:font-bold">
