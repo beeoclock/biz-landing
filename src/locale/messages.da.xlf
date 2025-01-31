@@ -262,5 +262,113 @@
         <target> Demo-konto </target>
       </segment>
     </unit>
+    <unit id="8412379658036067726">
+      <segment state="initial">
+        <source>Choose the best option for your business</source>
+        <target>Choose the best option for your business</target>
+      </segment>
+    </unit>
+    <unit id="6227291956598711151">
+      <segment state="initial">
+        <source> Monthly </source>
+        <target> Monthly </target>
+      </segment>
+    </unit>
+    <unit id="2925775378458956182">
+      <segment state="initial">
+        <source> Annual </source>
+        <target> Annual </target>
+      </segment>
+    </unit>
+    <unit id="471478188761593997">
+      <segment state="initial">
+        <source>FREE</source>
+        <target>FREE</target>
+      </segment>
+    </unit>
+    <unit id="6990629382875055999">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 1 User </source>
+        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 1 User </target>
+      </segment>
+    </unit>
+    <unit id="3723027339320684146">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Public page </source>
+        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Public page </target>
+      </segment>
+    </unit>
+    <unit id="5937084711191033307">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Admin panel </source>
+        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Admin panel </target>
+      </segment>
+    </unit>
+    <unit id="490364722075394846">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SEO Package </source>
+        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SEO Package </target>
+      </segment>
+    </unit>
+    <unit id="8688937334108344457">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> JSON LD </source>
+        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> JSON LD </target>
+      </segment>
+    </unit>
+    <unit id="3123738433241513007">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Email notification </source>
+        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Email notification </target>
+      </segment>
+    </unit>
+    <unit id="3265250603400790440">
+      <segment state="initial">
+        <source> Get Started </source>
+        <target> Get Started </target>
+      </segment>
+    </unit>
+    <unit id="1020329889985641339">
+      <segment state="initial">
+        <source>BASIC</source>
+        <target>BASIC</target>
+      </segment>
+    </unit>
+    <unit id="4066998311893586930">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 5 Users </source>
+        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 5 Users </target>
+      </segment>
+    </unit>
+    <unit id="5796179803993762219">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Plugins unlimited </source>
+        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Plugins unlimited </target>
+      </segment>
+    </unit>
+    <unit id="1348007387401845649">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Payment Confirmation </source>
+        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Payment Confirmation </target>
+      </segment>
+    </unit>
+    <unit id="6271066436620954403">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SMS Notification </source>
+        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SMS Notification </target>
+      </segment>
+    </unit>
+    <unit id="6388594842422610772">
+      <segment state="initial">
+        <source>PRO</source>
+        <target>PRO</target>
+      </segment>
+    </unit>
+    <unit id="currencyCode">
+      <segment state="initial">
+        <source>USD</source>
+        <target>DKK</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

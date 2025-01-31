@@ -17,7 +17,6 @@ import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
     NgOptimizedImage,
     NgIcon,
     NgClass,
-    CurrencyPipe,
     CurrencyCodePipe
   ],
   viewProviders: [
@@ -57,7 +56,7 @@ export class AppComponent implements OnInit {
   public isMobileMenuOpen = false;
   public aspectRatio: number | null = null;
   public subscriptionType: 'monthly' | 'annual' = 'monthly';
-  public readonly currencyCode: string = $localize`currencyCode`;
+  public readonly currencyCode: string = $localize`:@@currencyCode:USD`;
 
   pricing = {
     free: {
