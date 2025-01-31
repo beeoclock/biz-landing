@@ -12,7 +12,7 @@ export class CurrencyCodePipe implements PipeTransform {
    */
   private readonly localId = inject(LOCALE_ID);
 
-  transform(currency: string, options: Intl.NumberFormatOptions = {}): string {
+  public transform(currency: string, options: Intl.NumberFormatOptions = {}): string {
     const parts = new Intl.NumberFormat(
       this.localId,
       {
