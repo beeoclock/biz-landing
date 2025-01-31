@@ -6,6 +6,10 @@ import {inject, LOCALE_ID, Pipe, PipeTransform} from "@angular/core";
 })
 export class CurrencyCodePipe implements PipeTransform {
 
+  /**
+   * It is a USER language not country!!!
+   * @private
+   */
   private readonly localId = inject(LOCALE_ID);
 
   transform(currency: string, options: Intl.NumberFormatOptions = {}): string {
