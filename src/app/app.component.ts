@@ -46,20 +46,36 @@ export class AppComponent implements OnInit {
     { id: 8, name: $localize`Login`, link: '#', useCase: MenuUseCase.Mobile },
   ];
 
-  public readonly pricing  = {
+  // public readonly pricing  = {
+  //   free: {
+  //     monthly: 0,
+  //     annual: 0
+  //   },
+  //   basic: {
+  //     monthly: 59,
+  //     annual: 53,
+  //     discountBasic:59
+  //   },
+  //   pro: {
+  //     monthly: 189,
+  //     annual: 169,
+  //     discountPro:189
+  //   }
+  // };
+  public readonly pricing = {
     free: {
       monthly: 0,
       annual: 0
     },
     basic: {
-      monthly: 59,
-      annual: 53,
-      discountBasic:59
+      monthly: this.getLocalizedPrice(59, 55),
+      annual: this.getLocalizedPrice(53, 49),
+      discountBasic: this.getLocalizedPrice(59, 55)
     },
     pro: {
-      monthly: 189,
-      annual: 169,
-      discountPro:189
+      monthly: this.getLocalizedPrice(189, 89),
+      annual: this.getLocalizedPrice(169, 80),
+      discountPro: this.getLocalizedPrice(189, 89)
     }
   };
 
@@ -91,6 +107,10 @@ export class AppComponent implements OnInit {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
+  }
+
+  private getLocalizedPrice(pricePLN: number, priceUSD: number): number {
+    return this.currencyCode === 'PLN' ? pricePLN : priceUSD;
   }
 
   public get hostString(): string {
