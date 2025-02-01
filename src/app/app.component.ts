@@ -1,6 +1,6 @@
 import {Component, HostListener, inject, LOCALE_ID, OnInit, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
-import {CurrencyPipe, isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage} from "@angular/common";
+import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
 import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
     },
     pro: {
       monthly: 189,
-      annual: 170,
+      annual: 169,
       discountPro:189
     }
   };
@@ -89,7 +89,6 @@ export class AppComponent implements OnInit {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
-    console.log("Current locale:", this.localeId);
   }
 
   public get hostString(): string {
@@ -103,7 +102,6 @@ export class AppComponent implements OnInit {
     if (this.isBrowser) {
       this.aspectRatio = window.innerWidth / window.innerHeight;
     }
-    // this.setCurrencyByLocale(this.localeId);
   }
 
   public initializeSocialShareSeoService() {
@@ -117,17 +115,6 @@ export class AppComponent implements OnInit {
     this.socialShareSeoService.setAuthor($localize`:@@seo.header.author:Bee O'clock`);
     this.socialShareSeoService.setLocale(this.localeId);
   }
-
-  // public setCurrencyByLocale(locale: string) {
-  //   const currencyMap: { [key: string]: string } = {
-  //     'en-US': 'USD',
-  //     'pl-PL': 'PLN',
-  //     'da-DA': 'DKK',
-  //     'uk-UA': 'UAH',
-  //     'pl': ''
-  //   };
-  //   this.currencyCode = currencyMap[locale] || 'USD';
-  // }
 
   private closeMobileMenu() {
     this.isMobileMenuOpen = false;
