@@ -8,7 +8,6 @@ import {MenuUseCase} from "./enum/menu-use-case.enum";
 import {environment} from "../environments/environment";
 import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
 
-type Currency = 'PLN' | 'DKK' | 'USD';
 
 @Component({
   selector: 'app-root',
@@ -47,6 +46,23 @@ export class AppComponent implements OnInit {
     { id: 8, name: $localize`Login`, link: '#', useCase: MenuUseCase.Mobile },
   ];
 
+  public readonly pricing  = {
+    free: {
+      monthly: 0,
+      annual: 0
+    },
+    basic: {
+      monthly: 59,
+      annual: 53,
+      discountBasic:59
+    },
+    pro: {
+      monthly: 189,
+      annual: 169,
+      discountPro:189
+    }
+  };
+
   private readonly localeId = inject(LOCALE_ID);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly socialShareSeoService = inject(SocialShareSeoService);
@@ -59,24 +75,7 @@ export class AppComponent implements OnInit {
   public isMobileMenuOpen = false;
   public aspectRatio: number | null = null;
   public subscriptionType: 'monthly' | 'annual' = 'monthly';
-  public currencyCode: Currency = $localize`:@@currencyCode:USD` as Currency;
-
-  pricing = {
-    free: {
-      monthly: { PLN: 0, DKK: 0, USD: 0 },
-      annual: { PLN: 0, DKK: 0, USD: 0 }
-    },
-    basic: {
-      monthly: { PLN: 59, DKK: 45, USD: 55 },
-      annual: { PLN: 53, DKK: 40, USD: 49 },
-      discountBasic: { PLN: 59, DKK: 45, USD: 55 }
-    },
-    pro: {
-      monthly: { PLN: 189, DKK: 140, USD: 89 },
-      annual: { PLN: 169, DKK: 125, USD: 80 },
-      discountPro: { PLN: 189, DKK: 140, USD: 89}
-    }
-  };
+  public currencyCode = $localize`:@@currencyCode:USD`
 
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
@@ -105,7 +104,6 @@ export class AppComponent implements OnInit {
     if (this.isBrowser) {
       this.aspectRatio = window.innerWidth / window.innerHeight;
     }
-    this.setCurrencyByLocale();
   }
 
   public initializeSocialShareSeoService() {
@@ -130,14 +128,5 @@ export class AppComponent implements OnInit {
 
   public toggleSubscription(type: 'monthly' | 'annual') {
     this.subscriptionType = type;
-  }
-
-  private setCurrencyByLocale() {
-    const localeToCurrency: Record<string, Currency> = {
-      'pl': 'PLN',
-      'da': 'DKK',
-    };
-    const languageCode = this.localeId.split('-')[0];
-    this.currencyCode = localeToCurrency[languageCode] || 'USD';
   }
 }
