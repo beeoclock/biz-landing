@@ -8,6 +8,8 @@ import {MenuUseCase} from "./enum/menu-use-case.enum";
 import {environment} from "../environments/environment";
 import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
 
+type Currency = 'PLN' | 'DKK' | 'USD';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -29,6 +31,7 @@ import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
     'class': 'flex flex-col'
   },
 })
+
 
 export class AppComponent implements OnInit {
   public MenuUseCase = MenuUseCase;
@@ -56,22 +59,22 @@ export class AppComponent implements OnInit {
   public isMobileMenuOpen = false;
   public aspectRatio: number | null = null;
   public subscriptionType: 'monthly' | 'annual' = 'monthly';
-  public readonly currencyCode: string = $localize`:@@currencyCode:USD`;
+  public currencyCode: Currency = $localize`:@@currencyCode:USD` as Currency;
 
   pricing = {
     free: {
-      monthly: 0,
-      annual: 0
+      monthly: { PLN: 0, DKK: 0, USD: 0 },
+      annual: { PLN: 0, DKK: 0, USD: 0 }
     },
     basic: {
-      monthly: 59,
-      annual: 53,
-      discountBasic:59
+      monthly: { PLN: 59, DKK: 45, USD: 55 },
+      annual: { PLN: 53, DKK: 40, USD: 49 },
+      discountBasic: { PLN: 59, DKK: 45, USD: 55 }
     },
     pro: {
-      monthly: 189,
-      annual: 169,
-      discountPro:189
+      monthly: { PLN: 189, DKK: 140, USD: 89 },
+      annual: { PLN: 169, DKK: 125, USD: 80 },
+      discountPro: { PLN: 189, DKK: 140, USD: 89}
     }
   };
 
@@ -102,6 +105,7 @@ export class AppComponent implements OnInit {
     if (this.isBrowser) {
       this.aspectRatio = window.innerWidth / window.innerHeight;
     }
+    this.setCurrencyByLocale();
   }
 
   public initializeSocialShareSeoService() {
@@ -126,5 +130,14 @@ export class AppComponent implements OnInit {
 
   public toggleSubscription(type: 'monthly' | 'annual') {
     this.subscriptionType = type;
+  }
+
+  private setCurrencyByLocale() {
+    const localeToCurrency: Record<string, Currency> = {
+      'pl': 'PLN',
+      'da': 'DKK',
+    };
+    const languageCode = this.localeId.split('-')[0];
+    this.currencyCode = localeToCurrency[languageCode] || 'USD';
   }
 }
