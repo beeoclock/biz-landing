@@ -46,22 +46,6 @@ export class AppComponent implements OnInit {
     { id: 8, name: $localize`Login`, link: '#', useCase: MenuUseCase.Mobile },
   ];
 
-  // public readonly pricing  = {
-  //   free: {
-  //     monthly: 0,
-  //     annual: 0
-  //   },
-  //   basic: {
-  //     monthly: 59,
-  //     annual: 53,
-  //     discountBasic:59
-  //   },
-  //   pro: {
-  //     monthly: 189,
-  //     annual: 169,
-  //     discountPro:189
-  //   }
-  // };
   public readonly pricing = {
     free: {
       monthly: 0,
