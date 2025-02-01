@@ -46,22 +46,7 @@ export class AppComponent implements OnInit {
     { id: 8, name: $localize`Login`, link: '#', useCase: MenuUseCase.Mobile },
   ];
 
-  public readonly pricing = {
-    free: {
-      monthly: 0,
-      annual: 0
-    },
-    basic: {
-      monthly: this.getLocalizedPrice(59, 55),
-      annual: this.getLocalizedPrice(53, 49),
-      discountBasic: this.getLocalizedPrice(59, 55)
-    },
-    pro: {
-      monthly: this.getLocalizedPrice(189, 89),
-      annual: this.getLocalizedPrice(169, 80),
-      discountPro: this.getLocalizedPrice(189, 89)
-    }
-  };
+
 
   private readonly localeId = inject(LOCALE_ID);
   private readonly platformId = inject(PLATFORM_ID);
@@ -72,10 +57,26 @@ export class AppComponent implements OnInit {
 
   public readonly host = [environment.config.host, this.localeId];
   public readonly consultationLink = environment.config.consultationLink;
-  public isMobileMenuOpen = false;
+  public isMobileMenuOpen = false
   public aspectRatio: number | null = null;
   public subscriptionType: 'monthly' | 'annual' = 'monthly';
-  public currencyCode = $localize`:@@currencyCode:USD`
+  public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
+  public readonly pricing = {
+    free: {
+      monthly: { value: 0, currency: this.currencyCode },
+      annual: { value: 0, currency: this.currencyCode }
+    },
+    basic: {
+      monthly: { value: this.getLocalizedPrice(59, 55), currency: this.currencyCode },
+      annual: { value: this.getLocalizedPrice(53, 49), currency: this.currencyCode },
+      discountBasic: { value: this.getLocalizedPrice(59, 55), currency: this.currencyCode }
+    },
+    pro: {
+      monthly: { value: this.getLocalizedPrice(189, 89), currency: this.currencyCode },
+      annual: { value: this.getLocalizedPrice(169, 80), currency: this.currencyCode },
+      discountPro: { value: this.getLocalizedPrice(189, 89), currency: this.currencyCode }
+    }
+  };
 
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
