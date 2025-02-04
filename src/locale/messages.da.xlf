@@ -364,12 +364,6 @@
         <target>PRO</target>
       </segment>
     </unit>
-    <unit id="currencyCode">
-      <segment state="initial">
-        <source>USD</source>
-        <target>DKK</target>
-      </segment>
-    </unit>
     <unit id="5710456802985900180">
       <segment state="initial">
         <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Unlimited Users </source>
@@ -392,6 +386,12 @@
       <segment state="initial">
         <source>No need card</source>
         <target>Intet behov for kort</target>
+      </segment>
+    </unit>
+    <unit id="4905798562247431262">
+      <segment state="initial">
+        <source>per month</source>
+        <target>om måneden</target>
       </segment>
     </unit>
   </file>

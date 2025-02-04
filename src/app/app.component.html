@@ -293,7 +293,12 @@
                   <div class="flex mb-1">
                     <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
                       {{ pricing.free[subscriptionType].value }}
-                      <span class="font-bold mb-1 text-2xl">{{ pricing.basic[subscriptionType].currency | currencyCode }}</span>
+                      <span
+                        class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
+                      </span>
+                      @if (subscriptionType === 'annual') {
+                        <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                      }
                     </p>
                   </div>
                   <ul
@@ -341,12 +346,23 @@
               <div class="flex justify-center">
                 <div class="flex flex-col w-[250px]">
                   @if (subscriptionType === 'annual') {
-                    <p
-                      class="font-light text-base line-through">{{ pricing.basic.discountBasic.value }} {{ pricing.basic.discountBasic.currency | currencyCode }}</p>
+                    <div class="flex gap-3">
+                      <p class="font-light text-base line-through">
+                        {{ pricing.basic.discountBasic.value }} {{ pricing.basic.discountBasic.currency | currencyCode }}
+                      </p>
+                      <p class="rounded-2xl text-[#FFFFFF] text-base font-normal px-[6px] py-[2px] bg-[#DA0606]">
+                        -10%
+                      </p>
+                    </div>
                   }
                   <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
                     {{ pricing.basic[subscriptionType].value }}
-                    <span class="font-bold mb-1 text-2xl">{{ pricing.basic[subscriptionType].currency | currencyCode }}</span>
+                    <span
+                      class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
+                    </span>
+                    @if (subscriptionType === 'annual') {
+                      <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                    }
                   </p>
                   <ul
                     class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
@@ -406,12 +422,21 @@
               <div class="flex justify-center">
                 <div class="flex flex-col w-[250px]">
                   @if (subscriptionType === 'annual') {
-                    <p
-                      class="font-light line-through">{{ pricing.pro.discountPro.value }} {{ pricing.pro.discountPro.currency | currencyCode }}</p>
+                    <div class="flex gap-3">
+                      <p class="font-light line-through">
+                        {{ pricing.pro.discountPro.value }} {{ pricing.pro.discountPro.currency | currencyCode }}
+                      </p>
+                      <p class="rounded-2xl text-[#FFFFFF] text-base font-normal px-[6px] py-[2px] bg-[#DA0606]">
+                        -10%
+                      </p>
+                    </div>
                   }
                   <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
                     {{ pricing.pro[subscriptionType].value }}
-                    <span class="font-bold mb-1 text-2xl">{{ currencyCode | currencyCode }}</span>
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    @if (subscriptionType === 'annual') {
+                      <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                    }
                   </p>
                   <ul
                     class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center [&>li:nth-last-child(2)]:font-bold">
