@@ -45,14 +45,16 @@
           </a>
         </div>
         @if (isMobileMenuOpen) {
-          <div class="fixed inset-0 bg-white z-30 mt-[70px] overflow-auto transition-all duration-400 ease-in-out bg-[#FFFFFF]">
+          <div
+            class="fixed inset-0 bg-white z-30 mt-[70px] overflow-auto transition-all duration-400 ease-in-out">
             <ul
               class="flex flex-col items-center px-5 pt-4 [&>li]:flex [&>li]:items-center [&>li]:h-[51px] [&>li]:w-full
                      [&>li]:border-b [&>li]:border-[#F4F4F5]"
             >
               @for (item of menuItems; track item.name) {
                 <li>
-                  <a [href]="item.link" id="{{item.name}}-mobile-link" class="hover:text-yellow-500 font-medium" i18n>
+                  <a [href]="item.link" id="{{item.name}}-mobile-link" class="hover:text-yellow-500 font-medium"
+                     [attr.target]="item.name === 'Try a demo account' ? '_blank' : null" i18n>
                     {{ item.name }}
                   </a>
                 </li>
@@ -82,7 +84,8 @@
             </p>
           </div>
           <button type="button" id="try-free-button"
-                  class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800] transition-all  duration-150 ease-in-out active:scale-95"
+                  class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800]
+                        transition-all  duration-150 ease-in-out active:scale-95"
                   i18n>
             Try it for free
           </button>
@@ -101,7 +104,7 @@
     <section class="flex w-full justify-center xl:min-h-[810px]">
       <div class="flex w-full max-w-[1200px] items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0 justify-between">
         <div class="flex">
-          <img ngSrc="assets/img/img.webp" alt="Bee O`clock service details" height="614" width="542">
+          <img ngSrc="assets/img/img.webp" alt="Bee O`clock service details" height="614" width="542" priority>
         </div>
         <div class="text-4xl flex items-center flex-col">
           <div class="flex justify-start w-full mb-[30px] phone:flex-col">
@@ -164,7 +167,8 @@
               <p>1</p>
               <div>
                 <h3 i18n>Registration on the platform</h3>
-                <p i18n>Create an account: Fill in basic information about your business, add address and contact details.</p>
+                <p i18n>Create an account: Fill in basic information about your business, add address and contact
+                  details.</p>
               </div>
               <div><img ngSrc="../assets/icon/1.png" alt="registration" height="120" width="120"></div>
             </div>
@@ -188,7 +192,8 @@
               <p>4</p>
               <div>
                 <h3 i18n>Online customer registration</h3>
-                <p i18n>Convenient booking: Customers book a service and a convenient time online, without calling or waiting.</p>
+                <p i18n>Convenient booking: Customers book a service and a convenient time online, without calling or
+                  waiting.</p>
               </div>
               <div><img ngSrc="../assets/icon/4.png" alt="customer" height="120" width="120"></div>
             </div>
@@ -219,10 +224,10 @@
         <div class="w-full flex justify-center relative">
           <img ngSrc="assets/img/demo.webp" alt="" height="569" width="926" priority class="phone:hidden">
           <iframe class="max-w-[609px] w-full h-[440px] phone:h-[230px] absolute top-[10%] rounded-2xl phone:relative"
-            src="https://www.youtube.com/embed/Z5L5FoGcnrY"
-            frameborder="1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+                  src="https://www.youtube.com/embed/Z5L5FoGcnrY"
+                  frameborder="1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
           >
           </iframe>
         </div>
@@ -230,17 +235,264 @@
           <h2 class="text-4xl phone:text-2xl font-bold text-black max-w-[816px]" i18n>
             Service for business: Simple online customer registration.
           </h2>
-          <div class="flex justify-between items-center phone:gap-5 w-full phone:portrait:flex-col portrait:w-[1024]:flex-row">
+          <div
+            class="flex justify-between items-center phone:gap-5 w-full phone:portrait:flex-col portrait:w-[1024]:flex-row">
             <p class="text-base max-w-[500px] font-normal" i18n>
               Order a demo access to the online customer recording service, a convenient solution without registration.
             </p>
             <a [href]="demoAccountUrl" target="_blank" id="demo-button">
-            <button class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800]
+              <button class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800]
                           transition-all duration-150 ease-in-out active:scale-95" i18n
-            >
-              Demo account
-            </button>
+              >
+                Demo account
+              </button>
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tariffs"
+             class="flex w-full justify-center items-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0">
+      <div class="flex flex-col w-full max-w-[1080px] gap-10 phone:gap-3 [&>div]:cursor-pointer">
+        <div class="flex w-full items-center phone:flex-col phone:items-start phone:gap-2.5">
+          <div class="w-full flex flex-col px-2.5">
+            <h2 class="font-bold text-[40px]" i18n>Tariffs</h2>
+            <p class="font-normal text-base" i18n>Choose the best option for your business</p>
+          </div>
+          <div class="flex shadow-sm h-[40px] rounded-[66px]">
+            <button
+              id="monthly-button"
+              class="text-sm font-semibold font-inter px-5 py-[5px] rounded-[66px] h-[40px] transition-colors duration-300"
+              [ngClass]="{ 'bg-[#E5E5E5]': subscriptionType === 'monthly'}"
+              (click)="toggleSubscription('monthly')"
+              i18n>
+              Monthly
+            </button>
+            <button
+              id="annual-button"
+              class="text-sm font-semibold font-inter px-5 py-[5px] rounded-[66px] h-[40px] transition-colors duration-300"
+              [ngClass]="{ 'bg-[#E5E5E5]': subscriptionType === 'annual' }"
+              (click)="toggleSubscription('annual')" i18n>
+              Annual
+            </button>
+          </div>
+        </div>
+
+        <div class="flex [&>div]:rounded-2xl gap-5 [&>div]:px-5 [&>div]:py-3 [&>div>h2]:text-2xl [&>div>h2]:font-bold
+                    [&>div>h2]:text-[#FFD429] [&>div]:w-full phone:flex-col"
+        >
+          <div
+            class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
+            <div class="flex flex-col">
+              <div class="flex justify-between items-center mb-1">
+                <h2 class="text-2xl font-bold text-[#FFD429] uppercase" i18n>FREE</h2>
+                <p class="font-light text-xs" i18n>No need card</p>
+              </div>
+              <div class="flex justify-center">
+                <div class="flex flex-col w-[250px]">
+                  <div class="flex mb-1">
+                    <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                      {{ pricing.free[subscriptionType].value }}
+                      <span
+                        class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
+                      </span>
+                      @if (subscriptionType === 'annual') {
+                        <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                      }
+                    </p>
+                  </div>
+                  <ul
+                    class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
+                    <li class="first:font-bold" i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      1 User
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Public page
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Admin panel
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      SEO Package
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      JSON LD
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Email notification
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+              hover:bg-[#FFC800] rounded-[10px] w-full uppercase" i18n>
+              Get Started
+            </button>
+          </div>
+
+          <div
+            class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
+            <div class="flex flex-col">
+              <div class="flex justify-between items-center mb-1">
+                <h2 class="text-2xl font-bold text-[#FFD429] mb-1 uppercase" i18n>BASIC</h2>
+              </div>
+              <div class="flex justify-center">
+                <div class="flex flex-col w-[250px]">
+                  @if (subscriptionType === 'annual') {
+                    <div class="flex gap-3">
+                      <p class="font-light text-base line-through">
+                        {{ pricing.basic.discountBasic.value }} {{ pricing.basic.discountBasic.currency | currencyCode }}
+                      </p>
+                      <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
+                        -10%
+                      </p>
+                    </div>
+                  }
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ pricing.basic[subscriptionType].value }}
+                    <span
+                      class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
+                    </span>
+                    @if (subscriptionType === 'annual') {
+                      <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                    }
+                  </p>
+                  <ul
+                    class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
+                    <li class="first:font-bold" i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      5 Users
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Public page
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Admin panel
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      SEO Package
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      JSON LD
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Email notification
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Plugins unlimited
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Payment Confirmation
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      SMS Notification
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button
+              class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+              hover:bg-[#FFC800] rounded-[10px] uppercase" i18n>
+              Get Started
+            </button>
+          </div>
+
+          <div
+            class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
+            <div class="flex flex-col">
+              <div class="flex justify-between items-center mb-1">
+                <h2 class="text-2xl font-bold text-[#FFD429] mb-1 uppercase" i18n>PRO</h2>
+              </div>
+              <div class="flex justify-center">
+                <div class="flex flex-col w-[250px]">
+                  @if (subscriptionType === 'annual') {
+                    <div class="flex gap-3">
+                      <p class="font-light line-through">
+                        {{ pricing.pro.discountPro.value }} {{ pricing.pro.discountPro.currency | currencyCode }}
+                      </p>
+                      <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
+                        -10%
+                      </p>
+                    </div>
+                  }
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ pricing.pro[subscriptionType].value }}
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    @if (subscriptionType === 'annual') {
+                      <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                    }
+                  </p>
+                  <ul
+                    class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center [&>li:nth-last-child(2)]:font-bold">
+                    <li class="first:font-bold" i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Unlimited Users
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Public page
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Admin panel
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      SEO Package
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      JSON LD
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Email notification
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Plugins unlimited
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Payment Confirmation
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      SMS Notification
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      AI assistant
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Public rest API
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button
+              class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+              hover:bg-[#FFC800] rounded-[10px] uppercase" i18n>
+              Get Started
+            </button>
           </div>
         </div>
       </div>
