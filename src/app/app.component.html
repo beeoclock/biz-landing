@@ -295,7 +295,7 @@
                       {{ pricing.free[subscriptionType].value }}
                       <span
                         class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
-                      </span>
+                        </span>
                       @if (subscriptionType === 'annual') {
                         <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
                       }
@@ -336,7 +336,6 @@
               Get Started
             </button>
           </div>
-
           <div
             class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
             <div class="flex flex-col">
@@ -359,7 +358,7 @@
                     {{ pricing.basic[subscriptionType].value }}
                     <span
                       class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
-                    </span>
+                      </span>
                     @if (subscriptionType === 'annual') {
                       <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
                     }
@@ -490,10 +489,77 @@
             </div>
             <button
               class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
-              hover:bg-[#FFC800] rounded-[10px] uppercase" i18n>
+                     hover:bg-[#FFC800] rounded-[10px] uppercase" i18n
+            >
               Get Started
             </button>
           </div>
+        </div>
+      </div>
+    </section>
+    <section id="faq"
+             class="flex w-full justify-center items-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0"
+    >
+      <div class="w-full max-w-[1060px] flex gap-10 flex-col">
+        <div>
+          <h2 i18n="FAQ header|Short title for FAQ section" class="font-bold text-[40px] leading-10">FAQ</h2>
+        </div>
+        <div class="flex flex-col">
+          @for (item of faqItems; track item; let i = $index) {
+            <div class="self-stretch justify-center items-start inline-flex w-full flex-col">
+              <div class="flex justify-between items-center w-full gap-5 pt-5 pb-5">
+                <div class="grow text-black text-sm font-bold leading-tight" i18n="FAQ Title">
+                  {{ item.title }}
+                </div>
+                <button id="faq-button" (click)="toggleItem(i)" class="flex items-center">
+                  @if (activeIndex === i) {
+                    <ng-icon name="bootstrapDashCircle" size="2.5em"/>
+                  } @else {
+                    <ng-icon name="bootstrapPlusCircle" size="2.5em"/>
+                  }
+                </button>
+              </div>
+              <div
+                class="transition-all duration-500 ease-in-out overflow-hidden"
+                [ngClass]="{ 'max-h-0 opacity-0 ease-in-out': activeIndex !== i, 'max-h-[900px] opacity-500 ease-in-out': activeIndex === i }"
+              >
+                <div class="text-sm text-black pb-8 pl-[30px] max-w-[1000px] phone:portrait:pr-[60px] leading-6">
+                  <span class="font-bold">{{ item.content }}</span> <span [innerHTML]="item.description"></span>
+                  @if (item.list) {
+                    @if (item.listType === 'ordered') {
+                      <ol class="pl-2 mt-2.5 ml-4 list-decimal marker:font-bold">
+                        @for (point of item.list; track point) {
+                          <li>
+                            <span class="font-bold">{{ point.split(':')[0] }}:</span>
+                            {{ point.split(':')[1] }}
+                          </li>
+                        }
+                      </ol>
+                    } @else if (item.listType === 'unordered') {
+                      <ul class="pl-2 mt-2.5 ml-3.5 list-disc">
+                        @for (point of item.list; track point) {
+                          <li>
+                            <span class="font-bold">{{ point.split(':')[0] }}:</span>
+                            {{ point.split(':')[1] }}
+                          </li>
+                        }
+                      </ul>
+                    } @else {
+                      <div class="mt-2.5 list-none">
+                        @for (point of item.list; track point) {
+                          <p class="mb-2">
+                            <span class="font-bold">{{ point.split(':')[0] }}:</span>
+                            {{ point.split(':')[1] }}
+                          </p>
+                        }
+                      </div>
+                    }
+                  }
+                </div>
+              </div>
+              <div class="border-b border-[#cacaca] w-full"></div>
+            </div>
+          }
         </div>
       </div>
     </section>

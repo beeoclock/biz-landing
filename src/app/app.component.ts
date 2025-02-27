@@ -2,11 +2,12 @@ import {Component, HostListener, inject, LOCALE_ID, OnInit, PLATFORM_ID, ViewEnc
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
-import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
+import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg, bootstrapPlusCircle, bootstrapDashCircle} from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
 import {environment} from "../environments/environment";
 import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
+import {getFaqItems} from "../common/interface/i.faq-item";
 
 
 @Component({
@@ -21,7 +22,13 @@ import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
     CurrencyCodePipe
   ],
   viewProviders: [
-    provideIcons({bootstrapXLg, bootstrapThreeDots, bootstrapCheck}),
+    provideIcons({
+      bootstrapXLg,
+      bootstrapThreeDots,
+      bootstrapCheck,
+      bootstrapPlusCircle,
+      bootstrapDashCircle
+    }),
     provideNgIconsConfig({
       size: '1.5em',
     }),
@@ -46,21 +53,18 @@ export class AppComponent implements OnInit {
     { id: 8, name: $localize`Login`, link: '#', useCase: MenuUseCase.Mobile },
   ];
 
-
-
   private readonly localeId = inject(LOCALE_ID);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly socialShareSeoService = inject(SocialShareSeoService);
   private readonly isBrowser: boolean;
-
   public readonly demoAccountUrl = new URL(environment.config.demoAccount.panelUrl);
-
   public readonly host = [environment.config.host, this.localeId];
   public readonly consultationLink = environment.config.consultationLink;
   public isMobileMenuOpen = false
   public aspectRatio: number | null = null;
   public subscriptionType: 'monthly' | 'annual' = 'monthly';
   public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
+  public activeIndex: number | null = null;
   public readonly pricing = {
     free: {
       monthly: { value: 0, currency: this.currencyCode },
@@ -77,6 +81,7 @@ export class AppComponent implements OnInit {
       discountPro: { value: this.getLocalizedPrice(189, 89), currency: this.currencyCode }
     }
   };
+  public readonly faqItems = getFaqItems(this.pricing, this.currencyCode);
 
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
@@ -133,5 +138,9 @@ export class AppComponent implements OnInit {
 
   public toggleSubscription(type: 'monthly' | 'annual') {
     this.subscriptionType = type;
+  }
+
+  public toggleItem(index: number) {
+    this.activeIndex = this.activeIndex === index ? null : index;
   }
 }
