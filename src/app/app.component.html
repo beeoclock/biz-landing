@@ -507,17 +507,17 @@
         <div class="flex flex-col">
           @for (item of faqItems; track item; let i = $index) {
             <div class="self-stretch justify-center items-start inline-flex w-full flex-col">
-              <div class="flex justify-between items-center w-full gap-5 pt-5 pb-5">
+              <div (click)="toggleItem(i)" id="faq-button" class="flex justify-between items-center w-full gap-5 pt-5 pb-5 cursor-pointer">
                 <div class="grow text-black text-sm font-bold leading-tight" i18n="FAQ Title">
                   {{ item.title }}
                 </div>
-                <button id="faq-button" (click)="toggleItem(i)" class="flex items-center">
+                <div class="flex items-center">
                   @if (activeIndex === i) {
                     <ng-icon name="bootstrapDashCircle" size="2.5em"/>
                   } @else {
                     <ng-icon name="bootstrapPlusCircle" size="2.5em"/>
                   }
-                </button>
+                </div>
               </div>
               <div
                 class="transition-all duration-500 ease-in-out overflow-hidden"
