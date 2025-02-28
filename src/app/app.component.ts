@@ -1,4 +1,13 @@
-import {Component, HostListener, inject, LOCALE_ID, OnInit, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  inject,
+  LOCALE_ID,
+  OnInit,
+  PLATFORM_ID, ViewChild,
+  ViewEncapsulation
+} from '@angular/core';
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage, NgStyle} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
@@ -85,6 +94,7 @@ export class AppComponent implements OnInit {
   };
   public readonly faqItems = getFaqItems(this.pricing, this.currencyCode);
 
+  @ViewChild('faqList', { static: false }) faqList!: ElementRef;
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
     if (this.isBrowser) {
@@ -143,13 +153,29 @@ export class AppComponent implements OnInit {
   }
 
   public toggleItem(index: number): void {
+    const prevIndex = this.activeIndex;
     this.activeIndex = this.activeIndex === index ? null : index;
 
-    setTimeout(() => {
-      const element = document.querySelector("#faq-list") as HTMLElement;
-      if (element) {
-        this.faqMinHeight = `${element.scrollHeight}px`;
+    if (!this.faqList) {
+      console.error('faqList is not initialized yet');
+      return;
+    }
+
+    const element = this.faqList.nativeElement;
+    const openItems = element.querySelectorAll(".grid-rows-1fr") as NodeListOf<HTMLElement>;
+
+    if (openItems.length > 0) {
+      const totalHeight = Array.from(openItems).reduce((total, item) => total + item.scrollHeight, 0);
+      this.faqMinHeight = `${totalHeight + 200}px`;
+    } else {
+      this.faqMinHeight = "200px";
+    }
+
+    if (prevIndex !== null && prevIndex !== index) {
+      const selectedItem = element.querySelector(`#faq-item-${index}`) as HTMLElement;
+      if (selectedItem) {
+        selectedItem.scrollIntoView({ block: "nearest" });
       }
-    }, 300);
+    }
   }
 }
