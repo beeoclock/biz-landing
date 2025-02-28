@@ -61,6 +61,7 @@ export class AppComponent implements OnInit {
   public aspectRatio: number | null = null;
   public subscriptionType: 'monthly' | 'annual' = 'monthly';
   public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
+  public readonly email = 'support@beeoclock.com'
   public readonly pricing = {
     free: {
       monthly: { value: 0, currency: this.currencyCode },
