@@ -1,6 +1,6 @@
 import {Component, HostListener, inject, LOCALE_ID, OnInit, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
-import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage} from "@angular/common";
+import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage, NgStyle} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
 import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg, bootstrapPlusCircle, bootstrapDashCircle} from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
@@ -19,7 +19,8 @@ import {getFaqItems} from "../common/interface/i.faq-item";
     NgOptimizedImage,
     NgIcon,
     NgClass,
-    CurrencyCodePipe
+    CurrencyCodePipe,
+    NgStyle
   ],
   viewProviders: [
     provideIcons({
@@ -65,6 +66,7 @@ export class AppComponent implements OnInit {
   public subscriptionType: 'monthly' | 'annual' = 'monthly';
   public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
   public activeIndex: number | null = null;
+  public faqMinHeight = '200px';
   public readonly pricing = {
     free: {
       monthly: { value: 0, currency: this.currencyCode },
@@ -140,7 +142,14 @@ export class AppComponent implements OnInit {
     this.subscriptionType = type;
   }
 
-  public toggleItem(index: number) {
+  public toggleItem(index: number): void {
     this.activeIndex = this.activeIndex === index ? null : index;
+
+    setTimeout(() => {
+      const element = document.querySelector("#faq-list") as HTMLElement;
+      if (element) {
+        this.faqMinHeight = `${element.scrollHeight}px`;
+      }
+    }, 300);
   }
 }
