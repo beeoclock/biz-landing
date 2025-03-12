@@ -499,7 +499,7 @@
       </div>
     </section>
     <section id="faq" #faqList
-             class="flex w-full justify-center items-center pt-[120px] phone:py-10 phone:px-5 lg:px-5 xl:px-0"
+             class="flex lg:max-h-[866px] lg:h-full w-full justify-center items-center pt-[120px] phone:py-10 phone:px-5 lg:px-5 xl:px-0"
     >
       <div class="w-full max-w-[1060px] flex gap-10 flex-col">
         <div class="relative bg-white z-10 pb-4">
@@ -568,7 +568,7 @@
         </div>
       </div>
     </section>
-    <section class="flex w-full justify-center items-center phone:py-10 phone:px-5 lg:px-5 xl:px-0 mb-4 ">
+    <section class="flex w-full lg:max-h-[1006px] lg:h-full justify-center items-center phone:py-10 phone:px-5 lg:px-5 xl:px-0 mb-4 ">
       <div
         class="max-w-[1080px]  flex-col justify-start items-end gap-5 inline-flex shadow-md rounded-2xl phone:shadow-none relative">
         <img ngSrc="assets/img/left_men.svg" alt="img" class="absolute left-[-17.5%] bottom-[-0.5%] hidden xl:block"
@@ -731,16 +731,16 @@
                     }
                     <details [attr.open]="isPopupOpen ? '' : null">
                       <summary class="hidden"></summary>
-                      <div class="bg-[#FFFFFF] z-20 flex flex-col rounded-[20px] w-full max-w-[528px] max-h-[158px] mx-auto absolute inset-0 gap-2.5">
+                      <div class="bg-[#FFFFFF] z-20 flex flex-col rounded-[20px] w-full max-w-[528px] max-h-[158px] phone:h-auto mx-auto absolute inset-0 gap-2.5">
                         <div (click)="closePopup()" class="flex justify-end px-5 py-3.5 cursor-pointer">
                           <ng-icon name="bootstrapXLg"/>
                         </div>
                         <div class="flex justify-center items-center gap-3.5">
                           <ng-icon size="3em" name="bootstrapCheckCircleFill"/>
                           <div>
-                            <h1 class="font-bold text-xl" i18n>
+                            <span class="font-bold text-xl phone:text-base" i18n>
                               The form has been successfully submitted!
-                            </h1>
+                            </span>
                             <p class="text-sm font-normal" i18n>
                               We will contact you shortly.
                             </p>
