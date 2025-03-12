@@ -295,7 +295,7 @@
                       {{ pricing.free[subscriptionType].value }}
                       <span
                         class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
-                      </span>
+                        </span>
                       @if (subscriptionType === 'annual') {
                         <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
                       }
@@ -490,10 +490,81 @@
             </div>
             <button
               class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
-              hover:bg-[#FFC800] rounded-[10px] uppercase" i18n>
+                     hover:bg-[#FFC800] rounded-[10px] uppercase" i18n
+            >
               Get Started
             </button>
           </div>
+        </div>
+      </div>
+    </section>
+    <section id="faq" #faqList
+             class="flex w-full justify-center items-center pt-[120px] phone:py-10 phone:px-5 lg:px-5 xl:px-0"
+    >
+      <div class="w-full max-w-[1060px] flex gap-10 flex-col">
+        <div class="relative bg-white z-10 pb-4">
+          <h2 i18n="FAQ header|Short title for FAQ section" class="font-bold text-[40px] leading-10">FAQ</h2>
+        </div>
+        <div id="faq-list"
+             class="relative flex flex-col transition-[min-height] duration-500 ease-in-out"
+             [ngStyle]="{ 'min-height': faqMinHeight }"
+        >
+          @for (item of faqItems; track item; let i = $index) {
+            <div id="faq-item-{{ i }}" class="self-stretch justify-center items-start inline-flex w-full flex-col">
+              <div (click)="toggleItem(i)" id="faq-button"
+                   class="flex justify-between items-center w-full gap-5 pt-5 pb-5 cursor-pointer">
+                <div class="grow text-black text-sm font-bold leading-tight" i18n="FAQ Title">
+                  {{ item.title }}
+                </div>
+                <div class="flex items-center">
+                  @if (activeIndex === i) {
+                    <ng-icon name="bootstrapDashCircle" size="2.5em"/>
+                  } @else {
+                    <ng-icon name="bootstrapPlusCircle" size="2.5em"/>
+                  }
+                </div>
+              </div>
+              <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                   [ngClass]="{ 'grid-rows-[0fr] opacity-0': activeIndex !== i, 'grid-rows-[1fr] opacity-100': activeIndex === i }">
+                <div class="overflow-hidden text-sm text-black pl-[30px] max-w-[1000px] phone:portrait:pr-[60px] leading-6">
+                  <div class="mb-8">
+                    <span class="font-bold">{{ item.content }}</span> <span [innerHTML]="item.description"></span>
+                  </div>
+                  @if (item.list) {
+                    @if (item.listType === 'ordered') {
+                      <ol class="pl-2 mt-2.5 ml-4 list-decimal marker:font-bold mb-8">
+                        @for (point of item.list; track point) {
+                          <li>
+                            <span class="font-bold">{{ point.split(':')[0] }}:</span>
+                            {{ point.split(':')[1] }}
+                          </li>
+                        }
+                      </ol>
+                    } @else if (item.listType === 'unordered') {
+                      <ul class="pl-2 mt-2.5 ml-3.5 list-disc mb-8">
+                        @for (point of item.list; track point) {
+                          <li>
+                            <span class="font-bold">{{ point.split(':')[0] }}:</span>
+                            {{ point.split(':')[1] }}
+                          </li>
+                        }
+                      </ul>
+                    } @else {
+                      <div class="mt-2.5 list-none mb-8">
+                        @for (point of item.list; track point) {
+                          <p class="mb-2">
+                            <span class="font-bold">{{ point.split(':')[0] }}:</span>
+                            {{ point.split(':')[1] }}
+                          </p>
+                        }
+                      </div>
+                    }
+                  }
+                </div>
+              </div>
+              <div class="border-b border-[#cacaca] w-full"></div>
+            </div>
+          }
         </div>
       </div>
     </section>

@@ -394,5 +394,171 @@
         <target>на місяць</target>
       </segment>
     </unit>
+    <unit id="3394190499997524231">
+      <notes>
+        <note category="description">Short title for FAQ section</note>
+        <note category="meaning">FAQ header</note>
+      </notes>
+      <segment state="initial">
+        <source>FAQ</source>
+        <target>FAQ</target>
+      </segment>
+    </unit>
+    <unit id="2303057299624544730">
+      <segment state="initial">
+        <source>How quickly can you get started with Bee o’clock?</source>
+        <target>Як швидко можна розпочати роботу з Bee o’clock?</target>
+      </segment>
+    </unit>
+    <unit id="1979683524318589117">
+      <segment state="initial">
+        <source>Starting to use the service is very simple: </source>
+        <target>Почати користуватися сервісом дуже просто: </target>
+      </segment>
+    </unit>
+    <unit id="7400988240553005942">
+      <segment state="initial">
+        <source>register on the platform, add basic information about your business and services, and the system will be ready to go. You have the option to use the free plan (Free) with basic functionality, which will allow you to immediately test the key features of Bee o’clock without any costs.</source>
+        <target>зареєструйтеся на платформі, додайте основну інформацію про свій бізнес та послуги, і система буде готова до роботи. У вас є можливість скористатися безкоштовним тарифом (Free) із базовим функціоналом, що дозволить одразу протестувати ключові можливості Bee o’clock без будь-яких витрат.</target>
+      </segment>
+    </unit>
+    <unit id="3360962359416326349">
+      <segment state="initial">
+        <source>What features does Bee o’clock provide and how does it differ from other services?</source>
+        <target>Які можливості надає Bee o’clock і чим він відрізняється від інших сервісів?</target>
+      </segment>
+    </unit>
+    <unit id="2995240845889286352">
+      <segment state="initial">
+        <source>Bee o’clock offers a comprehensive set </source>
+        <target>Bee o’clock пропонує комплексний набір </target>
+      </segment>
+    </unit>
+    <unit id="4036736770564302134">
+      <segment state="initial">
+        <source>tools for automating online bookings</source>
+        <target>інструментів для автоматизації онлайн-бронювання</target>
+      </segment>
+    </unit>
+    <unit id="6346180550648816832">
+      <segment state="initial">
+        <source>Automation of bookings: the system automatically records new bookings and reserves time in the calendar.</source>
+        <target>Автоматизація записів: система самостійно фіксує нові бронювання і резервує час у календарі.</target>
+      </segment>
+    </unit>
+    <unit id="2167439250237745802">
+      <segment state="initial">
+        <source>Reminders to clients: SMS and e-mail notifications will help reduce the number of missed appointments.</source>
+        <target>Нагадування клієнтам: SMS та e-mail нотифікації допоможуть скоротити кількість пропущених зустрічей.</target>
+      </segment>
+    </unit>
+    <unit id="1881874480414973014">
+      <segment state="initial">
+        <source>Customization for your brand: you can change the appearance of your public page and customize the interface to suit your business.</source>
+        <target>Кастомізація під ваш бренд: можна змінювати вигляд публічної сторінки та налаштовувати інтерфейс під свій бізнес.</target>
+      </segment>
+    </unit>
+    <unit id="4479729736795111846">
+      <segment state="initial">
+        <source>Online booking management: the entire schedule is always at hand and can be accessed from a smartphone or computer.</source>
+        <target>Управління записами онлайн: увесь розклад завжди під рукою, а доступ до нього можливий зі смартфона чи комп’ютера.</target>
+      </segment>
+    </unit>
+    <unit id="8416027020806100691">
+      <segment state="initial">
+        <source>Analytics and development: the service tracks statistics so you can improve customer interactions.</source>
+        <target>Аналітика та розвиток: сервіс відстежує статистику, щоб ви могли покращувати взаємодію з клієнтами.</target>
+      </segment>
+    </unit>
+    <unit id="5576863779043305858">
+      <segment state="initial">
+        <source>Various pricing plans: from free to advanced PRO, with the ability to connect an AI assistant and public REST API.</source>
+        <target>Різні тарифні плани: від безкоштовного до розширеного PRO, із можливістю підключення AI-асистента й публічного REST API.</target>
+      </segment>
+    </unit>
+    <unit id="2188934911957763380">
+      <segment state="initial">
+        <source>How to set up and manage online bookings in Bee o’clock?</source>
+        <target>Як налаштувати та керувати онлайн-бронюванням у Bee o’clock?</target>
+      </segment>
+    </unit>
+    <unit id="3517806335395007253">
+      <segment state="initial">
+        <source>Everything happens in a few simple steps</source>
+        <target>Усе відбувається у декілька простих кроків</target>
+      </segment>
+    </unit>
+    <unit id="9133139451209238142">
+      <segment state="initial">
+        <source>Register on the platform: create an account and enter your business details.</source>
+        <target>Реєстрація на платформі: створіть обліковий запис і внесіть дані про бізнес.</target>
+      </segment>
+    </unit>
+    <unit id="7250808851035664300">
+      <segment state="initial">
+        <source>Service settings: add a list of services, set the duration and price.</source>
+        <target>Налаштування послуг: додайте перелік послуг, встановіть тривалість та ціну.</target>
+      </segment>
+    </unit>
+    <unit id="1065294413010134453">
+      <segment state="initial">
+        <source>Invite customers: share a unique link to your profile via your website, social media, or email.</source>
+        <target>Запрошення клієнтів: поділіться унікальним посиланням на ваш профіль через сайт, соцмережі або електронну пошту.</target>
+      </segment>
+    </unit>
+    <unit id="1026634334394306968">
+      <segment state="initial">
+        <source>Online customer booking: customers can book a service in a few clicks, and you will receive notifications about each new booking.</source>
+        <target>Онлайн запис клієнтів: клієнти можуть забронювати послугу в кілька кліків, а ви отримаєте сповіщення про кожен новий запис.</target>
+      </segment>
+    </unit>
+    <unit id="811367694795533818">
+      <segment state="initial">
+        <source>Manage your recordings: Conveniently change your schedule, track activity, and get notified about changes.</source>
+        <target>Керування записами: зручно змінюйте розклад, відстежуйте активність і отримуйте сповіщення про зміни.</target>
+      </segment>
+    </unit>
+    <unit id="4470730349165597654">
+      <segment state="initial">
+        <source>Analysis and development: View statistics to evaluate performance and improve your service.</source>
+        <target>Аналіз та розвиток: переглядайте статистику, щоб оцінювати ефективність і вдосконалювати свій сервіс.</target>
+      </segment>
+    </unit>
+    <unit id="2840247853133963034">
+      <segment state="initial">
+        <source>Can I accept online payments and receive notifications about successful transactions?</source>
+        <target>Чи можна приймати онлайн-оплати та отримувати повідомлення про успішну транзакцію?</target>
+      </segment>
+    </unit>
+    <unit id="4123705423401895406">
+      <segment state="initial">
+        <source>Yes, the BASIC and PRO plans have a &lt;b&gt;Payment Confirmation&lt;/b&gt; feature that allows you to track customer payments. The service also sends SMS and email notifications so that you and your customers are always up to date with booking and payment updates. All this ensures safe and transparent transactions.</source>
+        <target>Так, у тарифах BASIC і PRO реалізовано функцію &lt;b&gt;Payment Confirmation&lt;/b&gt;, що дає змогу відстежувати сплату клієнтів. Також сервіс надсилає SMS та e-mail нотифікації, аби ви та ваші клієнти завжди були в курсі оновлень стосовно бронювання та оплат. Усе це забезпечує безпечні та прозорі транзакції.</target>
+      </segment>
+    </unit>
+    <unit id="423381276093176480">
+      <segment state="initial">
+        <source>What tariff plans are available and how do they differ?</source>
+        <target>Які тарифні плани доступні і чим вони відрізняються?</target>
+      </segment>
+    </unit>
+    <unit id="3304132639371050887">
+      <segment state="initial">
+        <source>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.</source>
+        <target>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 1 користувач, публічна сторінка, адмін-панель, SEO Package, JSON LD, e-mail нотифікації. Підійде для невеликих проєктів чи тестування.</target>
+      </segment>
+    </unit>
+    <unit id="7027589287121851016">
+      <segment state="initial">
+        <source>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.</source>
+        <target>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 5 користувачів, публічна сторінка, адмін-панель, SEO Package, JSON LD, e-mail нотифікації, необмежені плагіни, Payment Confirmation та SMS Notifications. Рішення для малого і середнього бізнесу.</target>
+      </segment>
+    </unit>
+    <unit id="8778436686334410487">
+      <segment state="initial">
+        <source>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
+        <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>):  необмежена кількість користувачів, повний доступ до функцій, включно з AI assistant та Public REST API. Ідеально для розвинених та масштабованих проєктів.</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

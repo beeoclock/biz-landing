@@ -1,12 +1,22 @@
-import {Component, HostListener, inject, LOCALE_ID, OnInit, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  inject,
+  LOCALE_ID,
+  OnInit,
+  PLATFORM_ID, ViewChild,
+  ViewEncapsulation
+} from '@angular/core';
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
-import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage} from "@angular/common";
+import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage, NgStyle} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
-import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg} from "@ng-icons/bootstrap-icons";
+import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg, bootstrapPlusCircle, bootstrapDashCircle} from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
 import {environment} from "../environments/environment";
 import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
+import {getFaqItems} from "../common/interface/i.faq-item";
 
 
 @Component({
@@ -18,10 +28,17 @@ import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
     NgOptimizedImage,
     NgIcon,
     NgClass,
-    CurrencyCodePipe
+    CurrencyCodePipe,
+    NgStyle
   ],
   viewProviders: [
-    provideIcons({bootstrapXLg, bootstrapThreeDots, bootstrapCheck}),
+    provideIcons({
+      bootstrapXLg,
+      bootstrapThreeDots,
+      bootstrapCheck,
+      bootstrapPlusCircle,
+      bootstrapDashCircle
+    }),
     provideNgIconsConfig({
       size: '1.5em',
     }),
@@ -61,6 +78,8 @@ export class AppComponent implements OnInit {
   public aspectRatio: number | null = null;
   public subscriptionType: 'monthly' | 'annual' = 'monthly';
   public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
+  public activeIndex: number | null = null;
+  public faqMinHeight = '200px';
   public readonly email = 'support@beeoclock.com'
   public readonly pricing = {
     free: {
@@ -78,7 +97,9 @@ export class AppComponent implements OnInit {
       discountPro: { value: this.getLocalizedPrice(189, 89), currency: this.currencyCode }
     }
   };
+  public readonly faqItems = getFaqItems(this.pricing, this.currencyCode);
 
+  @ViewChild('faqList', { static: false }) faqList!: ElementRef;
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
     if (this.isBrowser) {
@@ -134,5 +155,32 @@ export class AppComponent implements OnInit {
 
   public toggleSubscription(type: 'monthly' | 'annual') {
     this.subscriptionType = type;
+  }
+
+  public toggleItem(index: number): void {
+    const prevIndex = this.activeIndex;
+    this.activeIndex = this.activeIndex === index ? null : index;
+
+    if (!this.faqList) {
+      console.error('faqList is not initialized yet');
+      return;
+    }
+
+    const element = this.faqList.nativeElement;
+    const openItems = element.querySelectorAll(".grid-rows-1fr") as NodeListOf<HTMLElement>;
+
+    if (openItems.length > 0) {
+      const totalHeight = Array.from(openItems).reduce((total, item) => total + item.scrollHeight, 0);
+      this.faqMinHeight = `${totalHeight + 200}px`;
+    } else {
+      this.faqMinHeight = "200px";
+    }
+
+    if (prevIndex !== null && prevIndex !== index) {
+      const selectedItem = element.querySelector(`#faq-item-${index}`) as HTMLElement;
+      if (selectedItem) {
+        selectedItem.scrollIntoView({ block: "nearest" });
+      }
+    }
   }
 }
