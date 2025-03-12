@@ -92,7 +92,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   public readonly consultationLink = environment.config.consultationLink;
   public isMobileMenuOpen = false
   public aspectRatio: number | null = null;
-  public subscriptionType: 'monthly' | 'annual' = 'monthly';
+  public subscriptionType: 'monthly' | 'annual' = 'annual';
   public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
   public activeIndex: number | null = null;
   public faqMinHeight = '200px';
