@@ -560,5 +560,125 @@
         <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): nieograniczona liczba użytkowników, pełny dostęp do funkcji, w tym asystenta AI i Public REST API. Idealne dla zaawansowanych i skalowalnych projektów.</target>
       </segment>
     </unit>
+    <unit id="8478716983552743608">
+      <segment state="initial">
+        <source> Contact </source>
+        <target> Kontakt </target>
+      </segment>
+    </unit>
+    <unit id="2897796351634591638">
+      <segment state="initial">
+        <source> Do you have any questions or suggestions? </source>
+        <target> Masz jakieś pytania lub sugestie? </target>
+      </segment>
+    </unit>
+    <unit id="468887983520506369">
+      <segment state="initial">
+        <source> If you have any additional questions about using Bee o’clock or would like to share ideas for improving the service, we are always ready to listen! Contact us in any convenient way: </source>
+        <target> Jeśli masz dodatkowe pytania dotyczące korzystania z Bee o’clock lub chciałbyś podzielić się pomysłami na ulepszenie usługi, zawsze jesteśmy gotowi wysłuchać! Skontaktuj się z nami w dogodny sposób: </target>
+      </segment>
+    </unit>
+    <unit id="9010906137488696549">
+      <segment state="initial">
+        <source> Social networks </source>
+        <target> Sieci społecznościowe </target>
+      </segment>
+    </unit>
+    <unit id="4015999779146833867">
+      <segment state="initial">
+        <source> Join our community to be the first to receive useful tips, news, and promotional offers: </source>
+        <target> Dołącz do naszej społeczności, aby jako pierwszy otrzymywać przydatne wskazówki, wiadomości i oferty promocyjne: </target>
+      </segment>
+    </unit>
+    <unit id="6836286461192524918">
+      <segment state="initial">
+        <source> Follow us on social media and be the first to know about updates and new features of Bee o’clock. </source>
+        <target> Obserwuj nas w mediach społecznościowych, aby jako pierwszy dowiadywać się o aktualizacjach i nowych funkcjach Bee o’clock. </target>
+      </segment>
+    </unit>
+    <unit id="4367579805518675029">
+      <segment state="initial">
+        <source> Feedback form </source>
+        <target> Formularz opinii </target>
+      </segment>
+    </unit>
+    <unit id="6348803519672992606">
+      <segment state="initial">
+        <source> If you prefer to write directly here on the website, fill out the form below - we will try to respond as quickly as possible, usually within 24 hours. </source>
+        <target> Jeśli wolisz napisać bezpośrednio na stronie internetowej, wypełnij formularz poniżej – postaramy się odpowiedzieć tak szybko, jak to możliwe, zazwyczaj w ciągu 24 godzin. </target>
+      </segment>
+    </unit>
+    <unit id="8778616811237742446">
+      <segment state="initial">
+        <source> Name </source>
+        <target> Nazwa </target>
+      </segment>
+    </unit>
+    <unit id="placeholderName">
+      <segment state="initial">
+        <source>Name</source>
+        <target>Nazwa</target>
+      </segment>
+    </unit>
+    <unit id="7817163188308824825">
+      <segment state="initial">
+        <source> Email </source>
+        <target> Email </target>
+      </segment>
+    </unit>
+    <unit id="placeholderEmail">
+      <segment state="initial">
+        <source>E-mail</source>
+        <target>E-mail</target>
+      </segment>
+    </unit>
+    <unit id="4499935730832938989">
+      <segment state="initial">
+        <source>Message subject <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc></source>
+        <target>Temat wiadomości <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (Na przykład: &quot;Pytania dotyczące taryf&quot;, &quot;Wsparcie techniczne&quot;) </pc></target>
+      </segment>
+    </unit>
+    <unit id="placeholderSubject">
+      <segment state="initial">
+        <source>Message subject</source>
+        <target>Temat wiadomości</target>
+      </segment>
+    </unit>
+    <unit id="3760039188715962867">
+      <segment state="initial">
+        <source>Message text <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc></source>
+        <target>Tekst wiadomości <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (proszę podać swoją prośbę lub sugestię) </pc></target>
+      </segment>
+    </unit>
+    <unit id="placeholderMessageText">
+      <segment state="initial">
+        <source>Message text</source>
+        <target>Tekst wiadomości</target>
+      </segment>
+    </unit>
+    <unit id="7563035552061651664">
+      <segment state="initial">
+        <source> Send </source>
+        <target> Wysłać </target>
+      </segment>
+    </unit>
+    <unit id="3262236020277300799">
+      <segment state="initial">
+        <source>Phone</source>
+        <target>Telefon</target>
+      </segment>
+    </unit>
+    <unit id="7670455289447668933">
+      <segment state="initial">
+        <source> The form has been successfully submitted! </source>
+        <target> Formularz został pomyślnie wysłany! </target>
+      </segment>
+    </unit>
+    <unit id="723246605321014138">
+      <segment state="initial">
+        <source> We will contact you shortly. </source>
+        <target> Skontaktujemy się z Tobą wkrótce. </target>
+      </segment>
+    </unit>
   </file>
 </xliff>
