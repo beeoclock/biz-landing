@@ -394,5 +394,171 @@
         <target>om måneden</target>
       </segment>
     </unit>
+    <unit id="3394190499997524231">
+      <notes>
+        <note category="description">Short title for FAQ section</note>
+        <note category="meaning">FAQ header</note>
+      </notes>
+      <segment state="initial">
+        <source>FAQ</source>
+        <target>FAQ</target>
+      </segment>
+    </unit>
+    <unit id="2303057299624544730">
+      <segment state="initial">
+        <source>How quickly can you get started with Bee o’clock?</source>
+        <target>Hvor hurtigt kan du komme i gang med Bee o'clock?</target>
+      </segment>
+    </unit>
+    <unit id="1979683524318589117">
+      <segment state="initial">
+        <source>Starting to use the service is very simple: </source>
+        <target>Det er meget enkelt at begynde at bruge tjenesten: </target>
+      </segment>
+    </unit>
+    <unit id="7400988240553005942">
+      <segment state="initial">
+        <source>register on the platform, add basic information about your business and services, and the system will be ready to go. You have the option to use the free plan (Free) with basic functionality, which will allow you to immediately test the key features of Bee o’clock without any costs.</source>
+        <target>registrer dig på platformen, tilføj grundlæggende oplysninger om din virksomhed og tjenester, og systemet er klar til brug. Du har mulighed for at bruge den gratis plan (gratis) med grundlæggende funktionalitet, som giver dig mulighed for straks at teste nøglefunktionerne i Bee o'clock uden omkostninger.</target>
+      </segment>
+    </unit>
+    <unit id="3360962359416326349">
+      <segment state="initial">
+        <source>What features does Bee o’clock provide and how does it differ from other services?</source>
+        <target>Hvilke funktioner tilbyder Bee o'clock, og hvordan adskiller det sig fra andre tjenester?</target>
+      </segment>
+    </unit>
+    <unit id="2995240845889286352">
+      <segment state="initial">
+        <source>Bee o’clock offers a comprehensive set </source>
+        <target>Bee o'clock tilbyder et omfattende sæt </target>
+      </segment>
+    </unit>
+    <unit id="4036736770564302134">
+      <segment state="initial">
+        <source>tools for automating online bookings</source>
+        <target>værktøjer til at automatisere online bookinger</target>
+      </segment>
+    </unit>
+    <unit id="6346180550648816832">
+      <segment state="initial">
+        <source>Automation of bookings: the system automatically records new bookings and reserves time in the calendar.</source>
+        <target>Automatisering af bookinger: systemet registrerer automatisk nye bookinger og reserverer tid i kalenderen.</target>
+      </segment>
+    </unit>
+    <unit id="2167439250237745802">
+      <segment state="initial">
+        <source>Reminders to clients: SMS and e-mail notifications will help reduce the number of missed appointments.</source>
+        <target>Påmindelser til kunder: SMS- og e-mail-meddelelser hjælper med at reducere antallet af ubesvarede aftaler.</target>
+      </segment>
+    </unit>
+    <unit id="1881874480414973014">
+      <segment state="initial">
+        <source>Customization for your brand: you can change the appearance of your public page and customize the interface to suit your business.</source>
+        <target>Tilpasning til dit brand: Du kan ændre udseendet af din offentlige side og tilpasse grænsefladen, så den passer til din virksomhed.</target>
+      </segment>
+    </unit>
+    <unit id="4479729736795111846">
+      <segment state="initial">
+        <source>Online booking management: the entire schedule is always at hand and can be accessed from a smartphone or computer.</source>
+        <target>Online bookingstyring: Hele tidsplanen er altid ved hånden og kan tilgås fra en smartphone eller computer.</target>
+      </segment>
+    </unit>
+    <unit id="8416027020806100691">
+      <segment state="initial">
+        <source>Analytics and development: the service tracks statistics so you can improve customer interactions.</source>
+        <target>Analyse og udvikling: Tjenesten sporer statistik, så du kan forbedre kundeinteraktioner.</target>
+      </segment>
+    </unit>
+    <unit id="5576863779043305858">
+      <segment state="initial">
+        <source>Various pricing plans: from free to advanced PRO, with the ability to connect an AI assistant and public REST API.</source>
+        <target>Forskellige prisplaner: fra gratis til avanceret PRO, med mulighed for at forbinde en AI-assistent og offentlig REST API.</target>
+      </segment>
+    </unit>
+    <unit id="2188934911957763380">
+      <segment state="initial">
+        <source>How to set up and manage online bookings in Bee o’clock?</source>
+        <target>Hvordan opsætter og administrerer man online reservationer i Bee o'clock?</target>
+      </segment>
+    </unit>
+    <unit id="3517806335395007253">
+      <segment state="initial">
+        <source>Everything happens in a few simple steps</source>
+        <target>Alt sker i nogle få enkle trin</target>
+      </segment>
+    </unit>
+    <unit id="9133139451209238142">
+      <segment state="initial">
+        <source>Register on the platform: create an account and enter your business details.</source>
+        <target>Tilmeld dig på platformen: Opret en konto og indtast dine virksomhedsoplysninger.</target>
+      </segment>
+    </unit>
+    <unit id="7250808851035664300">
+      <segment state="initial">
+        <source>Service settings: add a list of services, set the duration and price.</source>
+        <target>Tjenesteindstillinger: Tilføj en liste over tjenester, indstil varighed og pris.</target>
+      </segment>
+    </unit>
+    <unit id="1065294413010134453">
+      <segment state="initial">
+        <source>Invite customers: share a unique link to your profile via your website, social media, or email.</source>
+        <target>Inviter kunder: Del et unikt link til din profil via dit websted, sociale medier eller e-mail.</target>
+      </segment>
+    </unit>
+    <unit id="1026634334394306968">
+      <segment state="initial">
+        <source>Online customer booking: customers can book a service in a few clicks, and you will receive notifications about each new booking.</source>
+        <target>Online kundebooking: kunder kan booke en service med få klik, og du vil modtage meddelelser om hver ny booking.</target>
+      </segment>
+    </unit>
+    <unit id="811367694795533818">
+      <segment state="initial">
+        <source>Manage your recordings: Conveniently change your schedule, track activity, and get notified about changes.</source>
+        <target>Administrer dine optagelser: Skift nemt din tidsplan, spor aktivitet og få besked om ændringer.</target>
+      </segment>
+    </unit>
+    <unit id="4470730349165597654">
+      <segment state="initial">
+        <source>Analysis and development: View statistics to evaluate performance and improve your service.</source>
+        <target>Analyse og udvikling: Se statistik for at evaluere ydeevne og forbedre din service.</target>
+      </segment>
+    </unit>
+    <unit id="2840247853133963034">
+      <segment state="initial">
+        <source>Can I accept online payments and receive notifications about successful transactions?</source>
+        <target>Kan jeg acceptere onlinebetalinger og modtage meddelelser om vellykkede transaktioner?</target>
+      </segment>
+    </unit>
+    <unit id="4123705423401895406">
+      <segment state="initial">
+        <source>Yes, the BASIC and PRO plans have a &lt;b&gt;Payment Confirmation&lt;/b&gt; feature that allows you to track customer payments. The service also sends SMS and email notifications so that you and your customers are always up to date with booking and payment updates. All this ensures safe and transparent transactions.</source>
+        <target>Ja, BASIC- og PRO-planerne har en &lt;b&gt;betalingsbekræftelse&lt;/b&gt; funktion, der giver dig mulighed for at spore kundebetalinger. Tjenesten sender også SMS og e-mail notifikationer, så du og dine kunder altid er opdateret med booking- og betalingsopdateringer. Alt dette sikrer sikre og gennemsigtige transaktioner.</target>
+      </segment>
+    </unit>
+    <unit id="423381276093176480">
+      <segment state="initial">
+        <source>What tariff plans are available and how do they differ?</source>
+        <target>Hvilke takstplaner er tilgængelige, og hvordan adskiller de sig?</target>
+      </segment>
+    </unit>
+    <unit id="3304132639371050887">
+      <segment state="initial">
+        <source>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.</source>
+        <target>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 1 bruger, offentlig side, admin panel, SEO pakke, JSON LD, e-mail notifikationer. Velegnet til små projekter eller test.</target>
+      </segment>
+    </unit>
+    <unit id="7027589287121851016">
+      <segment state="initial">
+        <source>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.</source>
+        <target>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 5 brugere, offentlig side, adminpanel, SEO-pakke, JSON LD, e-mail-beskeder, ubegrænsede plugins, betalingsbekræftelse og sms-beskeder. Løsning til små og mellemstore virksomheder.</target>
+      </segment>
+    </unit>
+    <unit id="8778436686334410487">
+      <segment state="initial">
+        <source>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
+        <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): ubegrænsede brugere, fuld adgang til funktioner, inklusive AI-assistent og Public REST API. Ideel til avancerede og skalerbare projekter.</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
