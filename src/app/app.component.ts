@@ -18,7 +18,7 @@ import {
   bootstrapXLg,
   bootstrapPlusCircle,
   bootstrapDashCircle,
-  bootstrapEnvelope, bootstrapInstagram, bootstrapAt, bootstrapFacebook, bootstrapLinkedin, bootstrapCheckCircleFill
+  bootstrapEnvelope, bootstrapInstagram, bootstrapAt, bootstrapFacebook, bootstrapTwitterX, bootstrapCheckCircleFill
 } from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
@@ -54,7 +54,7 @@ import JSConfetti from "js-confetti";
       bootstrapInstagram,
       bootstrapAt,
       bootstrapFacebook,
-      bootstrapLinkedin,
+      bootstrapTwitterX,
       bootstrapCheckCircleFill,
       bootstrapPlusCircle,
       bootstrapDashCircle
