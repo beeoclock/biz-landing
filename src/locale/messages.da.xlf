@@ -407,7 +407,7 @@
     <unit id="2303057299624544730">
       <segment state="initial">
         <source>How quickly can you get started with Bee o’clock?</source>
-        <target>Hvor hurtigt kan du komme i gang med Bee o'clock?</target>
+        <target>Hvor hurtigt kan du komme i gang med Bee o&apos;clock?</target>
       </segment>
     </unit>
     <unit id="1979683524318589117">
@@ -419,19 +419,19 @@
     <unit id="7400988240553005942">
       <segment state="initial">
         <source>register on the platform, add basic information about your business and services, and the system will be ready to go. You have the option to use the free plan (Free) with basic functionality, which will allow you to immediately test the key features of Bee o’clock without any costs.</source>
-        <target>registrer dig på platformen, tilføj grundlæggende oplysninger om din virksomhed og tjenester, og systemet er klar til brug. Du har mulighed for at bruge den gratis plan (gratis) med grundlæggende funktionalitet, som giver dig mulighed for straks at teste nøglefunktionerne i Bee o'clock uden omkostninger.</target>
+        <target>registrer dig på platformen, tilføj grundlæggende oplysninger om din virksomhed og tjenester, og systemet er klar til brug. Du har mulighed for at bruge den gratis plan (gratis) med grundlæggende funktionalitet, som giver dig mulighed for straks at teste nøglefunktionerne i Bee o&apos;clock uden omkostninger.</target>
       </segment>
     </unit>
     <unit id="3360962359416326349">
       <segment state="initial">
         <source>What features does Bee o’clock provide and how does it differ from other services?</source>
-        <target>Hvilke funktioner tilbyder Bee o'clock, og hvordan adskiller det sig fra andre tjenester?</target>
+        <target>Hvilke funktioner tilbyder Bee o&apos;clock, og hvordan adskiller det sig fra andre tjenester?</target>
       </segment>
     </unit>
     <unit id="2995240845889286352">
       <segment state="initial">
         <source>Bee o’clock offers a comprehensive set </source>
-        <target>Bee o'clock tilbyder et omfattende sæt </target>
+        <target>Bee o&apos;clock tilbyder et omfattende sæt </target>
       </segment>
     </unit>
     <unit id="4036736770564302134">
@@ -479,7 +479,7 @@
     <unit id="2188934911957763380">
       <segment state="initial">
         <source>How to set up and manage online bookings in Bee o’clock?</source>
-        <target>Hvordan opsætter og administrerer man online reservationer i Bee o'clock?</target>
+        <target>Hvordan opsætter og administrerer man online reservationer i Bee o&apos;clock?</target>
       </segment>
     </unit>
     <unit id="3517806335395007253">
@@ -678,6 +678,12 @@
       <segment state="initial">
         <source> We will contact you shortly. </source>
         <target> Vi kontakter dig snarest. </target>
+      </segment>
+    </unit>
+    <unit id="5999357793482437014">
+      <segment state="initial">
+        <source> Incorrect Email </source>
+        <target> Forkert e-mail </target>
       </segment>
     </unit>
   </file>

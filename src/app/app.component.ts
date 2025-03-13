@@ -27,6 +27,8 @@ import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import intlTelInput, {Iti} from 'intl-tel-input';
 import {getFaqItems} from "../common/interface/i.faq-item";
+import {emailValidator} from "../common/validators/email-validators";
+import JSConfetti from "js-confetti";
 
 
 @Component({
@@ -90,6 +92,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   public readonly demoAccountUrl = new URL(environment.config.demoAccount.panelUrl);
   public readonly host = [environment.config.host, this.localeId];
   public readonly consultationLink = environment.config.consultationLink;
+  private jsConfetti: JSConfetti | undefined;
   public isMobileMenuOpen = false
   public aspectRatio: number | null = null;
   public subscriptionType: 'monthly' | 'annual' = 'annual';
@@ -122,6 +125,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   @ViewChild('faqList', { static: false }) faqList!: ElementRef;
   @ViewChild('phoneInput', { static: false }) phoneInput!: ElementRef;
+  @ViewChild('messageTextarea') messageTextarea!: ElementRef<HTMLTextAreaElement>;
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
     if (this.isBrowser) {
@@ -138,7 +142,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, emailValidator()]],
       phone: [''],
       subject: [''],
       message: ['']
@@ -178,6 +182,8 @@ export class AppComponent implements OnInit, AfterViewInit {
             .catch(() => callback("us"));
         }
       });
+      this.jsConfetti = new JSConfetti();
+      this.autoResize();
     }
   }
 
@@ -232,15 +238,27 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
-  public get isInvalid() {
-    return (controlName: string) =>
-      this.contactForm.get(controlName)?.invalid && this.contactForm.get(controlName)?.touched;
+  public isInvalid(controlName: string): boolean {
+    const control = this.contactForm.get(controlName);
+    if (!control) return false;
+
+    if (control.hasError('required')) {
+      return control.touched;
+    }
+
+    return control.invalid && control.dirty;
   }
 
   public onSubmit() {
     if (this.contactForm.valid) {
-      this.isPopupOpen = true;
       this.contactForm.reset();
+      if (this.jsConfetti) {
+        this.jsConfetti.addConfetti({
+          emojis: ['🎉', '✨', '🎊', '🥳'],
+          confettiRadius: 15,
+          confettiNumber: 100,
+        });
+      }
     } else {
       this.contactForm.markAllAsTouched();
     }
@@ -248,5 +266,13 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   public closePopup() {
     this.isPopupOpen = false;
+  }
+
+  public autoResize() {
+    if (this.messageTextarea) {
+      const textarea = this.messageTextarea.nativeElement;
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
+    }
   }
 }

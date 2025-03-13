@@ -680,5 +680,11 @@
         <target> Skontaktujemy się z Tobą wkrótce. </target>
       </segment>
     </unit>
+    <unit id="5999357793482437014">
+      <segment state="initial">
+        <source> Incorrect Email </source>
+        <target> Nieprawidłowy adres e-mail </target>
+      </segment>
+    </unit>
   </file>
 </xliff>

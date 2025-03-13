@@ -295,7 +295,7 @@
                       {{ pricing.free[subscriptionType].value }}
                       <span
                         class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
-                      </span>
+                        </span>
                       @if (subscriptionType === 'annual') {
                         <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
                       }
@@ -359,7 +359,7 @@
                     {{ pricing.basic[subscriptionType].value }}
                     <span
                       class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
-                    </span>
+                      </span>
                     @if (subscriptionType === 'annual') {
                       <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
                     }
@@ -526,7 +526,8 @@
               </div>
               <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
                    [ngClass]="{ 'grid-rows-[0fr] opacity-0': activeIndex !== i, 'grid-rows-[1fr] opacity-100': activeIndex === i }">
-                <div class="overflow-hidden text-sm text-black pl-[30px] max-w-[1000px] phone:portrait:pr-[60px] leading-6">
+                <div
+                  class="overflow-hidden text-sm text-black pl-[30px] max-w-[1000px] phone:portrait:pr-[60px] leading-6">
                   <div class="mb-8">
                     <span class="font-bold">{{ item.content }}</span> <span [innerHTML]="item.description"></span>
                   </div>
@@ -568,12 +569,13 @@
         </div>
       </div>
     </section>
-    <section class="flex w-full lg:max-h-[1006px] lg:h-full justify-center items-center phone:py-10 phone:px-5 lg:px-5 xl:px-0 mb-4 ">
+    <section
+      class="flex w-full lg:max-h-[1006px] lg:h-full justify-center items-center phone:py-10 phone:px-5 lg:px-5 xl:px-0 mb-4 ">
       <div
         class="max-w-[1080px]  flex-col justify-start items-end gap-5 inline-flex shadow-md rounded-2xl phone:shadow-none relative">
-        <img ngSrc="assets/img/left_men.svg" alt="img" class="absolute left-[-17.5%] bottom-[-0.5%] hidden xl:block"
+        <img ngSrc="assets/img/left_men.svg" alt="img" class="absolute left-[-17.5%] bottom-[-0.6%] hidden xl:block"
              height="456" width="250">
-        <img ngSrc="assets/img/right_men.svg" alt="img" class="absolute right-[-17.5%] bottom-[0.5%] hidden xl:block"
+        <img ngSrc="assets/img/right_men.svg" alt="img" class="absolute right-[-17.5%] bottom-[-0.6%] hidden xl:block"
              height="469" width="296">
         <div
           class="self-stretch grow shrink basis-0 bg-white rounded-2xl justify-start items-start gap-[50px] flex phone:flex-col">
@@ -613,20 +615,20 @@
                   </div>
                 </div>
                 <div class="self-stretch justify-between items-start inline-flex phone:flex-col phone:gap-[6px]">
-                  <a href="#" class="justify-start items-center gap-1.5 flex">
+                  <a href="https://www.instagram.com/beeoclock.biz/" target="_blank" class="justify-start items-center gap-1.5 flex">
                     <ng-icon name="bootstrapInstagram"/>
                     <div class="text-black text-sm font-normal underline tracking-tight flex items-center">
                       <ng-icon name="bootstrapAt" size="1em" class=""/>
                       beeoclock
                     </div>
                   </a>
-                  <a href="#" class="justify-start items-center gap-1.5 flex">
+                  <a href="https://m.facebook.com/@beeoclock.biz/?wtsid=rdr_0eM1YyzCYFTDfjBGU&hr=1" target="_blank" class="justify-start items-center gap-1.5 flex">
                     <ng-icon name="bootstrapFacebook"/>
                     <div class="text-black text-sm font-normal underline tracking-tight">
                       beeoclock
                     </div>
                   </a>
-                  <a href="#" class="justify-start items-center gap-1.5 flex">
+                  <a href="https://x.com/bee_o_clock?s=21" target="_blank" class="justify-start items-center gap-1.5 flex">
                     <ng-icon name="bootstrapLinkedin"/>
                     <div class="text-black text-sm font-normal underline tracking-tight">
                       beeoclock
@@ -657,7 +659,7 @@
                     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"
                           class="flex flex-col w-full [&>div]:flex [&>div]:flex-col [&>div>input]:p-0 gap-8 [&>div>input]:h-[33px]
                                  [&>div>input]:bg-[#f3f3f3] [&>div>input]:border-0 [&>div>input]:border-b-[1px] [&>div>label]:font-semibold
-                                 [&>div>label]:text-sm"
+                                 [&>div>label]:text-sm [&>div>textarea]:border-0 [&>div>textarea]:border-b-[1px] [&>div>textarea]:bg-[#f3f3f3]"
                     >
                       <div class="relative">
                         <label for="name"
@@ -684,6 +686,12 @@
                                placeholder="E-mail"
                                i18n-placeholder="@@placeholderEmail"
                                class="focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500 placeholder:text-[12px] text-[#606060]"/>
+                        @if (isInvalid('email')) {
+                          <div class="absolute text-xs bottom-[-35%]" [ngClass]="{'text-rose-600': isInvalid('email')}"
+                               i18n>
+                              Incorrect Email
+                          </div>
+                        }
                       </div>
                       <div>
                         <label for="phone" i18n>Phone</label>
@@ -712,12 +720,14 @@
                             (please indicate your request or suggestion)
                           </span>
                         </label>
-                        <input type="text"
+                        <textarea maxlength="1000" type="text"
+                               #messageTextarea
                                id="message"
+                               (input)="autoResize()"
                                formControlName="message"
                                placeholder="Message text"
                                i18n-placeholder="@@placeholderMessageText"
-                               class="focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500 placeholder:text-[12px] text-[#606060]"/>
+                               class="focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500 placeholder:text-[12px] text-[#606060] pl-0"></textarea>
                       </div>
                       <button class="self-stretch px-7 py-4 bg-[#000] rounded-[11px] justify-center items-center gap-2.5
                                inline-flex cursor-pointer text-[#ffff] text-xl font-bold tracking-tight
@@ -726,19 +736,20 @@
                         Send
                       </button>
                     </form>
-                    @if(isPopupOpen) {
+                    @if (isPopupOpen) {
                       <div class="bg-[#00000033] overflow-x-hidden overflow-y-auto fixed inset-0 z-10"></div>
                     }
                     <details [attr.open]="isPopupOpen ? '' : null">
                       <summary class="hidden"></summary>
-                      <div class="bg-[#FFFFFF] z-20 flex flex-col rounded-[20px] w-full max-w-[528px] max-h-[158px] phone:h-auto mx-auto absolute inset-0 gap-2.5">
+                      <div
+                        class="bg-[#FFFFFF] z-20 flex flex-col rounded-[20px] w-full max-w-[528px] max-h-[158px] phone:h-auto mx-auto absolute inset-0 gap-2.5">
                         <div (click)="closePopup()" class="flex justify-end px-5 py-3.5 cursor-pointer">
                           <ng-icon name="bootstrapXLg"/>
                         </div>
                         <div class="flex justify-center items-center gap-3.5">
                           <ng-icon size="3em" name="bootstrapCheckCircleFill"/>
                           <div>
-                            <span class="font-bold text-xl phone:text-base" i18n>
+                              <span class="font-bold text-xl phone:text-base" i18n>
                               The form has been successfully submitted!
                             </span>
                             <p class="text-sm font-normal" i18n>
