@@ -18,7 +18,8 @@ import {
   bootstrapXLg,
   bootstrapPlusCircle,
   bootstrapDashCircle,
-  bootstrapEnvelope, bootstrapInstagram, bootstrapAt, bootstrapFacebook, bootstrapTwitterX, bootstrapCheckCircleFill
+  bootstrapEnvelope, bootstrapInstagram, bootstrapAt, bootstrapFacebook, bootstrapTwitterX, bootstrapCheckCircleFill,
+  bootstrapLinkedin
 } from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
@@ -57,7 +58,8 @@ import JSConfetti from "js-confetti";
       bootstrapTwitterX,
       bootstrapCheckCircleFill,
       bootstrapPlusCircle,
-      bootstrapDashCircle
+      bootstrapDashCircle,
+      bootstrapLinkedin
     }),
     provideNgIconsConfig({
       size: '1.5em',
@@ -257,7 +259,7 @@ export class AppComponent implements OnInit, AfterViewInit {
           emojis: ['🎉', '✨', '🎊', '🥳'],
           confettiRadius: 15,
           confettiNumber: 100,
-        });
+        }).then(() => {});
       }
     } else {
       this.contactForm.markAllAsTouched();
