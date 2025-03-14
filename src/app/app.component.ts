@@ -253,6 +253,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   public onSubmit() {
     if (this.contactForm.valid) {
+      this.isPopupOpen = true;
       this.contactForm.reset();
       if (this.jsConfetti) {
         this.jsConfetti.addConfetti({
