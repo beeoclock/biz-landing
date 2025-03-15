@@ -26,9 +26,9 @@ export class LanguagesPage {
       code: 'pl'
     },
     {
-      name: 'Urkainian',
-      href: '/ua',
-      code: 'ua'
+      name: 'Ukrainian',
+      href: '/uk',
+      code: 'uk'
     }
   ];
 
