@@ -502,7 +502,7 @@
              class="flex lg:max-h-[866px] lg:h-full w-full justify-center items-center pt-[120px] phone:py-10 phone:px-5 lg:px-5 xl:px-0"
     >
       <div class="w-full max-w-[1060px] flex gap-10 flex-col">
-        <div class="relative bg-white z-10 pb-4">
+        <div class="relative bg-[#FFFFFF] z-10 pb-4">
           <h2 i18n="FAQ header|Short title for FAQ section" class="font-bold text-[40px] leading-10">FAQ</h2>
         </div>
         <div id="faq-list"
@@ -513,10 +513,10 @@
             <div id="faq-item-{{ i }}" class="self-stretch justify-center items-start inline-flex w-full flex-col">
               <div (click)="toggleItem(i)" id="faq-button"
                    class="flex justify-between items-center w-full gap-5 pt-5 pb-5 cursor-pointer">
-                <div class="grow text-black text-sm font-bold leading-tight phone:min-h-14" i18n="FAQ Title">
+                <div class="grow text-black text-sm font-bold leading-tight" i18n="FAQ Title">
                   {{ item.title }}
                 </div>
-                <div class="flex items-center min-h-11 min-w-11 justify-center">
+                <div class="flex items-center justify-center">
                   @if (activeIndex === i) {
                     <ng-icon name="bootstrapDashCircle" size="2.5em"/>
                   } @else {
@@ -578,7 +578,7 @@
         <img ngSrc="assets/img/right_men.svg" alt="img" class="absolute right-[-17.5%] bottom-[-0.6%] hidden xl:block"
              height="469" width="296">
         <div
-          class="self-stretch grow shrink basis-0 bg-white rounded-2xl justify-start items-start gap-[50px] flex phone:flex-col">
+          class="self-stretch grow shrink basis-0 bg-[#FFFFFF] rounded-2xl justify-start items-start gap-[50px] flex phone:flex-col">
           <div
             class="grow shrink basis-0 self-stretch px-[30px] py-5 flex-col justify-between items-start inline-flex phone:gap-[70px] phone:shadow-sm rounded-2xl">
             <div class="self-stretch  flex-col justify-start items-start gap-5 flex">
