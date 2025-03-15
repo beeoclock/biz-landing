@@ -31,7 +31,6 @@ import LanguagesPage from "./component/languages/languages.page";
     CurrencyCodePipe,
     NgStyle,
     LanguagesPage,
-    LanguagesPage
   ],
   viewProviders: [
     provideIcons({

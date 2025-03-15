@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation, inject, LOCALE_ID } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-languages',
@@ -8,6 +9,7 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation, inject, LOCALE_I
 })
 export class LanguagesPage {
   private readonly localeId = inject(LOCALE_ID);
+  private readonly router = inject(Router);
   public selectedLanguageCode: string;
 
   public readonly languageList: { name: string; href: string; code: string }[] = [
@@ -27,6 +29,7 @@ export class LanguagesPage {
 
   onLanguageSelect(language: { name: string; href: string; code: string }) {
     this.selectedLanguageCode = language.code;
+    this.router.navigate([language.href]);
   }
 }
 
