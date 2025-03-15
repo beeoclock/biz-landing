@@ -17,7 +17,7 @@ import {MenuUseCase} from "./enum/menu-use-case.enum";
 import {environment} from "../environments/environment";
 import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
 import {getFaqItems} from "../common/interface/i.faq-item";
-
+import LanguagesPage from "./component/languages/languages.page";
 
 @Component({
   selector: 'app-root',
@@ -29,7 +29,9 @@ import {getFaqItems} from "../common/interface/i.faq-item";
     NgIcon,
     NgClass,
     CurrencyCodePipe,
-    NgStyle
+    NgStyle,
+    LanguagesPage,
+    LanguagesPage
   ],
   viewProviders: [
     provideIcons({
@@ -76,6 +78,7 @@ export class AppComponent implements OnInit {
   public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
   public activeIndex: number | null = null;
   public faqMinHeight = '200px';
+  public readonly currentYear = new Date().getFullYear();
   public readonly pricing = {
     free: {
       monthly: { value: 0, currency: this.currencyCode },

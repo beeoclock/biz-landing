@@ -1,4 +1,4 @@
-<div class="wrapper w-full flex justify-center">
+<div class="wrapper w-full flex justify-center flex-col items-center">
   <div class="w-full max-w-[1440px]">
     <nav class="phone:landscape:px-5 max-lg:landscape:px:5 phone:px-5 w-full lg:px-5 xl:px-0 bg-[#FFFFFF] fixed md:static z-20
                 text-black flex justify-between items-center h-[70px] md:h-[90px] max-w-[1200px] mx-auto lg:mb-[58px] md:mb-0"
@@ -568,4 +568,18 @@
       </div>
     </section>
   </div>
+  <footer class="bg-[#1E1E1E] w-full flex justify-center items-center">
+    <div class="w-full h-[180px] phone:h-[118px] flex max-w-[1080px] px-2.5 py-2.5 justify-between items-center text-[#FFFFFF]
+                phone:flex-wrap phone:justify-center phone:py-0"
+    >
+      <div class="flex gap-2.5 phone:order-1">
+        <a href="https://docs.beeoclock.com/" target="_blank" i18n>Terms of use</a>
+        <a href="https://docs.beeoclock.com/privacy-policy" target="_blank" i18n>Privacy policy</a>
+      </div>
+      <div class="phone:order-3" i18n>
+        © {{ currentYear }} Bee O'clock. All rights reserved.
+      </div>
+      <app-languages></app-languages>
+    </div>
+  </footer>
 </div>
