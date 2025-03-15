@@ -1,12 +1,12 @@
 <div class="flex justify-start items-center phone:order-2">
-  @for (language of languageList; track language.name) {
+  @for (language of filteredLanguages; track language.name) {
     <a
       [hreflang]="language.code"
       [href]="language.href"
       class="p-2.5 flex justify-center items-center gap-2.5 cursor-pointer"
       [attr.aria-label]="'Change language to ' + language.name"
       (click)="onLanguageSelect(language)"
-      >
+    >
       <span class="text-white font-normal">{{ language.code.toUpperCase() }}</span>
     </a>
   }
