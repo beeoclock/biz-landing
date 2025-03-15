@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation, inject, LOCALE_I
 })
 export class LanguagesPage {
   private readonly localeId = inject(LOCALE_ID);
-  public selectedLanguage: string;
+  public selectedLanguageCode: string;
 
   public readonly languageList: { name: string; href: string; code: string }[] = [
     { name: 'Dansk', href: '/da', code: 'da' },
@@ -18,15 +18,15 @@ export class LanguagesPage {
   ];
 
   constructor() {
-    this.selectedLanguage = this.languageList.find(lang => lang.code === this.localeId)?.name || 'English';
+    this.selectedLanguageCode = this.languageList.some(lang => lang.code === this.localeId) ? this.localeId : 'en';
   }
 
   get filteredLanguages() {
-    return this.languageList.filter(lang => lang.name !== this.selectedLanguage);
+    return this.languageList.filter(lang => lang.code !== this.selectedLanguageCode);
   }
 
   onLanguageSelect(language: { name: string; href: string; code: string }) {
-    this.selectedLanguage = language.name;
+    this.selectedLanguageCode = language.code;
   }
 }
 
