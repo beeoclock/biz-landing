@@ -557,7 +557,25 @@
     <unit id="8778436686334410487">
       <segment state="initial">
         <source>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
-        <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>):  необмежена кількість користувачів, повний доступ до функцій, включно з AI assistant та Public REST API. Ідеально для розвинених та масштабованих проєктів.</target>
+        <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): необмежена кількість користувачів, повний доступ до функцій, включно з AI assistant та Public REST API. Ідеально для розвинених та масштабованих проєктів.</target>
+      </segment>
+    </unit>
+    <unit id="1573561306072316026">
+      <segment state="initial">
+        <source>Terms of use</source>
+        <target>Умови використання</target>
+      </segment>
+    </unit>
+    <unit id="6090931838305354672">
+      <segment state="initial">
+        <source>Privacy policy</source>
+        <target>Політика конфіденційності</target>
+      </segment>
+    </unit>
+    <unit id="2891546849092285340">
+      <segment state="initial">
+        <source> © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/> Bee O&apos;clock. All rights reserved. </source>
+        <target> © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/> Bee O&apos;clock. Всі права захищені. </target>
       </segment>
     </unit>
   </file>

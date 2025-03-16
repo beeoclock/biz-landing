@@ -467,5 +467,20 @@
         <source>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
       </segment>
     </unit>
+    <unit id="1573561306072316026">
+      <segment>
+        <source>Terms of use</source>
+      </segment>
+    </unit>
+    <unit id="2891546849092285340">
+      <segment>
+        <source> © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/> Bee O&apos;clock. All rights reserved. </source>
+      </segment>
+    </unit>
+    <unit id="6090931838305354672">
+      <segment>
+        <source>Privacy policy</source>
+      </segment>
+    </unit>
   </file>
 </xliff>
