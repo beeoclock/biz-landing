@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class LanguagesPage {
   private readonly localeId = inject(LOCALE_ID);
-  private readonly router = inject(Router);
   public selectedLanguageCode: string;
 
   public readonly languageList: { name: string; href: string; code: string }[] = [
@@ -25,11 +24,6 @@ export class LanguagesPage {
 
   get filteredLanguages() {
     return this.languageList.filter(lang => lang.code !== this.selectedLanguageCode);
-  }
-
-  onLanguageSelect(language: { name: string; href: string; code: string }) {
-    this.selectedLanguageCode = language.code;
-    this.router.navigate([language.href]);
   }
 }
 

@@ -30,7 +30,7 @@ import LanguagesPage from "./component/languages/languages.page";
     NgClass,
     CurrencyCodePipe,
     NgStyle,
-    LanguagesPage,
+    LanguagesPage
   ],
   viewProviders: [
     provideIcons({
