@@ -28,6 +28,7 @@ import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import intlTelInput, {Iti} from 'intl-tel-input';
 import {getFaqItems} from "../common/interface/i.faq-item";
+import LanguagesPage from "./component/languages/languages.page";
 import {emailValidator} from "../common/validators/email-validators";
 import JSConfetti from "js-confetti";
 
@@ -42,6 +43,8 @@ import JSConfetti from "js-confetti";
     NgIcon,
     NgClass,
     CurrencyCodePipe,
+    NgStyle,
+    LanguagesPage,
     NgStyle,
     CurrencyCodePipe,
     ReactiveFormsModule,
@@ -80,9 +83,9 @@ export class AppComponent implements OnInit, AfterViewInit {
     { id: 3, name: $localize`Reviews`, link: '#reviews', useCase: MenuUseCase.Desktop },
     { id: 4, name: $localize`FAQ`, link: '#faq', useCase: MenuUseCase.Both },
     { id: 5, name: $localize`About Us`, link: '#about-us', useCase: MenuUseCase.Desktop },
-    { id: 6, name: $localize`Order a consultation`, link: '#', useCase: MenuUseCase.Mobile },
+    { id: 6, name: $localize`Order a consultation`, link: 'https://beeoclock.com/uk/office', useCase: MenuUseCase.Mobile },
     { id: 7, name: $localize`Try a demo account`, link: 'https://panel.dev.beeoclock.com/66f9378141ed7954254c40c8/event/calendar-with-specialists', useCase: MenuUseCase.Mobile },
-    { id: 8, name: $localize`Login`, link: '#', useCase: MenuUseCase.Mobile },
+    { id: 8, name: $localize`Login`, link: 'https://panel.dev.beeoclock.com/identity', useCase: MenuUseCase.Mobile },
   ];
 
   private readonly formBuilder = inject(FormBuilder)
@@ -101,6 +104,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
   public activeIndex: number | null = null;
   public faqMinHeight = '200px';
+  public readonly currentYear = new Date().getFullYear();
   public readonly email = 'support@beeoclock.com'
   public contactForm: FormGroup;
   public intlTelInput: Iti | null = null;
