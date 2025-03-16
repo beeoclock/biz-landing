@@ -44,10 +44,10 @@ import JSConfetti from "js-confetti";
     NgClass,
     CurrencyCodePipe,
     NgStyle,
-    LanguagesPage,
     NgStyle,
     CurrencyCodePipe,
     ReactiveFormsModule,
+    LanguagesPage,
   ],
   viewProviders: [
     provideIcons({
@@ -150,8 +150,8 @@ export class AppComponent implements OnInit, AfterViewInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, emailValidator()]],
       phone: [''],
-      subject: [''],
-      message: ['']
+      subject: ['', Validators.required],
+      message: ['',Validators.required]
     });
   }
 

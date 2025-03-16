@@ -500,8 +500,8 @@
         </div>
       </div>
     </section>
-    <section id="faq" #faqList
-             class="flex lg:max-h-[866px] lg:h-full w-full justify-center items-center pt-[120px] phone:py-10 phone:px-5 lg:px-5 xl:px-0"
+    <section id="faq" #faqList class="flex lg:h-[866px] w-full justify-center items-center phone:py-10 phone:px-5
+                    lg:px-5 xl:px-0"
     >
       <div class="w-full max-w-[1060px] flex gap-10 flex-col">
         <div class="relative bg-[#FFFFFF] z-10 pb-4">
@@ -710,7 +710,8 @@
                                class="w-full border-0 border-b-[1px] bg-[#f3f3f3] focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500"/>
                       </div>
                       <div>
-                        <label for="subject" class="phone:portrait:max-w-[320px]" i18n>Message subject
+                        <label for="subject" class="phone:portrait:max-w-[320px] lg:max-w-[320px]"
+                               [ngClass]="{'text-rose-600': isInvalid('subject')}" i18n>Message subject
                           <span class="text-[12px] font-normal text-[#606060]">
                             (for example: "Questions about tariffs", "Technical support")
                           </span>
@@ -723,7 +724,7 @@
                                class="focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500 placeholder:text-[12px] text-[#606060]"/>
                       </div>
                       <div>
-                        <label for="message" i18n>Message text
+                        <label for="message" [ngClass]="{'text-rose-600': isInvalid('message')}" i18n>Message text
                           <span class="text-[12px] font-normal text-[#606060]">
                             (please indicate your request or suggestion)
                           </span>
