@@ -2,4 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "bootstrap-icons";
+@import 'intl-tel-input/build/css/intlTelInput.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+.iti {
+  display: block !important;
+
+  .iti__country-list {
+    @apply  rounded-lg shadow-lg border-0 border-gray-700;
+  }
+
+  .iti__search-input {
+    @apply  rounded-lg shadow-lg border-0 border-gray-700;
+  }
+
+  .iti__dropdown-content {
+    @apply  rounded-lg shadow-lg border-0 border-gray-700;
+  }
+
+  .iti__flag {
+    border-radius: 50%;
+    width: 12px;
+  }
+  .iti__selected-country-primary {
+    padding-left: 0;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'FixelDisplay';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url('./assets/fonts/FixelDisplay-Medium.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'FixelDisplay';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url('./assets/fonts/FixelDisplay-Regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'FixelDisplay';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url('./assets/fonts/FixelDisplay-Bold.woff2') format('woff2');
+  }
+}
+

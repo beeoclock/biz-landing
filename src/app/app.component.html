@@ -1,571 +1,805 @@
-<nav class="bg-transparent absolute w-full z-20 top-0 left-0 text-white">
-
-  <div class="max-w-screen-xl mx-auto">
-    <div class="grid grid-cols-12 text-white">
-
-      <div class="2xl:hidden col-span-1">
-      </div>
-      <div class="2xl:col-span-12 col-span-10">
-        <div class="flex flex-wrap items-center justify-between mx-auto py-2 md:py-6">
-          <a href="/" class="flex items-center">
-            <img src="assets/logo.svg" class="h-8 mr-3" alt="Bee O`clock Logo">
-            <span class="self-center text-2xl font-bold whitespace-nowrap">Bee O<span
-              class="text-beeoclock-primary">`</span>clock - Biz</span>
+<div class="wrapper w-full flex justify-center flex-col items-center">
+  <div class="w-full max-w-[1440px]">
+    <nav class="phone:landscape:px-5 max-lg:landscape:px:5 phone:px-5 w-full lg:px-5 xl:px-0 bg-[#FFFFFF] fixed md:static z-20
+                text-black flex justify-between items-center h-[70px] md:h-[90px] max-w-[1200px] mx-auto lg:mb-[58px] md:mb-0"
+    >
+      <div class="h-[60px] md:h-[70px] justify-between items-center w-full flex">
+        <div class="flex items-center w-[200px]">
+          <a href="#" id="logo-link" class="flex gap-[14px]">
+            <img ngSrc="assets/new_logo.svg" alt="Bee O`clock Logo" height="38" width="38">
+            <img ngSrc="assets/logo_text.svg" class="phone:hidden lg:block max-lg:hidden" alt="Bee O`clock"
+                 height="38" width="119"
+            >
           </a>
-<!--          <div class="flex md:order-2 md:hidden ">-->
-<!--            <button data-collapse-toggle="navbar-sticky" type="button"-->
-<!--                    class="text-white-->
-<!--        text-xl-->
-<!--        transition-all-->
-<!--        hover:bg-white/20-->
-<!--        focus:ring-4-->
-<!--        focus:outline-none-->
-<!--        focus:ring-beeColor-400-->
-<!--        font-medium-->
-<!--        rounded-lg-->
-<!--        px-4-->
-<!--        py-2.5-->
-<!--        text-center-->
-<!--        inline-flex-->
-<!--        items-center-->
-<!--        active:scale-95-->
-<!--        duration-100"-->
-<!--                    aria-controls="navbar-sticky" aria-expanded="false">-->
-<!--              <span class="sr-only">Open main menu</span>-->
-<!--              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"-->
-<!--                   xmlns="http://www.w3.org/2000/svg">-->
-<!--                <path fill-rule="evenodd"-->
-<!--                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"-->
-<!--                      clip-rule="evenodd"></path>-->
-<!--              </svg>-->
-<!--            </button>-->
-<!--          </div>-->
-<!--          bg-[#0B1828]-->
-          <div class="justify-end flex w-auto order-1 bg-transparent rounded-2xl mt-0">
+        </div>
+        <div class="flex justify-center lg:hidden w-full">
+          <img ngSrc="assets/logo_text.svg" alt="Bee O`clock" height="38" width="119">
+        </div>
+        <div class="flex lg:hidden w-[200px] justify-end">
+          <button (click)="toggleMobileMenu()" id="mobile-menu-button" aria-label="close-open"
+                  class="text-black focus:outline-none h-[100%] flex">
+            @if (isMobileMenuOpen) {
+              <ng-icon name="bootstrapXLg"/>
+            } @else {
+              <ng-icon name="bootstrapThreeDots"/>
+            }
+          </button>
+        </div>
+        <div class="phone:hidden md:flex gap-[20px] font-medium">
+          @for (item of menuItems; track item.id) {
+            @if (item.useCase === MenuUseCase.Desktop || item.useCase === MenuUseCase.Both) {
+              <a [href]="item.link" id="{{item.name}}-link-nav"
+                 class="hover:bg-main-hover hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px]"
+                 i18n
+              >
+                {{ item.name }}
+              </a>
+            }
+          }
+        </div>
+        <div class="phone:hidden justify-end hidden md:flex font-medium w-[200px]">
+          <a href="https://panel.dev.beeoclock.com/identity" target="_blank"
+             class="hover:bg-main-hover hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px] "
+             i18n>
+            Login
+          </a>
+        </div>
+        @if (isMobileMenuOpen) {
+          <div
+            class="fixed inset-0 bg-[#FFFFFF] z-30 mt-[70px] overflow-auto transition-all duration-400 ease-in-out">
             <ul
-              class="flex flex-col p-4 md:p-0 font-medium md:flex-row lg:space-x-8">
-<!--              <li>-->
-<!--                <a [href]="hostString"-->
-<!--                   class="text-white-->
-<!--        text-xl-->
-<!--        transition-all-->
-<!--        hover:bg-white/20-->
-<!--        focus:ring-4-->
-<!--        focus:outline-none-->
-<!--        focus:ring-beeColor-400-->
-<!--        font-medium-->
-<!--        rounded-lg-->
-<!--        px-4-->
-<!--        py-2.5-->
-<!--        text-center-->
-<!--        inline-flex-->
-<!--        items-center-->
-<!--        active:scale-95-->
-<!--        duration-100"-->
-<!--                   aria-current="page">-->
-<!--                  {{ 'keyword.capitalize.login' | translate }}-->
-<!--                </a>-->
-<!--              </li>-->
-<!--              <li>-->
-<!--                <a [href]="hostString + '/identity/sign-up'"-->
-<!--                   class="text-white-->
-<!--        text-xl-->
-<!--        transition-all-->
-<!--        hover:bg-white/20-->
-<!--        focus:ring-4-->
-<!--        focus:outline-none-->
-<!--        focus:ring-beeColor-400-->
-<!--        font-medium-->
-<!--        rounded-lg-->
-<!--        px-4-->
-<!--        py-2.5-->
-<!--        text-center-->
-<!--        inline-flex-->
-<!--        items-center-->
-<!--        active:scale-95-->
-<!--        duration-100">-->
-<!--                  {{ 'keyword.capitalize.register' | translate }}-->
-<!--                </a>-->
-<!--              </li>-->
+              class="flex flex-col items-center px-5 pt-4 [&>li]:flex [&>li]:items-center [&>li]:h-[51px] [&>li]:w-full
+                     [&>li]:border-b [&>li]:border-[#F4F4F5]"
+            >
+              @for (item of menuItems; track item.name) {
+                <li>
+                  <a [href]="item.link" id="{{item.name}}-mobile-link" class="hover:text-yellow-500 font-medium"
+                     [attr.target]="item.name === 'Try a demo account' ? '_blank' : null" i18n>
+                    {{ item.name }}
+                  </a>
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+    </nav>
+
+    <section class="flex w-full justify-center mt-[90px] md:mt-0 phone:mb-7 xl:min-h-[810px]">
+      <div class="flex flex-col landscape:flex-row md:flex-row items-center w-full max-w-[1200px] max-lg:px-5 landscape:gap-2.5
+                  phone:landscape:px-5 phone:px-5 lg:px-5 xl:px-0"
+      >
+        <div class="flex lg:hidden relative w-full lg:mb-[20px] mb-0">
+          <img ngSrc="assets/img/main_mob.webp" priority alt="Bee O`clock service details image" height="286"
+               width="335">
+        </div>
+        <div class="text-wrapper mx-auto flex flex-wrap items-center w-full sm:max-w-[100%] lg:max-w-[40%] sm:px-0">
+          <div class="max-w-[469px] mb-[30px] md:mb-10 landscape:h-full">
+            <p class="font-bold leading-[34px] text-[40px] phone:text-[32px] landscape:text-[30px] landscape:mb-2.5"
+               i18n>
+              Online appointment booking for clients.
+            </p>
+            <p class="font-medium md:text-[20px]" i18n>
+              A simple and effective tool for managing customer records in beauty salons and other businesses
+            </p>
+          </div>
+          <a href="https://panel.dev.beeoclock.com/identity/sign-up" target="_blank">
+            <button type="button" id="try-free-button"
+                    class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800]
+                          transition-all  duration-150 ease-in-out active:scale-95"
+                    i18n>
+              Try it for free
+            </button>
+          </a>
+        </div>
+        <div class="relative hidden lg:block">
+          <img ngSrc="assets/img/group.webp" priority alt="Bee O`clock service details image" height="715" width="721">
+          <img class="absolute top-[30%] right-[90%]" ngSrc="assets/img/vector_1.png" alt="Bee O`clock service schedule"
+               height="78" width="40">
+          <img class="absolute top-[67%]" ngSrc="assets/img/vector_2.png" alt="line" height="48" width="78">
+          <img class="absolute top-[4%] right-[67%]" ngSrc="assets/img/service_details.png" alt="line" height="137"
+               width="200">
+        </div>
+      </div>
+    </section>
+
+    <section class="flex w-full justify-center xl:min-h-[810px]">
+      <div class="flex w-full max-w-[1200px] items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0 justify-between">
+        <div class="flex">
+          <img ngSrc="assets/img/img.webp" alt="Bee O`clock service details" height="614" width="542" priority>
+        </div>
+        <div class="text-4xl flex items-center flex-col">
+          <div class="flex justify-start w-full mb-[30px] phone:flex-col">
+            <h2 class="font-bold text-black mr-2 md:mr-2" i18n>Opportunities</h2>
+            <h2 class="font-bold text-[#FFD429]">Bee o'clock</h2></div>
+          <div class="flex">
+            <ul class="flex flex-col gap-[20px] [&>li>div>h3]:font-bold [&>li>div>h3]:text-xl [&>li>div>p]:font-medium
+                       [&>li>div>p]:text-[16px] [&>li>div]:max-w-[524px] leading-7 [&>li]:flex"
+            >
               <li>
-                <utility-change-language-component/>
+                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"></ng-icon>
+                <div>
+                  <h3 i18n>Automate records</h3>
+                  <p i18n>Forget about confusion with records. Our service automates customer onboarding processes,
+                    allowing you to focus on your work, not on record administration.</p>
+                </div>
+              </li>
+              <li>
+                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
+                <div>
+                  <h3 i18n>Reminder to clients</h3>
+                  <p i18n>Make sure your customers always remember their visit! Automatic SMS and email reminders will
+                    ensure that your clients arrive on time and reduce the number of missed appointments.</p>
+                </div>
+              </li>
+              <li>
+                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
+                <div>
+                  <h3 i18n>Customized for your business</h3>
+                  <p i18n>Make Bee o'clock a part of your brand! You can customize each interface of the service to your
+                    style and brand, which allows you to individualize your workflows.</p>
+                </div>
+              </li>
+              <li>
+                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
+                <div>
+                  <h3 i18n>Manage your records online</h3>
+                  <p i18n>All information is at your fingertips - you can access customer history, schedules, and
+                    records from any device. You can make decisions anywhere and anytime.</p>
+                </div>
               </li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</nav>
+    </section>
 
-
-<!-- Header h-[700px] -->
-<header class="pt-24 md:pt-36 mb-4 md:mb-20 overflow-hidden"
-        style="background-image: url('/assets/banner-1.jpg');background-repeat: no-repeat; background-size: cover;">
-
-  <div class="max-w-screen-xl mx-auto">
-
-    <div class="flex flex-wrap items-center justify-between">
-
-      <div class="grid grid-cols-12 text-white">
-
-        <div class="2xl:hidden col-span-1">
-          <!-- SPACING -->
-        </div>
-        <div class="col-span-10 lg:col-span-4 pb-10">
-          <h1 class="text-5xl font-display font-light" [innerHtml]="'header.titleHTML' | translate">
-
-          </h1>
-          <p class="mt-4 text-[#748194]">
-            {{ 'header.description' | translate }}
-          </p>
-
-          <div class="mt-8 flex flex-col gap-4">
-            <a [href]="hostString + '/identity/sign-up'"
-               class="rounded-full text-lg md:text-xl px-4 py-2 w-full flex justify-between bg-beeoclock-primary hover:underline font-bold text-black">
-              <span [innerHtml]="'header.button.label' | translate"></span>
-              <i class="bi bi-chevron-right"></i>
-            </a>
+    <section class="flex w-full justify-center xl:min-h-[810px]">
+      <div class="flex w-full max-w-[1040px] items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0 justify-between">
+        <div class="w-full flex flex-col">
+          <h2 class="font-bold text-4xl text-black mb-[26px] phone:pt-12 phone:flex" i18n>How does it work?</h2>
+          <div class="flex gap-5 flex-wrap [&>div]:bg-[#F4F4F4] [&>div]:rounded-[32px] [&>div]:flex [&>div]:max-w-[510px]
+                      [&>div]:w-full [&>div]:h-[180px] [&>div>p]:font-bold [&>div>p]:text-[128px] [&>div>p]:text-[#CACACA]
+                      [&>div>div>h3]:font-bold [&>div>div>h3]:text-x [&>div>div]:flex [&>div>div]:flex-col [&>div>div]:item-center
+                      [&>div>div]:justify-center [&>div>div>p]:max-w-[268px] [&>div]:justify-around [&>div>div:last-child]:phone:hidden
+                      [&>div>div>p]:phone:text-[16px] [&>div]:phone:h-[170px] [&>div>p]:phone:mr-2 [&>div>p]:flex
+                      [&>div>p]:w-[90px] [&>div>p]:justify-center [&>div]:items-center [&>div>div>p]:text-sm [&>div>div]:phone:pr-[6px]"
+          >
             <div>
-              <a [href]="demoAccountUrl"
-                 class="rounded-full text-lg md:text-xl px-4 py-2 w-full flex justify-between bg-white hover:underline font-bold text-black">
-                <span>{{ 'header.demoAccount.link.label' | translate }}</span>
-                <i class="bi bi-chevron-right"></i>
-              </a>
-              <div class="ps-4">{{ 'header.demoAccount.link.helper' | translate }}</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-span-1">
-          <!-- SPACING -->
-        </div>
-        <div class="col-span-12 lg:col-span-5 2xl:col-span-7">
-<!--           h-[560px]-->
-          <img src="../assets/iPad_Air_calenadr-with-specialist.png" class="object-cover object-left-top w-full rounded-lg"
-               alt="Screen of Bee O`clock panel">
-        </div>
-
-      </div>
-
-      <!-- TODO Add inside shadow -->
-
-    </div>
-
-  </div>
-
-</header>
-
-<!-- Business we support -->
-<section class="h-[1400px] md:h-auto mb-52">
-
-  <div class="text-center w-full mb-20">
-    <h2 class="text-3xl font-display">
-      {{ 'businessSupport.title' | translate }}
-    </h2>
-    <p class="text-[#748194]">
-      {{ 'businessSupport.description' | translate }}
-    </p>
-  </div>
-
-  <div class="max-w-screen-xl mx-auto">
-
-    <div class="grid grid-cols-24 md:gap-4 p-8 md:p-0">
-
-      <div class="hidden md:block col-span-1">
-
-      </div>
-
-      <div class="col-span-24 md:col-span-8 mb-8 md:mb-0">
-
-        <img src="assets/examples/business-1.jpg" class="w-full h-full rounded-xl" alt="">
-
-      </div>
-
-      <div class="col-span-24 md:col-span-8 relative">
-
-        <img src="assets/examples/business-2.jpg" class="w-full h-full rounded-xl" alt="">
-
-        <div class="absolute top-[calc(100%-60px)] right-8 md:top-8 md:right-[-80%] 2xl:-right-full">
-
-          <div class="bg-white border rounded-xl p-8 min-h-[350px] w-[300px] md:w-[500px]">
-
-            <img src="assets/double-quotes.svg" class="absolute -top-4 right-20" alt="">
-
-            <div class="font-bold mb-4 mt-4 text-xl md:text-3xl">
-              {{ 'businessSupport.example.title' | translate }}
-            </div>
-
-            <p class="text-[#344050] mb-4">
-              {{ 'businessSupport.example.description' | translate }}
-            </p>
-
-            <div class="flex flex-col md:flex-row justify-between mb-4">
-              <div class="flex flex-col mb-4 md:mb-0">
-                <div class="font-bold">
-                  {{ 'businessSupport.example.fullName' | translate }}
-                </div>
-                <div class="text-[#344050]">
-                  {{ 'businessSupport.example.service.title' | translate }}
-                </div>
-              </div>
+              <p>1</p>
               <div>
-                <div class="rounded-full bg-[#16BDCA] text-white text-center py-1">
-                  {{ 'businessSupport.example.service.duration' | translate }}
-                </div>
-                <span class="text-[#748194] text-sm">
-                  {{ 'businessSupport.example.service.comment' | translate }}
+                <h3 i18n>Registration on the platform</h3>
+                <p i18n>Create an account: Fill in basic information about your business, add address and contact
+                  details.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/1.png" alt="registration" height="120" width="120"></div>
+            </div>
+            <div>
+              <p>2</p>
+              <div>
+                <h3 i18n>Service settings</h3>
+                <p i18n>Add your services: Specify the list of services, their duration and cost.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/2.png" alt="service settings" height="120" width="120"></div>
+            </div>
+            <div>
+              <p>3</p>
+              <div>
+                <h3 i18n>Customer invitations</h3>
+                <p i18n>Get a unique link to your record page and share it via website, social media, or email.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/3.png" alt="customer" height="120" width="120"></div>
+            </div>
+            <div>
+              <p>4</p>
+              <div>
+                <h3 i18n>Online customer registration</h3>
+                <p i18n>Convenient booking: Customers book a service and a convenient time online, without calling or
+                  waiting.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/4.png" alt="customer" height="120" width="120"></div>
+            </div>
+            <div>
+              <p>5</p>
+              <div>
+                <h3 i18n>Managing records</h3>
+                <p i18n>Control your schedule: Get notified about new recordings, view and manage your schedule in a
+                  convenient interface.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/5.png" alt="records" height="120" width="120"></div>
+            </div>
+            <div>
+              <p>6</p>
+              <div>
+                <h3 i18n>Analysis and development</h3>
+                <p i18n>Track your success: Analyze your record and customer activity statistics to improve your
+                  service.</p>
+              </div>
+              <div><img ngSrc="../assets/icon/6.png" alt="analytics" height="120" width="120"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex w-full justify-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0">
+      <div class="flex w-full max-w-[1040px] justify-center flex-col items-center phone:flex-col phone:gap-7 gap-4">
+        <div class="w-full flex justify-center relative">
+          <img ngSrc="assets/img/demo.webp" alt="" height="569" width="926" priority class="phone:hidden">
+          <iframe class="max-w-[609px] w-full h-[440px] phone:h-[230px] absolute top-[10%] rounded-2xl phone:relative"
+                  src="https://www.youtube.com/embed/Z5L5FoGcnrY"
+                  frameborder="1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+          >
+          </iframe>
+        </div>
+        <div class="flex flex-wrap max-w-[816px] gap-2">
+          <h2 class="text-4xl phone:text-2xl font-bold text-black max-w-[816px]" i18n>
+            Service for business: Simple online customer registration.
+          </h2>
+          <div
+            class="flex justify-between items-center phone:gap-5 w-full phone:portrait:flex-col portrait:w-[1024]:flex-row">
+            <p class="text-base max-w-[500px] font-normal" i18n>
+              Order a demo access to the online customer recording service, a convenient solution without registration.
+            </p>
+            <a [href]="demoAccountUrl" target="_blank" id="demo-button">
+              <button class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800]
+                          transition-all duration-150 ease-in-out active:scale-95" i18n
+              >
+                Demo account
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tariffs"
+             class="flex w-full justify-center items-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0">
+      <div class="flex flex-col w-full max-w-[1080px] gap-10 phone:gap-3 [&>div]:cursor-pointer">
+        <div class="flex w-full items-center phone:flex-col phone:items-start phone:gap-2.5">
+          <div class="w-full flex flex-col px-2.5">
+            <h2 class="font-bold text-[40px]" i18n>Tariffs</h2>
+            <p class="font-normal text-base" i18n>Choose the best option for your business</p>
+          </div>
+          <div class="flex shadow-sm h-[40px] rounded-[66px]">
+            <button
+              id="monthly-button"
+              class="text-sm font-semibold font-inter px-5 py-[5px] rounded-[66px] h-[40px] transition-colors duration-300"
+              [ngClass]="{ 'bg-[#E5E5E5]': subscriptionType === 'monthly'}"
+              (click)="toggleSubscription('monthly')"
+              i18n>
+              Monthly
+            </button>
+            <button
+              id="annual-button"
+              class="text-sm font-semibold font-inter px-5 py-[5px] rounded-[66px] h-[40px] transition-colors duration-300"
+              [ngClass]="{ 'bg-[#E5E5E5]': subscriptionType === 'annual' }"
+              (click)="toggleSubscription('annual')" i18n>
+              Annual
+            </button>
+          </div>
+        </div>
 
-              </span>
+        <div class="flex [&>div]:rounded-2xl gap-5 [&>div]:px-5 [&>div]:py-3 [&>div>h2]:text-2xl [&>div>h2]:font-bold
+                    [&>div>h2]:text-[#FFD429] [&>div]:w-full phone:flex-col"
+        >
+          <div
+            class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
+            <div class="flex flex-col">
+              <div class="flex justify-between items-center mb-1">
+                <h2 class="text-2xl font-bold text-[#FFD429] uppercase" i18n>FREE</h2>
+                <p class="font-light text-xs" i18n>No need card</p>
+              </div>
+              <div class="flex justify-center">
+                <div class="flex flex-col w-[250px]">
+                  <div class="flex mb-1">
+                    <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                      {{ pricing.free[subscriptionType].value }}
+                      <span
+                        class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
+                        </span>
+                      @if (subscriptionType === 'annual') {
+                        <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                      }
+                    </p>
+                  </div>
+                  <ul
+                    class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
+                    <li class="first:font-bold" i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      1 User
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Public page
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Admin panel
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      SEO Package
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      JSON LD
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Email notification
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-
-            <div class="flex flex-wrap gap-4">
-
-              <a href="https://twitter.com/bee_o_clock" target="_blank" class="rounded-full bg-white shadow px-3 py-2">
-                <i class="bi bi-linkedin"></i>
-              </a>
-
-              <a href="https://www.facebook.com/beeoclock.biz" target="_blank" class="rounded-full bg-white shadow px-3 py-2">
-                <i class="bi bi-facebook"></i>
-              </a>
-
-              <a href="https://www.instagram.com/beeoclock.biz" target="_blank" class="rounded-full bg-white shadow px-3 py-2">
-                <i class="bi bi-instagram"></i>
-              </a>
-
-            </div>
-
+            <button class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+              hover:bg-[#FFC800] rounded-[10px] w-full uppercase" i18n>
+              Get Started
+            </button>
           </div>
 
-        </div>
+          <div
+            class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
+            <div class="flex flex-col">
+              <div class="flex justify-between items-center mb-1">
+                <h2 class="text-2xl font-bold text-[#FFD429] mb-1 uppercase" i18n>BASIC</h2>
+              </div>
+              <div class="flex justify-center">
+                <div class="flex flex-col w-[250px]">
+                  @if (subscriptionType === 'annual') {
+                    <div class="flex gap-3">
+                      <p class="font-light text-base line-through">
+                        {{ pricing.basic.discountBasic.value }} {{ pricing.basic.discountBasic.currency | currencyCode }}
+                      </p>
+                      <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
+                        -10%
+                      </p>
+                    </div>
+                  }
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ pricing.basic[subscriptionType].value }}
+                    <span
+                      class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
+                      </span>
+                    @if (subscriptionType === 'annual') {
+                      <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                    }
+                  </p>
+                  <ul
+                    class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
+                    <li class="first:font-bold" i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      5 Users
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Public page
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Admin panel
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      SEO Package
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      JSON LD
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Email notification
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Plugins unlimited
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Payment Confirmation
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      SMS Notification
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button
+              class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+              hover:bg-[#FFC800] rounded-[10px] uppercase" i18n>
+              Get Started
+            </button>
+          </div>
 
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- Features -->
-<section class="">
-
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-
-    <div class="text-center w-full mb-20">
-      <h2 class="text-3xl font-display">
-        {{ 'features.title' | translate }}
-      </h2>
-      <p class="text-[#748194]">
-        {{ 'features.description' | translate }}
-      </p>
-    </div>
-
-    <section>
-      <div
-        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img class="w-full" src="assets/sections/plan.svg" alt="PLAN Image">
-        <div class="mt-4 md:mt-0">
-          <p class="text-[#E63756]">
-            <i class="bi bi-lightbulb-fill"></i>
-            {{ 'features.plan.title' | translate }}
-          </p>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-            {{ 'features.plan.description' | translate }}
-          </h2>
-          <p class="mb-6 font-light text-[#5D6E82] md:text-lg">
-            {{ 'features.plan.content' | translate }}
-          </p>
+          <div
+            class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
+            <div class="flex flex-col">
+              <div class="flex justify-between items-center mb-1">
+                <h2 class="text-2xl font-bold text-[#FFD429] mb-1 uppercase" i18n>PRO</h2>
+              </div>
+              <div class="flex justify-center">
+                <div class="flex flex-col w-[250px]">
+                  @if (subscriptionType === 'annual') {
+                    <div class="flex gap-3">
+                      <p class="font-light line-through">
+                        {{ pricing.pro.discountPro.value }} {{ pricing.pro.discountPro.currency | currencyCode }}
+                      </p>
+                      <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
+                        -10%
+                      </p>
+                    </div>
+                  }
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ pricing.pro[subscriptionType].value }}
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    @if (subscriptionType === 'annual') {
+                      <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                    }
+                  </p>
+                  <ul
+                    class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center [&>li:nth-last-child(2)]:font-bold">
+                    <li class="first:font-bold" i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Unlimited Users
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Public page
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Admin panel
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      SEO Package
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      JSON LD
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Email notification
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Plugins unlimited
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Payment Confirmation
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      SMS Notification
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      AI assistant
+                    </li>
+                    <li i18n>
+                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
+                      Public rest API
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button
+              class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+                     hover:bg-[#FFC800] rounded-[10px] uppercase" i18n
+            >
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
     </section>
-
-    <section>
-      <div
-        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img class="md:hidden w-full" src="assets/sections/build.svg" alt="BUILD Image">
-        <div class="mt-4 md:mt-0">
-          <p class="text-[#27BCFE]">
-            <i class="bi bi-box-fill"></i>
-            {{ 'features.build.title' | translate }}
-          </p>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-            {{ 'features.build.description' | translate }}
-          </h2>
-          <p class="mb-6 font-light text-[#5D6E82] md:text-lg">
-            {{ 'features.build.content' | translate }}
-          </p>
+    <section id="faq" #faqList class="flex lg:h-[866px] w-full justify-center items-center phone:py-10 phone:px-5
+                    lg:px-5 xl:px-0"
+    >
+      <div class="w-full max-w-[1060px] flex gap-10 flex-col">
+        <div class="relative bg-[#FFFFFF] z-10 pb-4">
+          <h2 i18n="FAQ header|Short title for FAQ section" class="font-bold text-[40px] leading-10">FAQ</h2>
         </div>
-        <img class="w-full hidden md:block" src="assets/sections/build.svg" alt="BUILD Image">
-      </div>
-    </section>
-
-    <section>
-      <div
-        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img class="w-full" src="assets/sections/organize.svg" alt="ORGANIZE Image">
-        <div class="mt-4 md:mt-0">
-          <p class="text-beeoclock-primary">
-            <i class="bi bi-diagram-3-fill"></i>
-            {{ 'features.organize.title' | translate }}
-          </p>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-            {{ 'features.organize.description' | translate }}
-          </h2>
-          <p class="mb-6 font-light text-[#5D6E82] md:text-lg">
-            {{ 'features.organize.content' | translate }}
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div
-        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img class="w-full md:hidden" src="assets/sections/secure.svg" alt="SECURE Image">
-        <div class="mt-4 md:mt-0">
-          <p class="text-[#9B51E0]">
-            <i class="bi bi-shield-shaded"></i>
-            {{ 'features.secure.title' | translate }}
-          </p>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-            {{ 'features.secure.description' | translate }}
-          </h2>
-          <p class="mb-6 font-light text-[#5D6E82] md:text-lg">
-            {{ 'features.secure.content' | translate }}
-          </p>
-        </div>
-        <img class="w-full hidden md:block" src="assets/sections/secure.svg" alt="SECURE Image">
-      </div>
-    </section>
-
-    <section>
-      <div
-        class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img class="w-full" src="assets/sections/monitor.svg" alt="MONITOR Image">
-        <div class="mt-4 md:mt-0">
-          <p class="text-[#16BDCA]">
-            <i class="bi bi-graph-up-arrow"></i>
-            {{ 'features.monitor.title' | translate }}
-          </p>
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-            {{ 'features.monitor.description' | translate }}
-          </h2>
-          <p class="mb-6 font-light text-[#5D6E82] md:text-lg">
-            {{ 'features.monitor.content' | translate }}
-          </p>
+        <div id="faq-list"
+             class="relative flex flex-col transition-[min-height] duration-500 ease-in-out"
+             [ngStyle]="{ 'min-height': faqMinHeight }"
+        >
+          @for (item of faqItems; track item; let i = $index) {
+            <div id="faq-item-{{ i }}" class="self-stretch justify-center items-start inline-flex w-full flex-col">
+              <div (click)="toggleItem(i)" id="faq-button"
+                   class="flex justify-between items-center w-full gap-5 pt-5 pb-5 cursor-pointer">
+                <div class="grow text-black text-sm font-bold leading-tight" i18n="FAQ Title">
+                  {{ item.title }}
+                </div>
+                <div class="flex items-center justify-center">
+                  @if (activeIndex === i) {
+                    <ng-icon name="bootstrapDashCircle" size="2.5em"/>
+                  } @else {
+                    <ng-icon name="bootstrapPlusCircle" size="2.5em"/>
+                  }
+                </div>
+              </div>
+              <div class="grid transition-[grid-template-rows] duration-500 ease-in-out"
+                   [ngClass]="{ 'grid-rows-[0fr] opacity-0': activeIndex !== i, 'grid-rows-[1fr] opacity-100': activeIndex === i }">
+                <div
+                  class="overflow-hidden text-sm text-black pl-[30px] max-w-[1000px] phone:portrait:pr-[60px] leading-6">
+                  <div class="mb-8">
+                    <span class="font-bold">{{ item.content }}</span> <span [innerHTML]="item.description"></span>
+                  </div>
+                  @if (item.list) {
+                    @if (item.listType === 'ordered') {
+                      <ol class="pl-2 mt-2.5 ml-4 list-decimal marker:font-bold mb-8">
+                        @for (point of item.list; track point) {
+                          <li>
+                            <span class="font-bold">{{ point.split(':')[0] }}:</span>
+                            {{ point.split(':')[1] }}
+                          </li>
+                        }
+                      </ol>
+                    } @else if (item.listType === 'unordered') {
+                      <ul class="pl-2 mt-2.5 ml-3.5 list-disc mb-8">
+                        @for (point of item.list; track point) {
+                          <li>
+                            <span class="font-bold">{{ point.split(':')[0] }}:</span>
+                            {{ point.split(':')[1] }}
+                          </li>
+                        }
+                      </ul>
+                    } @else {
+                      <div class="mt-2.5 list-none mb-8">
+                        @for (point of item.list; track point) {
+                          <p class="mb-2">
+                            <span class="font-bold">{{ point.split(':')[0] }}:</span>
+                            {{ point.split(':')[1] }}
+                          </p>
+                        }
+                      </div>
+                    }
+                  }
+                </div>
+              </div>
+              <div class="border-b border-[#cacaca] w-full"></div>
+            </div>
+          }
         </div>
       </div>
     </section>
-
-  </div>
-
-</section>
-
-<!-- Do you need consultation -->
-<section class="mb-4">
-  <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-    <div class="mb-8 lg:mb-16 text-center">
-      <h2 class="text-3xl font-display tracking-tight leading-tight text-gray-900 md:text-4xl">
-        {{ 'consultation.title' | translate }}
-      </h2>
-      <p class="text-[#748194]">
-        {{ 'consultation.description' | translate }}
-      </p>
-    </div>
-    <div class="flex items-center justify-center gap-8 text-[#5D6E82]">
-      <div>
-        <a [href]="consultationLink"
-           class="rounded-full gap-2 text-lg md:text-xl px-4 py-2 w-full flex justify-between bg-beeoclock-primary hover:underline font-bold text-black">
-          <span [innerHtml]="'header.button.consultationLink.label' | translate"></span>
-          <i class="bi bi-chevron-right"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Media about creators -->
-<section class="bg-white border-y">
-  <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-    <div class="mb-8 lg:mb-16 text-center">
-      <h2 class="text-3xl font-display tracking-tight leading-tight text-gray-900 md:text-4xl">
-        {{ 'media.title' | translate }}
-      </h2>
-      <p class="text-[#748194]">
-        {{ 'media.description' | translate }}
-      </p>
-    </div>
-    <div class="grid grid-cols-2 gap-8 text-[#5D6E82] sm:gap-12 md:grid-cols-3 lg:grid-cols-6">
-      <a href="https://www.newsweek.com/ukrainian-fighters-using-crowdsourced-ford-rangers-armored-battle-1724417"
-         class="flex justify-center items-center">
-        <img src="assets/media/newsweek.svg" class="h-9 hover:text-gray-900 d" alt="Newsweek">
-      </a>
-      <a href="https://www.youtube.com/watch?v=0ZBULtaRSMs" class="flex justify-center items-center">
-        <img src="assets/media/cnn.svg" class="h-9 hover:text-gray-900 " alt="CNN">
-      </a>
-      <a
-        href="https://www.businessinsider.com/civilian-fords-and-toyotas-turned-into-battle-trucks-for-ukraines-forces-2022-6?IR=T"
-        class="flex justify-center items-center">
-        <img src="assets/media/insider.svg" class="h-9 hover:text-gray-900 " alt="INSIDER">
-      </a>
-      <a href="https://www.telegraph.co.uk/cars/features/british-farming-vehicles-turned-ukrainian-rocket-launchers/"
-         class="flex justify-center items-center">
-        <img src="assets/media/the-telegraph.svg" class="h-9 hover:text-gray-900 "
-             alt="The Telegraph">
-      </a>
-      <a href="https://www.kyivpost.com/post/5293" class="flex justify-center items-center">
-        <img src="assets/media/kyivpost.svg" class="h-9 hover:text-gray-900 " alt="Kyiv Post">
-      </a>
-      <a
-        href="https://tw.news.yahoo.com/%E8%B2%A8%E5%8D%A1%E8%AE%8A%E6%88%B0%E8%BB%8A-car4ukraine-%E4%BB%96%E5%80%91%E7%94%A8%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%B9%E5%BC%8F%E7%82%BA%E7%83%8F%E5%85%8B%E8%98%AD%E8%80%8C%E6%88%B0-111417739.html"
-        class="flex justify-center items-center">
-        <img src="assets/media/yahoo.svg" class="h-9 hover:text-gray-900 " alt="yahoo!">
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="mt-20 p-8">
-
-  <div class="bg-[#0B1828] rounded-2xl">
-    <div class="mx-auto w-full max-w-screen-xl lg:py-8">
-      <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-        <div class="col-span-2 md:col-span-1">
-          <h2 class="mb-6 font-semibold uppercase text-white">
-            {{ 'footer.title' | translate }}
-          </h2>
-          <ul class="text-[#5D6E82] font-medium">
-            <li class="mb-4">
-              {{ 'footer.description' | translate }}
-            </li>
-          </ul>
-        </div>
-        <div class="col-span-2 md:col-span-1">
-          <h2 class="mb-6 font-semibold uppercase text-white">
-            {{ 'footer.blog.title' | translate }}
-          </h2>
-          <ul class="text-[#5D6E82] font-medium">
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
-                <p class="">
-                  {{ 'footer.blog.firstPost' | translate }}
-                </p>
-                <div class="text-sm flex text-[#344050]">
-                  <span>Jan 15</span>
-                  <i class="bi bi-dot"></i>
-                  <span>8min read</span>
+    <section
+      class="flex w-full lg:max-h-[1006px] lg:h-full justify-center items-center phone:py-10 phone:px-5 lg:px-5 xl:px-0 mb-4 ">
+      <div
+        class="max-w-[1080px]  flex-col justify-start items-end gap-5 inline-flex shadow-md rounded-2xl phone:shadow-none relative">
+        <img ngSrc="assets/img/left_men.svg" alt="img" class="absolute left-[-17.5%] bottom-[-0.6%] hidden xl:block"
+             height="456" width="250">
+        <img ngSrc="assets/img/right_men.svg" alt="img" class="absolute right-[-17.5%] bottom-[-0.6%] hidden xl:block"
+             height="469" width="296">
+        <div
+          class="self-stretch grow shrink basis-0 bg-[#FFFFFF] rounded-2xl justify-start items-start gap-[50px] flex phone:flex-col">
+          <div
+            class="grow shrink basis-0 self-stretch px-[30px] py-5 flex-col justify-between items-start inline-flex phone:gap-[70px] phone:shadow-sm rounded-2xl">
+            <div class="self-stretch  flex-col justify-start items-start gap-5 flex">
+              <div class="self-stretch flex-col justify-start items-start flex">
+                <div class="text-black text-8xl font-bold leading-tight phone:text-[64px]" i18n>
+                  Contact
+                </div>
+                <div class="self-stretch flex-col justify-start items-start flex">
+                  <div class="self-stretch text-black text-sm font-bold leading-tight" i18n>
+                    Do you have any questions or suggestions?
+                  </div>
+                  <div class="self-stretch text-[#606060] text-xs font-normal" i18n>
+                    If you have any additional questions about using Bee o’clock or would like to share ideas for
+                    improving the service,
+                    we are always ready to listen! Contact us in any convenient way:
+                  </div>
+                </div>
+              </div>
+              <a [href]="'mailto:' + email" class="justify-start items-center gap-2.5 inline-flex">
+                <ng-icon name="bootstrapEnvelope"/>
+                <div class="text-black text-sm font-semibold tracking-tight">
+                  {{ email }}
                 </div>
               </a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
-                <p class="">
-                  {{ 'footer.blog.secondPost' | translate }}
-                </p>
-                <div class="text-sm flex text-[#344050]">
-                  <span>Jan 15</span>
-                  <i class="bi bi-dot"></i>
-                  <span>3min read</span>
+            </div>
+            <div class="self-stretch flex-col justify-start items-start gap-5 flex">
+              <div class="self-stretch  flex-col justify-start items-start gap-5 flex">
+                <div class="self-stretch  flex-col justify-start items-start flex">
+                  <div class="self-stretch text-black text-sm font-bold leading-tight" i18n>
+                    Social networks
+                  </div>
+                  <div class="self-stretch text-[#606060] text-xs font-normal" i18n>
+                    Join our community to be the first to receive useful tips, news, and promotional offers:
+                  </div>
                 </div>
-              </a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
-                <p class="">
-                  {{ 'footer.blog.thirdPost' | translate }}
-                </p>
-                <div class="text-sm flex text-[#344050]">
-                  <span>Jan 15</span>
-                  <i class="bi bi-dot"></i>
-                  <span>3min read</span>
+                <div class="self-stretch justify-between items-start inline-flex phone:flex-col phone:grid phone:grid-cols-2 phone:gap-x-5 phone:gap-y-[6px]">
+                  <a href="https://www.instagram.com/beeoclock.biz/" target="_blank" class="justify-start items-center gap-1.5 flex">
+                    <ng-icon name="bootstrapInstagram"/>
+                    <div class="text-black text-xs font-normal underline underline-offset-2 tracking-tight flex items-center">
+                      <ng-icon name="bootstrapAt" size="1em" class=""/>
+                      beeoclock.biz
+                    </div>
+                  </a>
+                  <a href="https://m.facebook.com/@beeoclock.biz/?wtsid=rdr_0eM1YyzCYFTDfjBGU&hr=1" target="_blank" class="justify-start items-center gap-1.5 flex">
+                    <ng-icon name="bootstrapFacebook"/>
+                    <div class="text-black text-xs font-normal underline underline-offset-2 tracking-tight">
+                      beeoclock.biz
+                    </div>
+                  </a>
+                  <a href="https://x.com/bee_o_clock?s=21" target="_blank" class="justify-start items-center gap-1.5 flex">
+                    <ng-icon name="bootstrapTwitterX"/>
+                    <div class="text-black text-xs font-normal underline underline-offset-2 tracking-tight">
+                      bee_o_clock
+                    </div>
+                  </a>
+                  <a href="https://www.linkedin.com/company/beeoclock/" target="_blank" class="justify-start items-center gap-1.5 flex">
+                    <ng-icon name="bootstrapLinkedin" class="bg-black"/>
+                    <div class="text-black text-xs font-normal underline underline-offset-2 tracking-tight">
+                      beeoclock
+                    </div>
+                  </a>
                 </div>
-              </a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
-                <p class="">
-                  {{ 'footer.blog.fourthPost' | translate }}
-                </p>
-                <div class="text-sm flex text-[#344050]">
-                  <span>Jan 15</span>
-                  <i class="bi bi-dot"></i>
-                  <span>3min read</span>
+              </div>
+              <div class="self-stretch text-[#606060] text-xs font-normal" i18n>
+                Follow us on social media and be the first to know about updates and new features of Bee o’clock.
+              </div>
+            </div>
+          </div>
+          <div class="grow shrink basis-0 self-stretch justify-start items-center gap-2.5 flex">
+            <div class="grow shrink basis-0 self-stretch flex-col justify-start items-start gap-3 flex">
+              <div
+                class="self-stretch grow shrink basis-0 px-10 pt-[50px] pb-5 bg-[#f3f3f3] rounded-2xl flex-col justify-between items-end flex">
+                <div class="self-stretch flex-col justify-start items-start gap-[31px] flex">
+                  <div class="self-stretch flex-col justify-start items-start flex">
+                    <div class="self-stretch h-5 text-black text-sm font-bold leading-tight" i18n>
+                      Feedback form
+                    </div>
+                    <div class=" text-[#606060] text-xs font-normal" i18n>
+                      If you prefer to write directly here on the website, fill out the form below - we will try to
+                      respond as quickly as possible, usually within 24 hours.
+                    </div>
+                  </div>
+                  <div class="self-stretch flex-col justify-start items-start flex phone:relative">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"
+                          class="flex flex-col w-full [&>div]:flex [&>div]:flex-col [&>div>input]:p-0 gap-8 [&>div>input]:h-[33px]
+                                 [&>div>input]:bg-[#f3f3f3] [&>div>input]:border-0 [&>div>input]:border-b-[1px] [&>div>label]:font-semibold
+                                 [&>div>label]:text-sm [&>div>textarea]:border-0 [&>div>textarea]:border-b-[1px] [&>div>textarea]:bg-[#f3f3f3]"
+                    >
+                      <div class="relative">
+                        <label for="name"
+                               class="after:content-['*'] after:text-rose-600"
+                               [ngClass]="{'text-rose-600': isInvalid('name')}" i18n>
+                          Name
+                        </label>
+                        <input type="text"
+                               id="name"
+                               formControlName="name"
+                               placeholder="Name"
+                               i18n-placeholder="@@placeholderName"
+                               class="focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500 placeholder:text-[12px] text-[#606060]"/>
+                      </div>
+                      <div class="relative">
+                        <label for="email"
+                               class="after:content-['*'] after:text-rose-600"
+                               [ngClass]="{'text-rose-600': isInvalid('email')}" i18n>
+                          Email
+                        </label>
+                        <input type="text"
+                               id="email"
+                               formControlName="email"
+                               placeholder="E-mail"
+                               i18n-placeholder="@@placeholderEmail"
+                               class="focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500 placeholder:text-[12px] text-[#606060]"/>
+                        @if (isInvalid('email')) {
+                          <div class="absolute text-xs bottom-[-35%]" [ngClass]="{'text-rose-600': isInvalid('email')}"
+                               i18n>
+                              Incorrect Email
+                          </div>
+                        }
+                      </div>
+                      <div>
+                        <label for="phone" i18n>Phone</label>
+                        <input type="tel"
+                               id="phone"
+                               #phoneInput
+                               formControlName="phone"
+                               class="w-full border-0 border-b-[1px] bg-[#f3f3f3] focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500"/>
+                      </div>
+                      <div>
+                        <label for="subject"
+                               class="phone:portrait:max-w-[320px] lg:max-w-[320px]"
+                               [ngClass]="{'text-rose-600': isInvalid('subject')}" i18n>
+                         <span class="after:content-['*'] after:text-rose-600">
+                                Message subject
+                         </span>
+                          <span class="text-[12px] font-normal text-[#606060]">
+                            (for example: "Questions about tariffs", "Technical support")
+                          </span>
+                        </label>
+                        <input type="text"
+                               id="subject"
+                               formControlName="subject"
+                               placeholder="Message subject"
+                               i18n-placeholder="@@placeholderSubject"
+                               class="focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500 placeholder:text-[12px] text-[#606060]"/>
+                      </div>
+                      <div>
+                        <label for="message"
+                               [ngClass]="{'text-rose-600': isInvalid('message')}" i18n>
+                          <span class="after:content-['*'] after:text-rose-600">
+                            Message text
+                          </span>
+                          <span class="text-[12px] font-normal text-[#606060]">
+                            (please indicate your request or suggestion)
+                          </span>
+                        </label>
+                        <textarea maxlength="1000" type="text"
+                               #messageTextarea
+                               id="message"
+                               (input)="autoResize()"
+                               formControlName="message"
+                               placeholder="Message text"
+                               i18n-placeholder="@@placeholderMessageText"
+                               class="focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500 placeholder:text-[12px] text-[#606060] pl-0"></textarea>
+                      </div>
+                      <button class="self-stretch px-7 py-4 bg-[#000] rounded-[11px] justify-center items-center gap-2.5
+                               inline-flex cursor-pointer text-[#ffff] text-xl font-bold tracking-tight
+                               transition-all duration-150 ease-in-out active:scale-95" i18n
+                      >
+                        Send
+                      </button>
+                    </form>
+                    @if (isPopupOpen) {
+                      <div class="bg-[#00000033] overflow-x-hidden overflow-y-auto fixed inset-0 z-10"></div>
+                    }
+                    <details [attr.open]="isPopupOpen ? '' : null">
+                      <summary class="hidden"></summary>
+                      <div class="bg-[#FFFFFF] z-20 flex flex-col rounded-[20px] w-full max-w-[528px] max-h-[157px]
+                                  phone:portrait:max-h-[227px] mx-auto absolute inset-0 gap-2.5"
+                      >
+                        <div (click)="closePopup()" class="flex justify-end px-5 py-3.5 cursor-pointer">
+                          <ng-icon name="bootstrapXLg"/>
+                        </div>
+                        <div class="flex justify-center items-center gap-3.5 phone:portrait:flex-col">
+                          <div class="">
+                            <ng-icon size="3em" name="bootstrapCheckCircleFill"/>
+                          </div>
+                          <div class="phone:text-center">
+                              <span class="font-bold text-xl phone:text-base" i18n>
+                              The form has been successfully submitted!
+                            </span>
+                            <p class="text-sm font-normal" i18n>
+                              We will contact you shortly.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </details>
+                  </div>
                 </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-span-2 md:col-span-1">
-          <h2 class="mb-6 font-semibold uppercase text-white">
-            Biz’s Features
-          </h2>
-          <ul class="text-[#5D6E82] font-medium">
-            <li class="mb-4">
-              <a href="#" class="hover:underline">Calendar & Appointment</a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">Customizable Online Page</a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">Payments Management</a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">No-Show Protection</a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">Insights & Analytics</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-span-2 md:col-span-1">
-          <h2 class="mb-6 font-semibold uppercase text-white">
-            Pro’s Features
-          </h2>
-          <ul class="text-[#5D6E82] font-medium">
-            <li class="mb-4">
-              <a href="#" class="hover:underline">Manage Team and Resources</a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">Inventory Tracking</a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">Revenue Boost</a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">Seamless Transactions</a>
-            </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">Seamless Transactions</a>
-            </li>
-          </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="px-4 py-6 flex md:items-center justify-center md:justify-between">
-        <a href="/" class="flex items-center text-white">
-          <img src="assets/logo.svg" class="h-8 mr-3" alt="Bee O`clock Logo">
-          <span class="self-center text-2xl font-bold whitespace-nowrap">Bee O<span
-            class="text-beeoclock-primary">`</span>clock</span>
-        </a>
-      </div>
-    </div>
+    </section>
   </div>
-
-  <div class="flex justify-between flex-col md:flex-row mt-2 text-sm">
-    <div class="flex gap-4">
-      <a class="hover:underline text-[#2A7BE4]" href="">Cookies</a>
-      <a class="hover:underline text-[#2A7BE4]" href="">Terms of User</a>
-      <a class="hover:underline text-[#2A7BE4]" href="">Privacy Policy</a>
-    </div>
-    <div class="flex gap-4 text-[#748194]">
-      <div>
-        © 2023 Bee O’clock All Rights Reserved
+  <footer class="bg-[#1E1E1E] w-full flex justify-center items-center">
+    <div class="w-full h-[180px] phone:h-[128px] flex max-w-[1080px] px-2.5 py-2.5 justify-between items-center text-[#FFFFFF]
+                phone:portrait:flex-col phone:portrait:items-start phone:portrait:py-2.5"
+    >
+      <div class="flex gap-2.5 phone:order-1 phone:portrait:gap-5">
+        <a href="https://docs.beeoclock.com/" target="_blank" i18n>Terms of use</a>
+        <a href="https://docs.beeoclock.com/privacy-policy" target="_blank" i18n>Privacy policy</a>
       </div>
-      <div>
-        v1.0.0
+      <div class="phone:order-3" i18n>
+        © {{ currentYear }} Bee O'clock. All rights reserved.
       </div>
+      <app-languages></app-languages>
     </div>
-  </div>
-
-
-</footer>
+  </footer>
+</div>
