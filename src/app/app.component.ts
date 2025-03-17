@@ -47,7 +47,7 @@ import JSConfetti from "js-confetti";
     NgStyle,
     CurrencyCodePipe,
     ReactiveFormsModule,
-    LanguagesPage,
+    LanguagesPage
   ],
   viewProviders: [
     provideIcons({
@@ -80,7 +80,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   public readonly menuItems: IMenuItem[] = [
     { id: 1, name: $localize`Services`, link: '#services', useCase: MenuUseCase.Both },
     { id: 2, name: $localize`Tariffs`, link: '#tariffs', useCase: MenuUseCase.Both },
-    { id: 3, name: $localize`Reviews`, link: '#reviews', useCase: MenuUseCase.Desktop },
+    // { id: 3, name: $localize`Reviews`, link: '#reviews', useCase: MenuUseCase.Desktop },
     { id: 4, name: $localize`FAQ`, link: '#faq', useCase: MenuUseCase.Both },
     { id: 5, name: $localize`About Us`, link: '#about-us', useCase: MenuUseCase.Desktop },
     { id: 6, name: $localize`Order a consultation`, link: 'https://beeoclock.com/uk/office', useCase: MenuUseCase.Mobile },

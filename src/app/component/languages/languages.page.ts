@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation, inject, LOCALE_ID } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-languages',
+  standalone: true,
   templateUrl: './languages.page.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
