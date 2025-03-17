@@ -13,29 +13,94 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "da": {
+            "translation": "src/locale/messages.da.xlf"
+          },
+          "uk": {
+            "translation": "src/locale/messages.uk.xlf"
+          },
+          "pl": {
+            "translation": "src/locale/messages.pl.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "allowedCommonJsDependencies": [
+              "intl-tel-input"
+            ],
             "outputPath": "dist/biz-landing",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "robots.txt",
+                "input": "environments/develop/",
+                "output": "./"
+              }
             ],
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            },
+            "localize": true,
+            "i18nMissingTranslation": "warning"
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "750kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "environments/production/environment.ts"
+                }
+              ],
+              "prerender": {
+                "discoverRoutes": true,
+                "routesFile": "environments/production/routes.txt"
+              },
+              "assets": [
+                "src/favicon.ico",
+                "src/assets",
+                {
+                  "glob": "robots.txt",
+                  "input": "environments/production/",
+                  "output": "./"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "prepare_production_base": {
+              "localize": false,
+              "deleteOutputPath": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -48,42 +113,81 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all",
               "fileReplacements": [
                 {
-                  "replace": "src/environment/environment.ts",
-                  "with": "src/environment/environment.prod.ts"
-                }
-              ]
-            },
-            "develop": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "replace": "src/environments/environment.ts",
+                  "with": "environments/production/environment.ts"
                 }
               ],
-              "fileReplacements": [
+              "assets": [
+                "src/favicon.ico",
+                "src/assets",
                 {
-                  "replace": "src/environment/environment.ts",
-                  "with": "src/environment/environment.dev.ts"
+                  "glob": "robots.txt",
+                  "input": "environments/production/",
+                  "output": "./"
                 }
               ],
+              "prerender": {
+                "discoverRoutes": true,
+                "routesFile": "environments/production/routes.txt"
+              },
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "environments/develop/environment.ts"
+                }
+              ],
+              "prerender": {
+                "discoverRoutes": true,
+                "routesFile": "environments/develop/routes.txt"
+              }
+            },
+            "prepare_development_base": {
+              "localize": false,
+              "deleteOutputPath": false,
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "environments/develop/environment.ts"
+                }
+              ],
+              "prerender": {
+                "discoverRoutes": true,
+                "routesFile": "environments/develop/routes.txt"
+              }
+            },
+            "develop": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "environments/develop/environment.ts"
+                }
+              ]
+            },
+            "en-US": {
+              "localize": ["en-US"]
+            },
+            "pl": {
+              "localize": ["pl"]
+            },
+            "da": {
+              "localize": ["da"]
+            },
+            "uk": {
+              "localize": ["uk"]
             }
           },
           "defaultConfiguration": "production"
@@ -92,22 +196,37 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "biz-landing:build:production"
+              "buildTarget": "biz-landing:build:production"
             },
             "development": {
-              "browserTarget": "biz-landing:build:development"
+              "buildTarget": "biz-landing:build:development"
+            },
+            "da": {
+              "buildTarget": "biz-landing:build:development,da"
+            },
+            "uk": {
+              "buildTarget": "biz-landing:build:development,uk"
+            },
+            "pl": {
+              "buildTarget": "biz-landing:build:development,pl"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "ng-extract-i18n-merge:ng-extract-i18n-merge",
           "options": {
-            "browserTarget": "biz-landing:build"
+            "buildTarget": "biz-landing:build",
+            "format": "xlf2",
+            "outputPath": "src/locale",
+            "targetFiles": [
+              "messages.da.xlf",
+              "messages.uk.xlf",
+              "messages.pl.xlf"
+            ]
           }
         }
       }
     }
-  },
-  "defaultProject": "biz-landing"
+  }
 }

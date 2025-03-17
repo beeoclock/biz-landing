@@ -1,4 +1,3 @@
-import {BehaviorSubject} from "rxjs";
 import {DOCUMENT} from '@angular/common';
 import {inject, InjectionToken} from '@angular/core';
 
@@ -20,6 +19,10 @@ export const WINDOW = new InjectionToken<Window>(
 export const tokens = [
   {
     provide: WINDOW,
-    useFactory: () => window
+    deps: [DOCUMENT],
+    useFactory: (document: Document) => {
+      const window = document.defaultView;
+      return window;
+    }
   }
 ]

@@ -1,5 +1,5 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -8,9 +8,6 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    fontFamily: {
-      'display': ['Poppins', ...defaultTheme.fontFamily.sans]
-    },
     extend: {
       gridTemplateColumns: {
         // Simple 24 column grid
@@ -19,17 +16,31 @@ module.exports = {
       gridColumn: {
         'span-14': 'span 14 / span 14',
         'span-24': 'span 24 / span 24',
+      },
+      screens: {
+        'phone': {'max': '1023px'},
+      },
+      fontFamily: {
+        sans: ['FixelDisplay', ...defaultTheme.fontFamily.sans],
+        inter: ['Inter', 'sans-serif'],
       }
     },
     colors: {
-      ...colors,
+      gray: colors.gray,
+      neutral: colors.neutral,
+      slate: colors.slate,
+      stone: colors.stone,
+      sky: colors.sky,
+      rose: colors.rose,
+      amber: colors.amber,
       beeColor: colors.neutral,
       beeDarkColor: colors.neutral,
       beeoclock: {
         primary: {
           DEFAULT: '#FF8A4C',
         }
-      }
+      },
+      'main-hover': '#FFC907'
     }
   },
   plugins: [
@@ -37,5 +48,4 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
   ],
-}
-
+};
