@@ -482,5 +482,110 @@
         <source>Privacy policy</source>
       </segment>
     </unit>
+    <unit id="2897796351634591638">
+      <segment>
+        <source> Do you have any questions or suggestions? </source>
+      </segment>
+    </unit>
+    <unit id="3760039188715962867">
+      <segment>
+        <source>Message text <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc></source>
+      </segment>
+    </unit>
+    <unit id="4015999779146833867">
+      <segment>
+        <source> Join our community to be the first to receive useful tips, news, and promotional offers: </source>
+      </segment>
+    </unit>
+    <unit id="4367579805518675029">
+      <segment>
+        <source> Feedback form </source>
+      </segment>
+    </unit>
+    <unit id="4499935730832938989">
+      <segment>
+        <source>Message subject <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc></source>
+      </segment>
+    </unit>
+    <unit id="468887983520506369">
+      <segment>
+        <source> If you have any additional questions about using Bee o’clock or would like to share ideas for improving the service, we are always ready to listen! Contact us in any convenient way: </source>
+      </segment>
+    </unit>
+    <unit id="6348803519672992606">
+      <segment>
+        <source> If you prefer to write directly here on the website, fill out the form below - we will try to respond as quickly as possible, usually within 24 hours. </source>
+      </segment>
+    </unit>
+    <unit id="6836286461192524918">
+      <segment>
+        <source> Follow us on social media and be the first to know about updates and new features of Bee o’clock. </source>
+      </segment>
+    </unit>
+    <unit id="7563035552061651664">
+      <segment>
+        <source> Send </source>
+      </segment>
+    </unit>
+    <unit id="7817163188308824825">
+      <segment>
+        <source> Email </source>
+      </segment>
+    </unit>
+    <unit id="8478716983552743608">
+      <segment>
+        <source> Contact </source>
+      </segment>
+    </unit>
+    <unit id="8778616811237742446">
+      <segment>
+        <source> Name </source>
+      </segment>
+    </unit>
+    <unit id="9010906137488696549">
+      <segment>
+        <source> Social networks </source>
+      </segment>
+    </unit>
+    <unit id="placeholderEmail">
+      <segment>
+        <source>E-mail</source>
+      </segment>
+    </unit>
+    <unit id="placeholderMessageText">
+      <segment>
+        <source>Message text</source>
+      </segment>
+    </unit>
+    <unit id="placeholderName">
+      <segment>
+        <source>Name</source>
+      </segment>
+    </unit>
+    <unit id="placeholderSubject">
+      <segment>
+        <source>Message subject</source>
+      </segment>
+    </unit>
+    <unit id="3262236020277300799">
+      <segment>
+        <source>Phone</source>
+      </segment>
+    </unit>
+    <unit id="723246605321014138">
+      <segment>
+        <source> We will contact you shortly. </source>
+      </segment>
+    </unit>
+    <unit id="7670455289447668933">
+      <segment>
+        <source> The form has been successfully submitted! </source>
+      </segment>
+    </unit>
+    <unit id="5999357793482437014">
+      <segment>
+        <source> Incorrect Email </source>
+      </segment>
+    </unit>
   </file>
 </xliff>

@@ -2,8 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'intl-tel-input/build/css/intlTelInput.css';
+
 html {
   scroll-behavior: smooth;
+}
+
+.iti {
+  display: block !important;
+
+  .iti__country-list {
+    @apply  rounded-lg shadow-lg border-0 border-gray-700;
+  }
+
+  .iti__search-input {
+    @apply  rounded-lg shadow-lg border-0 border-gray-700;
+  }
+
+  .iti__dropdown-content {
+    @apply  rounded-lg shadow-lg border-0 border-gray-700;
+  }
+
+  .iti__flag {
+    border-radius: 50%;
+    width: 12px;
+  }
+  .iti__selected-country-primary {
+    padding-left: 0;
+  }
 }
 
 @layer base {

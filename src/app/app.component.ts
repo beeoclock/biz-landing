@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   HostListener,
@@ -11,13 +12,26 @@ import {
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage, NgStyle} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
-import {bootstrapCheck, bootstrapThreeDots, bootstrapXLg, bootstrapPlusCircle, bootstrapDashCircle} from "@ng-icons/bootstrap-icons";
+import {
+  bootstrapCheck,
+  bootstrapThreeDots,
+  bootstrapXLg,
+  bootstrapPlusCircle,
+  bootstrapDashCircle,
+  bootstrapEnvelope, bootstrapInstagram, bootstrapAt, bootstrapFacebook, bootstrapTwitterX, bootstrapCheckCircleFill,
+  bootstrapLinkedin
+} from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
 import {environment} from "../environments/environment";
 import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import intlTelInput, {Iti} from 'intl-tel-input';
 import {getFaqItems} from "../common/interface/i.faq-item";
 import LanguagesPage from "./component/languages/languages.page";
+import {emailValidator} from "../common/validators/email-validators";
+import JSConfetti from "js-confetti";
+
 
 @Component({
   selector: 'app-root',
@@ -30,15 +44,25 @@ import LanguagesPage from "./component/languages/languages.page";
     NgClass,
     CurrencyCodePipe,
     NgStyle,
-    LanguagesPage
+    NgStyle,
+    CurrencyCodePipe,
+    ReactiveFormsModule,
+    LanguagesPage,
   ],
   viewProviders: [
     provideIcons({
       bootstrapXLg,
       bootstrapThreeDots,
       bootstrapCheck,
+      bootstrapEnvelope,
+      bootstrapInstagram,
+      bootstrapAt,
+      bootstrapFacebook,
+      bootstrapTwitterX,
+      bootstrapCheckCircleFill,
       bootstrapPlusCircle,
-      bootstrapDashCircle
+      bootstrapDashCircle,
+      bootstrapLinkedin
     }),
     provideNgIconsConfig({
       size: '1.5em',
@@ -50,9 +74,9 @@ import LanguagesPage from "./component/languages/languages.page";
 })
 
 
-export class AppComponent implements OnInit {
-  public MenuUseCase = MenuUseCase;
+export class AppComponent implements OnInit, AfterViewInit {
 
+  public MenuUseCase = MenuUseCase;
   public readonly menuItems: IMenuItem[] = [
     { id: 1, name: $localize`Services`, link: '#services', useCase: MenuUseCase.Both },
     { id: 2, name: $localize`Tariffs`, link: '#tariffs', useCase: MenuUseCase.Both },
@@ -64,13 +88,16 @@ export class AppComponent implements OnInit {
     { id: 8, name: $localize`Login`, link: 'https://panel.dev.beeoclock.com/identity', useCase: MenuUseCase.Mobile },
   ];
 
+  private readonly formBuilder = inject(FormBuilder)
   private readonly localeId = inject(LOCALE_ID);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly socialShareSeoService = inject(SocialShareSeoService);
   private readonly isBrowser: boolean;
+
   public readonly demoAccountUrl = new URL(environment.config.demoAccount.panelUrl);
   public readonly host = [environment.config.host, this.localeId];
   public readonly consultationLink = environment.config.consultationLink;
+  private jsConfetti: JSConfetti | undefined;
   public isMobileMenuOpen = false
   public aspectRatio: number | null = null;
   public subscriptionType: 'monthly' | 'annual' = 'annual';
@@ -78,6 +105,12 @@ export class AppComponent implements OnInit {
   public activeIndex: number | null = null;
   public faqMinHeight = '200px';
   public readonly currentYear = new Date().getFullYear();
+  public readonly email = 'support@beeoclock.com'
+  public contactForm: FormGroup;
+  public intlTelInput: Iti | null = null;
+  public isPopupOpen = false;
+
+  public submitted = false;
   public readonly pricing = {
     free: {
       monthly: { value: 0, currency: this.currencyCode },
@@ -97,6 +130,8 @@ export class AppComponent implements OnInit {
   public readonly faqItems = getFaqItems(this.pricing, this.currencyCode);
 
   @ViewChild('faqList', { static: false }) faqList!: ElementRef;
+  @ViewChild('phoneInput', { static: false }) phoneInput!: ElementRef;
+  @ViewChild('messageTextarea') messageTextarea!: ElementRef<HTMLTextAreaElement>;
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
     if (this.isBrowser) {
@@ -111,6 +146,13 @@ export class AppComponent implements OnInit {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
+    this.contactForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, emailValidator()]],
+      phone: [''],
+      subject: ['', Validators.required],
+      message: ['',Validators.required]
+    });
   }
 
   private getLocalizedPrice(pricePLN: number, priceUSD: number): number {
@@ -127,6 +169,27 @@ export class AppComponent implements OnInit {
     }
     if (this.isBrowser) {
       this.aspectRatio = window.innerWidth / window.innerHeight;
+    }
+  }
+
+  public ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.intlTelInput = intlTelInput(this.phoneInput.nativeElement, {
+        initialCountry: 'auto',
+        strictMode: true,
+        separateDialCode: true,
+        countryOrder: ['dk', 'pl', 'ua'],
+        // @ts-ignore
+        utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/21.1.3/js/utils.js',
+        geoIpLookup: callback => {
+          fetch("https://freeipapi.com/api/json")
+            .then(res => res.json())
+            .then(data => callback(data.countryCode))
+            .catch(() => callback("us"));
+        }
+      });
+      this.jsConfetti = new JSConfetti();
+      this.autoResize();
     }
   }
 
@@ -178,6 +241,45 @@ export class AppComponent implements OnInit {
       if (selectedItem) {
         selectedItem.scrollIntoView({ block: "nearest" });
       }
+    }
+  }
+
+  public isInvalid(controlName: string): boolean {
+    const control = this.contactForm.get(controlName);
+    if (!control) return false;
+
+    if (control.hasError('required')) {
+      return control.touched;
+    }
+
+    return control.invalid && control.dirty;
+  }
+
+  public onSubmit() {
+    if (this.contactForm.valid) {
+      this.isPopupOpen = true;
+      this.contactForm.reset();
+      if (this.jsConfetti) {
+        this.jsConfetti.addConfetti({
+          emojis: ['🎉', '✨', '🎊', '🥳'],
+          confettiRadius: 15,
+          confettiNumber: 100,
+        }).then(() => {});
+      }
+    } else {
+      this.contactForm.markAllAsTouched();
+    }
+  }
+
+  public closePopup() {
+    this.isPopupOpen = false;
+  }
+
+  public autoResize() {
+    if (this.messageTextarea) {
+      const textarea = this.messageTextarea.nativeElement;
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
     }
   }
 }

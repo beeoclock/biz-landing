@@ -557,7 +557,7 @@
     <unit id="8778436686334410487">
       <segment state="initial">
         <source>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
-        <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): необмежена кількість користувачів, повний доступ до функцій, включно з AI assistant та Public REST API. Ідеально для розвинених та масштабованих проєктів.</target>
+        <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>):  необмежена кількість користувачів, повний доступ до функцій, включно з AI assistant та Public REST API. Ідеально для розвинених та масштабованих проєктів.</target>
       </segment>
     </unit>
     <unit id="1573561306072316026">
@@ -576,6 +576,132 @@
       <segment state="initial">
         <source> © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/> Bee O&apos;clock. All rights reserved. </source>
         <target> © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/> Bee O&apos;clock. Всі права захищені. </target>
+      </segment>
+    </unit>
+    <unit id="8478716983552743608">
+      <segment state="initial">
+        <source> Contact </source>
+        <target> Contact </target>
+      </segment>
+    </unit>
+    <unit id="2897796351634591638">
+      <segment state="initial">
+        <source> Do you have any questions or suggestions? </source>
+        <target> Залишилися питання чи пропозиції? </target>
+      </segment>
+    </unit>
+    <unit id="468887983520506369">
+      <segment state="initial">
+        <source> If you have any additional questions about using Bee o’clock or would like to share ideas for improving the service, we are always ready to listen! Contact us in any convenient way: </source>
+        <target> Якщо ви маєте додаткові запитання щодо використання Bee o’clock або хочете поділитися ідеями з покращення сервісу, ми завжди готові вислухати! Зв’яжіться з нами будь-яким зручним способом: </target>
+      </segment>
+    </unit>
+    <unit id="9010906137488696549">
+      <segment state="initial">
+        <source> Social networks </source>
+        <target> Соціальні мережі </target>
+      </segment>
+    </unit>
+    <unit id="4015999779146833867">
+      <segment state="initial">
+        <source> Join our community to be the first to receive useful tips, news, and promotional offers: </source>
+        <target> Приєднуйтеся до нашої спільноти, щоб отримувати корисні поради, новини та акційні пропозиції першими: </target>
+      </segment>
+    </unit>
+    <unit id="6836286461192524918">
+      <segment state="initial">
+        <source> Follow us on social media and be the first to know about updates and new features of Bee o’clock. </source>
+        <target> Підписуйтеся на нас у соцмережах та дізнавайтеся першими про оновлення та нові можливості Bee o’clock. </target>
+      </segment>
+    </unit>
+    <unit id="4367579805518675029">
+      <segment state="initial">
+        <source> Feedback form </source>
+        <target> Форма зворотного зв’язку </target>
+      </segment>
+    </unit>
+    <unit id="6348803519672992606">
+      <segment state="initial">
+        <source> If you prefer to write directly here on the website, fill out the form below - we will try to respond as quickly as possible, usually within 24 hours. </source>
+        <target> Якщо вам зручніше написати безпосередньо тут на сайті, заповніть форму нижче — ми постараємося відповісти максимально швидко, зазвичай протягом 24 годин. </target>
+      </segment>
+    </unit>
+    <unit id="8778616811237742446">
+      <segment state="initial">
+        <source> Name </source>
+        <target> Ім&apos;я </target>
+      </segment>
+    </unit>
+    <unit id="placeholderName">
+      <segment state="initial">
+        <source>Name</source>
+        <target>Ім&apos;я</target>
+      </segment>
+    </unit>
+    <unit id="7817163188308824825">
+      <segment state="initial">
+        <source> Email </source>
+        <target> Електронна пошта </target>
+      </segment>
+    </unit>
+    <unit id="placeholderEmail">
+      <segment state="initial">
+        <source>E-mail</source>
+        <target>E-mail</target>
+      </segment>
+    </unit>
+    <unit id="4499935730832938989">
+      <segment state="initial">
+        <source>Message subject <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc></source>
+        <target>Тема повідомлення <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (наприклад: &quot;Запитання про тарифи&quot;, &quot;Технічна підтримка&quot;) </pc></target>
+      </segment>
+    </unit>
+    <unit id="placeholderSubject">
+      <segment state="initial">
+        <source>Message subject</source>
+        <target>Тема повідомлення</target>
+      </segment>
+    </unit>
+    <unit id="3760039188715962867">
+      <segment state="initial">
+        <source>Message text <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc></source>
+        <target>Текст повідомлення <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (вкажіть свій запит або пропозицію) </pc></target>
+      </segment>
+    </unit>
+    <unit id="placeholderMessageText">
+      <segment state="initial">
+        <source>Message text</source>
+        <target>Текст повідомлення</target>
+      </segment>
+    </unit>
+    <unit id="7563035552061651664">
+      <segment state="initial">
+        <source> Send </source>
+        <target> Надіслати </target>
+      </segment>
+    </unit>
+    <unit id="3262236020277300799">
+      <segment state="initial">
+        <source>Phone</source>
+        <target>Телефон</target>
+      </segment>
+    </unit>
+    <unit id="7670455289447668933">
+      <segment state="initial">
+        <source> The form has been successfully submitted! </source>
+        <target> Форму успішно надіслано! </target>
+      </segment>
+    </unit>
+    <unit id="723246605321014138">
+      <segment state="initial">
+        <source> We will contact you shortly. </source>
+        <target> Ми зв’яжемося з вами найближчим часом. </target>
+      </segment>
+    </unit>
+    <unit id="5999357793482437014">
+      <segment state="initial">
+        <source> Incorrect Email </source>
+        <target> Неправильна електронна адреса </target>
       </segment>
     </unit>
   </file>
