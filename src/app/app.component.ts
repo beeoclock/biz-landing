@@ -6,20 +6,28 @@ import {
   inject,
   LOCALE_ID,
   OnInit,
-  PLATFORM_ID, resource, signal, ViewChild,
+  PLATFORM_ID,
+  resource,
+  signal,
+  ViewChild,
   ViewEncapsulation
 } from '@angular/core';
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
 import {isPlatformBrowser, isPlatformServer, NgClass, NgOptimizedImage, NgStyle} from "@angular/common";
 import {NgIcon, provideIcons, provideNgIconsConfig} from "@ng-icons/core";
 import {
+  bootstrapAt,
   bootstrapCheck,
-  bootstrapThreeDots,
-  bootstrapXLg,
-  bootstrapPlusCircle,
+  bootstrapCheckCircleFill,
   bootstrapDashCircle,
-  bootstrapEnvelope, bootstrapInstagram, bootstrapAt, bootstrapFacebook, bootstrapTwitterX, bootstrapCheckCircleFill,
-  bootstrapLinkedin
+  bootstrapEnvelope,
+  bootstrapFacebook,
+  bootstrapInstagram,
+  bootstrapLinkedin,
+  bootstrapPlusCircle,
+  bootstrapThreeDots,
+  bootstrapTwitterX,
+  bootstrapXLg
 } from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
@@ -32,9 +40,8 @@ import LanguagesPage from "./component/languages/languages.page";
 import {emailValidator} from "../common/validators/email-validators";
 import JSConfetti from "js-confetti";
 import {AppService} from "./app.service";
-import { lastValueFrom, tap } from 'rxjs';
-import { SendContactFormDto } from '../common/interface/i.contact-form';
-import { log } from 'console';
+import {firstValueFrom} from 'rxjs';
+import {SendContactFormDto} from '../common/interface/i.contact-form';
 
 
 @Component({
@@ -276,23 +283,21 @@ export class AppComponent implements OnInit, AfterViewInit {
     request: () => ({
       body: this.lastValidFormValue(),
     }),
-    loader: async ({ request: { body } }) => {
-      if (!body){
-        console.log('body is null, запит не виконується');
-        return;
-      }
-      console.log('Викликається loader з даними:', body);
-      const request$ = this.appService.sendContactForm(body).pipe(
-        takeUntilDestroyed(),
-        tap(() => {
-          console.log('Форма успішно відправлена!');
-          this.isPopupOpen = true;
-          this.contactForm.reset();
-          this.showConfetti();
-        })
-      );
+    loader: async ({request: {body}}) => {
 
-      return await lastValueFrom(request$);
+      if (body) {
+
+        const request$ = this.appService.sendContactForm(body);
+        await firstValueFrom(request$);
+
+        this.isPopupOpen = true;
+        this.contactForm.reset();
+        this.showConfetti();
+
+      }
+
+      return body;
+
     }
   });
 
@@ -302,7 +307,6 @@ export class AppComponent implements OnInit, AfterViewInit {
         object: 'SendContactFormDto',
         ...this.contactForm.value
       } as SendContactFormDto;
-      console.log( data);
       this.lastValidFormValue.set(data);
       this.lastSuccessfulSent.reload();
     } else {
@@ -313,7 +317,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   private showConfetti() {
     if (this.jsConfetti) {
       this.jsConfetti.addConfetti({
-        emojis:  ['🎉', '✨', '🐝', '🐝'],
+        emojis: ['🎉', '✨', '🐝', '🐝'],
         confettiRadius: 15,
         confettiNumber: 100,
       }).then(() => {
@@ -333,6 +337,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 }
+
 function takeUntilDestroyed(): import("rxjs").OperatorFunction<Object, unknown> {
   throw new Error('Function not implemented.');
 }
