@@ -31,6 +31,7 @@ import {getFaqItems} from "../common/interface/i.faq-item";
 import LanguagesPage from "./component/languages/languages.page";
 import {emailValidator} from "../common/validators/email-validators";
 import JSConfetti from "js-confetti";
+import {AppService} from "./app.service";
 
 
 @Component({
@@ -78,14 +79,24 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   public MenuUseCase = MenuUseCase;
   public readonly menuItems: IMenuItem[] = [
-    { id: 1, name: $localize`Services`, link: '#services', useCase: MenuUseCase.Both },
-    { id: 2, name: $localize`Tariffs`, link: '#tariffs', useCase: MenuUseCase.Both },
+    {id: 1, name: $localize`Services`, link: '#services', useCase: MenuUseCase.Both},
+    {id: 2, name: $localize`Tariffs`, link: '#tariffs', useCase: MenuUseCase.Both},
     // { id: 3, name: $localize`Reviews`, link: '#reviews', useCase: MenuUseCase.Desktop },
-    { id: 4, name: $localize`FAQ`, link: '#faq', useCase: MenuUseCase.Both },
-    { id: 5, name: $localize`About Us`, link: '#about-us', useCase: MenuUseCase.Desktop },
-    { id: 6, name: $localize`Order a consultation`, link: 'https://beeoclock.com/uk/office', useCase: MenuUseCase.Mobile },
-    { id: 7, name: $localize`Try a demo account`, link: 'https://panel.dev.beeoclock.com/66f9378141ed7954254c40c8/event/calendar-with-specialists', useCase: MenuUseCase.Mobile },
-    { id: 8, name: $localize`Login`, link: 'https://panel.dev.beeoclock.com/identity', useCase: MenuUseCase.Mobile },
+    {id: 4, name: $localize`FAQ`, link: '#faq', useCase: MenuUseCase.Both},
+    {id: 5, name: $localize`Contact`, link: '#contact', useCase: MenuUseCase.Desktop},
+    {
+      id: 6,
+      name: $localize`Order a consultation`,
+      link: 'https://beeoclock.com/uk/office',
+      useCase: MenuUseCase.Mobile
+    },
+    {
+      id: 7,
+      name: $localize`Try a demo account`,
+      link: 'https://panel.dev.beeoclock.com/66f9378141ed7954254c40c8/event/calendar-with-specialists',
+      useCase: MenuUseCase.Mobile
+    },
+    {id: 8, name: $localize`Login`, link: 'https://panel.dev.beeoclock.com/identity', useCase: MenuUseCase.Mobile},
   ];
 
   private readonly formBuilder = inject(FormBuilder)
@@ -93,6 +104,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly socialShareSeoService = inject(SocialShareSeoService);
   private readonly isBrowser: boolean;
+  private appService = inject(AppService);
 
   public readonly demoAccountUrl = new URL(environment.config.demoAccount.panelUrl);
   public readonly host = [environment.config.host, this.localeId];
@@ -113,25 +125,26 @@ export class AppComponent implements OnInit, AfterViewInit {
   public submitted = false;
   public readonly pricing = {
     free: {
-      monthly: { value: 0, currency: this.currencyCode },
-      annual: { value: 0, currency: this.currencyCode }
+      monthly: {value: 0, currency: this.currencyCode},
+      annual: {value: 0, currency: this.currencyCode}
     },
     basic: {
-      monthly: { value: this.getLocalizedPrice(59, 55), currency: this.currencyCode },
-      annual: { value: this.getLocalizedPrice(53, 49), currency: this.currencyCode },
-      discountBasic: { value: this.getLocalizedPrice(59, 55), currency: this.currencyCode }
+      monthly: {value: this.getLocalizedPrice(59, 55), currency: this.currencyCode},
+      annual: {value: this.getLocalizedPrice(53, 49), currency: this.currencyCode},
+      discountBasic: {value: this.getLocalizedPrice(59, 55), currency: this.currencyCode}
     },
     pro: {
-      monthly: { value: this.getLocalizedPrice(189, 89), currency: this.currencyCode },
-      annual: { value: this.getLocalizedPrice(169, 80), currency: this.currencyCode },
-      discountPro: { value: this.getLocalizedPrice(189, 89), currency: this.currencyCode }
+      monthly: {value: this.getLocalizedPrice(189, 89), currency: this.currencyCode},
+      annual: {value: this.getLocalizedPrice(169, 80), currency: this.currencyCode},
+      discountPro: {value: this.getLocalizedPrice(189, 89), currency: this.currencyCode}
     }
   };
   public readonly faqItems = getFaqItems(this.pricing, this.currencyCode);
 
-  @ViewChild('faqList', { static: false }) faqList!: ElementRef;
-  @ViewChild('phoneInput', { static: false }) phoneInput!: ElementRef;
+  @ViewChild('faqList', {static: false}) faqList!: ElementRef;
+  @ViewChild('phoneInput', {static: false}) phoneInput!: ElementRef;
   @ViewChild('messageTextarea') messageTextarea!: ElementRef<HTMLTextAreaElement>;
+
   @HostListener('window:resize', ['$event'])
   onResize(_event: any) {
     if (this.isBrowser) {
@@ -150,8 +163,8 @@ export class AppComponent implements OnInit, AfterViewInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, emailValidator()]],
       phone: [''],
-      subject: ['', Validators.required],
-      message: ['',Validators.required]
+      subject: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(100)]],
+      message: ['', [Validators.required, Validators.minLength(10)]]
     });
   }
 
@@ -188,6 +201,7 @@ export class AppComponent implements OnInit, AfterViewInit {
             .catch(() => callback("us"));
         }
       });
+      console.log(this.intlTelInput.getSelectedCountryData())
       this.jsConfetti = new JSConfetti();
       this.autoResize();
     }
@@ -239,7 +253,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     if (prevIndex !== null && prevIndex !== index) {
       const selectedItem = element.querySelector(`#faq-item-${index}`) as HTMLElement;
       if (selectedItem) {
-        selectedItem.scrollIntoView({ block: "nearest" });
+        selectedItem.scrollIntoView({block: "nearest"});
       }
     }
   }
@@ -257,17 +271,28 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   public onSubmit() {
     if (this.contactForm.valid) {
-      this.isPopupOpen = true;
-      this.contactForm.reset();
-      if (this.jsConfetti) {
-        this.jsConfetti.addConfetti({
-          emojis: ['🎉', '✨', '🎊', '🥳'],
-          confettiRadius: 15,
-          confettiNumber: 100,
-        }).then(() => {});
+      const data = {
+        object: 'SendContactFormDto',
+        ...this.contactForm.value
       }
+      this.appService.sendContactForm(data).subscribe(() => {
+          this.isPopupOpen = true;
+          this.contactForm.reset();
+          this.showConfetti();
+      })
     } else {
       this.contactForm.markAllAsTouched();
+    }
+  }
+
+  private showConfetti() {
+    if (this.jsConfetti) {
+      this.jsConfetti.addConfetti({
+        emojis: ['🎉', '✨', '🎊', '🥳'],
+        confettiRadius: 15,
+        confettiNumber: 100,
+      }).then(() => {
+      });
     }
   }
 

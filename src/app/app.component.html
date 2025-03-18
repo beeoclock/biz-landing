@@ -103,7 +103,7 @@
       </div>
     </section>
 
-    <section class="flex w-full justify-center xl:min-h-[810px]">
+    <section  id="services" class="flex w-full justify-center xl:min-h-[840px]">
       <div class="flex w-full max-w-[1200px] items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0 justify-between">
         <div class="flex">
           <img ngSrc="assets/img/img.webp" alt="Bee O`clock service details" height="614" width="542" priority>
@@ -333,10 +333,12 @@
                 </div>
               </div>
             </div>
-            <button class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
-              hover:bg-[#FFC800] rounded-[10px] w-full uppercase" i18n>
+            <a href="https://panel.dev.beeoclock.com/identity/sign-up" target="_blank"
+               class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+                      hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"
+               i18n>
               Get Started
-            </button>
+            </a>
           </div>
 
           <div
@@ -408,11 +410,12 @@
                 </div>
               </div>
             </div>
-            <button
-              class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
-              hover:bg-[#FFC800] rounded-[10px] uppercase" i18n>
+            <a href="https://panel.dev.beeoclock.com/identity/sign-up" target="_blank"
+               class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+                      hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"
+               i18n>
               Get Started
-            </button>
+            </a>
           </div>
 
           <div
@@ -490,12 +493,12 @@
                 </div>
               </div>
             </div>
-            <button
-              class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
-                     hover:bg-[#FFC800] rounded-[10px] uppercase" i18n
-            >
+            <a href="https://panel.dev.beeoclock.com/identity/sign-up" target="_blank"
+               class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+                      hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"
+               i18n>
               Get Started
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -571,7 +574,7 @@
         </div>
       </div>
     </section>
-    <section
+    <section id="contact"
       class="flex w-full lg:max-h-[1006px] lg:h-full justify-center items-center phone:py-10 phone:px-5 lg:px-5 xl:px-0 mb-4 ">
       <div
         class="max-w-[1080px]  flex-col justify-start items-end gap-5 inline-flex shadow-md rounded-2xl phone:shadow-none relative">
@@ -709,7 +712,7 @@
                                formControlName="phone"
                                class="w-full border-0 border-b-[1px] bg-[#f3f3f3] focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500"/>
                       </div>
-                      <div>
+                      <div class="relative">
                         <label for="subject"
                                class="phone:portrait:max-w-[320px] lg:max-w-[320px]"
                                [ngClass]="{'text-rose-600': isInvalid('subject')}" i18n>
@@ -726,8 +729,13 @@
                                placeholder="Message subject"
                                i18n-placeholder="@@placeholderSubject"
                                class="focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500 placeholder:text-[12px] text-[#606060]"/>
+                        @if (isInvalid('subject')) {
+                          <div class="absolute text-xs bottom-[-25%]" [ngClass]="{'text-rose-600': isInvalid('subject')}" i18n>
+                            Minimum 3 character
+                          </div>
+                        }
                       </div>
-                      <div>
+                      <div class="relative">
                         <label for="message"
                                [ngClass]="{'text-rose-600': isInvalid('message')}" i18n>
                           <span class="after:content-['*'] after:text-rose-600">
@@ -745,6 +753,11 @@
                                placeholder="Message text"
                                i18n-placeholder="@@placeholderMessageText"
                                class="focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500 placeholder:text-[12px] text-[#606060] pl-0"></textarea>
+                        @if (isInvalid('message')) {
+                          <div class="absolute text-xs bottom-[-25%]" [ngClass]="{'text-rose-600': isInvalid('message')}" i18n>
+                            Minimum 10 character
+                          </div>
+                        }
                       </div>
                       <button class="self-stretch px-7 py-4 bg-[#000] rounded-[11px] justify-center items-center gap-2.5
                                inline-flex cursor-pointer text-[#ffff] text-xl font-bold tracking-tight
@@ -799,7 +812,7 @@
       <div class="phone:order-3" i18n>
         © {{ currentYear }} Bee O'clock. All rights reserved.
       </div>
-      <app-languages></app-languages>
+      <app-languages/>
     </div>
   </footer>
 </div>
