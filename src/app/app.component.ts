@@ -6,7 +6,7 @@ import {
   inject,
   LOCALE_ID,
   OnInit,
-  PLATFORM_ID, ViewChild,
+  PLATFORM_ID, resource, signal, ViewChild,
   ViewEncapsulation
 } from '@angular/core';
 import {SocialShareSeoService} from "../common/cdk/social-share.seo.service";
@@ -32,6 +32,9 @@ import LanguagesPage from "./component/languages/languages.page";
 import {emailValidator} from "../common/validators/email-validators";
 import JSConfetti from "js-confetti";
 import {AppService} from "./app.service";
+import { lastValueFrom, tap } from 'rxjs';
+import { SendContactFormDto } from '../common/interface/i.contact-form';
+import { log } from 'console';
 
 
 @Component({
@@ -105,6 +108,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   private readonly socialShareSeoService = inject(SocialShareSeoService);
   private readonly isBrowser: boolean;
   private appService = inject(AppService);
+  private readonly lastValidFormValue = signal<SendContactFormDto | null>(null);
 
   public readonly demoAccountUrl = new URL(environment.config.demoAccount.panelUrl);
   public readonly host = [environment.config.host, this.localeId];
@@ -200,8 +204,7 @@ export class AppComponent implements OnInit, AfterViewInit {
             .then(data => callback(data.countryCode))
             .catch(() => callback("us"));
         }
-      });
-      console.log(this.intlTelInput.getSelectedCountryData())
+      })
       this.jsConfetti = new JSConfetti();
       this.autoResize();
     }
@@ -269,17 +272,39 @@ export class AppComponent implements OnInit, AfterViewInit {
     return control.invalid && control.dirty;
   }
 
+  private readonly lastSuccessfulSent = resource({
+    request: () => ({
+      body: this.lastValidFormValue(),
+    }),
+    loader: async ({ request: { body } }) => {
+      if (!body){
+        console.log('body is null, запит не виконується');
+        return;
+      }
+      console.log('Викликається loader з даними:', body);
+      const request$ = this.appService.sendContactForm(body).pipe(
+        takeUntilDestroyed(),
+        tap(() => {
+          console.log('Форма успішно відправлена!');
+          this.isPopupOpen = true;
+          this.contactForm.reset();
+          this.showConfetti();
+        })
+      );
+
+      return await lastValueFrom(request$);
+    }
+  });
+
   public onSubmit() {
     if (this.contactForm.valid) {
       const data = {
         object: 'SendContactFormDto',
         ...this.contactForm.value
-      }
-      this.appService.sendContactForm(data).subscribe(() => {
-          this.isPopupOpen = true;
-          this.contactForm.reset();
-          this.showConfetti();
-      })
+      } as SendContactFormDto;
+      console.log( data);
+      this.lastValidFormValue.set(data);
+      this.lastSuccessfulSent.reload();
     } else {
       this.contactForm.markAllAsTouched();
     }
@@ -288,7 +313,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   private showConfetti() {
     if (this.jsConfetti) {
       this.jsConfetti.addConfetti({
-        emojis: ['🎉', '✨', '🎊', '🥳'],
+        emojis:  ['🎉', '✨', '🐝', '🐝'],
         confettiRadius: 15,
         confettiNumber: 100,
       }).then(() => {
@@ -308,3 +333,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 }
+function takeUntilDestroyed(): import("rxjs").OperatorFunction<Object, unknown> {
+  throw new Error('Function not implemented.');
+}
+

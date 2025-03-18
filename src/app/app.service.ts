@@ -9,7 +9,7 @@ import {HttpClient} from "@angular/common/http";
 export class AppService {
   public readonly platformId = inject(PLATFORM_ID);
   public readonly http = inject(HttpClient)
-  private apiUrl = 'https://api-dev.beeoclock.com/client/api/v1/contact';
+  private readonly apiUrl = 'https://api-dev.beeoclock.com/client/api/v1/contact';
 
   public constructor() {
     if (isPlatformBrowser(this.platformId)) {
@@ -21,7 +21,7 @@ export class AppService {
   }
 
   sendContactForm(data: SendContactFormDto) {
-
+    console.log('🚀 API: Відправка даних на сервер:', data);
     return this.http.post(this.apiUrl, data);
   }
 }
