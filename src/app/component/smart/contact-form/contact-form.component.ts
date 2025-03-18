@@ -34,7 +34,7 @@ import intlTelInput, {Iti} from 'intl-tel-input';
     ContactFormService,
   ],
   host: {
-    class: 'max-w-[1080px]  flex-col justify-start items-end gap-5 inline-flex shadow-md rounded-2xl phone:shadow-none relative'
+    class: 'max-w-[1080px] flex-col justify-start items-end gap-5 inline-flex shadow-md rounded-2xl phone:shadow-none relative'
   }
 })
 export class ContactFormComponent implements AfterViewInit {

@@ -196,31 +196,29 @@
                 </button>
               </form>
               @if (isPopupOpen()) {
-                <div class="bg-[#00000033] overflow-x-hidden overflow-y-auto fixed inset-0 z-10"></div>
-              }
-              <details [attr.open]="isPopupOpen() ? '' : null">
-                <summary class="hidden"></summary>
+                <div class="fixed inset-0 bg-[#00000033] flex items-center justify-center z-10"></div>
                 <div class="bg-[#FFFFFF] z-20 flex flex-col rounded-[20px] w-full max-w-[528px] max-h-[157px]
-                                  phone:portrait:max-h-[227px] mx-auto absolute inset-0 gap-2.5"
+                             phone:portrait:max-h-[227px] px-6 py-4 shadow-lg fixed left-1/2 top-1/2
+                             transform -translate-x-1/2 -translate-y-1/2phone:portrait:max-w-[335px]"
                 >
-                  <div (click)="closePopup()" class="flex justify-end px-5 py-3.5 cursor-pointer">
+                  <div (click)="closePopup()" class="flex justify-end cursor-pointer">
                     <ng-icon name="bootstrapXLg"/>
                   </div>
                   <div class="flex justify-center items-center gap-3.5 phone:portrait:flex-col">
-                    <div class="">
+                    <div>
                       <ng-icon size="3em" name="bootstrapCheckCircleFill"/>
                     </div>
-                    <div class="phone:text-center">
-                              <span class="font-bold text-xl phone:text-base" i18n>
-                              The form has been successfully submitted!
-                            </span>
+                    <div class="text-center">
+                      <span class="font-bold text-xl phone:text-base" i18n>
+                        The form has been successfully submitted!
+                      </span>
                       <p class="text-sm font-normal" i18n>
                         We will contact you shortly.
                       </p>
                     </div>
                   </div>
                 </div>
-              </details>
+              }
             </div>
           </div>
         </div>
