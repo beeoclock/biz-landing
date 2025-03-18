@@ -114,6 +114,12 @@ export class ContactFormComponent implements AfterViewInit {
   }
 
   public onSubmit() {
+    if (this.intlTelInput) {
+      const countryData = this.intlTelInput.getSelectedCountryData();
+      const nationalNumber = this.phoneInput.nativeElement.value;
+      const fullNumber = '+' + countryData.dialCode + nationalNumber;
+      this.contactForm.patchValue({ phone: fullNumber });
+    }
     if (this.contactForm.valid) {
       const data = {
         object: 'SendContactFormDto',
