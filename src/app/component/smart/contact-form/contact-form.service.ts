@@ -32,9 +32,9 @@ export class ContactFormService {
 
         return lastValueFrom(request$).then(() => {
           this.successfullySentCallback();
+          return body;
         }).catch(() => {
           this.failedSentCallback();
-        }).finally(() => {
           return body;
         });
 
