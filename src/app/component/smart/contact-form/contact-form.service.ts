@@ -12,7 +12,7 @@ export class ContactFormService {
   public successfullySentCallback = () => {
   };
 
-  public failedSentCallback = () => {
+  public failedSentCallback = (error:string[]) => {
   };
 
   private readonly apiUrl = 'https://api-dev.beeoclock.com/client/api/v1/contact';
@@ -33,8 +33,8 @@ export class ContactFormService {
         return lastValueFrom(request$).then(() => {
           this.successfullySentCallback();
           return body;
-        }).catch(() => {
-          this.failedSentCallback();
+        }).catch((error) => {
+          this.failedSentCallback(error.error.message);
           return body;
         });
 

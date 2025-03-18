@@ -65,6 +65,9 @@ export class ContactFormComponent implements AfterViewInit {
         this.contactForm.reset();
         this.showConfetti();
       };
+      this.contactFormService.failedSentCallback = (error: string[]) => {
+        alert(error.join('\n'));
+      };
       this.jsConfetti = new JSConfetti();
 
       this.intlTelInput = intlTelInput(this.phoneInput.nativeElement, {
