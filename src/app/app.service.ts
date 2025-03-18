@@ -8,20 +8,10 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AppService {
   public readonly platformId = inject(PLATFORM_ID);
-  public readonly http = inject(HttpClient)
-  private readonly apiUrl = 'https://api-dev.beeoclock.com/client/api/v1/contact';
 
-  public constructor() {
+  public runInBrowser(callback: () => void) {
     if (isPlatformBrowser(this.platformId)) {
-
-      // this.translateService.onLangChange.subscribe(() => {
-      //   localStorage.setItem('language', this.translateService.currentLang);
-      // });
+      callback();
     }
-  }
-
-  sendContactForm(data: SendContactFormDto) {
-    console.log('🚀 API: Відправка даних на сервер:', data);
-    return this.http.post(this.apiUrl, data);
   }
 }
