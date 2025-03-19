@@ -52,12 +52,12 @@
                      [&>li]:border-b [&>li]:border-[#F4F4F5]"
             >
               @for (item of menuItems; track item.name) {
-                <li>
-                  <a [href]="item.link" id="{{item.name}}-mobile-link" class="hover:text-yellow-500 font-medium"
-                     [attr.target]="item.name === 'Try a demo account' ? '_blank' : null" i18n>
+                <a [href]="item.link" (click)="toggleMobileMenu()" id="{{item.name}}-mobile-link" class="hover:text-yellow-500 font-medium"
+                   [attr.target]="item.name === 'Try a demo account' ? '_blank' : null" i18n>
+                  <li>
                     {{ item.name }}
-                  </a>
-                </li>
+                  </li>
+                </a>
               }
             </ul>
           </div>
