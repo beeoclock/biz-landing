@@ -1,11 +1,11 @@
 import {
-  Component,
+  Component, effect,
   ElementRef,
   HostListener,
   inject,
   LOCALE_ID,
   OnInit,
-  PLATFORM_ID,
+  PLATFORM_ID, signal,
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
@@ -29,11 +29,12 @@ import {
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
 import {environment} from "../environments/environment";
-import {CurrencyCodePipe} from "../common/pipe/currency.pipe";
 import {ReactiveFormsModule} from "@angular/forms";
-import {getFaqItems} from "../common/interface/i.faq-item";
-import LanguagesPage from "./component/languages/languages.page";
+import {getFaqItems, IFaqItem, IPricing, IPricingPlan} from "../common/interface/i.faq-item";
 import {ContactFormComponent} from "./component/smart/contact-form/contact-form.component";
+import {TariffsComponent} from "./component/tariffs/tariffs.component";
+import LanguagesPage from "./component/languages/languages.page";
+import {TariffsService} from "./component/tariffs/tariffs.service";
 
 
 @Component({
@@ -45,14 +46,13 @@ import {ContactFormComponent} from "./component/smart/contact-form/contact-form.
     NgOptimizedImage,
     NgIcon,
     NgClass,
-    CurrencyCodePipe,
     NgStyle,
-    NgStyle,
-    CurrencyCodePipe,
     ReactiveFormsModule,
-    LanguagesPage,
-    ContactFormComponent
+    ContactFormComponent,
+    TariffsComponent,
+    LanguagesPage
   ],
+  providers: [TariffsService],
   viewProviders: [
     provideIcons({
       bootstrapXLg,
@@ -106,36 +106,20 @@ export class AppComponent implements OnInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly socialShareSeoService = inject(SocialShareSeoService);
   private readonly isBrowser: boolean;
+  private readonly tariffsService = inject(TariffsService);
 
   public readonly demoAccountUrl = new URL(environment.config.demoAccount.panelUrl);
   public readonly host = [environment.config.host, this.localeId];
   public readonly consultationLink = environment.config.consultationLink;
   public isMobileMenuOpen = false
   public aspectRatio: number | null = null;
-  public subscriptionType: 'monthly' | 'annual' = 'annual';
   public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
   public activeIndex: number | null = null;
   public faqMinHeight = '200px';
   public readonly currentYear = new Date().getFullYear();
 
   public submitted = false;
-  public readonly pricing = {
-    free: {
-      monthly: {value: 0, currency: this.currencyCode},
-      annual: {value: 0, currency: this.currencyCode}
-    },
-    basic: {
-      monthly: {value: this.getLocalizedPrice(59, 55), currency: this.currencyCode},
-      annual: {value: this.getLocalizedPrice(53, 49), currency: this.currencyCode},
-      discountBasic: {value: this.getLocalizedPrice(59, 55), currency: this.currencyCode}
-    },
-    pro: {
-      monthly: {value: this.getLocalizedPrice(189, 89), currency: this.currencyCode},
-      annual: {value: this.getLocalizedPrice(169, 80), currency: this.currencyCode},
-      discountPro: {value: this.getLocalizedPrice(189, 89), currency: this.currencyCode}
-    }
-  };
-  public readonly faqItems = getFaqItems(this.pricing, this.currencyCode);
+  public readonly faqItems = signal<IFaqItem[]>([]);
 
   @ViewChild('faqList', {static: false}) faqList!: ElementRef;
 
@@ -153,10 +137,13 @@ export class AppComponent implements OnInit {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.demoAccountUrl.searchParams.set('login', environment.config.demoAccount.login);
     this.demoAccountUrl.searchParams.set('password', environment.config.demoAccount.password);
-  }
 
-  private getLocalizedPrice(pricePLN: number, priceUSD: number): number {
-    return this.currencyCode === 'PLN' ? pricePLN : priceUSD;
+    effect(() => {
+      const pricing = this.buildMonthlyPricing();
+      if (pricing) {
+        this.faqItems.set(getFaqItems(pricing, this.currencyCode));
+      }
+    });
   }
 
   public get hostString(): string {
@@ -192,10 +179,6 @@ export class AppComponent implements OnInit {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
-  public toggleSubscription(type: 'monthly' | 'annual') {
-    this.subscriptionType = type;
-  }
-
   public toggleItem(index: number): void {
     const prevIndex = this.activeIndex;
     this.activeIndex = this.activeIndex === index ? null : index;
@@ -221,6 +204,36 @@ export class AppComponent implements OnInit {
         selectedItem.scrollIntoView({block: "nearest"});
       }
     }
+  }
+
+  private buildMonthlyPricing(): IPricing | null {
+    const tariffs = this.tariffsService.tariffsResource.value();
+    if (!tariffs) return null;
+
+    const getPlan = (type: string): IPricingPlan | null => {
+      const tariff = tariffs.find(t => t.type.toLowerCase() === type.toLowerCase());
+      const price = tariff?.prices.find(p => p.currency === this.currencyCode);
+      const value = price?.values.find(v => v.billingCycle === 'monthly');
+
+      if (!value || !price?.currency) return null;
+
+      return {
+        value: value.afterDiscount,
+        currency: price.currency
+      };
+    };
+
+    const free = getPlan('free');
+    const basic = getPlan('basic');
+    const pro = getPlan('professional');
+
+    if (!free || !basic || !pro) return null;
+
+    return {
+      free: { monthly: free, annual: { value: 0, currency: this.currencyCode } },
+      basic: { monthly: basic, annual: { value: 0, currency: this.currencyCode } },
+      pro: { monthly: pro, annual: { value: 0, currency: this.currencyCode } }
+    };
   }
 
 }
