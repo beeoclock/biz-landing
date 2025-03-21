@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US">
   <file id="ngi18n" original="ng.template">
+    <unit id="7708270344948043036">
+      <segment>
+        <source>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+        </source>
+      </segment>
+    </unit>
+    <unit id="1908285951500318953">
+      <segment>
+        <source> Login </source>
+      </segment>
+    </unit>
+    <unit id="794752773916392654">
+      <segment>
+        <source>
+          <pc id="0" equivStart="START_LIST_ITEM" equivEnd="CLOSE_LIST_ITEM" type="other" dispStart="&lt;li&gt;" dispEnd="&lt;/li&gt;">
+            <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+          </pc>
+        </source>
+      </segment>
+    </unit>
     <unit id="3044375770210666349">
       <segment>
         <source> Online appointment booking for clients. </source>
-      </segment>
-    </unit>
-    <unit id="2454050363478003966">
-      <segment>
-        <source>Login</source>
-      </segment>
-    </unit>
-    <unit id="7143579180750436311">
-      <segment>
-        <source>Services</source>
       </segment>
     </unit>
     <unit id="6254764080441478187">
@@ -26,101 +37,9 @@
         <source> Try it for free </source>
       </segment>
     </unit>
-    <unit id="7708270344948043036">
-      <segment>
-        <source>
-          <ph id="0" equiv="INTERPOLATION" disp="{{ item.name }}"/>
-        </source>
-      </segment>
-    </unit>
-    <unit id="1561634790975642473">
-      <segment>
-        <source>Order a consultation</source>
-      </segment>
-    </unit>
-    <unit id="2806917038528218276">
-      <segment>
-        <source>FAQ</source>
-      </segment>
-    </unit>
-    <unit id="4937917695205691719">
-      <segment>
-        <source>Tariffs</source>
-      </segment>
-    </unit>
-    <unit id="7922989125096435449">
-      <segment>
-        <source>Contact</source>
-      </segment>
-    </unit>
-    <unit id="6159873727198464508">
-      <segment>
-        <source>Try a demo account</source>
-      </segment>
-    </unit>
-    <unit id="seo.header.author">
-      <segment>
-        <source>Bee O&apos;clock</source>
-      </segment>
-    </unit>
-    <unit id="seo.header.description">
-      <segment>
-        <source>Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
-      </segment>
-    </unit>
-    <unit id="seo.header.image">
-      <segment>
-        <source>https://beeoclock.com/asset/logo.png</source>
-      </segment>
-    </unit>
-    <unit id="seo.header.keywords">
-      <segment>
-        <source>appointment, calendar, clients, business, management, tool, bookkeeping, tax planning, event management, delegate, time-consuming tasks, empower, professionals, reduce stress, increase productivity, eliminate distractions, frustrations, running a business</source>
-      </segment>
-    </unit>
-    <unit id="seo.header.title">
-      <segment>
-        <source>Bee O&apos;clock</source>
-      </segment>
-    </unit>
-    <unit id="1740823155458190052">
-      <segment>
-        <source>Make sure your customers always remember their visit! Automatic SMS and email reminders will ensure that your clients arrive on time and reduce the number of missed appointments.</source>
-      </segment>
-    </unit>
     <unit id="368381012328092097">
       <segment>
         <source>Opportunities</source>
-      </segment>
-    </unit>
-    <unit id="3732033756571014582">
-      <segment>
-        <source>Reminder to clients</source>
-      </segment>
-    </unit>
-    <unit id="3838889887687918421">
-      <segment>
-        <source>Make Bee o&apos;clock a part of your brand! You can customize each interface of the service to your style and brand, which allows you to individualize your workflows.</source>
-      </segment>
-    </unit>
-    <unit id="4018557285768677174">
-      <segment>
-        <source>All information is at your fingertips - you can access customer history, schedules, and records from any device. You can make decisions anywhere and anytime.</source>
-      </segment>
-    </unit>
-    <unit id="5162287718938938685">
-      <segment>
-        <source>Customized for your business</source>
-      </segment>
-    </unit>
-    <unit id="5452253478250635820">
-      <segment>
-        <source>Forget about confusion with records. Our service automates customer onboarding processes, allowing you to focus on your work, not on record administration.</source>
-      </segment>
-    </unit>
-    <unit id="5457809380934707352">
-      <segment>
-        <source>Manage your records online</source>
       </segment>
     </unit>
     <unit id="6891840319588833020">
@@ -128,59 +47,39 @@
         <source>Automate records</source>
       </segment>
     </unit>
-    <unit id="1908285951500318953">
+    <unit id="5452253478250635820">
       <segment>
-        <source> Login </source>
+        <source>Forget about confusion with records. Our service automates customer onboarding processes, allowing you to focus on your work, not on record administration.</source>
       </segment>
     </unit>
-    <unit id="1436694444410203003">
+    <unit id="3732033756571014582">
       <segment>
-        <source>Control your schedule: Get notified about new recordings, view and manage your schedule in a convenient interface.</source>
+        <source>Reminder to clients</source>
       </segment>
     </unit>
-    <unit id="2292486472487615617">
+    <unit id="1740823155458190052">
       <segment>
-        <source>Customer invitations</source>
+        <source>Make sure your customers always remember their visit! Automatic SMS and email reminders will ensure that your clients arrive on time and reduce the number of missed appointments.</source>
       </segment>
     </unit>
-    <unit id="5095119527158275841">
+    <unit id="5162287718938938685">
       <segment>
-        <source>Service settings</source>
+        <source>Customized for your business</source>
       </segment>
     </unit>
-    <unit id="5916941698320460151">
+    <unit id="3838889887687918421">
       <segment>
-        <source>Convenient booking: Customers book a service and a convenient time online, without calling or waiting.</source>
+        <source>Make Bee o&apos;clock a part of your brand! You can customize each interface of the service to your style and brand, which allows you to individualize your workflows.</source>
       </segment>
     </unit>
-    <unit id="6075954856904697133">
+    <unit id="5457809380934707352">
       <segment>
-        <source>Registration on the platform</source>
+        <source>Manage your records online</source>
       </segment>
     </unit>
-    <unit id="6363114221294606387">
+    <unit id="4018557285768677174">
       <segment>
-        <source>Managing records</source>
-      </segment>
-    </unit>
-    <unit id="7123634690175978938">
-      <segment>
-        <source>Online customer registration</source>
-      </segment>
-    </unit>
-    <unit id="7687221152441169151">
-      <segment>
-        <source>Analysis and development</source>
-      </segment>
-    </unit>
-    <unit id="7736403083717360411">
-      <segment>
-        <source>Add your services: Specify the list of services, their duration and cost.</source>
-      </segment>
-    </unit>
-    <unit id="8794739238241286861">
-      <segment>
-        <source>Create an account: Fill in basic information about your business, add address and contact details.</source>
+        <source>All information is at your fingertips - you can access customer history, schedules, and records from any device. You can make decisions anywhere and anytime.</source>
       </segment>
     </unit>
     <unit id="879650116501482755">
@@ -188,9 +87,29 @@
         <source>How does it work?</source>
       </segment>
     </unit>
-    <unit id="8970166395194601366">
+    <unit id="6075954856904697133">
       <segment>
-        <source>Track your success: Analyze your record and customer activity statistics to improve your service.</source>
+        <source>Registration on the platform</source>
+      </segment>
+    </unit>
+    <unit id="8794739238241286861">
+      <segment>
+        <source>Create an account: Fill in basic information about your business, add address and contact details.</source>
+      </segment>
+    </unit>
+    <unit id="5095119527158275841">
+      <segment>
+        <source>Service settings</source>
+      </segment>
+    </unit>
+    <unit id="7736403083717360411">
+      <segment>
+        <source>Add your services: Specify the list of services, their duration and cost.</source>
+      </segment>
+    </unit>
+    <unit id="2292486472487615617">
+      <segment>
+        <source>Customer invitations</source>
       </segment>
     </unit>
     <unit id="7230578029671330213">
@@ -198,9 +117,34 @@
         <source>Get a unique link to your record page and share it via website, social media, or email.</source>
       </segment>
     </unit>
-    <unit id="4223732254391797153">
+    <unit id="7123634690175978938">
       <segment>
-        <source> Demo account </source>
+        <source>Online customer registration</source>
+      </segment>
+    </unit>
+    <unit id="5916941698320460151">
+      <segment>
+        <source>Convenient booking: Customers book a service and a convenient time online, without calling or waiting.</source>
+      </segment>
+    </unit>
+    <unit id="6363114221294606387">
+      <segment>
+        <source>Managing records</source>
+      </segment>
+    </unit>
+    <unit id="1436694444410203003">
+      <segment>
+        <source>Control your schedule: Get notified about new recordings, view and manage your schedule in a convenient interface.</source>
+      </segment>
+    </unit>
+    <unit id="7687221152441169151">
+      <segment>
+        <source>Analysis and development</source>
+      </segment>
+    </unit>
+    <unit id="8970166395194601366">
+      <segment>
+        <source>Track your success: Analyze your record and customer activity statistics to improve your service.</source>
       </segment>
     </unit>
     <unit id="6509061853376529873">
@@ -213,79 +157,214 @@
         <source> Order a demo access to the online customer recording service, a convenient solution without registration. </source>
       </segment>
     </unit>
-    <unit id="1020329889985641339">
+    <unit id="4223732254391797153">
       <segment>
-        <source>BASIC</source>
+        <source> Demo account </source>
       </segment>
     </unit>
-    <unit id="1348007387401845649">
+    <unit id="3394190499997524231">
+      <notes>
+        <note category="description">Short title for FAQ section</note>
+        <note category="meaning">FAQ header</note>
+      </notes>
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Payment Confirmation </source>
+        <source>FAQ</source>
       </segment>
     </unit>
-    <unit id="2925775378458956182">
+    <unit id="1573561306072316026">
       <segment>
-        <source> Annual </source>
+        <source>Terms of use</source>
       </segment>
     </unit>
-    <unit id="3123738433241513007">
+    <unit id="6090931838305354672">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Email notification </source>
+        <source>Privacy policy</source>
       </segment>
     </unit>
-    <unit id="3265250603400790440">
+    <unit id="2891546849092285340">
       <segment>
-        <source> Get Started </source>
+        <source> © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/> Bee O&apos;clock. All rights reserved. </source>
       </segment>
     </unit>
-    <unit id="3723027339320684146">
+    <unit id="7143579180750436311">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Public page </source>
+        <source>Services</source>
       </segment>
     </unit>
-    <unit id="4066998311893586930">
+    <unit id="4937917695205691719">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 5 Users </source>
+        <source>Tariffs</source>
       </segment>
     </unit>
-    <unit id="471478188761593997">
+    <unit id="2806917038528218276">
       <segment>
-        <source>FREE</source>
+        <source>FAQ</source>
       </segment>
     </unit>
-    <unit id="490364722075394846">
+    <unit id="7922989125096435449">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SEO Package </source>
+        <source>Contact</source>
       </segment>
     </unit>
-    <unit id="5796179803993762219">
+    <unit id="1561634790975642473">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Plugins unlimited </source>
+        <source>Order a consultation</source>
       </segment>
     </unit>
-    <unit id="5937084711191033307">
+    <unit id="6159873727198464508">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Admin panel </source>
+        <source>Try a demo account</source>
       </segment>
     </unit>
-    <unit id="6227291956598711151">
+    <unit id="2454050363478003966">
       <segment>
-        <source> Monthly </source>
+        <source>Login</source>
       </segment>
     </unit>
-    <unit id="6271066436620954403">
+    <unit id="seo.header.title">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SMS Notification </source>
+        <source>Bee O&apos;clock</source>
       </segment>
     </unit>
-    <unit id="6388594842422610772">
+    <unit id="seo.header.description">
       <segment>
-        <source>PRO</source>
+        <source>Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
       </segment>
     </unit>
-    <unit id="6990629382875055999">
+    <unit id="seo.header.keywords">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 1 User </source>
+        <source>appointment, calendar, clients, business, management, tool, bookkeeping, tax planning, event management, delegate, time-consuming tasks, empower, professionals, reduce stress, increase productivity, eliminate distractions, frustrations, running a business</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.image">
+      <segment>
+        <source>https://beeoclock.com/asset/logo.png</source>
+      </segment>
+    </unit>
+    <unit id="seo.header.author">
+      <segment>
+        <source>Bee O&apos;clock</source>
+      </segment>
+    </unit>
+    <unit id="8478716983552743608">
+      <segment>
+        <source> Contact </source>
+      </segment>
+    </unit>
+    <unit id="2897796351634591638">
+      <segment>
+        <source> Do you have any questions or suggestions? </source>
+      </segment>
+    </unit>
+    <unit id="468887983520506369">
+      <segment>
+        <source> If you have any additional questions about using Bee o’clock or would like to share ideas for improving the service, we are always ready to listen! Contact us in any convenient way: </source>
+      </segment>
+    </unit>
+    <unit id="9010906137488696549">
+      <segment>
+        <source> Social networks </source>
+      </segment>
+    </unit>
+    <unit id="4015999779146833867">
+      <segment>
+        <source> Join our community to be the first to receive useful tips, news, and promotional offers: </source>
+      </segment>
+    </unit>
+    <unit id="6836286461192524918">
+      <segment>
+        <source> Follow us on social media and be the first to know about updates and new features of Bee o’clock. </source>
+      </segment>
+    </unit>
+    <unit id="4367579805518675029">
+      <segment>
+        <source> Feedback form </source>
+      </segment>
+    </unit>
+    <unit id="6348803519672992606">
+      <segment>
+        <source> If you prefer to write directly here on the website, fill out the form below - we will try to respond as quickly as possible, usually within 24 hours. </source>
+      </segment>
+    </unit>
+    <unit id="8778616811237742446">
+      <segment>
+        <source> Name </source>
+      </segment>
+    </unit>
+    <unit id="placeholderName">
+      <segment>
+        <source>Name</source>
+      </segment>
+    </unit>
+    <unit id="7817163188308824825">
+      <segment>
+        <source> Email </source>
+      </segment>
+    </unit>
+    <unit id="placeholderEmail">
+      <segment>
+        <source>E-mail</source>
+      </segment>
+    </unit>
+    <unit id="5999357793482437014">
+      <segment>
+        <source> Incorrect Email </source>
+      </segment>
+    </unit>
+    <unit id="3262236020277300799">
+      <segment>
+        <source>Phone</source>
+      </segment>
+    </unit>
+    <unit id="3666899047827889096">
+      <segment>
+        <source>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message subject </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc>
+        </source>
+      </segment>
+    </unit>
+    <unit id="placeholderSubject">
+      <segment>
+        <source>Message subject</source>
+      </segment>
+    </unit>
+    <unit id="1621060766174502183">
+      <segment>
+        <source> Minimum 3 character </source>
+      </segment>
+    </unit>
+    <unit id="7107262676689343969">
+      <segment>
+        <source>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message text </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc>
+        </source>
+      </segment>
+    </unit>
+    <unit id="placeholderMessageText">
+      <segment>
+        <source>Message text</source>
+      </segment>
+    </unit>
+    <unit id="7599979609938872802">
+      <segment>
+        <source> Minimum 10 character </source>
+      </segment>
+    </unit>
+    <unit id="7563035552061651664">
+      <segment>
+        <source> Send </source>
+      </segment>
+    </unit>
+    <unit id="7670455289447668933">
+      <segment>
+        <source> The form has been successfully submitted! </source>
+      </segment>
+    </unit>
+    <unit id="723246605321014138">
+      <segment>
+        <source> We will contact you shortly. </source>
       </segment>
     </unit>
     <unit id="8412379658036067726">
@@ -293,24 +372,19 @@
         <source>Choose the best option for your business</source>
       </segment>
     </unit>
-    <unit id="8688937334108344457">
+    <unit id="6227291956598711151">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> JSON LD </source>
+        <source> Monthly </source>
       </segment>
     </unit>
-    <unit id="1812640013654021129">
+    <unit id="2925775378458956182">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> AI assistant </source>
+        <source> Annual </source>
       </segment>
     </unit>
-    <unit id="4477550386517830221">
+    <unit id="471478188761593997">
       <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Public rest API </source>
-      </segment>
-    </unit>
-    <unit id="5710456802985900180">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Unlimited Users </source>
+        <source>FREE</source>
       </segment>
     </unit>
     <unit id="4853730136843270446">
@@ -323,34 +397,84 @@
         <source>per month</source>
       </segment>
     </unit>
-    <unit id="1026634334394306968">
+    <unit id="6990629382875055999">
       <segment>
-        <source>Online customer booking: customers can book a service in a few clicks, and you will receive notifications about each new booking.</source>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 1 User </source>
       </segment>
     </unit>
-    <unit id="1065294413010134453">
+    <unit id="3723027339320684146">
       <segment>
-        <source>Invite customers: share a unique link to your profile via your website, social media, or email.</source>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Public page </source>
       </segment>
     </unit>
-    <unit id="1881874480414973014">
+    <unit id="5937084711191033307">
       <segment>
-        <source>Customization for your brand: you can change the appearance of your public page and customize the interface to suit your business.</source>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Admin panel </source>
       </segment>
     </unit>
-    <unit id="1979683524318589117">
+    <unit id="490364722075394846">
       <segment>
-        <source>Starting to use the service is very simple: </source>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SEO Package </source>
       </segment>
     </unit>
-    <unit id="2167439250237745802">
+    <unit id="8688937334108344457">
       <segment>
-        <source>Reminders to clients: SMS and e-mail notifications will help reduce the number of missed appointments.</source>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> JSON LD </source>
       </segment>
     </unit>
-    <unit id="2188934911957763380">
+    <unit id="3123738433241513007">
       <segment>
-        <source>How to set up and manage online bookings in Bee o’clock?</source>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Email notification </source>
+      </segment>
+    </unit>
+    <unit id="3265250603400790440">
+      <segment>
+        <source> Get Started </source>
+      </segment>
+    </unit>
+    <unit id="1020329889985641339">
+      <segment>
+        <source>BASIC</source>
+      </segment>
+    </unit>
+    <unit id="4066998311893586930">
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 5 Users </source>
+      </segment>
+    </unit>
+    <unit id="5796179803993762219">
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Plugins unlimited </source>
+      </segment>
+    </unit>
+    <unit id="1348007387401845649">
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Payment Confirmation </source>
+      </segment>
+    </unit>
+    <unit id="6271066436620954403">
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SMS Notification </source>
+      </segment>
+    </unit>
+    <unit id="6388594842422610772">
+      <segment>
+        <source>PRO</source>
+      </segment>
+    </unit>
+    <unit id="5710456802985900180">
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Unlimited Users </source>
+      </segment>
+    </unit>
+    <unit id="1812640013654021129">
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> AI assistant </source>
+      </segment>
+    </unit>
+    <unit id="4477550386517830221">
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Public rest API </source>
       </segment>
     </unit>
     <unit id="2303057299624544730">
@@ -358,14 +482,14 @@
         <source>How quickly can you get started with Bee o’clock?</source>
       </segment>
     </unit>
-    <unit id="2840247853133963034">
+    <unit id="1979683524318589117">
       <segment>
-        <source>Can I accept online payments and receive notifications about successful transactions?</source>
+        <source>Starting to use the service is very simple: </source>
       </segment>
     </unit>
-    <unit id="2995240845889286352">
+    <unit id="7400988240553005942">
       <segment>
-        <source>Bee o’clock offers a comprehensive set </source>
+        <source>register on the platform, add basic information about your business and services, and the system will be ready to go. You have the option to use the free plan (Free) with basic functionality, which will allow you to immediately test the key features of Bee o’clock without any costs.</source>
       </segment>
     </unit>
     <unit id="3360962359416326349">
@@ -373,13 +497,49 @@
         <source>What features does Bee o’clock provide and how does it differ from other services?</source>
       </segment>
     </unit>
-    <unit id="3394190499997524231">
-      <notes>
-        <note category="description">Short title for FAQ section</note>
-        <note category="meaning">FAQ header</note>
-      </notes>
+    <unit id="2995240845889286352">
       <segment>
-        <source>FAQ</source>
+        <source>Bee o’clock offers a comprehensive set </source>
+      </segment>
+    </unit>
+    <unit id="4036736770564302134">
+      <segment>
+        <source>tools for automating online bookings</source>
+      </segment>
+    </unit>
+    <unit id="6346180550648816832">
+      <segment>
+        <source>Automation of bookings: the system automatically records new bookings and reserves time in the calendar.</source>
+      </segment>
+    </unit>
+    <unit id="2167439250237745802">
+      <segment>
+        <source>Reminders to clients: SMS and e-mail notifications will help reduce the number of missed appointments.</source>
+      </segment>
+    </unit>
+    <unit id="1881874480414973014">
+      <segment>
+        <source>Customization for your brand: you can change the appearance of your public page and customize the interface to suit your business.</source>
+      </segment>
+    </unit>
+    <unit id="4479729736795111846">
+      <segment>
+        <source>Online booking management: the entire schedule is always at hand and can be accessed from a smartphone or computer.</source>
+      </segment>
+    </unit>
+    <unit id="8416027020806100691">
+      <segment>
+        <source>Analytics and development: the service tracks statistics so you can improve customer interactions.</source>
+      </segment>
+    </unit>
+    <unit id="5576863779043305858">
+      <segment>
+        <source>Various pricing plans: from free to advanced PRO, with the ability to connect an AI assistant and public REST API.</source>
+      </segment>
+    </unit>
+    <unit id="2188934911957763380">
+      <segment>
+        <source>How to set up and manage online bookings in Bee o’clock?</source>
       </segment>
     </unit>
     <unit id="3517806335395007253">
@@ -387,9 +547,39 @@
         <source>Everything happens in a few simple steps</source>
       </segment>
     </unit>
-    <unit id="4036736770564302134">
+    <unit id="9133139451209238142">
       <segment>
-        <source>tools for automating online bookings</source>
+        <source>Register on the platform: create an account and enter your business details.</source>
+      </segment>
+    </unit>
+    <unit id="7250808851035664300">
+      <segment>
+        <source>Service settings: add a list of services, set the duration and price.</source>
+      </segment>
+    </unit>
+    <unit id="1065294413010134453">
+      <segment>
+        <source>Invite customers: share a unique link to your profile via your website, social media, or email.</source>
+      </segment>
+    </unit>
+    <unit id="1026634334394306968">
+      <segment>
+        <source>Online customer booking: customers can book a service in a few clicks, and you will receive notifications about each new booking.</source>
+      </segment>
+    </unit>
+    <unit id="811367694795533818">
+      <segment>
+        <source>Manage your recordings: Conveniently change your schedule, track activity, and get notified about changes.</source>
+      </segment>
+    </unit>
+    <unit id="4470730349165597654">
+      <segment>
+        <source>Analysis and development: View statistics to evaluate performance and improve your service.</source>
+      </segment>
+    </unit>
+    <unit id="2840247853133963034">
+      <segment>
+        <source>Can I accept online payments and receive notifications about successful transactions?</source>
       </segment>
     </unit>
     <unit id="4123705423401895406">
@@ -400,51 +590,6 @@
     <unit id="423381276093176480">
       <segment>
         <source>What tariff plans are available and how do they differ?</source>
-      </segment>
-    </unit>
-    <unit id="4470730349165597654">
-      <segment>
-        <source>Analysis and development: View statistics to evaluate performance and improve your service.</source>
-      </segment>
-    </unit>
-    <unit id="4479729736795111846">
-      <segment>
-        <source>Online booking management: the entire schedule is always at hand and can be accessed from a smartphone or computer.</source>
-      </segment>
-    </unit>
-    <unit id="5576863779043305858">
-      <segment>
-        <source>Various pricing plans: from free to advanced PRO, with the ability to connect an AI assistant and public REST API.</source>
-      </segment>
-    </unit>
-    <unit id="6346180550648816832">
-      <segment>
-        <source>Automation of bookings: the system automatically records new bookings and reserves time in the calendar.</source>
-      </segment>
-    </unit>
-    <unit id="7250808851035664300">
-      <segment>
-        <source>Service settings: add a list of services, set the duration and price.</source>
-      </segment>
-    </unit>
-    <unit id="7400988240553005942">
-      <segment>
-        <source>register on the platform, add basic information about your business and services, and the system will be ready to go. You have the option to use the free plan (Free) with basic functionality, which will allow you to immediately test the key features of Bee o’clock without any costs.</source>
-      </segment>
-    </unit>
-    <unit id="811367694795533818">
-      <segment>
-        <source>Manage your recordings: Conveniently change your schedule, track activity, and get notified about changes.</source>
-      </segment>
-    </unit>
-    <unit id="8416027020806100691">
-      <segment>
-        <source>Analytics and development: the service tracks statistics so you can improve customer interactions.</source>
-      </segment>
-    </unit>
-    <unit id="9133139451209238142">
-      <segment>
-        <source>Register on the platform: create an account and enter your business details.</source>
       </segment>
     </unit>
     <unit id="3304132639371050887">
@@ -460,142 +605,6 @@
     <unit id="8778436686334410487">
       <segment>
         <source>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
-      </segment>
-    </unit>
-    <unit id="1573561306072316026">
-      <segment>
-        <source>Terms of use</source>
-      </segment>
-    </unit>
-    <unit id="2891546849092285340">
-      <segment>
-        <source> © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/> Bee O&apos;clock. All rights reserved. </source>
-      </segment>
-    </unit>
-    <unit id="6090931838305354672">
-      <segment>
-        <source>Privacy policy</source>
-      </segment>
-    </unit>
-    <unit id="2897796351634591638">
-      <segment>
-        <source> Do you have any questions or suggestions? </source>
-      </segment>
-    </unit>
-    <unit id="4015999779146833867">
-      <segment>
-        <source> Join our community to be the first to receive useful tips, news, and promotional offers: </source>
-      </segment>
-    </unit>
-    <unit id="4367579805518675029">
-      <segment>
-        <source> Feedback form </source>
-      </segment>
-    </unit>
-    <unit id="468887983520506369">
-      <segment>
-        <source> If you have any additional questions about using Bee o’clock or would like to share ideas for improving the service, we are always ready to listen! Contact us in any convenient way: </source>
-      </segment>
-    </unit>
-    <unit id="6348803519672992606">
-      <segment>
-        <source> If you prefer to write directly here on the website, fill out the form below - we will try to respond as quickly as possible, usually within 24 hours. </source>
-      </segment>
-    </unit>
-    <unit id="6836286461192524918">
-      <segment>
-        <source> Follow us on social media and be the first to know about updates and new features of Bee o’clock. </source>
-      </segment>
-    </unit>
-    <unit id="7563035552061651664">
-      <segment>
-        <source> Send </source>
-      </segment>
-    </unit>
-    <unit id="7817163188308824825">
-      <segment>
-        <source> Email </source>
-      </segment>
-    </unit>
-    <unit id="8478716983552743608">
-      <segment>
-        <source> Contact </source>
-      </segment>
-    </unit>
-    <unit id="8778616811237742446">
-      <segment>
-        <source> Name </source>
-      </segment>
-    </unit>
-    <unit id="9010906137488696549">
-      <segment>
-        <source> Social networks </source>
-      </segment>
-    </unit>
-    <unit id="placeholderEmail">
-      <segment>
-        <source>E-mail</source>
-      </segment>
-    </unit>
-    <unit id="placeholderMessageText">
-      <segment>
-        <source>Message text</source>
-      </segment>
-    </unit>
-    <unit id="placeholderName">
-      <segment>
-        <source>Name</source>
-      </segment>
-    </unit>
-    <unit id="placeholderSubject">
-      <segment>
-        <source>Message subject</source>
-      </segment>
-    </unit>
-    <unit id="3262236020277300799">
-      <segment>
-        <source>Phone</source>
-      </segment>
-    </unit>
-    <unit id="723246605321014138">
-      <segment>
-        <source> We will contact you shortly. </source>
-      </segment>
-    </unit>
-    <unit id="7670455289447668933">
-      <segment>
-        <source> The form has been successfully submitted! </source>
-      </segment>
-    </unit>
-    <unit id="5999357793482437014">
-      <segment>
-        <source> Incorrect Email </source>
-      </segment>
-    </unit>
-    <unit id="1621060766174502183">
-      <segment>
-        <source> Minimum 3 character </source>
-      </segment>
-    </unit>
-    <unit id="3666899047827889096">
-      <segment>
-        <source>
-          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message subject </pc>
-          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc>
-        </source>
-      </segment>
-    </unit>
-    <unit id="7107262676689343969">
-      <segment>
-        <source>
-          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message text </pc>
-          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc>
-        </source>
-      </segment>
-    </unit>
-    <unit id="7599979609938872802">
-      <segment>
-        <source> Minimum 10 character </source>
       </segment>
     </unit>
   </file>

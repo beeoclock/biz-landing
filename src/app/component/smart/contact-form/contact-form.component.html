@@ -137,6 +137,8 @@
                          id="phone"
                          #phoneInput
                          formControlName="phone"
+                         (input)="sanitizePhoneInput()"
+                         (keypress)="preventNonNumeric($event)"
                          class="w-full border-0 border-b-[1px] bg-[#f3f3f3] focus:shadow-none focus:outline-none focus:ring-0 focus:border-beeColor-500"/>
                 </div>
                 <div class="relative">

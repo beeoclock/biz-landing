@@ -722,5 +722,19 @@
         <target> Minimum 10 znaków </target>
       </segment>
     </unit>
+    <unit id="794752773916392654">
+      <segment state="initial">
+        <source>
+          <pc id="0" equivStart="START_LIST_ITEM" equivEnd="CLOSE_LIST_ITEM" type="other" dispStart="&lt;li&gt;" dispEnd="&lt;/li&gt;">
+            <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+          </pc>
+        </source>
+        <target>
+          <pc id="0" equivStart="START_LIST_ITEM" equivEnd="CLOSE_LIST_ITEM" type="other" dispStart="&lt;li&gt;" dispEnd="&lt;/li&gt;">
+            <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+          </pc>
+        </target>
+      </segment>
+    </unit>
   </file>
 </xliff>

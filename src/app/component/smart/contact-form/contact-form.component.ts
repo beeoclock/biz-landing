@@ -144,4 +144,17 @@ export class ContactFormComponent implements AfterViewInit {
     }
   }
 
+  public sanitizePhoneInput() {
+    const phoneControl = this.contactForm.get('phone');
+    if (phoneControl) {
+      phoneControl.setValue(phoneControl.value.replace(/\D/g, ''), { emitEvent: false });
+    }
+  }
+
+  public preventNonNumeric(event: KeyboardEvent) {
+    if (!/[0-9]/.test(event.key)) {
+      event.preventDefault();
+    }
+  }
+
 }

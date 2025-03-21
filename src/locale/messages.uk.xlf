@@ -694,7 +694,7 @@
         </source>
         <target>
           <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Тема повідомлення </pc>
-          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (наприклад: &quot;Питання про тарифи&quot;, &quot;Технічна підтримка&quot»;) </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (наприклад: &quot;Питання про тарифи&quot;, &quot;Технічна підтримка&quot;) </pc>
         </target>
       </segment>
     </unit>
@@ -720,6 +720,20 @@
       <segment state="initial">
         <source> Minimum 10 character </source>
         <target> Мінімум 10 символів </target>
+      </segment>
+    </unit>
+    <unit id="794752773916392654">
+      <segment state="initial">
+        <source>
+          <pc id="0" equivStart="START_LIST_ITEM" equivEnd="CLOSE_LIST_ITEM" type="other" dispStart="&lt;li&gt;" dispEnd="&lt;/li&gt;">
+            <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+          </pc>
+        </source>
+        <target>
+          <pc id="0" equivStart="START_LIST_ITEM" equivEnd="CLOSE_LIST_ITEM" type="other" dispStart="&lt;li&gt;" dispEnd="&lt;/li&gt;">
+            <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+          </pc>
+        </target>
       </segment>
     </unit>
   </file>
