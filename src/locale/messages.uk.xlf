@@ -46,22 +46,16 @@
         </target>
       </segment>
     </unit>
-    <unit id="9029286143304711365">
-      <segment state="initial">
-        <source>Reviews</source>
-        <target>Відгуки</target>
-      </segment>
-    </unit>
     <unit id="2806917038528218276">
       <segment state="initial">
         <source>FAQ</source>
         <target>FAQ</target>
       </segment>
     </unit>
-    <unit id="5736481176444461852">
+    <unit id="7922989125096435449">
       <segment state="initial">
-        <source>About Us</source>
-        <target>Про нас</target>
+        <source>Contact</source>
+        <target>Контакти</target>
       </segment>
     </unit>
     <unit id="1561634790975642473">
@@ -557,7 +551,7 @@
     <unit id="8778436686334410487">
       <segment state="initial">
         <source>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
-        <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>):  необмежена кількість користувачів, повний доступ до функцій, включно з AI assistant та Public REST API. Ідеально для розвинених та масштабованих проєктів.</target>
+        <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): необмежена кількість користувачів, повний доступ до функцій, включно з AI assistant та Public REST API. Ідеально для розвинених та масштабованих проєктів.</target>
       </segment>
     </unit>
     <unit id="1573561306072316026">
@@ -650,22 +644,10 @@
         <target>E-mail</target>
       </segment>
     </unit>
-    <unit id="4499935730832938989">
-      <segment state="initial">
-        <source>Message subject <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc></source>
-        <target>Тема повідомлення <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (наприклад: &quot;Запитання про тарифи&quot;, &quot;Технічна підтримка&quot;) </pc></target>
-      </segment>
-    </unit>
     <unit id="placeholderSubject">
       <segment state="initial">
         <source>Message subject</source>
         <target>Тема повідомлення</target>
-      </segment>
-    </unit>
-    <unit id="3760039188715962867">
-      <segment state="initial">
-        <source>Message text <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc></source>
-        <target>Текст повідомлення <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (вкажіть свій запит або пропозицію) </pc></target>
       </segment>
     </unit>
     <unit id="placeholderMessageText">
@@ -702,6 +684,42 @@
       <segment state="initial">
         <source> Incorrect Email </source>
         <target> Неправильна електронна адреса </target>
+      </segment>
+    </unit>
+    <unit id="3666899047827889096">
+      <segment state="initial">
+        <source>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message subject </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc>
+        </source>
+        <target>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Тема повідомлення </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (наприклад: &quot;Питання про тарифи&quot;, &quot;Технічна підтримка&quot»;) </pc>
+        </target>
+      </segment>
+    </unit>
+    <unit id="1621060766174502183">
+      <segment state="initial">
+        <source> Minimum 3 character </source>
+        <target> Мінімум 3 символи </target>
+      </segment>
+    </unit>
+    <unit id="7107262676689343969">
+      <segment state="initial">
+        <source>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message text </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc>
+        </source>
+        <target>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Текст повідомлення </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (будь ласка, вкажіть ваш запит або пропозицію) </pc>
+        </target>
+      </segment>
+    </unit>
+    <unit id="7599979609938872802">
+      <segment state="initial">
+        <source> Minimum 10 character </source>
+        <target> Мінімум 10 символів </target>
       </segment>
     </unit>
   </file>

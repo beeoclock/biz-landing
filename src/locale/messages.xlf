@@ -48,19 +48,14 @@
         <source>Tariffs</source>
       </segment>
     </unit>
-    <unit id="5736481176444461852">
+    <unit id="7922989125096435449">
       <segment>
-        <source>About Us</source>
+        <source>Contact</source>
       </segment>
     </unit>
     <unit id="6159873727198464508">
       <segment>
         <source>Try a demo account</source>
-      </segment>
-    </unit>
-    <unit id="9029286143304711365">
-      <segment>
-        <source>Reviews</source>
       </segment>
     </unit>
     <unit id="seo.header.author">
@@ -487,11 +482,6 @@
         <source> Do you have any questions or suggestions? </source>
       </segment>
     </unit>
-    <unit id="3760039188715962867">
-      <segment>
-        <source>Message text <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc></source>
-      </segment>
-    </unit>
     <unit id="4015999779146833867">
       <segment>
         <source> Join our community to be the first to receive useful tips, news, and promotional offers: </source>
@@ -500,11 +490,6 @@
     <unit id="4367579805518675029">
       <segment>
         <source> Feedback form </source>
-      </segment>
-    </unit>
-    <unit id="4499935730832938989">
-      <segment>
-        <source>Message subject <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc></source>
       </segment>
     </unit>
     <unit id="468887983520506369">
@@ -585,6 +570,32 @@
     <unit id="5999357793482437014">
       <segment>
         <source> Incorrect Email </source>
+      </segment>
+    </unit>
+    <unit id="1621060766174502183">
+      <segment>
+        <source> Minimum 3 character </source>
+      </segment>
+    </unit>
+    <unit id="3666899047827889096">
+      <segment>
+        <source>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message subject </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc>
+        </source>
+      </segment>
+    </unit>
+    <unit id="7107262676689343969">
+      <segment>
+        <source>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message text </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc>
+        </source>
+      </segment>
+    </unit>
+    <unit id="7599979609938872802">
+      <segment>
+        <source> Minimum 10 character </source>
       </segment>
     </unit>
   </file>

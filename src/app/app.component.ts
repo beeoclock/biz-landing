@@ -96,10 +96,10 @@ export class AppComponent implements OnInit {
     {
       id: 7,
       name: $localize`Try a demo account`,
-      link: 'https://panel.dev.beeoclock.com/66f9378141ed7954254c40c8/event/calendar-with-specialists',
+      link: 'https://crm.dev.beeoclock.com/66f9378141ed7954254c40c8/event/calendar-with-specialists',
       useCase: MenuUseCase.Mobile
     },
-    {id: 8, name: $localize`Login`, link: 'https://panel.dev.beeoclock.com/identity', useCase: MenuUseCase.Mobile},
+    {id: 8, name: $localize`Login`, link: 'https://crm.dev.beeoclock.com/identity', useCase: MenuUseCase.Mobile},
   ];
 
   private readonly localeId = inject(LOCALE_ID);
