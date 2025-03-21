@@ -48,16 +48,16 @@
           <div
             class="fixed inset-0 bg-[#FFFFFF] z-30 mt-[70px] overflow-auto transition-all duration-400 ease-in-out">
             <ul
-              class="flex flex-col items-center px-5 pt-4 [&>li]:flex [&>li]:items-center [&>li]:h-[51px] [&>li]:w-full
-                     [&>li]:border-b [&>li]:border-[#F4F4F5]"
+              class="flex flex-col items-center px-5 pt-4 [&>a]:flex [&>a]:items-center [&>a]:h-[51px] [&>a]:w-full
+                     [&>a]:border-b [&>a]:border-[#F4F4F5]"
             >
               @for (item of menuItems; track item.name) {
-                <li>
-                  <a [href]="item.link" id="{{item.name}}-mobile-link" class="hover:text-yellow-500 font-medium"
-                     [attr.target]="item.name === 'Try a demo account' ? '_blank' : null" i18n>
+                <a [href]="item.link" (click)="toggleMobileMenu()" id="{{item.name}}-mobile-link" class="hover:text-yellow-500 font-medium"
+                   [attr.target]="item.name === 'Try a demo account' ? '_blank' : null" i18n>
+                  <li>
                     {{ item.name }}
-                  </a>
-                </li>
+                  </li>
+                </a>
               }
             </ul>
           </div>
