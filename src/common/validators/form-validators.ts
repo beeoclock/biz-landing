@@ -8,14 +8,6 @@ export function emailValidator(): ValidatorFn {
   };
 }
 
-export function phoneNumberValidator(): ValidatorFn {
-  return (control: AbstractControl): ValidationErrors | null => {
-    const value = control.value as string;
-    if (!value) return null;
-    return /^[0-9]+$/.test(value) ? null : { invalidPhone: true };
-  };
-}
-
 export function noLeadingSpacesValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
     const value = control.value as string;
