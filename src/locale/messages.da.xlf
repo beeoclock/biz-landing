@@ -256,9 +256,9 @@
         <target> Demo-konto </target>
       </segment>
     </unit>
-    <unit id="8412379658036067726">
+    <unit id="8703221669434854561">
       <segment state="initial">
-        <source>Choose the best option for your business</source>
+        <source>Choose the best option for your business.</source>
         <target>Vælg den bedste løsning til din virksomhed</target>
       </segment>
     </unit>
@@ -734,6 +734,12 @@
             <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
           </pc>
         </target>
+      </segment>
+    </unit>
+    <unit id="3934931018612604481">
+      <segment state="initial">
+        <source>The first 14 days are free</source>
+        <target>De første 14 dage er gratis</target>
       </segment>
     </unit>
   </file>
