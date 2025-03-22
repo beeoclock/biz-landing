@@ -1,7 +1,7 @@
-import {Component, inject, LOCALE_ID} from '@angular/core';
+import {Component, inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {CurrencyCodePipe} from "../../../common/pipe/currency.pipe";
 import {NgIcon} from "@ng-icons/core";
-import {NgClass} from "@angular/common";
+import {isPlatformBrowser, NgClass} from "@angular/common";
 import {TariffsService} from "./tariffs.service";
 import {PriceValue, TariffPlanDto} from "../../../common/interface/i.tariffs";
 
@@ -15,13 +15,26 @@ import {PriceValue, TariffPlanDto} from "../../../common/interface/i.tariffs";
   templateUrl: './tariffs.component.html',
   providers: [TariffsService]
 })
-export class TariffsComponent {
+export class TariffsComponent implements OnInit {
 
-  private readonly localeId = inject(LOCALE_ID);
   private readonly tariffsService = inject(TariffsService);
-  public readonly tariffs = this.tariffsService.tariffsResource.value
+  private readonly platformId = inject(PLATFORM_ID);
+  public readonly tariffs = this.tariffsService.tariffsResource.value;
   public subscriptionType: 'monthly' | 'annual' = 'annual';
-  public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
+  public currencyCode = 'USD';
+
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const locale = navigator.language;
+      if (locale.startsWith('pl')) {
+        this.currencyCode = 'PLN';
+      } else if (locale.startsWith('da')) {
+        this.currencyCode = 'EUR';
+      } else {
+        this.currencyCode = 'USD';
+      }
+    }
+  }
 
   public toggleSubscription(type: 'monthly' | 'annual') {
     this.subscriptionType = type;
@@ -41,6 +54,7 @@ export class TariffsComponent {
 
   public getDiscount(type: string): number | null {
     const price = this.getPrice(type);
+
     return price && price.discountPercentage > 0 ? price.beforeDiscount : null;
   }
 }

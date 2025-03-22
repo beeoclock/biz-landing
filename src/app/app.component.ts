@@ -117,8 +117,6 @@ export class AppComponent implements OnInit {
   public activeIndex: number | null = null;
   public faqMinHeight = '200px';
   public readonly currentYear = new Date().getFullYear();
-
-  public submitted = false;
   public readonly faqItems = signal<IFaqItem[]>([]);
 
   @ViewChild('faqList', {static: false}) faqList!: ElementRef;

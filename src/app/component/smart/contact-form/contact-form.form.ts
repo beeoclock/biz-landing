@@ -3,7 +3,7 @@ import {
   emailValidator,
   noLeadingSpacesValidator,
   phoneNumberValidator
-} from "../../../../common/validators/email-validators";
+} from "../../../../common/validators/form-validators";
 
 export class ContactFormForm extends FormGroup {
   public constructor() {
