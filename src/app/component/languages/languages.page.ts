@@ -9,6 +9,7 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation, inject, LOCALE_I
 })
 export class LanguagesPage {
   private readonly localeId = inject(LOCALE_ID);
+  private readonly currentLanguageCode = this.localeId[0] + this.localeId[1];
   public selectedLanguageCode: string;
 
   public readonly languageList: { name: string; href: string; code: string }[] = [
@@ -19,7 +20,7 @@ export class LanguagesPage {
   ];
 
   constructor() {
-    this.selectedLanguageCode = this.languageList.some(lang => lang.code === this.localeId) ? this.localeId : 'en';
+    this.selectedLanguageCode = this.languageList.some(lang => lang.code === this.currentLanguageCode) ? this.currentLanguageCode : 'en';
   }
 
   get filteredLanguages() {
