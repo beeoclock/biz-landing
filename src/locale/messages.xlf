@@ -367,9 +367,9 @@
         <source> We will contact you shortly. </source>
       </segment>
     </unit>
-    <unit id="8412379658036067726">
+    <unit id="8703221669434854561">
       <segment>
-        <source>Choose the best option for your business</source>
+        <source>Choose the best option for your business.</source>
       </segment>
     </unit>
     <unit id="6227291956598711151">
@@ -605,6 +605,11 @@
     <unit id="8778436686334410487">
       <segment>
         <source>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
+      </segment>
+    </unit>
+    <unit id="3934931018612604481">
+      <segment>
+        <source>The first 14 days are free</source>
       </segment>
     </unit>
   </file>

@@ -4,7 +4,10 @@
     <div class="flex w-full items-center phone:flex-col phone:items-start phone:gap-2.5">
       <div class="w-full flex flex-col px-2.5">
         <h2 class="font-bold text-[40px]" i18n>Tariffs</h2>
-        <p class="font-normal text-base" i18n>Choose the best option for your business</p>
+        <div class="flex [&>p]:text-base phone:portrait:flex-col">
+          <p class="font-normal" i18n>Choose the best option for your business.</p>
+          <p class="font-semibold" i18n>The first 14 days are free</p>
+        </div>
       </div>
       <div class="flex shadow-sm h-[40px] rounded-[66px]">
         <button
@@ -37,7 +40,10 @@
           </div>
           <div class="flex justify-center">
             <div class="flex flex-col w-[250px]">
-              <div class="flex mb-1">
+              @if (subscriptionType === 'annual') {
+                <div class="flex gap-3 h-7"></div>
+              }
+              <div class="flex gap-3">
                 <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
                   {{ getPrice('free')?.afterDiscount ?? 0 }}
                   <span class="font-bold mb-1 text-2xl mr-1.5">

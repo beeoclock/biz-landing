@@ -256,10 +256,10 @@
         <target> Демо аккаунт </target>
       </segment>
     </unit>
-    <unit id="8412379658036067726">
+    <unit id="8703221669434854561">
       <segment state="initial">
-        <source>Choose the best option for your business</source>
-        <target>Оберіть найкращий варіант для вашого бізнесу</target>
+        <source>Choose the best option for your business.</source>
+        <target>Оберіть найкращий варіант для вашого бізнесу. </target>
       </segment>
     </unit>
     <unit id="6227291956598711151">
@@ -575,7 +575,7 @@
     <unit id="8478716983552743608">
       <segment state="initial">
         <source> Contact </source>
-        <target> Contact </target>
+        <target> Контакти </target>
       </segment>
     </unit>
     <unit id="2897796351634591638">
@@ -734,6 +734,12 @@
             <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
           </pc>
         </target>
+      </segment>
+    </unit>
+    <unit id="3934931018612604481">
+      <segment state="initial">
+        <source>The first 14 days are free</source>
+        <target>Перші 14 днів - безкоштовно</target>
       </segment>
     </unit>
   </file>

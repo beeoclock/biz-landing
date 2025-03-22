@@ -256,10 +256,10 @@
         <target> Konto demo </target>
       </segment>
     </unit>
-    <unit id="8412379658036067726">
+    <unit id="8703221669434854561">
       <segment state="initial">
-        <source>Choose the best option for your business</source>
-        <target>Wybierz najlepszą opcję dla swojej firmy</target>
+        <source>Choose the best option for your business.</source>
+        <target>Wybierz najlepszą opcję dla swojej firmy. </target>
       </segment>
     </unit>
     <unit id="6227291956598711151">
@@ -734,6 +734,12 @@
             <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
           </pc>
         </target>
+      </segment>
+    </unit>
+    <unit id="3934931018612604481">
+      <segment state="initial">
+        <source>The first 14 days are free</source>
+        <target>Pierwsze 14 dni jest bezpłatne</target>
       </segment>
     </unit>
   </file>
