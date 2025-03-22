@@ -19,6 +19,7 @@ export class LanguagesPage {
   ];
 
   get filteredLanguages() {
+    console.log(this.localeId)
     return this.languageList.filter(lang => lang.code !== this.currentLanguageCode);
   }
 }
