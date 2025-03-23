@@ -37,49 +37,49 @@ export const appConfig: ApplicationConfig = {
     provideAnalytics(() => getAnalytics()),
 
     ...tokens,
-    {
-      provide: LOCALE_ID,
-      deps: [AppService, DOCUMENT],
-      useFactory: (appService: AppService, document: Document) => {
-
-        const userLang = (() => {
-
-          // TODO use $localize to set default language
-          // Get language from url
-          // if (isSupportedLanguageCodeEnum(userLangByUrl)) {
-          //   return userLangByUrl;
-          // }
-
-          const localStorage = document.defaultView?.localStorage;
-
-          if (localStorage) {
-
-            const userLangByLocalStorage: string | null = localStorage.getItem('language');
-
-            if (userLangByLocalStorage) {
-              return userLangByLocalStorage;
-            }
-
-          }
-
-          const navigator = document.defaultView?.navigator;
-
-          if (navigator) {
-
-            const userLangByNavigator: string | undefined = navigator?.language?.split?.('-')?.[0];
-
-            if (isSupportedLanguageCodeEnum(userLangByNavigator)) {
-              return userLangByNavigator;
-            }
-
-          }
-
-          return environment.config.language;
-        })();
-        return userLang;
-
-      },
-    },
+    // {
+    //   provide: LOCALE_ID,
+    //   deps: [AppService, DOCUMENT],
+    //   useFactory: (appService: AppService, document: Document) => {
+    //
+    //     const userLang = (() => {
+    //
+    //       // TODO use $localize to set default language
+    //       // Get language from url
+    //       // if (isSupportedLanguageCodeEnum(userLangByUrl)) {
+    //       //   return userLangByUrl;
+    //       // }
+    //
+    //       const localStorage = document.defaultView?.localStorage;
+    //
+    //       if (localStorage) {
+    //
+    //         const userLangByLocalStorage: string | null = localStorage.getItem('language');
+    //
+    //         if (userLangByLocalStorage) {
+    //           return userLangByLocalStorage;
+    //         }
+    //
+    //       }
+    //
+    //       const navigator = document.defaultView?.navigator;
+    //
+    //       if (navigator) {
+    //
+    //         const userLangByNavigator: string | undefined = navigator?.language?.split?.('-')?.[0];
+    //
+    //         if (isSupportedLanguageCodeEnum(userLangByNavigator)) {
+    //           return userLangByNavigator;
+    //         }
+    //
+    //       }
+    //
+    //       return environment.config.language;
+    //     })();
+    //     return userLang;
+    //
+    //   },
+    // },
     {
       provide: DEFAULTS,
       useValue: {

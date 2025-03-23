@@ -46,22 +46,16 @@
         <target>Taryfy</target>
       </segment>
     </unit>
-    <unit id="9029286143304711365">
-      <segment state="initial">
-        <source>Reviews</source>
-        <target>Recenzje</target>
-      </segment>
-    </unit>
     <unit id="2806917038528218276">
       <segment state="initial">
         <source>FAQ</source>
         <target>FAQ</target>
       </segment>
     </unit>
-    <unit id="5736481176444461852">
+    <unit id="7922989125096435449">
       <segment state="initial">
-        <source>About Us</source>
-        <target>O nas</target>
+        <source>Contact</source>
+        <target>Kontakt</target>
       </segment>
     </unit>
     <unit id="1561634790975642473">
@@ -262,10 +256,10 @@
         <target> Konto demo </target>
       </segment>
     </unit>
-    <unit id="8412379658036067726">
+    <unit id="8703221669434854561">
       <segment state="initial">
-        <source>Choose the best option for your business</source>
-        <target>Wybierz najlepszą opcję dla swojej firmy</target>
+        <source>Choose the best option for your business.</source>
+        <target>Wybierz najlepszą opcję dla swojej firmy. </target>
       </segment>
     </unit>
     <unit id="6227291956598711151">
@@ -650,22 +644,10 @@
         <target>E-mail</target>
       </segment>
     </unit>
-    <unit id="4499935730832938989">
-      <segment state="initial">
-        <source>Message subject <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc></source>
-        <target>Temat wiadomości <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (Na przykład: &quot;Pytania dotyczące taryf&quot;, &quot;Wsparcie techniczne&quot;) </pc></target>
-      </segment>
-    </unit>
     <unit id="placeholderSubject">
       <segment state="initial">
         <source>Message subject</source>
         <target>Temat wiadomości</target>
-      </segment>
-    </unit>
-    <unit id="3760039188715962867">
-      <segment state="initial">
-        <source>Message text <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc></source>
-        <target>Tekst wiadomości <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (proszę podać swoją prośbę lub sugestię) </pc></target>
       </segment>
     </unit>
     <unit id="placeholderMessageText">
@@ -702,6 +684,62 @@
       <segment state="initial">
         <source> Incorrect Email </source>
         <target> Nieprawidłowy adres e-mail </target>
+      </segment>
+    </unit>
+    <unit id="3666899047827889096">
+      <segment state="initial">
+        <source>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message subject </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc>
+        </source>
+        <target>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Temat wiadomości </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (Na przykład: &quot;Pytania dotyczące taryf&quot;, &quot;Wsparcie techniczne&quot;) </pc>
+        </target>
+      </segment>
+    </unit>
+    <unit id="1621060766174502183">
+      <segment state="initial">
+        <source> Minimum 3 character </source>
+        <target> Minimum 3 znaki </target>
+      </segment>
+    </unit>
+    <unit id="7107262676689343969">
+      <segment state="initial">
+        <source>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message text </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc>
+        </source>
+        <target>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Tekst wiadomości </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (Prosimy o wskazanie prośby lub sugestii) </pc>
+        </target>
+      </segment>
+    </unit>
+    <unit id="7599979609938872802">
+      <segment state="initial">
+        <source> Minimum 10 character </source>
+        <target> Minimum 10 znaków </target>
+      </segment>
+    </unit>
+    <unit id="794752773916392654">
+      <segment state="initial">
+        <source>
+          <pc id="0" equivStart="START_LIST_ITEM" equivEnd="CLOSE_LIST_ITEM" type="other" dispStart="&lt;li&gt;" dispEnd="&lt;/li&gt;">
+            <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+          </pc>
+        </source>
+        <target>
+          <pc id="0" equivStart="START_LIST_ITEM" equivEnd="CLOSE_LIST_ITEM" type="other" dispStart="&lt;li&gt;" dispEnd="&lt;/li&gt;">
+            <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+          </pc>
+        </target>
+      </segment>
+    </unit>
+    <unit id="3934931018612604481">
+      <segment state="initial">
+        <source>The first 14 days are free</source>
+        <target>Pierwsze 14 dni jest bezpłatne</target>
       </segment>
     </unit>
   </file>

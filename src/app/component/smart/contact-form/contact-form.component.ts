@@ -115,11 +115,21 @@ export class ContactFormComponent implements AfterViewInit {
 
   public onSubmit() {
     if (this.intlTelInput) {
-      const countryData = this.intlTelInput.getSelectedCountryData();
-      const nationalNumber = this.phoneInput.nativeElement.value;
-      const fullNumber = '+' + countryData.dialCode + nationalNumber;
-      this.contactForm.patchValue({ phone: fullNumber });
+      const nationalNumber = this.phoneInput.nativeElement.value.trim();
+
+      if (nationalNumber !== '') {
+        const countryData = this.intlTelInput.getSelectedCountryData();
+
+        let sanitizedNumber = nationalNumber;
+        if (sanitizedNumber.startsWith('+' + countryData.dialCode)) {
+          sanitizedNumber = sanitizedNumber.replace('+' + countryData.dialCode, '').trim();
+        }
+
+        const fullNumber = '+' + countryData.dialCode + sanitizedNumber;
+        this.contactForm.patchValue({ phone: fullNumber });
+      }
     }
+
     if (this.contactForm.valid) {
       const data = {
         object: 'SendContactFormDto',
@@ -136,6 +146,19 @@ export class ContactFormComponent implements AfterViewInit {
       const textarea = this.messageTextarea.nativeElement;
       textarea.style.height = 'auto';
       textarea.style.height = textarea.scrollHeight + 'px';
+    }
+  }
+
+  public sanitizePhoneInput() {
+    const phoneControl = this.contactForm.get('phone');
+    if (phoneControl) {
+      phoneControl.setValue(phoneControl.value.replace(/\D/g, ''), { emitEvent: false });
+    }
+  }
+
+  public preventNonNumeric(event: KeyboardEvent) {
+    if (!/[0-9]/.test(event.key)) {
+      event.preventDefault();
     }
   }
 
