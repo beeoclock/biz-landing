@@ -115,14 +115,19 @@ export class ContactFormComponent implements AfterViewInit {
 
   public onSubmit() {
     if (this.intlTelInput) {
-      const countryData = this.intlTelInput.getSelectedCountryData();
-      let nationalNumber = this.phoneInput.nativeElement.value.trim();
+      const nationalNumber = this.phoneInput.nativeElement.value.trim();
 
-      if (nationalNumber.startsWith('+' + countryData.dialCode)) {
-        nationalNumber = nationalNumber.replace('+' + countryData.dialCode, '').trim();
+      if (nationalNumber !== '') {
+        const countryData = this.intlTelInput.getSelectedCountryData();
+
+        let sanitizedNumber = nationalNumber;
+        if (sanitizedNumber.startsWith('+' + countryData.dialCode)) {
+          sanitizedNumber = sanitizedNumber.replace('+' + countryData.dialCode, '').trim();
+        }
+
+        const fullNumber = '+' + countryData.dialCode + sanitizedNumber;
+        this.contactForm.patchValue({ phone: fullNumber });
       }
-      const fullNumber = '+' + countryData.dialCode + nationalNumber;
-      this.contactForm.patchValue({ phone: fullNumber });
     }
 
     if (this.contactForm.valid) {
