@@ -223,4 +223,9 @@ export class AppComponent implements OnInit {
     }
   }
 
+  public get localeSuffix(): string {
+    console.log(this.localeId)
+    return this.localeId;
+  }
+
 }
