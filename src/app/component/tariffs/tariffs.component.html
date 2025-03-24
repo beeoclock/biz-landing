@@ -90,7 +90,7 @@
                 <div class="flex gap-3">
                   @if (getDiscount(TariffType.BASIC); as discount) {
                     <p class="font-light text-base line-through">
-                      {{ discount }} {{ currencyCode | currencyCode }}
+                      {{ discount }}{{ currencyCode | currencyCode }}
                     </p>
                   }
                   <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
@@ -98,15 +98,22 @@
                   </p>
                 </div>
               }
-              <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
-                {{ getPrice(TariffType.BASIC)?.afterDiscount ?? 0 }}
-                <span
-                  class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}
-                </span>
-                @if (subscriptionType === 'annual') {
-                  <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+              @switch (subscriptionType) {
+                @case ('monthly') {
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ getPrice(TariffType.BASIC)?.afterDiscount ?? 0 }}
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                  </p>
                 }
-              </p>
+                @case ('annual') {
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ getMonthlyPriceIfAnnual(TariffType.BASIC) | number:'1.0-0' }}
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                  </p>
+                }
+              }
               <ul
                 class="[&>li]:text-sm [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
                 <li class="font-bold">
@@ -151,13 +158,22 @@
                   </p>
                 </div>
               }
-              <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
-                {{ getPrice(TariffType.PROFESSIONAL)?.afterDiscount ?? 0 }}
-                <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
-                @if (subscriptionType === 'annual') {
-                  <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+              @switch (subscriptionType) {
+                @case ('monthly') {
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ getPrice(TariffType.PROFESSIONAL)?.afterDiscount ?? 0 }}
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                  </p>
                 }
-              </p>
+                @case ('annual') {
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ getMonthlyPriceIfAnnual(TariffType.PROFESSIONAL) | number:'1.0-0' }}
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                  </p>
+                }
+              }
               <ul
                 class="[&>li]:text-sm [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
                 <li class="font-bold">
