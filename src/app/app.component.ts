@@ -217,7 +217,7 @@ export class AppComponent implements OnInit {
 
     tariffs.forEach(tariff => {
       const price = tariff.prices.find(p =>
-        p.currency === currencyCode && !p.country && p.values.some(v => v.billingCycle === 'monthly')
+        p.currency === currencyCode && p.values.some(v => v.billingCycle === 'monthly')
       );
 
       if (price) {
