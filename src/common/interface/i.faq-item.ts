@@ -13,23 +13,19 @@ export interface IPricingPlan {
 }
 
 export interface IPricing {
-  free: {
-    monthly: IPricingPlan;
-    annual: IPricingPlan;
-  };
   basic: {
     monthly: IPricingPlan;
-    annual: IPricingPlan;
-    discountBasic?: IPricingPlan;
   };
-  pro: {
+  free: {
     monthly: IPricingPlan;
-    annual: IPricingPlan;
-    discountPro?: IPricingPlan;
+  };
+  professional: {
+    monthly: IPricingPlan;
   };
 }
 
-export function getFaqItems(pricing: IPricing, currencyCode: string): IFaqItem[] {
+export function getFaqItems(pricing: IPricing): IFaqItem[] {
+
   return [
     {
       title: $localize`How quickly can you get started with Bee o’clock?`,
@@ -70,9 +66,9 @@ export function getFaqItems(pricing: IPricing, currencyCode: string): IFaqItem[]
     {
       title: $localize`What tariff plans are available and how do they differ?`,
       list: [
-        $localize`Free (${pricing.free.monthly.value} ${currencyCode}): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.`,
-        $localize`Basic (${pricing.basic.monthly.value} ${currencyCode}): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.`,
-        $localize`Pro (${pricing.pro.monthly.value} ${currencyCode}): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.`
+        $localize`Free (${pricing.free.monthly.value} ${pricing.free.monthly.currency}): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.`,
+        $localize`Basic (${pricing.basic.monthly.value} ${pricing.basic.monthly.currency}): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.`,
+        $localize`Pro (${pricing.professional.monthly.value} ${pricing.professional.monthly.currency}): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.`
       ]
     },
   ];

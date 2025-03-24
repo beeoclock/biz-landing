@@ -3,6 +3,9 @@ import {ContactFormForm} from "./contact-form.form";
 import {SendContactFormDto} from "../../../../common/interface/i.contact-form";
 import {HttpClient} from "@angular/common/http";
 import {lastValueFrom} from "rxjs";
+import {environment} from "../../../../../environments/develop/environment"
+
+
 
 @Injectable()
 export class ContactFormService {
@@ -15,7 +18,7 @@ export class ContactFormService {
   public failedSentCallback = (error:string[]) => {
   };
 
-  private readonly apiUrl = 'https://api-dev.beeoclock.com/client/api/v1/contact';
+  private readonly apiUrl = `${environment.apiBaseUrl}/client/api/v1/contact`;
 
   public readonly lastValidFormValue = signal<SendContactFormDto | null>(null);
   private readonly httpClient = inject(HttpClient);

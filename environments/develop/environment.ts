@@ -1,4 +1,6 @@
 export const environment = {
+  apiBaseUrl: 'https://api-dev.beeoclock.com',
+  apiCrmUrl: 'https://crm.dev.beeoclock.com',
   firebase: {
     apiKey: "AIzaSyDpqktdOQyijnyCaiaOl3_DxUQhTu3PjUg",
     authDomain: "beeoclock-develop.firebaseapp.com",

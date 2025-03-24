@@ -45,7 +45,7 @@
               }
               <div class="flex gap-3">
                 <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
-                  {{ getPrice('free')?.afterDiscount ?? 0 }}
+                  {{ getPrice(TariffType.FREE)?.afterDiscount ?? 0 }}
                   <span class="font-bold mb-1 text-2xl mr-1.5">
                     {{ currencyCode | currencyCode }}
                   </span>
@@ -55,31 +55,17 @@
                 </p>
               </div>
               <ul
-                class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
-                <li class="first:font-bold" i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  1 User
+                class="[&>li]:text-sm [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
+                <li class="font-bold">
+                  <ng-icon name="bootstrapCheck" size="2em"/>
+                  {{ getSpecialistLimitLabel(TariffType.FREE)}}
                 </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Public page
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Admin panel
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  SEO Package
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  JSON LD
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Email notification
-                </li>
+                @for (feature of getFeatures(TariffType.FREE); track feature) {
+                  <li>
+                    <ng-icon name="bootstrapCheck" size="2em"/>
+                    {{ feature | featureTranslate}}
+                  </li>
+                }
               </ul>
             </div>
           </div>
@@ -102,18 +88,18 @@
             <div class="flex flex-col w-[250px]">
               @if (subscriptionType === 'annual') {
                 <div class="flex gap-3">
-                  @if (getDiscount('basic'); as discount) {
+                  @if (getDiscount(TariffType.BASIC); as discount) {
                     <p class="font-light text-base line-through">
                       {{ discount }} {{ currencyCode | currencyCode }}
                     </p>
                   }
                   <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
-                    -{{ getPrice('basic')?.discountPercentage ?? 0 }}%
+                    -{{ getPrice(TariffType.BASIC)?.discountPercentage ?? 0 }}%
                   </p>
                 </div>
               }
               <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
-                {{ getPrice('basic')?.afterDiscount ?? 0 }}
+                {{ getPrice(TariffType.BASIC)?.afterDiscount ?? 0 }}
                 <span
                   class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}
                 </span>
@@ -122,43 +108,17 @@
                 }
               </p>
               <ul
-                class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
-                <li class="first:font-bold" i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  5 Users
+                class="[&>li]:text-sm [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
+                <li class="font-bold">
+                  <ng-icon name="bootstrapCheck" size="2em"/>
+                  {{ getSpecialistLimitLabel(TariffType.BASIC)}}
                 </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Public page
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Admin panel
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  SEO Package
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  JSON LD
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Email notification
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Plugins unlimited
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Payment Confirmation
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  SMS Notification
-                </li>
+                @for (feature of getFeatures(TariffType.BASIC); track feature) {
+                  <li>
+                    <ng-icon name="bootstrapCheck" size="2em"/>
+                    {{ feature | featureTranslate }}
+                  </li>
+                }
               </ul>
             </div>
           </div>
@@ -181,69 +141,35 @@
             <div class="flex flex-col w-[250px]">
               @if (subscriptionType === 'annual') {
                 <div class="flex gap-3">
-                  @if (getDiscount('professional'); as discount) {
+                  @if (getDiscount(TariffType.PROFESSIONAL); as discount) {
                     <p class="font-light text-base line-through">
                       {{ discount }} {{ currencyCode | currencyCode }}
                     </p>
                   }
                   <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
-                    -{{ getPrice('professional')?.discountPercentage ?? 0 }}%
+                    -{{ getPrice(TariffType.PROFESSIONAL)?.discountPercentage ?? 0 }}%
                   </p>
                 </div>
               }
               <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
-                {{ getPrice('professional')?.afterDiscount ?? 0 }}
+                {{ getPrice(TariffType.PROFESSIONAL)?.afterDiscount ?? 0 }}
                 <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
                 @if (subscriptionType === 'annual') {
                   <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
                 }
               </p>
               <ul
-                class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center [&>li:nth-last-child(2)]:font-bold">
-                <li class="first:font-bold" i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Unlimited Users
+                class="[&>li]:text-sm [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
+                <li class="font-bold">
+                  <ng-icon name="bootstrapCheck" size="2em"/>
+                  {{ getSpecialistLimitLabel(TariffType.PROFESSIONAL)}} ∞
                 </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Public page
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Admin panel
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  SEO Package
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  JSON LD
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Email notification
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Plugins unlimited
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Payment Confirmation
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  SMS Notification
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  AI assistant
-                </li>
-                <li i18n>
-                  <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                  Public rest API
-                </li>
+                @for (feature of getFeatures(TariffType.PROFESSIONAL); track feature) {
+                  <li>
+                    <ng-icon name="bootstrapCheck" size="2em"/>
+                    {{ feature | featureTranslate }}
+                  </li>
+                }
               </ul>
             </div>
           </div>
