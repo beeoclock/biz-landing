@@ -88,9 +88,9 @@
             <div class="flex flex-col w-[250px]">
               @if (subscriptionType === 'annual') {
                 <div class="flex gap-3">
-                  @if (getDiscount(TariffType.BASIC); as discount) {
+                  @if (getDiscount(TariffType.BASIC)) {
                     <p class="font-light text-base line-through">
-                      {{ discount }}{{ currencyCode | currencyCode }}
+                      {{ getMonthlyBeforeDiscount(TariffType.BASIC) }}{{ currencyCode | currencyCode }}
                     </p>
                   }
                   <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
@@ -148,9 +148,9 @@
             <div class="flex flex-col w-[250px]">
               @if (subscriptionType === 'annual') {
                 <div class="flex gap-3">
-                  @if (getDiscount(TariffType.PROFESSIONAL); as discount) {
+                  @if (getDiscount(TariffType.PROFESSIONAL)) {
                     <p class="font-light text-base line-through">
-                      {{ discount }} {{ currencyCode | currencyCode }}
+                      {{ getMonthlyBeforeDiscount(TariffType.PROFESSIONAL) }}{{ currencyCode | currencyCode }}
                     </p>
                   }
                   <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">

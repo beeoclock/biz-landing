@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {CurrencyCodePipe} from "../../../common/pipe/currency.pipe";
 import {NgIcon} from "@ng-icons/core";
-import {DecimalPipe, isPlatformBrowser, NgClass} from "@angular/common";
+import {DecimalPipe, isPlatformBrowser, JsonPipe, NgClass} from "@angular/common";
 import {TariffsService} from "./tariffs.service";
 import {PriceValue, TariffPlanDto} from "../../../common/interface/i.tariffs";
 import {FeatureTranslatePipe} from "../../../common/pipe/feature-translate.pipe";
@@ -27,6 +27,7 @@ export class TariffsComponent implements OnInit {
   public readonly tariffs = this.tariffsService.tariffsResource.value;
   public subscriptionType: 'monthly' | 'annual' = 'annual';
   public currencyCode = 'USD';
+  protected readonly TariffType = TariffType;
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -78,5 +79,15 @@ export class TariffsComponent implements OnInit {
     return this.subscriptionType === 'annual' ? price / 12 : price;
   }
 
-  protected readonly TariffType = TariffType;
+  public getMonthlyBeforeDiscount(type: TariffType): number {
+    const price = this.getPrice(type);
+    if (!price) return 0;
+
+    if (this.subscriptionType === 'annual') {
+      return price.beforeDiscount / 12;
+    }
+
+    return price.beforeDiscount;
+  }
+
 }
