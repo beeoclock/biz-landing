@@ -96,10 +96,10 @@ export class AppComponent implements OnInit {
     {
       id: 7,
       name: $localize`Try a demo account`,
-      link: `${environment.apiCrmUrl}/beeoclock.com/66f9378141ed7954254c40c8/event/calendar-with-specialists`,
+      link: `${environment.apiCrmUrl}/66f9378141ed7954254c40c8/event/calendar-with-specialists`,
       useCase: MenuUseCase.Mobile
     },
-    {id: 8, name: $localize`Login`, link: `${environment.apiCrmUrl}/beeoclock.com/identity`, useCase: MenuUseCase.Mobile},
+    {id: 8, name: $localize`Login`, link: `${environment.apiCrmUrl}/identity`, useCase: MenuUseCase.Mobile},
   ];
 
   private readonly localeId = inject(LOCALE_ID);
@@ -117,8 +117,8 @@ export class AppComponent implements OnInit {
   public faqMinHeight = '200px';
   public readonly currentYear = new Date().getFullYear();
   public readonly faqItems = signal<IFaqItem[]>([]);
-  public crmRegister = `${environment.apiCrmUrl}/beeoclock.com/identity/sign-up`
-  public crmLogin = `${environment.apiCrmUrl}/beeoclock.com/identity`
+  public crmRegister = `${environment.apiCrmUrl}/identity/sign-up`
+  public crmLogin = `${environment.apiCrmUrl}/identity`
 
   @ViewChild('faqList', {static: false}) faqList!: ElementRef;
 
