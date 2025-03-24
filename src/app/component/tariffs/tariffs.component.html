@@ -1,5 +1,5 @@
 <section id="tariffs"
-  class="flex w-full justify-center items-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0">
+  class="flex w-full justify-center items-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0 lg:pt-28">
   <div class="flex flex-col w-full max-w-[1080px] gap-10 phone:gap-3 [&>div]:cursor-pointer">
     <div class="flex w-full items-center phone:flex-col phone:items-start phone:gap-2.5">
       <div class="w-full flex flex-col px-2.5">
@@ -41,7 +41,7 @@
           <div class="flex justify-center">
             <div class="flex flex-col w-[250px]">
               @if (subscriptionType === 'annual') {
-                <div class="flex gap-3 h-7"></div>
+                <div class="flex gap-3 h-7 phone:hidden"></div>
               }
               <div class="flex gap-3">
                 <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
