@@ -26,7 +26,7 @@ export interface IPricing {
 
 export function getFaqItems(pricing: IPricing): IFaqItem[] {
 
-  return [
+  const items: unknown[] = [
     {
       title: $localize`How quickly can you get started with Bee o’clock?`,
       content: $localize`Starting to use the service is very simple: `,
@@ -63,15 +63,38 @@ export function getFaqItems(pricing: IPricing): IFaqItem[] {
       title: $localize`Can I accept online payments and receive notifications about successful transactions?`,
       description: $localize`Yes, the BASIC and PRO plans have a <b>Payment Confirmation</b> feature that allows you to track customer payments. The service also sends SMS and email notifications so that you and your customers are always up to date with booking and payment updates. All this ensures safe and transparent transactions.`
     },
-    {
-      title: $localize`What tariff plans are available and how do they differ?`,
-      list: [
-        $localize`Free (${pricing.free.monthly.value} ${pricing.free.monthly.currency}): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.`,
-        $localize`Basic (${pricing.basic.monthly.value} ${pricing.basic.monthly.currency}): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.`,
-        $localize`Pro (${pricing.professional.monthly.value} ${pricing.professional.monthly.currency}): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.`
-      ]
-    },
   ];
+
+  if (Object.keys(pricing ?? {})?.length) {
+    const list = [];
+
+    if (pricing.free) {
+      list.push(
+        $localize`Free (${pricing.free.monthly.value} ${pricing.free.monthly.currency}): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.`,
+      );
+    }
+
+    if (pricing.basic) {
+      list.push(
+        $localize`Basic (${pricing.basic.monthly.value} ${pricing.basic.monthly.currency}): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.`,
+      );
+    }
+
+    if (pricing.professional) {
+      list.push(
+        $localize`Pro (${pricing.professional.monthly.value} ${pricing.professional.monthly.currency}): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.`
+      );
+    }
+
+    items.push(
+      {
+        title: $localize`What tariff plans are available and how do they differ?`,
+        list
+      }
+    )
+  }
+
+  return items as IFaqItem[];
 }
 
 
