@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div *ngIf="tariffs() as tariffs">
+    <div *ngIf="tariffs()?.length">
       <div class="flex [&>div]:rounded-2xl gap-5 [&>div]:px-5 [&>div]:py-3 [&>div>h2]:text-2xl [&>div>h2]:font-bold
                   [&>div>h2]:text-[#FFD429] [&>div]:w-full phone:flex-col">
 
@@ -49,17 +49,19 @@
               </div>
               <div class="flex justify-center">
                 <div class="flex flex-col w-[250px]">
-                  @if (type === TariffType.FREE && subscriptionType === 'annual') {
-                    <div class="h-7"></div>
+
+                  @if (type === TariffType.FREE && subscriptionType === 'monthly') {
+                    <div style="height: 28px;"></div>
                   }
+
                   @if (subscriptionType === 'annual') {
-                    @if (getDiscount(type, tariffs)) {
+                    @if (getDiscount(type, tariffs()) !== null) {
                       <div class="flex gap-3">
                         <p class="font-light text-base line-through">
-                          {{ getMonthlyBeforeDiscount(type, tariffs) }}{{ currencyCode | currencyCode }}
+                          {{ getMonthlyBeforeDiscount(type, tariffs()) }}{{ currencyCode | currencyCode }}
                         </p>
                         <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
-                          -{{ getPrice(type, tariffs)?.discountPercentage ?? 0 }}%
+                          -{{ getPrice(type, tariffs())?.discountPercentage ?? 0 }}%
                         </p>
                       </div>
                     }
@@ -67,25 +69,26 @@
                   @switch (subscriptionType) {
                     @case ('monthly') {
                       <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
-                        {{ getPrice(type, tariffs)?.afterDiscount ?? 0 }}
+                        {{ getPrice(type, tariffs())?.afterDiscount ?? 0 }}
                         <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
                         <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
                       </p>
                     }
                     @case ('annual') {
                       <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
-                        {{ getMonthlyPriceIfAnnual(type, tariffs) | number:'1.0-0' }}
+                        {{ getMonthlyPriceIfAnnual(type, tariffs()) | number:'1.0-0' }}
                         <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
                         <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
                       </p>
                     }
                   }
+
                   <ul class="[&>li]:text-sm [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
                     <li class="font-bold">
                       <ng-icon name="bootstrapCheck" size="2em"/>
-                      {{ getSpecialistLimitLabel(type, tariffs) }}
+                      {{ getSpecialistLimitLabel(type, tariffs()) }}
                     </li>
-                    @for (feature of getFeatures(type, tariffs); track feature) {
+                    @for (feature of getFeatures(type, tariffs()); track feature) {
                       <li>
                         <ng-icon name="bootstrapCheck" size="2em"/>
                         {{ feature | featureTranslate }}
@@ -96,7 +99,7 @@
               </div>
             </div>
             <a
-              [href]="crmLogin"
+              href="https://crm.dev.beeoclock.com/identity/sign-up"
               target="_blank"
               class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
                    hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"

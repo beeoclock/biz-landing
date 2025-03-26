@@ -28,7 +28,7 @@ import {environment} from "../../../environments/environment";
     NgClass,
     DecimalPipe,
     FeatureTranslatePipe,
-    NgIf
+    NgIf,
   ],
   providers: [TariffsService],
 })
@@ -60,11 +60,12 @@ export class TariffsComponent {
     this.subscriptionType = type;
   }
 
-  public getTariff(type: TariffType, tariffs: TariffPlanDto[]): TariffPlanDto | undefined {
-    return tariffs?.find(t => t.type?.toLowerCase() === type.toLowerCase());
+  public getTariff(type: TariffType, tariffs: TariffPlanDto[] | undefined): TariffPlanDto | undefined {
+    if (!tariffs || !Array.isArray(tariffs)) return undefined;
+    return tariffs.find(t => t?.type?.toLowerCase() === type.toLowerCase());
   }
 
-  public getPrice(type: TariffType, tariffs: TariffPlanDto[]): PriceValue | undefined {
+  public getPrice(type: TariffType, tariffs: TariffPlanDto[] | undefined): PriceValue | undefined {
     if (!tariffs) return undefined;
     const tariff = this.getTariff(type, tariffs);
     if (!tariff?.prices?.length) return undefined;
@@ -77,16 +78,16 @@ export class TariffsComponent {
     return this.subscriptionType === 'annual' ? 'yearly' : 'monthly';
   }
 
-  public getDiscount(type: TariffType, tariffs: TariffPlanDto[]): number | null {
+  public getDiscount(type: TariffType, tariffs: TariffPlanDto[] | undefined): number | null {
     const price = this.getPrice(type, tariffs);
     return price && price.discountPercentage > 0 ? price.beforeDiscount : null;
   }
 
-  public getFeatures(type: TariffType, tariffs: TariffPlanDto[]): string[] {
+  public getFeatures(type: TariffType, tariffs: TariffPlanDto[] | undefined): string[] {
     return this.getTariff(type, tariffs)?.features ?? [];
   }
 
-  public getSpecialistLimitLabel(type: TariffType, tariffs: TariffPlanDto[]): string {
+  public getSpecialistLimitLabel(type: TariffType, tariffs: TariffPlanDto[] | undefined): string {
     const limit = this.getTariff(type, tariffs)?.specialistLimit;
     if (limit === null || limit === undefined) {
       return $localize`:@@unlimitedUsers:Members`;
@@ -94,12 +95,12 @@ export class TariffsComponent {
     return `${$localize`:@@specialists:Members`} ${limit}`;
   }
 
-  public getMonthlyPriceIfAnnual(type: TariffType, tariffs: TariffPlanDto[]): number {
+  public getMonthlyPriceIfAnnual(type: TariffType, tariffs: TariffPlanDto[] | undefined): number {
     const price = this.getPrice(type, tariffs)?.afterDiscount ?? 0;
     return this.subscriptionType === 'annual' ? price / 12 : price;
   }
 
-  public getMonthlyBeforeDiscount(type: TariffType, tariffs: TariffPlanDto[]): number {
+  public getMonthlyBeforeDiscount(type: TariffType, tariffs: TariffPlanDto[] | undefined): number {
     const price = this.getPrice(type, tariffs);
     if (!price) return 0;
 
