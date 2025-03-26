@@ -93,20 +93,20 @@
           </a>
         </div>
         <div class="relative hidden lg:block">
-          <img ngSrc="assets/img/group.webp" priority alt="Bee O`clock service details image" height="715" width="721">
+          <img [src]="'assets/img/local_img/group_' + localeSuffix + '.webp'" alt="Bee O`clock service details image" height="715" width="721">
           <img class="absolute top-[30%] right-[90%]" ngSrc="assets/img/vector_1.png" alt="Bee O`clock service schedule"
                height="78" width="40">
           <img class="absolute top-[67%]" ngSrc="assets/img/vector_2.png" alt="line" height="48" width="78">
-          <img class="absolute top-[4%] right-[67%]" ngSrc="assets/img/service_details.png" alt="line" height="137"
+          <img class="absolute top-[4%] right-[67%]" [src]="'assets/img/local_img/service_details_'+ localeSuffix + '.webp'" alt="line" height="137"
                width="200">
         </div>
       </div>
     </section>
 
     <section  id="services" class="flex w-full justify-center xl:min-h-[840px]">
-      <div class="flex w-full max-w-[1200px] items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0 justify-between">
+      <div class="flex w-full items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0 gap-5 justify-center">
         <div class="flex">
-          <img ngSrc="assets/img/img.webp" alt="Bee O`clock service details" height="614" width="542" priority>
+          <img [src]="'assets/img/local_img/img_' + localeSuffix + '.webp'" alt="Bee O`clock service details">
         </div>
         <div class="text-4xl flex items-center flex-col">
           <div class="flex justify-start w-full mb-[30px] phone:flex-col">
@@ -114,10 +114,10 @@
             <h2 class="font-bold text-[#FFD429]">Bee o'clock</h2></div>
           <div class="flex">
             <ul class="flex flex-col gap-[20px] [&>li>div>h3]:font-bold [&>li>div>h3]:text-xl [&>li>div>p]:font-medium
-                       [&>li>div>p]:text-[16px] [&>li>div]:max-w-[524px] leading-7 [&>li]:flex"
+                       [&>li>div>p]:text-[13px] [&>li>div]:max-w-[524px] leading-7 [&>li]:flex"
             >
               <li>
-                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"></ng-icon>
+                <ng-icon name="bootstrapCheck" class="pr-6 phone:pr-10" size="1em"></ng-icon>
                 <div>
                   <h3 i18n>Automate records</h3>
                   <p i18n>Forget about confusion with records. Our service automates customer onboarding processes,
@@ -125,7 +125,7 @@
                 </div>
               </li>
               <li>
-                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
+                <ng-icon name="bootstrapCheck" class="pr-6 phone:pr-10" size="1em"/>
                 <div>
                   <h3 i18n>Reminder to clients</h3>
                   <p i18n>Make sure your customers always remember their visit! Automatic SMS and email reminders will
@@ -133,7 +133,7 @@
                 </div>
               </li>
               <li>
-                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
+                <ng-icon name="bootstrapCheck" class="pr-6 phone:pr-10" size="1em"/>
                 <div>
                   <h3 i18n>Customized for your business</h3>
                   <p i18n>Make Bee o'clock a part of your brand! You can customize each interface of the service to your
@@ -141,7 +141,7 @@
                 </div>
               </li>
               <li>
-                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
+                <ng-icon name="bootstrapCheck" class="pr-6 phone:pr-10" size="1em"/>
                 <div>
                   <h3 i18n>Manage your records online</h3>
                   <p i18n>All information is at your fingertips - you can access customer history, schedules, and
