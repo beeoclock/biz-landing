@@ -274,28 +274,10 @@
         <target> Річний </target>
       </segment>
     </unit>
-    <unit id="471478188761593997">
-      <segment state="initial">
-        <source>FREE</source>
-        <target>БЕЗКОШТОВНО</target>
-      </segment>
-    </unit>
     <unit id="3265250603400790440">
       <segment state="initial">
         <source> Get Started </source>
         <target> Спробувати </target>
-      </segment>
-    </unit>
-    <unit id="1020329889985641339">
-      <segment state="initial">
-        <source>BASIC</source>
-        <target>БАЗОВИЙ</target>
-      </segment>
-    </unit>
-    <unit id="6388594842422610772">
-      <segment state="initial">
-        <source>PRO</source>
-        <target>PRO</target>
       </segment>
     </unit>
     <unit id="4853730136843270446">
@@ -740,6 +722,16 @@
       <segment state="initial">
         <source>Chat support</source>
         <target>Підтримка в чаті</target>
+      </segment>
+    </unit>
+    <unit id="187187500641108332">
+      <segment state="initial">
+        <source>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ type }}"/>
+        </source>
+        <target>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ type }}"/>
+        </target>
       </segment>
     </unit>
   </file>

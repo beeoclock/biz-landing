@@ -1,35 +1,49 @@
-import {ChangeDetectionStrategy, Component, inject, OnInit, PLATFORM_ID} from '@angular/core';
-import {CurrencyCodePipe} from "../../../common/pipe/currency.pipe";
-import {NgIcon} from "@ng-icons/core";
-import {DecimalPipe, isPlatformBrowser, JsonPipe, NgClass} from "@angular/common";
-import {TariffsService} from "./tariffs.service";
-import {PriceValue, TariffPlanDto} from "../../../common/interface/i.tariffs";
-import {FeatureTranslatePipe} from "../../../common/pipe/feature-translate.pipe";
-import {TariffType} from "../../enum/tariff-type.enum";
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  inject,
+  PLATFORM_ID,
+} from '@angular/core';
+import {DecimalPipe, isPlatformBrowser, NgClass, NgIf} from '@angular/common';
+import { CurrencyCodePipe } from '../../../common/pipe/currency.pipe';
+import { NgIcon } from '@ng-icons/core';
+import { TariffsService } from './tariffs.service';
+import {
+  PriceValue,
+  TariffPlanDto,
+} from '../../../common/interface/i.tariffs';
+import { FeatureTranslatePipe } from '../../../common/pipe/feature-translate.pipe';
+import { TariffType } from '../../enum/tariff-type.enum';
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-tariffs',
+  standalone: true,
   templateUrl: './tariffs.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     CurrencyCodePipe,
     NgIcon,
     NgClass,
-    FeatureTranslatePipe,
     DecimalPipe,
+    FeatureTranslatePipe,
+    NgIf
   ],
-  providers: [TariffsService]
+  providers: [TariffsService],
 })
-export class TariffsComponent implements OnInit {
-
+export class TariffsComponent {
   private readonly tariffsService = inject(TariffsService);
   private readonly platformId = inject(PLATFORM_ID);
-  public readonly tariffs = this.tariffsService.tariffsResource.value;
+
+  public readonly tariffs = computed(() => this.tariffsService.tariffsResource.value() ?? []);
+
   public subscriptionType: 'monthly' | 'annual' = 'annual';
   public currencyCode = 'USD';
   protected readonly TariffType = TariffType;
+  public crmLogin = `${environment.apiCrmUrl}/identity`
 
-  ngOnInit(): void {
+  constructor() {
     if (isPlatformBrowser(this.platformId)) {
       const locale = navigator.language;
       if (locale.startsWith('pl')) {
@@ -46,45 +60,47 @@ export class TariffsComponent implements OnInit {
     this.subscriptionType = type;
   }
 
-  public getTariff(type: TariffType): TariffPlanDto | undefined {
-    const tariffs = this.tariffsService.tariffsResource.value();
-    return tariffs?.find(t => t.type.toLowerCase() === type.toLowerCase());
+  public getTariff(type: TariffType, tariffs: TariffPlanDto[]): TariffPlanDto | undefined {
+    return tariffs?.find(t => t.type?.toLowerCase() === type.toLowerCase());
   }
 
-  public getPrice(type: TariffType): PriceValue | undefined {
-    const tariff = this.getTariff(type);
-    const priceBlock = tariff?.prices.find(p => p.currency === this.currencyCode);
-    return priceBlock?.values.find(v => v.billingCycle === this.getBillingCycle());
+  public getPrice(type: TariffType, tariffs: TariffPlanDto[]): PriceValue | undefined {
+    if (!tariffs) return undefined;
+    const tariff = this.getTariff(type, tariffs);
+    if (!tariff?.prices?.length) return undefined;
+    const priceBlock = tariff.prices.find(p => p.currency === this.currencyCode);
+    if (!priceBlock?.values?.length) return undefined;
+    return priceBlock.values.find(v => v.billingCycle === this.getBillingCycle());
   }
 
   private getBillingCycle(): 'monthly' | 'yearly' {
     return this.subscriptionType === 'annual' ? 'yearly' : 'monthly';
   }
 
-  public getDiscount(type: TariffType): number | null {
-    const price = this.getPrice(type);
+  public getDiscount(type: TariffType, tariffs: TariffPlanDto[]): number | null {
+    const price = this.getPrice(type, tariffs);
     return price && price.discountPercentage > 0 ? price.beforeDiscount : null;
   }
 
-  public getFeatures(type: TariffType): string[] {
-    return this.getTariff(type)?.features ?? [];
+  public getFeatures(type: TariffType, tariffs: TariffPlanDto[]): string[] {
+    return this.getTariff(type, tariffs)?.features ?? [];
   }
 
-  public getSpecialistLimitLabel(type: TariffType): string {
-    const limit = this.getTariff(type)?.specialistLimit;
-    if (limit === null) {
+  public getSpecialistLimitLabel(type: TariffType, tariffs: TariffPlanDto[]): string {
+    const limit = this.getTariff(type, tariffs)?.specialistLimit;
+    if (limit === null || limit === undefined) {
       return $localize`:@@unlimitedUsers:Members`;
     }
     return `${$localize`:@@specialists:Members`} ${limit}`;
   }
 
-  public getMonthlyPriceIfAnnual(type: TariffType): number {
-    const price = this.getPrice(type)?.afterDiscount ?? 0;
+  public getMonthlyPriceIfAnnual(type: TariffType, tariffs: TariffPlanDto[]): number {
+    const price = this.getPrice(type, tariffs)?.afterDiscount ?? 0;
     return this.subscriptionType === 'annual' ? price / 12 : price;
   }
 
-  public getMonthlyBeforeDiscount(type: TariffType): number {
-    const price = this.getPrice(type);
+  public getMonthlyBeforeDiscount(type: TariffType, tariffs: TariffPlanDto[]): number {
+    const price = this.getPrice(type, tariffs);
     if (!price) return 0;
 
     if (this.subscriptionType === 'annual') {
@@ -93,5 +109,4 @@ export class TariffsComponent implements OnInit {
 
     return price.beforeDiscount;
   }
-
 }
