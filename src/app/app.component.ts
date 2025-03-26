@@ -28,13 +28,13 @@ import {
 } from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
 import {MenuUseCase} from "./enum/menu-use-case.enum";
-import {environment} from "../environments/environment";
 import {ReactiveFormsModule} from "@angular/forms";
 import {getFaqItems, IFaqItem, IPricing, IPricingPlan} from "../common/interface/i.faq-item";
 import {ContactFormComponent} from "./component/smart/contact-form/contact-form.component";
 import {TariffsComponent} from "./component/tariffs/tariffs.component";
 import LanguagesPage from "./component/languages/languages.page";
 import {TariffsService} from "./component/tariffs/tariffs.service";
+import {environment} from "../../environments/develop/environment";
 
 
 @Component({
@@ -96,10 +96,10 @@ export class AppComponent implements OnInit {
     {
       id: 7,
       name: $localize`Try a demo account`,
-      link: 'https://crm.dev.beeoclock.com/66f9378141ed7954254c40c8/event/calendar-with-specialists',
+      link: `${environment.apiCrmUrl}/66f9378141ed7954254c40c8/event/calendar-with-specialists`,
       useCase: MenuUseCase.Mobile
     },
-    {id: 8, name: $localize`Login`, link: 'https://crm.dev.beeoclock.com/identity', useCase: MenuUseCase.Mobile},
+    {id: 8, name: $localize`Login`, link: `${environment.apiCrmUrl}/identity`, useCase: MenuUseCase.Mobile},
   ];
 
   private readonly localeId = inject(LOCALE_ID);
@@ -113,11 +113,12 @@ export class AppComponent implements OnInit {
   public readonly consultationLink = environment.config.consultationLink;
   public isMobileMenuOpen = false
   public aspectRatio: number | null = null;
-  public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
   public activeIndex: number | null = null;
   public faqMinHeight = '200px';
   public readonly currentYear = new Date().getFullYear();
   public readonly faqItems = signal<IFaqItem[]>([]);
+  public crmRegister = `${environment.apiCrmUrl}/identity/sign-up`
+  public crmLogin = `${environment.apiCrmUrl}/identity`
 
   @ViewChild('faqList', {static: false}) faqList!: ElementRef;
 
@@ -139,7 +140,7 @@ export class AppComponent implements OnInit {
     effect(() => {
       const pricing = this.buildMonthlyPricing();
       if (pricing) {
-        this.faqItems.set(getFaqItems(pricing, this.currencyCode));
+        this.faqItems.set(getFaqItems(pricing as unknown as IPricing));
       }
     });
   }
@@ -204,34 +205,44 @@ export class AppComponent implements OnInit {
     }
   }
 
-  private buildMonthlyPricing(): IPricing | null {
+  private buildMonthlyPricing(): Record<string, { monthly: IPricingPlan }> | null {
     const tariffs = this.tariffsService.tariffsResource.value();
     if (!tariffs) return null;
 
-    const getPlan = (type: string): IPricingPlan | null => {
-      const tariff = tariffs.find(t => t.type.toLowerCase() === type.toLowerCase());
-      const price = tariff?.prices.find(p => p.currency === this.currencyCode);
-      const value = price?.values.find(v => v.billingCycle === 'monthly');
+    const currencyCode = this.getCurrencyByLocale(this.localeId);
 
-      if (!value || !price?.currency) return null;
+    const pricing: Record<string, { monthly: IPricingPlan }> = {};
 
-      return {
-        value: value.afterDiscount,
-        currency: price.currency
-      };
+    tariffs.forEach(tariff => {
+      const price = tariff.prices.find(p =>
+        p.currency === currencyCode && p.values.some(v => v.billingCycle === 'monthly')
+      );
+
+      if (price) {
+        const monthlyValue = price.values.find(v => v.billingCycle === 'monthly');
+
+        if (monthlyValue) {
+          pricing[tariff.type.toLowerCase()] = {
+            monthly: {
+              value: monthlyValue.afterDiscount,
+              currency: price.currency
+            }
+          };
+        }
+      }
+    });
+
+    return Object.keys(pricing).length ? pricing : null;
+  }
+
+  private getCurrencyByLocale(locale: string): string {
+    const localeCurrencyMap: Record<string, string> = {
+      'pl': 'PLN',
+      'da': 'EUR',
+      'en': 'USD'
     };
 
-    const free = getPlan('free');
-    const basic = getPlan('basic');
-    const pro = getPlan('professional');
-
-    if (!free || !basic || !pro) return null;
-
-    return {
-      free: { monthly: free, annual: { value: 0, currency: this.currencyCode } },
-      basic: { monthly: basic, annual: { value: 0, currency: this.currencyCode } },
-      pro: { monthly: pro, annual: { value: 0, currency: this.currencyCode } }
-    };
+    return localeCurrencyMap[locale.substring(0, 2)] || 'USD';
   }
 
   public get localeSuffix(): string {

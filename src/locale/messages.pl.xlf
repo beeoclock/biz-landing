@@ -280,42 +280,6 @@
         <target>BEZPŁATNY</target>
       </segment>
     </unit>
-    <unit id="6990629382875055999">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 1 User </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 1 Użytkownik </target>
-      </segment>
-    </unit>
-    <unit id="3723027339320684146">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Public page </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Strona publiczna </target>
-      </segment>
-    </unit>
-    <unit id="5937084711191033307">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Admin panel </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Panel administracyjny </target>
-      </segment>
-    </unit>
-    <unit id="490364722075394846">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SEO Package </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Pakiet SEO </target>
-      </segment>
-    </unit>
-    <unit id="8688937334108344457">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> JSON LD </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> JSON LD </target>
-      </segment>
-    </unit>
-    <unit id="3123738433241513007">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Email notification </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Powiadomienie e-mail </target>
-      </segment>
-    </unit>
     <unit id="3265250603400790440">
       <segment state="initial">
         <source> Get Started </source>
@@ -328,52 +292,10 @@
         <target>PODSTAWOWY</target>
       </segment>
     </unit>
-    <unit id="4066998311893586930">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 5 Users </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 5 Użytkowników </target>
-      </segment>
-    </unit>
-    <unit id="5796179803993762219">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Plugins unlimited </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Wtyczki bez ograniczeń </target>
-      </segment>
-    </unit>
-    <unit id="1348007387401845649">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Payment Confirmation </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Potwierdzenie płatności </target>
-      </segment>
-    </unit>
-    <unit id="6271066436620954403">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SMS Notification </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Powiadomienie SMS </target>
-      </segment>
-    </unit>
     <unit id="6388594842422610772">
       <segment state="initial">
         <source>PRO</source>
         <target>PRO</target>
-      </segment>
-    </unit>
-    <unit id="5710456802985900180">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Unlimited Users </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Nieograniczona liczba użytkowników </target>
-      </segment>
-    </unit>
-    <unit id="1812640013654021129">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> AI assistant </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Asystent AI </target>
-      </segment>
-    </unit>
-    <unit id="4477550386517830221">
-      <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Public rest API </source>
-        <target><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Publiczny interfejs API </target>
       </segment>
     </unit>
     <unit id="4853730136843270446">
@@ -538,19 +460,19 @@
     </unit>
     <unit id="3304132639371050887">
       <segment state="initial">
-        <source>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.</source>
+        <source>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="pricing.free.monthly.currency"/>): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.</source>
         <target>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 1 użytkownik, strona publiczna, panel administracyjny, pakiet SEO, JSON LD, powiadomienia e-mail. Nadaje się do małych projektów lub testów.</target>
       </segment>
     </unit>
     <unit id="7027589287121851016">
       <segment state="initial">
-        <source>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.</source>
+        <source>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="pricing.basic.monthly.currency"/>): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.</source>
         <target>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 5 użytkowników, strona publiczna, panel administracyjny, pakiet SEO, JSON LD, powiadomienia e-mail, nieograniczona liczba wtyczek, potwierdzenie płatności i powiadomienia SMS. Rozwiązanie dla małych i średnich firm.</target>
       </segment>
     </unit>
     <unit id="8778436686334410487">
       <segment state="initial">
-        <source>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
+        <source>Pro (<ph id="0" equiv="PH" disp="pricing.professional.monthly.value"/> <ph id="1" equiv="PH_1" disp="pricing.professional.monthly.currency"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
         <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): nieograniczona liczba użytkowników, pełny dostęp do funkcji, w tym asystenta AI i Public REST API. Idealne dla zaawansowanych i skalowalnych projektów.</target>
       </segment>
     </unit>
@@ -740,6 +662,84 @@
       <segment state="initial">
         <source>The first 14 days are free</source>
         <target>Pierwsze 14 dni jest bezpłatne</target>
+      </segment>
+    </unit>
+    <unit id="unlimitedUsers">
+      <segment state="initial">
+        <source>Members</source>
+        <target>Członkowie</target>
+      </segment>
+    </unit>
+    <unit id="specialists">
+      <segment state="initial">
+        <source>Members</source>
+        <target>Członkowie</target>
+      </segment>
+    </unit>
+    <unit id="unlimitedPlugins">
+      <segment state="initial">
+        <source>Plugins unlimited</source>
+        <target>Nieograniczone wtyczki</target>
+      </segment>
+    </unit>
+    <unit id="emailNotification">
+      <segment state="initial">
+        <source>Email notification</source>
+        <target>Powiadomienie e-mail</target>
+      </segment>
+    </unit>
+    <unit id="smsNotification">
+      <segment state="initial">
+        <source>SMS Notification</source>
+        <target>Powiadomienie SMS</target>
+      </segment>
+    </unit>
+    <unit id="jsonLD">
+      <segment state="initial">
+        <source>JSON LD</source>
+        <target>JSON LD</target>
+      </segment>
+    </unit>
+    <unit id="seoOptimization">
+      <segment state="initial">
+        <source>SEO Package</source>
+        <target>Pakiet SEO</target>
+      </segment>
+    </unit>
+    <unit id="confirmationAfterUserPayment">
+      <segment state="initial">
+        <source>Payment Confirmation</source>
+        <target>Potwierdzenie płatności</target>
+      </segment>
+    </unit>
+    <unit id="adminPanel">
+      <segment state="initial">
+        <source>Admin panel</source>
+        <target>Panel administracyjny</target>
+      </segment>
+    </unit>
+    <unit id="publicPage">
+      <segment state="initial">
+        <source>Public page</source>
+        <target>Strona publiczna</target>
+      </segment>
+    </unit>
+    <unit id="assistantAI">
+      <segment state="initial">
+        <source>AI assistant</source>
+        <target>Asystent AI</target>
+      </segment>
+    </unit>
+    <unit id="publicRestApi">
+      <segment state="initial">
+        <source>Public rest API</source>
+        <target>Publiczny REST API</target>
+      </segment>
+    </unit>
+    <unit id="chat">
+      <segment state="initial">
+        <source>Chat support</source>
+        <target>Chat support</target>
       </segment>
     </unit>
   </file>

@@ -397,36 +397,6 @@
         <source>per month</source>
       </segment>
     </unit>
-    <unit id="6990629382875055999">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 1 User </source>
-      </segment>
-    </unit>
-    <unit id="3723027339320684146">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Public page </source>
-      </segment>
-    </unit>
-    <unit id="5937084711191033307">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Admin panel </source>
-      </segment>
-    </unit>
-    <unit id="490364722075394846">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SEO Package </source>
-      </segment>
-    </unit>
-    <unit id="8688937334108344457">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> JSON LD </source>
-      </segment>
-    </unit>
-    <unit id="3123738433241513007">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Email notification </source>
-      </segment>
-    </unit>
     <unit id="3265250603400790440">
       <segment>
         <source> Get Started </source>
@@ -437,44 +407,9 @@
         <source>BASIC</source>
       </segment>
     </unit>
-    <unit id="4066998311893586930">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> 5 Users </source>
-      </segment>
-    </unit>
-    <unit id="5796179803993762219">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Plugins unlimited </source>
-      </segment>
-    </unit>
-    <unit id="1348007387401845649">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Payment Confirmation </source>
-      </segment>
-    </unit>
-    <unit id="6271066436620954403">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> SMS Notification </source>
-      </segment>
-    </unit>
     <unit id="6388594842422610772">
       <segment>
         <source>PRO</source>
-      </segment>
-    </unit>
-    <unit id="5710456802985900180">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Unlimited Users </source>
-      </segment>
-    </unit>
-    <unit id="1812640013654021129">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> AI assistant </source>
-      </segment>
-    </unit>
-    <unit id="4477550386517830221">
-      <segment>
-        <source><pc id="0" equivStart="START_TAG_NG_ICON" equivEnd="CLOSE_TAG_NG_ICON" type="other" dispStart="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;" dispEnd="&lt;ng-icon name=&quot;bootstrapCheck&quot; class=&quot;&quot; size=&quot;2em&quot;/&gt;"/> Public rest API </source>
       </segment>
     </unit>
     <unit id="2303057299624544730">
@@ -594,22 +529,87 @@
     </unit>
     <unit id="3304132639371050887">
       <segment>
-        <source>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.</source>
+        <source>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="pricing.free.monthly.currency"/>): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.</source>
       </segment>
     </unit>
     <unit id="7027589287121851016">
       <segment>
-        <source>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.</source>
+        <source>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="pricing.basic.monthly.currency"/>): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.</source>
       </segment>
     </unit>
     <unit id="8778436686334410487">
       <segment>
-        <source>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
+        <source>Pro (<ph id="0" equiv="PH" disp="pricing.professional.monthly.value"/> <ph id="1" equiv="PH_1" disp="pricing.professional.monthly.currency"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
       </segment>
     </unit>
     <unit id="3934931018612604481">
       <segment>
         <source>The first 14 days are free</source>
+      </segment>
+    </unit>
+    <unit id="adminPanel">
+      <segment>
+        <source>Admin panel</source>
+      </segment>
+    </unit>
+    <unit id="assistantAI">
+      <segment>
+        <source>AI assistant</source>
+      </segment>
+    </unit>
+    <unit id="chat">
+      <segment>
+        <source>Chat support</source>
+      </segment>
+    </unit>
+    <unit id="confirmationAfterUserPayment">
+      <segment>
+        <source>Payment Confirmation</source>
+      </segment>
+    </unit>
+    <unit id="emailNotification">
+      <segment>
+        <source>Email notification</source>
+      </segment>
+    </unit>
+    <unit id="jsonLD">
+      <segment>
+        <source>JSON LD</source>
+      </segment>
+    </unit>
+    <unit id="publicPage">
+      <segment>
+        <source>Public page</source>
+      </segment>
+    </unit>
+    <unit id="publicRestApi">
+      <segment>
+        <source>Public rest API</source>
+      </segment>
+    </unit>
+    <unit id="seoOptimization">
+      <segment>
+        <source>SEO Package</source>
+      </segment>
+    </unit>
+    <unit id="smsNotification">
+      <segment>
+        <source>SMS Notification</source>
+      </segment>
+    </unit>
+    <unit id="specialists">
+      <segment>
+        <source>Members</source>
+      </segment>
+    </unit>
+    <unit id="unlimitedPlugins">
+      <segment>
+        <source>Plugins unlimited</source>
+      </segment>
+    </unit>
+    <unit id="unlimitedUsers">
+      <segment>
+        <source>Members</source>
       </segment>
     </unit>
   </file>
