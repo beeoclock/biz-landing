@@ -34,7 +34,7 @@ import {ContactFormComponent} from "./component/smart/contact-form/contact-form.
 import {TariffsComponent} from "./component/tariffs/tariffs.component";
 import LanguagesPage from "./component/languages/languages.page";
 import {TariffsService} from "./component/tariffs/tariffs.service";
-import {environment} from "../../environments/develop/environment";
+import {environment} from "../environments/environment";
 
 
 @Component({
