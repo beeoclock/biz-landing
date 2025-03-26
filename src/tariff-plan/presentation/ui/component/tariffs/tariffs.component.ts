@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, effect, inject, PLATFORM_ID, signal,} from '@angular/core';
+import {ChangeDetectionStrategy, Component, effect, inject, LOCALE_ID, PLATFORM_ID, signal,} from '@angular/core';
 import {DecimalPipe, isPlatformBrowser, isPlatformServer, NgClass} from '@angular/common';
 import {CurrencyCodePipe} from '@src/common/pipe/currency.pipe';
 import {NgIcon} from '@ng-icons/core';
@@ -27,6 +27,7 @@ import {LanguageCodeEnum} from "@src/core/enum/language-code.enum";
 })
 export class TariffsComponent {
   private readonly tariffsService = inject(TariffsService);
+  private readonly localeId = inject(LOCALE_ID);
   private readonly platformId = inject(PLATFORM_ID);
 
   public readonly items = signal<ITariffPlan.DTO[]>([]);
@@ -154,14 +155,8 @@ export class TariffsComponent {
   }) {
     const {item, subscriptionType, country, language} = params;
     return item.prices.reduce((acc, price) => {
-      if (price.country !== country) {
-        if (price.country) {
-          return acc;
-        }
-        const thePriceCountryIsInRegions = regionsWithCountryCodeRecord[price.region].includes(country);
-        if (!thePriceCountryIsInRegions) {
-          return acc;
-        }
+      if (this.currencyCode !== price.currency) {
+        return acc;
       }
       const takeCurrentSubscriptionType = price.values.filter((value) => {
         return value.billingCycle === subscriptionType;
