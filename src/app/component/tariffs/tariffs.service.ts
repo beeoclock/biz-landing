@@ -2,7 +2,7 @@ import {inject, Injectable, resource} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {lastValueFrom} from "rxjs";
 import {TariffPlanDto,TariffApiResponse} from "../../../common/interface/i.tariffs";
-import {environment} from "../../../../environments/develop/environment";
+import {environment} from "../../../environments/environment";
 
 
 @Injectable()
