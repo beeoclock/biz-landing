@@ -4,13 +4,8 @@ import {
   computed,
   inject,
   PLATFORM_ID,
-  signal,
 } from '@angular/core';
-import {
-  DecimalPipe,
-  isPlatformBrowser,
-  NgClass, NgIf,
-} from '@angular/common';
+import { DecimalPipe, isPlatformBrowser, NgClass } from '@angular/common';
 import { CurrencyCodePipe } from '../../../common/pipe/currency.pipe';
 import { NgIcon } from '@ng-icons/core';
 import { TariffsService } from './tariffs.service';
@@ -31,9 +26,8 @@ import { TariffType } from '../../enum/tariff-type.enum';
     NgIcon,
     NgClass,
     DecimalPipe,
-    FeatureTranslatePipe,
-    NgIf,
-  ],
+    FeatureTranslatePipe
+],
   providers: [TariffsService],
 })
 export class TariffsComponent {
