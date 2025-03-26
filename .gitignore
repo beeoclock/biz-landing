@@ -45,8 +45,9 @@ Thumbs.db
 .firebase
 *-debug.log
 .runtimeconfig.json
-/firebase/develop/dist/
 
-# Scully
-scully.log
-/firebase/production/dist/
+/environments/develop/firebase/.firebase
+/environments/develop/firebase/dist/
+
+/environments/production/firebase/.firebase
+/environments/production/firebase/dist/

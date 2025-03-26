@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "bee-o-clock",
+    "public": "dist/browser",
+    "ignore": [
+      "**/firebase/**",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
-import {inject, Injectable} from '@angular/core';
+import {inject, Injectable, PLATFORM_ID, Renderer2, RendererFactory2} from '@angular/core';
 import {Meta, Title} from "@angular/platform-browser";
-import {DOCUMENT} from "@angular/common";
+import {DOCUMENT, isPlatformBrowser} from "@angular/common";
 import {ImageAuxData, ISeoSocialShare, SeoMetaTag} from "../interface/i.seo-social-share";
 
 @Injectable({
@@ -10,7 +10,20 @@ export class SocialShareSeoService {
 
   private readonly metaService = inject(Meta);
   private readonly titleService = inject(Title);
+  /*private readonly rendererFactory2 = inject(RendererFactory2);*/
   private readonly document = inject(DOCUMENT);
+  private readonly platformId = inject(PLATFORM_ID);
+  /*private renderer2 = this.rendererFactory2.createRenderer(this.document, null);*/
+
+  public constructor() {
+
+    if (isPlatformBrowser(this.platformId)) {
+
+      /*this.renderer2 = inject(Renderer2);*/
+
+    }
+
+  }
 
   /**
    * This method is used to set various metadata for SEO and social share.
@@ -228,7 +241,7 @@ export class SocialShareSeoService {
       this.metaService.updateTag({property: 'og:locale', content: locale});
       this.setLanguage(locale);
       // Update lang attribute on html element
-      this.document.documentElement.lang = locale;
+      /*this.renderer2.setAttribute(this.document.documentElement, 'lang', locale);*/
     } else {
       this.metaService.removeTag(`property='og:locale'`);
     }
@@ -310,17 +323,19 @@ export class SocialShareSeoService {
   public setLanguageAlternativeUrl(lang: string, url?: string): void {
     // first remove potential previous url
     const selector = `link[rel='alternate'][hreflang='${lang}']`;
-    const languageAlternativeElement = this.document.head.querySelector(selector);
+    // this.document.head.querySelector(selector);
+    /*const languageAlternativeElement = this.renderer2.selectRootElement(selector);
     if (languageAlternativeElement) {
-      this.document.head.removeChild(languageAlternativeElement);
-    }
+      this.renderer2.removeChild(this.document.head, languageAlternativeElement);
+    }*/
 
     if (url && url.length) {
       const link: HTMLLinkElement = this.document.createElement('link');
       link.setAttribute('rel', 'alternate');
       link.setAttribute('hreflang', lang);
       link.setAttribute('href', url);
-      this.document.head.appendChild(link);
+      // this.document.head.appendChild(link);
+      /*this.renderer2.appendChild(this.document.head, link);*/
     }
   }
 
@@ -329,14 +344,16 @@ export class SocialShareSeoService {
     const selector = `link[rel='canonical']`;
     const canonicalElement = this.document.head.querySelector(selector);
     if (canonicalElement) {
-      this.document.head.removeChild(canonicalElement);
+      // this.document.head.removeChild(canonicalElement);
+      /*this.renderer2.removeChild(this.document.head, canonicalElement);*/
     }
 
     if (url && url.length) {
       const link: HTMLLinkElement = this.document.createElement('link');
       link.setAttribute('rel', 'canonical');
       link.setAttribute('href', url);
-      this.document.head.appendChild(link);
+      // this.document.head.appendChild(link);
+      /*this.renderer2.appendChild(this.document.head, link);*/
     }
   }
 

@@ -1,0 +1,203 @@
+<section id="tariffs"
+  class="flex w-full justify-center items-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0">
+  <div class="flex flex-col w-full max-w-[1080px] gap-10 phone:gap-3 [&>div]:cursor-pointer">
+    <div class="flex w-full items-center phone:flex-col phone:items-start phone:gap-2.5">
+      <div class="w-full flex flex-col px-2.5">
+        <h2 class="font-bold text-[40px]" i18n>Tariffs</h2>
+        <div class="flex [&>p]:text-base phone:portrait:flex-col gap-[2px]">
+          <p class="font-normal" i18n>Choose the best option for your business.</p>
+          <p class="font-semibold" i18n>The first 14 days are free</p>
+        </div>
+      </div>
+      <div class="flex shadow-sm h-[40px] rounded-[66px]">
+        <button
+          id="monthly-button"
+          class="text-sm font-semibold font-inter px-5 py-[5px] rounded-[66px] h-[40px] transition-colors duration-300"
+          [ngClass]="{ 'bg-[#E5E5E5]': subscriptionType === 'monthly'}"
+          (click)="toggleSubscription('monthly')"
+          i18n>
+          Monthly
+        </button>
+        <button
+          id="annual-button"
+          class="text-sm font-semibold font-inter px-5 py-[5px] rounded-[66px] h-[40px] transition-colors duration-300"
+          [ngClass]="{ 'bg-[#E5E5E5]': subscriptionType === 'annual' }"
+          (click)="toggleSubscription('annual')" i18n>
+          Annual
+        </button>
+      </div>
+    </div>
+
+    <div class="flex [&>div]:rounded-2xl gap-5 [&>div]:px-5 [&>div]:py-3 [&>div>h2]:text-2xl [&>div>h2]:font-bold
+                    [&>div>h2]:text-[#FFD429] [&>div]:w-full phone:flex-col"
+    >
+      <div
+        class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
+        <div class="flex flex-col">
+          <div class="flex justify-between items-center mb-1">
+            <h2 class="text-2xl font-bold text-[#FFD429] uppercase" i18n>FREE</h2>
+            <p class="font-light text-xs" i18n>No need card</p>
+          </div>
+          <div class="flex justify-center">
+            <div class="flex flex-col w-[250px]">
+              @if (subscriptionType === 'annual') {
+                <div class="flex gap-3 h-7"></div>
+              }
+              <div class="flex gap-3">
+                <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                  {{ getPrice(TariffType.FREE)?.afterDiscount ?? 0 }}
+                  <span class="font-bold mb-1 text-2xl mr-1.5">
+                    {{ currencyCode | currencyCode }}
+                  </span>
+                  @if (subscriptionType === 'annual') {
+                    <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                  }
+                </p>
+              </div>
+              <ul
+                class="[&>li]:text-sm [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
+                <li class="font-bold">
+                  <ng-icon name="bootstrapCheck" size="2em"/>
+                  {{ getSpecialistLimitLabel(TariffType.FREE)}}
+                </li>
+                @for (feature of getFeatures(TariffType.FREE); track feature) {
+                  <li>
+                    <ng-icon name="bootstrapCheck" size="2em"/>
+                    {{ feature | featureTranslate}}
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="https://crm.dev.beeoclock.com/identity/sign-up" target="_blank"
+           class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+                      hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"
+          i18n>
+          Get Started
+        </a>
+      </div>
+
+      <div
+        class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
+        <div class="flex flex-col">
+          <div class="flex justify-between items-center mb-1">
+            <h2 class="text-2xl font-bold text-[#FFD429] mb-1 uppercase" i18n>BASIC</h2>
+          </div>
+          <div class="flex justify-center">
+            <div class="flex flex-col w-[250px]">
+              @if (subscriptionType === 'annual') {
+                <div class="flex gap-3">
+                  @if (getDiscount(TariffType.BASIC)) {
+                    <p class="font-light text-base line-through">
+                      {{ getMonthlyBeforeDiscount(TariffType.BASIC) }}{{ currencyCode | currencyCode }}
+                    </p>
+                  }
+                  <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
+                    -{{ getPrice(TariffType.BASIC)?.discountPercentage ?? 0 }}%
+                  </p>
+                </div>
+              }
+              @switch (subscriptionType) {
+                @case ('monthly') {
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ getPrice(TariffType.BASIC)?.afterDiscount ?? 0 }}
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                  </p>
+                }
+                @case ('annual') {
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ getMonthlyPriceIfAnnual(TariffType.BASIC) | number:'1.0-0' }}
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                  </p>
+                }
+              }
+              <ul
+                class="[&>li]:text-sm [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
+                <li class="font-bold">
+                  <ng-icon name="bootstrapCheck" size="2em"/>
+                  {{ getSpecialistLimitLabel(TariffType.BASIC)}}
+                </li>
+                @for (feature of getFeatures(TariffType.BASIC); track feature) {
+                  <li>
+                    <ng-icon name="bootstrapCheck" size="2em"/>
+                    {{ feature | featureTranslate }}
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="https://crm.dev.beeoclock.com/identity/sign-up" target="_blank"
+           class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+                      hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"
+          i18n>
+          Get Started
+        </a>
+      </div>
+
+      <div
+        class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
+        <div class="flex flex-col">
+          <div class="flex justify-between items-center mb-1">
+            <h2 class="text-2xl font-bold text-[#FFD429] mb-1 uppercase" i18n>PRO</h2>
+          </div>
+          <div class="flex justify-center">
+            <div class="flex flex-col w-[250px]">
+              @if (subscriptionType === 'annual') {
+                <div class="flex gap-3">
+                  @if (getDiscount(TariffType.PROFESSIONAL)) {
+                    <p class="font-light text-base line-through">
+                      {{ getMonthlyBeforeDiscount(TariffType.PROFESSIONAL) }}{{ currencyCode | currencyCode }}
+                    </p>
+                  }
+                  <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
+                    -{{ getPrice(TariffType.PROFESSIONAL)?.discountPercentage ?? 0 }}%
+                  </p>
+                </div>
+              }
+              @switch (subscriptionType) {
+                @case ('monthly') {
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ getPrice(TariffType.PROFESSIONAL)?.afterDiscount ?? 0 }}
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                  </p>
+                }
+                @case ('annual') {
+                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
+                    {{ getMonthlyPriceIfAnnual(TariffType.PROFESSIONAL) | number:'1.0-0' }}
+                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
+                    <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
+                  </p>
+                }
+              }
+              <ul
+                class="[&>li]:text-sm [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
+                <li class="font-bold">
+                  <ng-icon name="bootstrapCheck" size="2em"/>
+                  {{ getSpecialistLimitLabel(TariffType.PROFESSIONAL)}} ∞
+                </li>
+                @for (feature of getFeatures(TariffType.PROFESSIONAL); track feature) {
+                  <li>
+                    <ng-icon name="bootstrapCheck" size="2em"/>
+                    {{ feature | featureTranslate }}
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="https://crm.dev.beeoclock.com/identity/sign-up" target="_blank"
+           class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
+                      hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"
+          i18n>
+          Get Started
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,746 @@
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US" trgLang="uk">
+  <file id="ngi18n" original="ng.template">
+    <unit id="3044375770210666349">
+      <segment state="initial">
+        <source> Online appointment booking for clients. </source>
+        <target> Запис клієнтів онлайн. </target>
+      </segment>
+    </unit>
+    <unit id="7143579180750436311">
+      <segment state="initial">
+        <source>Services</source>
+        <target>Послуги</target>
+      </segment>
+    </unit>
+    <unit id="4937917695205691719">
+      <segment state="initial">
+        <source>Tariffs</source>
+        <target>Тарифи</target>
+      </segment>
+    </unit>
+    <unit id="2454050363478003966">
+      <segment state="initial">
+        <source>Login</source>
+        <target>Вхід</target>
+      </segment>
+    </unit>
+    <unit id="6254764080441478187">
+      <segment state="initial">
+        <source> A simple and effective tool for managing customer records in beauty salons and other businesses </source>
+        <target>Простий та ефективний інструмент для управління записами клієнтів у салонах краси та інших бізнесах</target>
+      </segment>
+    </unit>
+    <unit id="3652697872793402667">
+      <segment state="initial">
+        <source> Try it for free </source>
+        <target>Спробувати безкоштовно</target>
+      </segment>
+    </unit>
+    <unit id="7708270344948043036">
+      <segment state="initial">
+        <source>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+        </source>
+        <target>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+        </target>
+      </segment>
+    </unit>
+    <unit id="2806917038528218276">
+      <segment state="initial">
+        <source>FAQ</source>
+        <target>FAQ</target>
+      </segment>
+    </unit>
+    <unit id="7922989125096435449">
+      <segment state="initial">
+        <source>Contact</source>
+        <target>Контакти</target>
+      </segment>
+    </unit>
+    <unit id="1561634790975642473">
+      <segment state="initial">
+        <source>Order a consultation</source>
+        <target>Замовити консультацію</target>
+      </segment>
+    </unit>
+    <unit id="6159873727198464508">
+      <segment state="initial">
+        <source>Try a demo account</source>
+        <target>Спробувати демо-акаунт</target>
+      </segment>
+    </unit>
+    <unit id="seo.header.title">
+      <segment state="initial">
+        <source>Bee O&apos;clock</source>
+        <target>Bee O&apos;clock</target>
+      </segment>
+    </unit>
+    <unit id="seo.header.description">
+      <segment state="initial">
+        <source>Bee O’clock is a unique management tool allowing your customers to book and pay for your services. You can also keep track of your performance to become the best version of yourself.</source>
+        <target>Управління зустрічами та клієнтами для професіоналів</target>
+      </segment>
+    </unit>
+    <unit id="seo.header.keywords">
+      <segment state="initial">
+        <source>appointment, calendar, clients, business, management, tool, bookkeeping, tax planning, event management, delegate, time-consuming tasks, empower, professionals, reduce stress, increase productivity, eliminate distractions, frustrations, running a business</source>
+        <target>зустрічі, календар, клієнти, бізнес</target>
+      </segment>
+    </unit>
+    <unit id="seo.header.image">
+      <segment state="initial">
+        <source>https://beeoclock.com/asset/logo.png</source>
+        <target>https://beeoclock.com/asset/logo.png</target>
+      </segment>
+    </unit>
+    <unit id="seo.header.author">
+      <segment state="initial">
+        <source>Bee O&apos;clock</source>
+        <target>Bee O&apos;clock</target>
+      </segment>
+    </unit>
+    <unit id="368381012328092097">
+      <segment state="initial">
+        <source>Opportunities</source>
+        <target>Можливості</target>
+      </segment>
+    </unit>
+    <unit id="6891840319588833020">
+      <segment state="initial">
+        <source>Automate records</source>
+        <target>Автоматизація зписів</target>
+      </segment>
+    </unit>
+    <unit id="5452253478250635820">
+      <segment state="initial">
+        <source>Forget about confusion with records. Our service automates customer onboarding processes, allowing you to focus on your work, not on record administration.</source>
+        <target>Забудьте про плутанину в записах. Наш сервіс автоматизує процеси запису клієнтів, дозволяючи вам зосередитися на роботі, а не на адміністративних завданнях.</target>
+      </segment>
+    </unit>
+    <unit id="3732033756571014582">
+      <segment state="initial">
+        <source>Reminder to clients</source>
+        <target>Нагадування клієнтам</target>
+      </segment>
+    </unit>
+    <unit id="1740823155458190052">
+      <segment state="initial">
+        <source>Make sure your customers always remember their visit! Automatic SMS and email reminders will ensure that your clients arrive on time and reduce the number of missed appointments.</source>
+        <target>Відтепер ваші клієнти завжди пам’ятатимуть про візит! Автоматичні SMS та email-нагадування забезпечать своєчасний прихід клієнтів і зменшать кількість пропущених зустрічей.</target>
+      </segment>
+    </unit>
+    <unit id="5162287718938938685">
+      <segment state="initial">
+        <source>Customized for your business</source>
+        <target>Кастомізація під ваш бізнес</target>
+      </segment>
+    </unit>
+    <unit id="3838889887687918421">
+      <segment state="initial">
+        <source>Make Bee o&apos;clock a part of your brand! You can customize each interface of the service to your style and brand, which allows you to individualize your workflows.</source>
+        <target>Зробіть Bee o’clock частиною вашого бренду! Ви можете налаштувати кольори інтерфейсу сервісу під стиль вашого бізнесу, що додасть індивідуальності й гармонії в роботі.</target>
+      </segment>
+    </unit>
+    <unit id="5457809380934707352">
+      <segment state="initial">
+        <source>Manage your records online</source>
+        <target>Управління записами онлайн</target>
+      </segment>
+    </unit>
+    <unit id="4018557285768677174">
+      <segment state="initial">
+        <source>All information is at your fingertips - you can access customer history, schedules, and records from any device. You can make decisions anywhere and anytime.</source>
+        <target>Вся інформація під рукою — від клієнтів до історії відвідувань. Доступ до розкладу та записів із будь-якого пристрою, що дозволяє працювати будь-де і будь-коли.</target>
+      </segment>
+    </unit>
+    <unit id="1908285951500318953">
+      <segment state="initial">
+        <source> Login </source>
+        <target> Вхід </target>
+      </segment>
+    </unit>
+    <unit id="879650116501482755">
+      <segment state="initial">
+        <source>How does it work?</source>
+        <target>Як це працює?</target>
+      </segment>
+    </unit>
+    <unit id="6075954856904697133">
+      <segment state="initial">
+        <source>Registration on the platform</source>
+        <target>Реєстрація на платформі</target>
+      </segment>
+    </unit>
+    <unit id="8794739238241286861">
+      <segment state="initial">
+        <source>Create an account: Fill in basic information about your business, add address and contact details.</source>
+        <target>Створіть обліковий запис: Заповніть основну інформацію про ваш бізнес, додайте адресу та контактні дані.</target>
+      </segment>
+    </unit>
+    <unit id="5095119527158275841">
+      <segment state="initial">
+        <source>Service settings</source>
+        <target>Налаштування послуг</target>
+      </segment>
+    </unit>
+    <unit id="7736403083717360411">
+      <segment state="initial">
+        <source>Add your services: Specify the list of services, their duration and cost.</source>
+        <target>Додайте свої послуги: Вкажіть перелік послуг, їх тривалість та вартість.</target>
+      </segment>
+    </unit>
+    <unit id="2292486472487615617">
+      <segment state="initial">
+        <source>Customer invitations</source>
+        <target>Запрошення клієнтів</target>
+      </segment>
+    </unit>
+    <unit id="1436694444410203003">
+      <segment state="initial">
+        <source>Control your schedule: Get notified about new recordings, view and manage your schedule in a convenient interface.</source>
+        <target>Контролюйте розклад: Отримуйте сповіщення про нові записи, переглядайте та керуйте розкладом у зручному інтерфейсі.</target>
+      </segment>
+    </unit>
+    <unit id="7123634690175978938">
+      <segment state="initial">
+        <source>Online customer registration</source>
+        <target>Онлайн запис клієнтів</target>
+      </segment>
+    </unit>
+    <unit id="5916941698320460151">
+      <segment state="initial">
+        <source>Convenient booking: Customers book a service and a convenient time online, without calling or waiting.</source>
+        <target>Зручне бронювання: Клієнти бронюють послугу та зручний час онлайн, без дзвінків та очікувань.</target>
+      </segment>
+    </unit>
+    <unit id="6363114221294606387">
+      <segment state="initial">
+        <source>Managing records</source>
+        <target>Керування записами</target>
+      </segment>
+    </unit>
+    <unit id="7687221152441169151">
+      <segment state="initial">
+        <source>Analysis and development</source>
+        <target>Аналіз та розвиток</target>
+      </segment>
+    </unit>
+    <unit id="8970166395194601366">
+      <segment state="initial">
+        <source>Track your success: Analyze your record and customer activity statistics to improve your service.</source>
+        <target>Відстежуйте успіхи: Аналізуйте статистику записів та клієнтської активності для покращення вашого сервісу.</target>
+      </segment>
+    </unit>
+    <unit id="7230578029671330213">
+      <segment state="initial">
+        <source>Get a unique link to your record page and share it via website, social media, or email.</source>
+        <target>Отримайте унікальне посилання на вашу сторінку запису та поділіться ним через сайт, соціальні мережі або електронну пошту.</target>
+      </segment>
+    </unit>
+    <unit id="6509061853376529873">
+      <segment state="initial">
+        <source> Service for business: Simple online customer registration. </source>
+        <target> Сервіс для бізнесу: Простий онлайн запис клієнтів. </target>
+      </segment>
+    </unit>
+    <unit id="844020319655550932">
+      <segment state="initial">
+        <source> Order a demo access to the online customer recording service, a convenient solution without registration. </source>
+        <target> Безкоштовний демо доступ до сервісу онлайн запису клієнтів, оцініть переваги до реєстрації. </target>
+      </segment>
+    </unit>
+    <unit id="4223732254391797153">
+      <segment state="initial">
+        <source> Demo account </source>
+        <target> Демо аккаунт </target>
+      </segment>
+    </unit>
+    <unit id="8703221669434854561">
+      <segment state="initial">
+        <source>Choose the best option for your business.</source>
+        <target>Оберіть найкращий варіант для вашого бізнесу. </target>
+      </segment>
+    </unit>
+    <unit id="6227291956598711151">
+      <segment state="initial">
+        <source> Monthly </source>
+        <target> Щомісяця </target>
+      </segment>
+    </unit>
+    <unit id="2925775378458956182">
+      <segment state="initial">
+        <source> Annual </source>
+        <target> Річний </target>
+      </segment>
+    </unit>
+    <unit id="471478188761593997">
+      <segment state="initial">
+        <source>FREE</source>
+        <target>БЕЗКОШТОВНО</target>
+      </segment>
+    </unit>
+    <unit id="3265250603400790440">
+      <segment state="initial">
+        <source> Get Started </source>
+        <target> Спробувати </target>
+      </segment>
+    </unit>
+    <unit id="1020329889985641339">
+      <segment state="initial">
+        <source>BASIC</source>
+        <target>БАЗОВИЙ</target>
+      </segment>
+    </unit>
+    <unit id="6388594842422610772">
+      <segment state="initial">
+        <source>PRO</source>
+        <target>PRO</target>
+      </segment>
+    </unit>
+    <unit id="4853730136843270446">
+      <segment state="initial">
+        <source>No need card</source>
+        <target>Картка не потрібна</target>
+      </segment>
+    </unit>
+    <unit id="4905798562247431262">
+      <segment state="initial">
+        <source>per month</source>
+        <target>на місяць</target>
+      </segment>
+    </unit>
+    <unit id="3394190499997524231">
+      <notes>
+        <note category="description">Short title for FAQ section</note>
+        <note category="meaning">FAQ header</note>
+      </notes>
+      <segment state="initial">
+        <source>FAQ</source>
+        <target>FAQ</target>
+      </segment>
+    </unit>
+    <unit id="2303057299624544730">
+      <segment state="initial">
+        <source>How quickly can you get started with Bee o’clock?</source>
+        <target>Як швидко можна розпочати роботу з Bee o’clock?</target>
+      </segment>
+    </unit>
+    <unit id="1979683524318589117">
+      <segment state="initial">
+        <source>Starting to use the service is very simple: </source>
+        <target>Почати користуватися сервісом дуже просто: </target>
+      </segment>
+    </unit>
+    <unit id="7400988240553005942">
+      <segment state="initial">
+        <source>register on the platform, add basic information about your business and services, and the system will be ready to go. You have the option to use the free plan (Free) with basic functionality, which will allow you to immediately test the key features of Bee o’clock without any costs.</source>
+        <target>зареєструйтеся на платформі, додайте основну інформацію про свій бізнес та послуги, і система буде готова до роботи. У вас є можливість скористатися безкоштовним тарифом (Free) із базовим функціоналом, що дозволить одразу протестувати ключові можливості Bee o’clock без будь-яких витрат.</target>
+      </segment>
+    </unit>
+    <unit id="3360962359416326349">
+      <segment state="initial">
+        <source>What features does Bee o’clock provide and how does it differ from other services?</source>
+        <target>Які можливості надає Bee o’clock і чим він відрізняється від інших сервісів?</target>
+      </segment>
+    </unit>
+    <unit id="2995240845889286352">
+      <segment state="initial">
+        <source>Bee o’clock offers a comprehensive set </source>
+        <target>Bee o’clock пропонує комплексний набір </target>
+      </segment>
+    </unit>
+    <unit id="4036736770564302134">
+      <segment state="initial">
+        <source>tools for automating online bookings</source>
+        <target>інструментів для автоматизації онлайн-бронювання</target>
+      </segment>
+    </unit>
+    <unit id="6346180550648816832">
+      <segment state="initial">
+        <source>Automation of bookings: the system automatically records new bookings and reserves time in the calendar.</source>
+        <target>Автоматизація записів: система самостійно фіксує нові бронювання і резервує час у календарі.</target>
+      </segment>
+    </unit>
+    <unit id="2167439250237745802">
+      <segment state="initial">
+        <source>Reminders to clients: SMS and e-mail notifications will help reduce the number of missed appointments.</source>
+        <target>Нагадування клієнтам: SMS та e-mail нотифікації допоможуть скоротити кількість пропущених зустрічей.</target>
+      </segment>
+    </unit>
+    <unit id="1881874480414973014">
+      <segment state="initial">
+        <source>Customization for your brand: you can change the appearance of your public page and customize the interface to suit your business.</source>
+        <target>Кастомізація під ваш бренд: можна змінювати вигляд публічної сторінки та налаштовувати інтерфейс під свій бізнес.</target>
+      </segment>
+    </unit>
+    <unit id="4479729736795111846">
+      <segment state="initial">
+        <source>Online booking management: the entire schedule is always at hand and can be accessed from a smartphone or computer.</source>
+        <target>Управління записами онлайн: увесь розклад завжди під рукою, а доступ до нього можливий зі смартфона чи комп’ютера.</target>
+      </segment>
+    </unit>
+    <unit id="8416027020806100691">
+      <segment state="initial">
+        <source>Analytics and development: the service tracks statistics so you can improve customer interactions.</source>
+        <target>Аналітика та розвиток: сервіс відстежує статистику, щоб ви могли покращувати взаємодію з клієнтами.</target>
+      </segment>
+    </unit>
+    <unit id="5576863779043305858">
+      <segment state="initial">
+        <source>Various pricing plans: from free to advanced PRO, with the ability to connect an AI assistant and public REST API.</source>
+        <target>Різні тарифні плани: від безкоштовного до розширеного PRO, із можливістю підключення AI-асистента й публічного REST API.</target>
+      </segment>
+    </unit>
+    <unit id="2188934911957763380">
+      <segment state="initial">
+        <source>How to set up and manage online bookings in Bee o’clock?</source>
+        <target>Як налаштувати та керувати онлайн-бронюванням у Bee o’clock?</target>
+      </segment>
+    </unit>
+    <unit id="3517806335395007253">
+      <segment state="initial">
+        <source>Everything happens in a few simple steps</source>
+        <target>Усе відбувається у декілька простих кроків</target>
+      </segment>
+    </unit>
+    <unit id="9133139451209238142">
+      <segment state="initial">
+        <source>Register on the platform: create an account and enter your business details.</source>
+        <target>Реєстрація на платформі: створіть обліковий запис і внесіть дані про бізнес.</target>
+      </segment>
+    </unit>
+    <unit id="7250808851035664300">
+      <segment state="initial">
+        <source>Service settings: add a list of services, set the duration and price.</source>
+        <target>Налаштування послуг: додайте перелік послуг, встановіть тривалість та ціну.</target>
+      </segment>
+    </unit>
+    <unit id="1065294413010134453">
+      <segment state="initial">
+        <source>Invite customers: share a unique link to your profile via your website, social media, or email.</source>
+        <target>Запрошення клієнтів: поділіться унікальним посиланням на ваш профіль через сайт, соцмережі або електронну пошту.</target>
+      </segment>
+    </unit>
+    <unit id="1026634334394306968">
+      <segment state="initial">
+        <source>Online customer booking: customers can book a service in a few clicks, and you will receive notifications about each new booking.</source>
+        <target>Онлайн запис клієнтів: клієнти можуть забронювати послугу в кілька кліків, а ви отримаєте сповіщення про кожен новий запис.</target>
+      </segment>
+    </unit>
+    <unit id="811367694795533818">
+      <segment state="initial">
+        <source>Manage your recordings: Conveniently change your schedule, track activity, and get notified about changes.</source>
+        <target>Керування записами: зручно змінюйте розклад, відстежуйте активність і отримуйте сповіщення про зміни.</target>
+      </segment>
+    </unit>
+    <unit id="4470730349165597654">
+      <segment state="initial">
+        <source>Analysis and development: View statistics to evaluate performance and improve your service.</source>
+        <target>Аналіз та розвиток: переглядайте статистику, щоб оцінювати ефективність і вдосконалювати свій сервіс.</target>
+      </segment>
+    </unit>
+    <unit id="2840247853133963034">
+      <segment state="initial">
+        <source>Can I accept online payments and receive notifications about successful transactions?</source>
+        <target>Чи можна приймати онлайн-оплати та отримувати повідомлення про успішну транзакцію?</target>
+      </segment>
+    </unit>
+    <unit id="4123705423401895406">
+      <segment state="initial">
+        <source>Yes, the BASIC and PRO plans have a &lt;b&gt;Payment Confirmation&lt;/b&gt; feature that allows you to track customer payments. The service also sends SMS and email notifications so that you and your customers are always up to date with booking and payment updates. All this ensures safe and transparent transactions.</source>
+        <target>Так, у тарифах BASIC і PRO реалізовано функцію &lt;b&gt;Payment Confirmation&lt;/b&gt;, що дає змогу відстежувати сплату клієнтів. Також сервіс надсилає SMS та e-mail нотифікації, аби ви та ваші клієнти завжди були в курсі оновлень стосовно бронювання та оплат. Усе це забезпечує безпечні та прозорі транзакції.</target>
+      </segment>
+    </unit>
+    <unit id="423381276093176480">
+      <segment state="initial">
+        <source>What tariff plans are available and how do they differ?</source>
+        <target>Які тарифні плани доступні і чим вони відрізняються?</target>
+      </segment>
+    </unit>
+    <unit id="3304132639371050887">
+      <segment state="initial">
+        <source>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="pricing.free.monthly.currency"/>): 1 user, public page, admin panel, SEO Package, JSON LD, e-mail notifications. Suitable for small projects or testing.</source>
+        <target>Free (<ph id="0" equiv="PH" disp="pricing.free.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 1 користувач, публічна сторінка, адмін-панель, SEO Package, JSON LD, e-mail нотифікації. Підійде для невеликих проєктів чи тестування.</target>
+      </segment>
+    </unit>
+    <unit id="7027589287121851016">
+      <segment state="initial">
+        <source>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="pricing.basic.monthly.currency"/>): 5 users, public page, admin panel, SEO Package, JSON LD, email notifications, unlimited plugins, Payment Confirmation and SMS Notifications. Solution for small and medium businesses.</source>
+        <target>Basic (<ph id="0" equiv="PH" disp="pricing.basic.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): 5 користувачів, публічна сторінка, адмін-панель, SEO Package, JSON LD, e-mail нотифікації, необмежені плагіни, Payment Confirmation та SMS Notifications. Рішення для малого і середнього бізнесу.</target>
+      </segment>
+    </unit>
+    <unit id="8778436686334410487">
+      <segment state="initial">
+        <source>Pro (<ph id="0" equiv="PH" disp="pricing.professional.monthly.value"/> <ph id="1" equiv="PH_1" disp="pricing.professional.monthly.currency"/>): unlimited users, full access to features, including AI assistant and Public REST API. Ideal for advanced and scalable projects.</source>
+        <target>Pro (<ph id="0" equiv="PH" disp="pricing.pro.monthly.value"/> <ph id="1" equiv="PH_1" disp="currencyCode"/>): необмежена кількість користувачів, повний доступ до функцій, включно з AI assistant та Public REST API. Ідеально для розвинених та масштабованих проєктів.</target>
+      </segment>
+    </unit>
+    <unit id="1573561306072316026">
+      <segment state="initial">
+        <source>Terms of use</source>
+        <target>Умови використання</target>
+      </segment>
+    </unit>
+    <unit id="6090931838305354672">
+      <segment state="initial">
+        <source>Privacy policy</source>
+        <target>Політика конфіденційності</target>
+      </segment>
+    </unit>
+    <unit id="2891546849092285340">
+      <segment state="initial">
+        <source> © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/> Bee O&apos;clock. All rights reserved. </source>
+        <target> © <ph id="0" equiv="INTERPOLATION" disp="{{ currentYear }}"/> Bee O&apos;clock. Всі права захищені. </target>
+      </segment>
+    </unit>
+    <unit id="8478716983552743608">
+      <segment state="initial">
+        <source> Contact </source>
+        <target> Контакти </target>
+      </segment>
+    </unit>
+    <unit id="2897796351634591638">
+      <segment state="initial">
+        <source> Do you have any questions or suggestions? </source>
+        <target> Залишилися питання чи пропозиції? </target>
+      </segment>
+    </unit>
+    <unit id="468887983520506369">
+      <segment state="initial">
+        <source> If you have any additional questions about using Bee o’clock or would like to share ideas for improving the service, we are always ready to listen! Contact us in any convenient way: </source>
+        <target> Якщо ви маєте додаткові запитання щодо використання Bee o’clock або хочете поділитися ідеями з покращення сервісу, ми завжди готові вислухати! Зв’яжіться з нами будь-яким зручним способом: </target>
+      </segment>
+    </unit>
+    <unit id="9010906137488696549">
+      <segment state="initial">
+        <source> Social networks </source>
+        <target> Соціальні мережі </target>
+      </segment>
+    </unit>
+    <unit id="4015999779146833867">
+      <segment state="initial">
+        <source> Join our community to be the first to receive useful tips, news, and promotional offers: </source>
+        <target> Приєднуйтеся до нашої спільноти, щоб отримувати корисні поради, новини та акційні пропозиції першими: </target>
+      </segment>
+    </unit>
+    <unit id="6836286461192524918">
+      <segment state="initial">
+        <source> Follow us on social media and be the first to know about updates and new features of Bee o’clock. </source>
+        <target> Підписуйтеся на нас у соцмережах та дізнавайтеся першими про оновлення та нові можливості Bee o’clock. </target>
+      </segment>
+    </unit>
+    <unit id="4367579805518675029">
+      <segment state="initial">
+        <source> Feedback form </source>
+        <target> Форма зворотного зв’язку </target>
+      </segment>
+    </unit>
+    <unit id="6348803519672992606">
+      <segment state="initial">
+        <source> If you prefer to write directly here on the website, fill out the form below - we will try to respond as quickly as possible, usually within 24 hours. </source>
+        <target> Якщо вам зручніше написати безпосередньо тут на сайті, заповніть форму нижче — ми постараємося відповісти максимально швидко, зазвичай протягом 24 годин. </target>
+      </segment>
+    </unit>
+    <unit id="8778616811237742446">
+      <segment state="initial">
+        <source> Name </source>
+        <target> Ім&apos;я </target>
+      </segment>
+    </unit>
+    <unit id="placeholderName">
+      <segment state="initial">
+        <source>Name</source>
+        <target>Ім&apos;я</target>
+      </segment>
+    </unit>
+    <unit id="7817163188308824825">
+      <segment state="initial">
+        <source> Email </source>
+        <target> Електронна пошта </target>
+      </segment>
+    </unit>
+    <unit id="placeholderEmail">
+      <segment state="initial">
+        <source>E-mail</source>
+        <target>E-mail</target>
+      </segment>
+    </unit>
+    <unit id="placeholderSubject">
+      <segment state="initial">
+        <source>Message subject</source>
+        <target>Тема повідомлення</target>
+      </segment>
+    </unit>
+    <unit id="placeholderMessageText">
+      <segment state="initial">
+        <source>Message text</source>
+        <target>Текст повідомлення</target>
+      </segment>
+    </unit>
+    <unit id="7563035552061651664">
+      <segment state="initial">
+        <source> Send </source>
+        <target> Надіслати </target>
+      </segment>
+    </unit>
+    <unit id="3262236020277300799">
+      <segment state="initial">
+        <source>Phone</source>
+        <target>Телефон</target>
+      </segment>
+    </unit>
+    <unit id="7670455289447668933">
+      <segment state="initial">
+        <source> The form has been successfully submitted! </source>
+        <target> Форму успішно надіслано! </target>
+      </segment>
+    </unit>
+    <unit id="723246605321014138">
+      <segment state="initial">
+        <source> We will contact you shortly. </source>
+        <target> Ми зв’яжемося з вами найближчим часом. </target>
+      </segment>
+    </unit>
+    <unit id="5999357793482437014">
+      <segment state="initial">
+        <source> Incorrect Email </source>
+        <target> Неправильна електронна адреса </target>
+      </segment>
+    </unit>
+    <unit id="3666899047827889096">
+      <segment state="initial">
+        <source>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message subject </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (for example: &quot;Questions about tariffs&quot;, &quot;Technical support&quot;) </pc>
+        </source>
+        <target>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Тема повідомлення </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (наприклад: &quot;Питання про тарифи&quot;, &quot;Технічна підтримка&quot;) </pc>
+        </target>
+      </segment>
+    </unit>
+    <unit id="1621060766174502183">
+      <segment state="initial">
+        <source> Minimum 3 character </source>
+        <target> Мінімум 3 символи </target>
+      </segment>
+    </unit>
+    <unit id="7107262676689343969">
+      <segment state="initial">
+        <source>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Message text </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (please indicate your request or suggestion) </pc>
+        </source>
+        <target>
+          <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;after:content-[&apos;*&apos;] after:text-rose-600&quot;&gt;" dispEnd="&lt;/span&gt;"> Текст повідомлення </pc>
+          <pc id="1" equivStart="START_TAG_SPAN_1" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;text-[12px] font-normal text-[#606060]&quot;&gt;" dispEnd="&lt;/span&gt;"> (будь ласка, вкажіть ваш запит або пропозицію) </pc>
+        </target>
+      </segment>
+    </unit>
+    <unit id="7599979609938872802">
+      <segment state="initial">
+        <source> Minimum 10 character </source>
+        <target> Мінімум 10 символів </target>
+      </segment>
+    </unit>
+    <unit id="794752773916392654">
+      <segment state="initial">
+        <source>
+          <pc id="0" equivStart="START_LIST_ITEM" equivEnd="CLOSE_LIST_ITEM" type="other" dispStart="&lt;li&gt;" dispEnd="&lt;/li&gt;">
+            <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+          </pc>
+        </source>
+        <target>
+          <pc id="0" equivStart="START_LIST_ITEM" equivEnd="CLOSE_LIST_ITEM" type="other" dispStart="&lt;li&gt;" dispEnd="&lt;/li&gt;">
+            <ph id="1" equiv="INTERPOLATION" disp="{{ item.name }}"/>
+          </pc>
+        </target>
+      </segment>
+    </unit>
+    <unit id="3934931018612604481">
+      <segment state="initial">
+        <source>The first 14 days are free</source>
+        <target>Перші 14 днів - безкоштовно</target>
+      </segment>
+    </unit>
+    <unit id="unlimitedUsers">
+      <segment state="initial">
+        <source>Members</source>
+        <target>Учасники</target>
+      </segment>
+    </unit>
+    <unit id="specialists">
+      <segment state="initial">
+        <source>Members</source>
+        <target>Учасники</target>
+      </segment>
+    </unit>
+    <unit id="unlimitedPlugins">
+      <segment state="initial">
+        <source>Plugins unlimited</source>
+        <target>Необмежені плагіни</target>
+      </segment>
+    </unit>
+    <unit id="emailNotification">
+      <segment state="initial">
+        <source>Email notification</source>
+        <target>Сповіщення на email</target>
+      </segment>
+    </unit>
+    <unit id="smsNotification">
+      <segment state="initial">
+        <source>SMS Notification</source>
+        <target>SMS-повідомлення</target>
+      </segment>
+    </unit>
+    <unit id="jsonLD">
+      <segment state="initial">
+        <source>JSON LD</source>
+        <target>JSON LD</target>
+      </segment>
+    </unit>
+    <unit id="seoOptimization">
+      <segment state="initial">
+        <source>SEO Package</source>
+        <target>SEO-пакет</target>
+      </segment>
+    </unit>
+    <unit id="confirmationAfterUserPayment">
+      <segment state="initial">
+        <source>Payment Confirmation</source>
+        <target>Підтвердження платежу</target>
+      </segment>
+    </unit>
+    <unit id="adminPanel">
+      <segment state="initial">
+        <source>Admin panel</source>
+        <target>Панель адміністратора</target>
+      </segment>
+    </unit>
+    <unit id="publicPage">
+      <segment state="initial">
+        <source>Public page</source>
+        <target>Публічна сторінка</target>
+      </segment>
+    </unit>
+    <unit id="assistantAI">
+      <segment state="initial">
+        <source>AI assistant</source>
+        <target>Помічник AI</target>
+      </segment>
+    </unit>
+    <unit id="publicRestApi">
+      <segment state="initial">
+        <source>Public rest API</source>
+        <target>Публічний REST API</target>
+      </segment>
+    </unit>
+    <unit id="chat">
+      <segment state="initial">
+        <source>Chat support</source>
+        <target>Підтримка в чаті</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>
