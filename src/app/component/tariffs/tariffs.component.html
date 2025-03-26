@@ -1,7 +1,7 @@
 <section
   id="tariffs"
   class="flex w-full justify-center items-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0"
-  >
+>
   <div class="flex flex-col w-full max-w-[1080px] gap-10 phone:gap-3 [&>div]:cursor-pointer">
     <div class="flex w-full items-center phone:flex-col phone:items-start phone:gap-2.5">
       <div class="w-full flex flex-col px-2.5">
@@ -18,7 +18,7 @@
           [ngClass]="{ 'bg-[#E5E5E5]': subscriptionType === 'monthly' }"
           (click)="toggleSubscription('monthly')"
           i18n
-          >
+        >
           Monthly
         </button>
         <button
@@ -27,13 +27,13 @@
           [ngClass]="{ 'bg-[#E5E5E5]': subscriptionType === 'annual' }"
           (click)="toggleSubscription('annual')"
           i18n
-          >
+        >
           Annual
         </button>
       </div>
     </div>
 
-    @if (tariffs(); as tariffs) {
+    <div *ngIf="tariffs() as tariffs">
       <div class="flex [&>div]:rounded-2xl gap-5 [&>div]:px-5 [&>div]:py-3 [&>div>h2]:text-2xl [&>div>h2]:font-bold
                   [&>div>h2]:text-[#FFD429] [&>div]:w-full phone:flex-col">
 
@@ -98,12 +98,12 @@
               class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
                    hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"
               i18n
-              >
+            >
               Get Started
             </a>
           </div>
         }
       </div>
-    }
+    </div>
   </div>
 </section>

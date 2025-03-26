@@ -5,7 +5,7 @@ import {
   inject,
   PLATFORM_ID,
 } from '@angular/core';
-import { DecimalPipe, isPlatformBrowser, NgClass } from '@angular/common';
+import {DecimalPipe, isPlatformBrowser, NgClass, NgIf} from '@angular/common';
 import { CurrencyCodePipe } from '../../../common/pipe/currency.pipe';
 import { NgIcon } from '@ng-icons/core';
 import { TariffsService } from './tariffs.service';
@@ -27,8 +27,9 @@ import {environment} from "../../../environments/environment";
     NgIcon,
     NgClass,
     DecimalPipe,
-    FeatureTranslatePipe
-],
+    FeatureTranslatePipe,
+    NgIf
+  ],
   providers: [TariffsService],
 })
 export class TariffsComponent {
