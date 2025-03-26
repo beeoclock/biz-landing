@@ -15,6 +15,7 @@ import {
 } from '../../../common/interface/i.tariffs';
 import { FeatureTranslatePipe } from '../../../common/pipe/feature-translate.pipe';
 import { TariffType } from '../../enum/tariff-type.enum';
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-tariffs',
@@ -39,6 +40,7 @@ export class TariffsComponent {
   public subscriptionType: 'monthly' | 'annual' = 'annual';
   public currencyCode = 'USD';
   protected readonly TariffType = TariffType;
+  public crmLogin = `${environment.apiCrmUrl}/identity`
 
   constructor() {
     if (isPlatformBrowser(this.platformId)) {
