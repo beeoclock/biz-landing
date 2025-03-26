@@ -49,6 +49,9 @@
               </div>
               <div class="flex justify-center">
                 <div class="flex flex-col w-[250px]">
+                  @if (type === TariffType.FREE && subscriptionType === 'annual') {
+                    <div class="h-7"></div>
+                  }
                   @if (subscriptionType === 'annual') {
                     @if (getDiscount(type, tariffs)) {
                       <div class="flex gap-3">
