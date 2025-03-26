@@ -54,7 +54,11 @@ export class TariffsComponent implements OnInit {
   public getPrice(type: TariffType): PriceValue | undefined {
     const tariff = this.getTariff(type);
     const priceBlock = tariff?.prices.find(p => p.currency === this.currencyCode);
-    return priceBlock?.values.find(v => v.billingCycle === (this.subscriptionType === 'annual' ? 'yearly' : 'monthly'));
+    return priceBlock?.values.find(v => v.billingCycle === this.getBillingCycle());
+  }
+
+  private getBillingCycle(): 'monthly' | 'yearly' {
+    return this.subscriptionType === 'annual' ? 'yearly' : 'monthly';
   }
 
   public getDiscount(type: TariffType): number | null {
