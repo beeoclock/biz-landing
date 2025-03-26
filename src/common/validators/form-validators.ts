@@ -7,3 +7,11 @@ export function emailValidator(): ValidatorFn {
     return valid ? null : { invalidEmail: true };
   };
 }
+
+export function noLeadingSpacesValidator(): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const value = control.value as string;
+    if (!value) return null;
+    return value.trimStart() === value ? null : { leadingSpaces: true };
+  };
+}

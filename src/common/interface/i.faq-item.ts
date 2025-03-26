@@ -1,4 +1,4 @@
-interface IFaqItem {
+export interface IFaqItem {
   title: string;
   content?: string;
   description?: string;
@@ -7,12 +7,12 @@ interface IFaqItem {
   pricing?: IPricing;
 }
 
-interface IPricingPlan {
+export interface IPricingPlan {
   value: number;
   currency: string;
 }
 
-interface IPricing {
+export interface IPricing {
   free: {
     monthly: IPricingPlan;
     annual: IPricingPlan;
