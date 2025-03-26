@@ -21,7 +21,27 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@src/*": [
+        "./src/*"
+      ],
+      "@common/*": [
+        "./common/*"
+      ],
+      "@core/*": [
+        "./core/*"
+      ],
+      "@environments/*": [
+        "./environments/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
+      ],
+      "@tariff-plan/*": [
+        "./assets/*"
+      ],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

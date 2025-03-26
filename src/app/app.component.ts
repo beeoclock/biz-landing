@@ -1,11 +1,13 @@
 import {
-  Component, effect,
+  Component,
+  effect,
   ElementRef,
   HostListener,
   inject,
   LOCALE_ID,
   OnInit,
-  PLATFORM_ID, signal,
+  PLATFORM_ID,
+  signal,
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
@@ -27,14 +29,16 @@ import {
   bootstrapXLg
 } from "@ng-icons/bootstrap-icons";
 import {IMenuItem} from "../common/interface/i.menu-item";
-import {MenuUseCase} from "./enum/menu-use-case.enum";
+import {MenuUseCase} from "@src/core/enum/menu-use-case.enum";
 import {ReactiveFormsModule} from "@angular/forms";
 import {getFaqItems, IFaqItem, IPricing, IPricingPlan} from "../common/interface/i.faq-item";
 import {ContactFormComponent} from "./component/smart/contact-form/contact-form.component";
-import {TariffsComponent} from "./component/tariffs/tariffs.component";
-import LanguagesPage from "./component/languages/languages.page";
-import {TariffsService} from "./component/tariffs/tariffs.service";
+import {TariffsComponent} from "@src/tariff-plan/presentation/ui/component/tariffs/tariffs.component";
+import {TariffsService} from "@src/tariff-plan/presentation/ui/component/tariffs/tariffs.service";
 import {environment} from "../environments/environment";
+import {GetTariffPlanApiAdapter} from "../tariff-plan/infrastructure/data-source/get.tariff-plan.api.adapter";
+import {CurrencyCodeEnum} from "@src/core/enum/currency-code.enum";
+import LanguagesPage from "@src/app/component/languages/languages.page";
 
 
 @Component({
@@ -50,9 +54,9 @@ import {environment} from "../environments/environment";
     ReactiveFormsModule,
     ContactFormComponent,
     TariffsComponent,
-    LanguagesPage
+    LanguagesPage,
   ],
-  providers: [TariffsService],
+  providers: [TariffsService, GetTariffPlanApiAdapter],
   viewProviders: [
     provideIcons({
       bootstrapXLg,
@@ -117,8 +121,8 @@ export class AppComponent implements OnInit {
   public faqMinHeight = '200px';
   public readonly currentYear = new Date().getFullYear();
   public readonly faqItems = signal<IFaqItem[]>([]);
-  public crmRegister = `${environment.apiCrmUrl}/identity/sign-up`
-  public crmLogin = `${environment.apiCrmUrl}/identity`
+  public readonly crmRegister = `${environment.apiCrmUrl}/identity/sign-up`
+  public readonly crmLogin = `${environment.apiCrmUrl}/identity`
 
   @ViewChild('faqList', {static: false}) faqList!: ElementRef;
 
@@ -139,7 +143,7 @@ export class AppComponent implements OnInit {
 
     effect(() => {
       const pricing = this.buildMonthlyPricing();
-      if (pricing) {
+      if (pricing && Object.keys(pricing ?? {})?.length) {
         this.faqItems.set(getFaqItems(pricing as unknown as IPricing));
       }
     });
@@ -236,13 +240,13 @@ export class AppComponent implements OnInit {
   }
 
   private getCurrencyByLocale(locale: string): string {
-    const localeCurrencyMap: Record<string, string> = {
-      'pl': 'PLN',
-      'da': 'EUR',
-      'en': 'USD'
+    const localeCurrencyMap: Record<string, CurrencyCodeEnum> = {
+      'pl': CurrencyCodeEnum.PLN,
+      'da': CurrencyCodeEnum.EUR,
+      'en': CurrencyCodeEnum.USD
     };
 
-    return localeCurrencyMap[locale.substring(0, 2)] || 'USD';
+    return localeCurrencyMap[locale.substring(0, 2)] || CurrencyCodeEnum.USD;
   }
 
   public get localeSuffix(): string {
