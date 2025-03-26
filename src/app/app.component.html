@@ -38,7 +38,7 @@
           }
         </div>
         <div class="phone:hidden justify-end hidden md:flex font-medium w-[200px]">
-          <a href="https://panel.dev.beeoclock.com/identity" target="_blank"
+          <a href="https://crm.dev.beeoclock.com/identity" target="_blank"
              class="hover:bg-main-hover hover:bg-opacity-20 transition-all duration-400 ease-in-out px-5 py-2.5 rounded-[40px] "
              i18n>
             Login
@@ -70,7 +70,7 @@
                   phone:landscape:px-5 phone:px-5 lg:px-5 xl:px-0"
       >
         <div class="flex lg:hidden relative w-full lg:mb-[20px] mb-0">
-          <img ngSrc="assets/img/main_mob.webp" priority alt="Bee O`clock service details image" height="286"
+          <img [src]="'assets/img/local_img/main_mob_' + localeSuffix + '.webp'" alt="Bee O`clock service details image" height="286"
                width="335">
         </div>
         <div class="text-wrapper mx-auto flex flex-wrap items-center w-full sm:max-w-[100%] lg:max-w-[40%] sm:px-0">
@@ -83,7 +83,7 @@
               A simple and effective tool for managing customer records in beauty salons and other businesses
             </p>
           </div>
-          <a href="https://panel.dev.beeoclock.com/identity/sign-up" target="_blank">
+          <a href="https://crm.dev.beeoclock.com/identity/sign-up" target="_blank">
             <button type="button" id="try-free-button"
                     class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800]
                           transition-all  duration-150 ease-in-out active:scale-95"
@@ -93,20 +93,20 @@
           </a>
         </div>
         <div class="relative hidden lg:block">
-          <img ngSrc="assets/img/group.webp" priority alt="Bee O`clock service details image" height="715" width="721">
+          <img [src]="'assets/img/local_img/group_' + localeSuffix + '.webp'" alt="Bee O`clock service details image" height="715" width="721">
           <img class="absolute top-[30%] right-[90%]" ngSrc="assets/img/vector_1.png" alt="Bee O`clock service schedule"
                height="78" width="40">
           <img class="absolute top-[67%]" ngSrc="assets/img/vector_2.png" alt="line" height="48" width="78">
-          <img class="absolute top-[4%] right-[67%]" ngSrc="assets/img/service_details.png" alt="line" height="137"
+          <img class="absolute top-[4%] right-[67%]" [src]="'assets/img/local_img/service_details_'+ localeSuffix + '.webp'" alt="line" height="137"
                width="200">
         </div>
       </div>
     </section>
 
     <section  id="services" class="flex w-full justify-center xl:min-h-[840px]">
-      <div class="flex w-full max-w-[1200px] items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0 justify-between">
+      <div class="flex w-full items-center phone:flex-col phone:px-5 lg:px-5 xl:px-0 gap-5 justify-center">
         <div class="flex">
-          <img ngSrc="assets/img/img.webp" alt="Bee O`clock service details" height="614" width="542" priority>
+          <img [src]="'assets/img/local_img/img_' + localeSuffix + '.webp'" alt="Bee O`clock service details">
         </div>
         <div class="text-4xl flex items-center flex-col">
           <div class="flex justify-start w-full mb-[30px] phone:flex-col">
@@ -114,10 +114,10 @@
             <h2 class="font-bold text-[#FFD429]">Bee o'clock</h2></div>
           <div class="flex">
             <ul class="flex flex-col gap-[20px] [&>li>div>h3]:font-bold [&>li>div>h3]:text-xl [&>li>div>p]:font-medium
-                       [&>li>div>p]:text-[16px] [&>li>div]:max-w-[524px] leading-7 [&>li]:flex"
+                       [&>li>div>p]:text-[13px] [&>li>div]:max-w-[524px] leading-7 [&>li]:flex"
             >
               <li>
-                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"></ng-icon>
+                <ng-icon name="bootstrapCheck" class="pr-6 phone:pr-10" size="1em"></ng-icon>
                 <div>
                   <h3 i18n>Automate records</h3>
                   <p i18n>Forget about confusion with records. Our service automates customer onboarding processes,
@@ -125,7 +125,7 @@
                 </div>
               </li>
               <li>
-                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
+                <ng-icon name="bootstrapCheck" class="pr-6 phone:pr-10" size="1em"/>
                 <div>
                   <h3 i18n>Reminder to clients</h3>
                   <p i18n>Make sure your customers always remember their visit! Automatic SMS and email reminders will
@@ -133,7 +133,7 @@
                 </div>
               </li>
               <li>
-                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
+                <ng-icon name="bootstrapCheck" class="pr-6 phone:pr-10" size="1em"/>
                 <div>
                   <h3 i18n>Customized for your business</h3>
                   <p i18n>Make Bee o'clock a part of your brand! You can customize each interface of the service to your
@@ -141,7 +141,7 @@
                 </div>
               </li>
               <li>
-                <ng-icon name="bootstrapCheck" class="pr-12 phone:pr-10" size="1em"/>
+                <ng-icon name="bootstrapCheck" class="pr-6 phone:pr-10" size="1em"/>
                 <div>
                   <h3 i18n>Manage your records online</h3>
                   <p i18n>All information is at your fingertips - you can access customer history, schedules, and
@@ -244,7 +244,7 @@
             </p>
             <a [href]="demoAccountUrl" target="_blank" id="demo-button">
               <button class="font-bold text-[20px] py-4 px-7 bg-[#FFD429] rounded-[60px] w-full md:w-auto hover:bg-[#FFC800]
-                          transition-all duration-150 ease-in-out active:scale-95" i18n
+                             transition-all duration-150 ease-in-out active:scale-95" i18n
               >
                 Demo account
               </button>
@@ -253,257 +253,10 @@
         </div>
       </div>
     </section>
-    <section id="tariffs"
-             class="flex w-full justify-center items-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0">
-      <div class="flex flex-col w-full max-w-[1080px] gap-10 phone:gap-3 [&>div]:cursor-pointer">
-        <div class="flex w-full items-center phone:flex-col phone:items-start phone:gap-2.5">
-          <div class="w-full flex flex-col px-2.5">
-            <h2 class="font-bold text-[40px]" i18n>Tariffs</h2>
-            <p class="font-normal text-base" i18n>Choose the best option for your business</p>
-          </div>
-          <div class="flex shadow-sm h-[40px] rounded-[66px]">
-            <button
-              id="monthly-button"
-              class="text-sm font-semibold font-inter px-5 py-[5px] rounded-[66px] h-[40px] transition-colors duration-300"
-              [ngClass]="{ 'bg-[#E5E5E5]': subscriptionType === 'monthly'}"
-              (click)="toggleSubscription('monthly')"
-              i18n>
-              Monthly
-            </button>
-            <button
-              id="annual-button"
-              class="text-sm font-semibold font-inter px-5 py-[5px] rounded-[66px] h-[40px] transition-colors duration-300"
-              [ngClass]="{ 'bg-[#E5E5E5]': subscriptionType === 'annual' }"
-              (click)="toggleSubscription('annual')" i18n>
-              Annual
-            </button>
-          </div>
-        </div>
-
-        <div class="flex [&>div]:rounded-2xl gap-5 [&>div]:px-5 [&>div]:py-3 [&>div>h2]:text-2xl [&>div>h2]:font-bold
-                    [&>div>h2]:text-[#FFD429] [&>div]:w-full phone:flex-col"
-        >
-          <div
-            class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
-            <div class="flex flex-col">
-              <div class="flex justify-between items-center mb-1">
-                <h2 class="text-2xl font-bold text-[#FFD429] uppercase" i18n>FREE</h2>
-                <p class="font-light text-xs" i18n>No need card</p>
-              </div>
-              <div class="flex justify-center">
-                <div class="flex flex-col w-[250px]">
-                  <div class="flex mb-1">
-                    <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
-                      {{ pricing.free[subscriptionType].value }}
-                      <span
-                        class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
-                        </span>
-                      @if (subscriptionType === 'annual') {
-                        <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
-                      }
-                    </p>
-                  </div>
-                  <ul
-                    class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
-                    <li class="first:font-bold" i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      1 User
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Public page
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Admin panel
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      SEO Package
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      JSON LD
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Email notification
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <a href="https://panel.dev.beeoclock.com/identity/sign-up" target="_blank"
-               class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
-                      hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"
-               i18n>
-              Get Started
-            </a>
-          </div>
-
-          <div
-            class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
-            <div class="flex flex-col">
-              <div class="flex justify-between items-center mb-1">
-                <h2 class="text-2xl font-bold text-[#FFD429] mb-1 uppercase" i18n>BASIC</h2>
-              </div>
-              <div class="flex justify-center">
-                <div class="flex flex-col w-[250px]">
-                  @if (subscriptionType === 'annual') {
-                    <div class="flex gap-3">
-                      <p class="font-light text-base line-through">
-                        {{ pricing.basic.discountBasic.value }} {{ pricing.basic.discountBasic.currency | currencyCode }}
-                      </p>
-                      <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
-                        -10%
-                      </p>
-                    </div>
-                  }
-                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
-                    {{ pricing.basic[subscriptionType].value }}
-                    <span
-                      class="font-bold mb-1 text-2xl mr-1.5">{{ pricing.basic[subscriptionType].currency | currencyCode }}
-                      </span>
-                    @if (subscriptionType === 'annual') {
-                      <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
-                    }
-                  </p>
-                  <ul
-                    class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center">
-                    <li class="first:font-bold" i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      5 Users
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Public page
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Admin panel
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      SEO Package
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      JSON LD
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Email notification
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Plugins unlimited
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Payment Confirmation
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      SMS Notification
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <a href="https://panel.dev.beeoclock.com/identity/sign-up" target="_blank"
-               class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
-                      hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"
-               i18n>
-              Get Started
-            </a>
-          </div>
-
-          <div
-            class="flex justify-between flex-col h-[600px] transition-transform duration-300 hover:scale-105 shadow-lg">
-            <div class="flex flex-col">
-              <div class="flex justify-between items-center mb-1">
-                <h2 class="text-2xl font-bold text-[#FFD429] mb-1 uppercase" i18n>PRO</h2>
-              </div>
-              <div class="flex justify-center">
-                <div class="flex flex-col w-[250px]">
-                  @if (subscriptionType === 'annual') {
-                    <div class="flex gap-3">
-                      <p class="font-light line-through">
-                        {{ pricing.pro.discountPro.value }} {{ pricing.pro.discountPro.currency | currencyCode }}
-                      </p>
-                      <p class="rounded-2xl text-[#FFFFFF] text-base font-light px-[6px] py-[2px] bg-[#DA0606]">
-                        -10%
-                      </p>
-                    </div>
-                  }
-                  <p class="flex font-bold mb-1 text-[64px] items-baseline gap-1">
-                    {{ pricing.pro[subscriptionType].value }}
-                    <span class="font-bold mb-1 text-2xl mr-1.5">{{ currencyCode | currencyCode }}</span>
-                    @if (subscriptionType === 'annual') {
-                      <span class="font-medium text-sm text-[#CACACA]" i18n>per month</span>
-                    }
-                  </p>
-                  <ul
-                    class="[&>li]:text-sm [&>li]:font-medium [&>li]:mb-1 [&>li]:h-[26px] [&>li]:flex [&>li]:items-center [&>li:nth-last-child(2)]:font-bold">
-                    <li class="first:font-bold" i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Unlimited Users
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Public page
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Admin panel
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      SEO Package
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      JSON LD
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Email notification
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Plugins unlimited
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Payment Confirmation
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      SMS Notification
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      AI assistant
-                    </li>
-                    <li i18n>
-                      <ng-icon name="bootstrapCheck" class="" size="2em"/>
-                      Public rest API
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <a href="https://panel.dev.beeoclock.com/identity/sign-up" target="_blank"
-               class="bg-[#FFD429] font-bold text-xl py-4 px-5 transition-all duration-150 ease-in-out active:scale-95
-                      hover:bg-[#FFC800] rounded-[10px] uppercase w-full text-center block"
-               i18n>
-              Get Started
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="faq" #faqList class="flex lg:h-[866px] w-full justify-center items-center phone:py-10 phone:px-5
+    <app-tariffs/>
+    <section id="faq"
+             #faqList
+             class="flex lg:h-[866px] w-full justify-center items-center phone:py-10 phone:px-5
                     lg:px-5 xl:px-0"
     >
       <div class="w-full max-w-[1060px] flex gap-10 flex-col">
@@ -514,7 +267,7 @@
              class="relative flex flex-col transition-[min-height] duration-500 ease-in-out"
              [ngStyle]="{ 'min-height': faqMinHeight }"
         >
-          @for (item of faqItems; track item; let i = $index) {
+          @for (item of faqItems(); track item; let i = $index) {
             <div id="faq-item-{{ i }}" class="self-stretch justify-center items-start inline-flex w-full flex-col">
               <div (click)="toggleItem(i)" id="faq-button"
                    class="flex justify-between items-center w-full gap-5 pt-5 pb-5 cursor-pointer">
@@ -575,17 +328,17 @@
       </div>
     </section>
     <section id="contact"
-      class="flex w-full lg:max-h-[1006px] lg:h-full justify-center items-center phone:py-10 phone:px-5 lg:px-5 xl:px-0 mb-4 ">
+      class="flex w-full lg:max-h-[1006px] lg:h-full justify-center items-center phone:py-10 phone:px-5 lg:px-5 xl:px-0 mb-4 lg:py-40">
       <contact-form-component/>
     </section>
   </div>
   <footer class="bg-[#1E1E1E] w-full flex justify-center items-center">
-    <div class="w-full h-[180px] phone:h-[128px] flex max-w-[1080px] px-2.5 py-2.5 justify-between items-center text-[#FFFFFF]
+    <div class="w-full h-[180px] phone:h-[140px] flex max-w-[1080px] px-2.5 py-2.5 justify-between items-center text-[#FFFFFF]
                 phone:portrait:flex-col phone:portrait:items-start phone:portrait:py-2.5"
     >
       <div class="flex gap-2.5 phone:order-1 phone:portrait:gap-5">
-        <a href="https://docs.beeoclock.com/" target="_blank" i18n>Terms of use</a>
-        <a href="https://docs.beeoclock.com/privacy-policy" target="_blank" i18n>Privacy policy</a>
+        <a href="https://docs.beeoclock.com/" class="hover:underline underline-offset-2" target="_blank" i18n>Terms of use</a>
+        <a href="https://docs.beeoclock.com/privacy-policy" class="hover:underline underline-offset-2" target="_blank" i18n>Privacy policy</a>
       </div>
       <div class="phone:order-3" i18n>
         © {{ currentYear }} Bee O'clock. All rights reserved.
