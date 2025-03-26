@@ -34,7 +34,7 @@ import {ContactFormComponent} from "./component/smart/contact-form/contact-form.
 import {TariffsComponent} from "./component/tariffs/tariffs.component";
 import LanguagesPage from "./component/languages/languages.page";
 import {TariffsService} from "./component/tariffs/tariffs.service";
-import {environment} from "../environments/environment";
+import {environment} from "../../environments/develop/environment";
 
 
 @Component({
@@ -113,7 +113,6 @@ export class AppComponent implements OnInit {
   public readonly consultationLink = environment.config.consultationLink;
   public isMobileMenuOpen = false
   public aspectRatio: number | null = null;
-  public readonly currencyCode: string = this.localeId.startsWith('pl') ? 'PLN' : 'USD';
   public activeIndex: number | null = null;
   public faqMinHeight = '200px';
   public readonly currentYear = new Date().getFullYear();
@@ -141,7 +140,7 @@ export class AppComponent implements OnInit {
     effect(() => {
       const pricing = this.buildMonthlyPricing();
       if (pricing) {
-        this.faqItems.set(getFaqItems(pricing, this.currencyCode));
+        this.faqItems.set(getFaqItems(pricing as unknown as IPricing));
       }
     });
   }
@@ -244,5 +243,9 @@ export class AppComponent implements OnInit {
     };
 
     return localeCurrencyMap[locale.substring(0, 2)] || 'USD';
+  }
+
+  public get localeSuffix(): string {
+    return this.localeId;
   }
 }
