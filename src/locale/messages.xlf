@@ -382,11 +382,6 @@
         <source> Annual </source>
       </segment>
     </unit>
-    <unit id="471478188761593997">
-      <segment>
-        <source>FREE</source>
-      </segment>
-    </unit>
     <unit id="4853730136843270446">
       <segment>
         <source>No need card</source>
@@ -400,16 +395,6 @@
     <unit id="3265250603400790440">
       <segment>
         <source> Get Started </source>
-      </segment>
-    </unit>
-    <unit id="1020329889985641339">
-      <segment>
-        <source>BASIC</source>
-      </segment>
-    </unit>
-    <unit id="6388594842422610772">
-      <segment>
-        <source>PRO</source>
       </segment>
     </unit>
     <unit id="2303057299624544730">
@@ -610,6 +595,13 @@
     <unit id="unlimitedUsers">
       <segment>
         <source>Members</source>
+      </segment>
+    </unit>
+    <unit id="187187500641108332">
+      <segment>
+        <source>
+          <ph id="0" equiv="INTERPOLATION" disp="{{ type }}"/>
+        </source>
       </segment>
     </unit>
   </file>
