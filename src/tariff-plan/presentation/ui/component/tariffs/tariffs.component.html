@@ -46,7 +46,7 @@
                 {{ item.type }}
               </h2>
               @if (item.type === typeTariffPlanEnum.Free) {
-                <p class="font-light text-xs" i18n>No need card</p>
+                <p class="font-light text-xs" i18n>No card required</p>
               }
             </div>
             <div class="flex justify-center">
@@ -54,7 +54,7 @@
                 <div class="flex flex-col justify-center">
                   @if (subscriptionType() === billingCycleEnum.yearly) {
                     @if (item.type === typeTariffPlanEnum.Free) {
-                      <div class="h-7"></div>
+                      <div class="h-7 portrait:phone:hidden"></div>
                     }
                   }
                   @if (item.type !== typeTariffPlanEnum.Free) {

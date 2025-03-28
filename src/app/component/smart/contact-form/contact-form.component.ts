@@ -8,7 +8,7 @@ import {
   ViewChild,
   ViewEncapsulation
 } from "@angular/core";
-import {SendContactFormDto} from "../../../../common/interface/i.contact-form";
+import {SendContactFormDto} from "@src/common/interface/i.contact-form";
 import JSConfetti from "js-confetti";
 import {NgClass, NgOptimizedImage} from "@angular/common";
 import {AppService} from "../../../app.service";
