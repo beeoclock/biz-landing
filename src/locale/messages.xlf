@@ -382,16 +382,6 @@
         <source> Annual </source>
       </segment>
     </unit>
-    <unit id="4853730136843270446">
-      <segment>
-        <source>No need card</source>
-      </segment>
-    </unit>
-    <unit id="4905798562247431262">
-      <segment>
-        <source>per month</source>
-      </segment>
-    </unit>
     <unit id="3265250603400790440">
       <segment>
         <source> Get Started </source>
@@ -597,11 +587,9 @@
         <source>Members</source>
       </segment>
     </unit>
-    <unit id="187187500641108332">
+    <unit id="8324571248496127784">
       <segment>
-        <source>
-          <ph id="0" equiv="INTERPOLATION" disp="{{ type }}"/>
-        </source>
+        <source>No card required</source>
       </segment>
     </unit>
   </file>
