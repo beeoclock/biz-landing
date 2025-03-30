@@ -1,9 +1,9 @@
 import {inject, Injectable, resource, signal} from "@angular/core";
 import {ContactFormForm} from "./contact-form.form";
-import {SendContactFormDto} from "../../../../common/interface/i.contact-form";
+import {SendContactFormDto} from "@src/common/interface/i.contact-form";
 import {HttpClient} from "@angular/common/http";
 import {lastValueFrom} from "rxjs";
-import {environment} from "../../../../environments/environment"
+import {environment} from "@src/environments/environment"
 
 
 @Injectable()

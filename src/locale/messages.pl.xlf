@@ -280,18 +280,6 @@
         <target> Rozpocznij </target>
       </segment>
     </unit>
-    <unit id="4853730136843270446">
-      <segment state="initial">
-        <source>No need card</source>
-        <target>Karta nie jest potrzebna</target>
-      </segment>
-    </unit>
-    <unit id="4905798562247431262">
-      <segment state="initial">
-        <source>per month</source>
-        <target>na miesiąc</target>
-      </segment>
-    </unit>
     <unit id="3394190499997524231">
       <notes>
         <note category="description">Short title for FAQ section</note>
@@ -563,7 +551,7 @@
     <unit id="7563035552061651664">
       <segment state="initial">
         <source> Send </source>
-        <target> Wysłać </target>
+        <target> Wyślij </target>
       </segment>
     </unit>
     <unit id="3262236020277300799">
@@ -724,14 +712,10 @@
         <target>Chat support</target>
       </segment>
     </unit>
-    <unit id="187187500641108332">
+    <unit id="8324571248496127784">
       <segment state="initial">
-        <source>
-          <ph id="0" equiv="INTERPOLATION" disp="{{ type }}"/>
-        </source>
-        <target>
-          <ph id="0" equiv="INTERPOLATION" disp="{{ type }}"/>
-        </target>
+        <source>No card required</source>
+        <target>Karta nie jest wymagana</target>
       </segment>
     </unit>
   </file>
