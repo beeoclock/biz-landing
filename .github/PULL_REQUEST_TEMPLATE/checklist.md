@@ -22,7 +22,6 @@ Please provide a short summary explaining what this PR does.
 ### **2. assert of header**
 - [ ] check that the logo is visible 
 - [ ] assert that button Services, Tariffs, FAQ, Login Contact present yellow hoover color after is triggered
-- ![img_1.png](img_1.png)
 - [ ] click on the Login page, and assert that in new card is opened the login page
 - [ ] click on the Contact page, and assert that page has been scroll into the contact section
 - [ ] click on the Services page, and assert that page has been scroll into the services section
@@ -31,32 +30,26 @@ Please provide a short summary explaining what this PR does.
 
 ### **2. appointment section**
 - [ ] check that the image is visible and correctly presented
-- ![img.png](img.png)
 - [ ] assert that button "try it for free" is visible and after click is new tab opened with the link https://crm.dev.beeoclock.com/identity/sign-up
 
 ### **3. Opportunities section**
 - [ ] check that the image is visible and correctly presented
-- ![img_3.png](img_3.png)
 
 ### **4. Services section**
 - [ ] check that the image is visible and correctly presented
-- [img_4.png](img_4.png)
 
 ### **5. move section**
 - [ ] check that the image is visible and correctly presented
-![img_5.png](img_5.png)
-- assert that mp4 video is visible and correctly presented <link>link</link>
+- [ ] assert that mp4 video is visible and correctly presented <link>link</link>
 
 ### **6. tariffs section**
 - [ ] check that the image is visible and correctly presented
-- ![img_6.png](img_6.png)
 - [ ] assert that switch annual and monthly is visible and clickable 
 - [ ] verify that get started button is visible and clickable, after click is opened the link https://crm.dev.beeoclock.com/identity/sign-up
 - [ ] ensure that tariff prices are correctly presented
 
 ### **7. FAQ section**
 - [ ] check that the image is visible and correctly presented
-![img_7.png](img_7.png)
 - [ ] assert that question: "How quickly can you get started with Bee o’clock?" have answer:
     - [ ] Starting to use the service is very simple: register on the platform, add basic information about your business and services, and the system will be ready to go. You have the option to use the free plan (Free) with basic functionality, which will allow you to immediately test the key features of Bee o’clock without any costs.
 
@@ -88,7 +81,6 @@ Please provide a short summary explaining what this PR does.
 
 ### **8. Contact section**
 - [ ] check that the image is visible and correctly presented
-![img_8.png](img_8.png)
 - [ ] assert that the form is visible and correctly presented
 - [ ] assert that the form have 4 fields: Name, Email, Phone, Message
 - [ ] assert that the form have button "Send message" and after click the email is sended (devtools)
@@ -96,7 +88,6 @@ Please provide a short summary explaining what this PR does.
 
 ### **9. Footer section**
 - [ ] check that the image is visible and correctly presented
-![img_9.png](img_9.png)
 - [ ] assert that terms of use link is visible and clickable, after click is opened the link https://docs.beeoclock.com in the new card
 - [ ] assert that privacy policy link is visible and clickable, after click is opened the link https://docs.beeoclock.com/privacy-policy in the new card
 
