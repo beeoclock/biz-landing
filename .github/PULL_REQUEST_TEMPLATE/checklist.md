@@ -40,7 +40,7 @@ Please provide a short summary explaining what this PR does.
 
 ### **4. Services section**
 - [ ] check that the image is visible and correctly presented
-- ![img_4.png](img_4.png)
+- [img_4.png](img_4.png)
 
 ### **5. move section**
 - [ ] check that the image is visible and correctly presented
