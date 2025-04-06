@@ -15,7 +15,7 @@
     <unit id="2454050363478003966">
       <segment state="initial">
         <source>Login</source>
-        <target>Załogować się</target>
+        <target>Zaloguj się</target>
       </segment>
     </unit>
     <unit id="6254764080441478187">
@@ -157,7 +157,7 @@
     <unit id="1908285951500318953">
       <segment state="initial">
         <source> Login </source>
-        <target> Załogować się </target>
+        <target> Zaloguj się </target>
       </segment>
     </unit>
     <unit id="879650116501482755">
