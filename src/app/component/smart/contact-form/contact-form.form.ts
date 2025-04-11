@@ -1,5 +1,5 @@
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {emailValidator, noLeadingSpacesValidator,} from "../../../../common/validators/form-validators";
+import {emailValidator, noLeadingSpacesValidator,} from "@src/common/validators/form-validators";
 
 export class ContactFormForm extends FormGroup {
   public constructor() {
