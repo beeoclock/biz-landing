@@ -19,6 +19,6 @@ export const environment = {
       login: "",
       password: ""
     },
-    gTrackingId: 'G-3VJTTMLWYH',
+    gTrackingId: "G-3VJTTMLWYH",
   },
 };
