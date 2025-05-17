@@ -221,17 +221,21 @@
         </div>
       </div>
     </section>
-    <section id="demo-video" class="flex w-full justify-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0">
+    <section id="demo-video" #demoVideoSection class="flex w-full justify-center lg:min-h-[810px] phone:py-10 phone:px-5 lg:px-5 xl:px-0">
       <div class="flex w-full max-w-[1040px] justify-center flex-col items-center phone:flex-col phone:gap-7 gap-4">
         <div class="w-full flex justify-center relative">
           <img ngSrc="assets/img/demo.webp" alt="" height="569" width="926" priority class="phone:hidden">
-          <iframe class="max-w-[609px] w-full h-[440px] phone:h-[230px] absolute top-[10%] rounded-2xl phone:relative"
-                  src="https://www.youtube.com/embed/Z5L5FoGcnrY"
-                  frameborder="1"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-          >
-          </iframe>
+          @defer (on viewport) {
+            <iframe
+              class="max-w-[609px] w-full h-[440px] phone:h-[230px] absolute top-[10%] rounded-2xl phone:relative"
+              src="https://www.youtube.com/embed/Z5L5FoGcnrY"
+              frameborder="1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          } @placeholder {
+            <div>Video placeholder</div>
+          }
         </div>
         <div class="flex flex-wrap max-w-[816px] gap-2">
           <h2 class="text-4xl phone:text-2xl font-bold text-black max-w-[816px]" i18n>
