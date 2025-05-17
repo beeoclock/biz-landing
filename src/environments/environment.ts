@@ -19,6 +19,7 @@ export const environment = {
       panelUrl: "",
       login: "",
       password: ""
-    }
+    },
+    gTrackingId: "",
   },
 };
