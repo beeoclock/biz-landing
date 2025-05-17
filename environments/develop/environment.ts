@@ -19,6 +19,7 @@ export const environment = {
       panelUrl: 'https://panel.dev.beeoclock.com/identity',
       login: 'demo@beeoclock.com',
       password: 'ItIckBeRSOLDENZYGosicirE'
-    }
+    },
+    gTrackingId: ""
   },
 };
