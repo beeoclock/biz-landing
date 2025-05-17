@@ -20,6 +20,6 @@ export const environment = {
       login: 'demo@beeoclock.com',
       password: 'ItIckBeRSOLDENZYGosicirE'
     },
-    gTrackingId: ""
+    gtmId: ""
   },
 };
