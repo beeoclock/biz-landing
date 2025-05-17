@@ -160,6 +160,10 @@ export class AppComponent implements OnInit {
     if (this.isBrowser) {
       this.aspectRatio = window.innerWidth / window.innerHeight;
     }
+    const trackingId = environment.config.gTrackingId;
+    if (this.isBrowser && trackingId) {
+      this.initializeGoogleAnalytics(trackingId);
+    }
   }
 
   public initializeSocialShareSeoService() {
@@ -251,5 +255,21 @@ export class AppComponent implements OnInit {
 
   public get localeSuffix(): string {
     return this.localeId;
+  }
+
+  private initializeGoogleAnalytics(trackingId: string): void {
+    const script1 = document.createElement('script');
+    script1.async = true;
+    script1.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+    document.head.appendChild(script1);
+
+    const script2 = document.createElement('script');
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${trackingId}');
+    `;
+    document.head.appendChild(script2);
   }
 }
