@@ -94,6 +94,11 @@
                   "glob": "robots.txt",
                   "input": "environments/production/",
                   "output": "./"
+                },
+                {
+                  "glob": "googlef6954245d8430b0b.html",
+                  "input": "src/assets",
+                  "output": "./"
                 }
               ],
               "outputHashing": "all"
