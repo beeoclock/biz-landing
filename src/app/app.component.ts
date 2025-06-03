@@ -160,6 +160,10 @@ export class AppComponent implements OnInit {
     if (this.isBrowser) {
       this.aspectRatio = window.innerWidth / window.innerHeight;
     }
+    const gtmId = environment.config.gtmId;
+    if (this.isBrowser && gtmId) {
+      this.initializeGTM(gtmId);
+    }
   }
 
   public initializeSocialShareSeoService() {
@@ -251,5 +255,17 @@ export class AppComponent implements OnInit {
 
   public get localeSuffix(): string {
     return this.localeId;
+  }
+
+  private initializeGTM(gtmId: string): void {
+    const script = document.createElement('script');
+    script.innerHTML = `
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','${gtmId}');
+  `;
+    document.head.appendChild(script);
   }
 }

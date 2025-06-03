@@ -19,6 +19,7 @@ export const environment = {
       panelUrl: 'https://panel.beeoclock.com/identity',
       login: 'demo@beeoclock.com',
       password: 'ItIckBeRSOLDENZYGosicirE'
-    }
+    },
+    gtmId: "GTM-N63656MM",
   },
 };

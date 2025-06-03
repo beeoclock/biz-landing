@@ -15,7 +15,7 @@
     <unit id="2454050363478003966">
       <segment state="initial">
         <source>Login</source>
-        <target>Załogować się</target>
+        <target>Zaloguj się</target>
       </segment>
     </unit>
     <unit id="6254764080441478187">
@@ -157,7 +157,7 @@
     <unit id="1908285951500318953">
       <segment state="initial">
         <source> Login </source>
-        <target> Załogować się </target>
+        <target> Zaloguj się </target>
       </segment>
     </unit>
     <unit id="879650116501482755">
@@ -271,7 +271,7 @@
     <unit id="2925775378458956182">
       <segment state="initial">
         <source> Annual </source>
-        <target> Roczny </target>
+        <target> Rocznie </target>
       </segment>
     </unit>
     <unit id="3265250603400790440">
@@ -323,7 +323,7 @@
     <unit id="4036736770564302134">
       <segment state="initial">
         <source>tools for automating online bookings</source>
-        <target>narzędzia do automatyzacji rezerwacji online</target>
+        <target>narzędzi do automatyzacji rezerwacji online</target>
       </segment>
     </unit>
     <unit id="6346180550648816832">

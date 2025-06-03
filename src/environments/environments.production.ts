@@ -18,6 +18,7 @@ export const environment = {
       panelUrl: "",
       login: "",
       password: ""
-    }
+    },
+    gtmId: "GTM-N63656MM",
   },
 };
