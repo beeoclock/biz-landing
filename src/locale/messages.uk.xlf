@@ -244,9 +244,9 @@
         <target> Сервіс для бізнесу: Простий онлайн запис клієнтів. </target>
       </segment>
     </unit>
-    <unit id="7350882108412130859">
+    <unit id="6981695245326594120">
       <segment state="initial">
-        <source> Try free demo access to the online customer recording service, a convenient solution without registration. </source>
+        <source> Try free demo access to the online customer order management service – an easy and convenient solution without registration. </source>
         <target> Безкоштовний демо доступ до сервісу онлайн запису клієнтів, оцініть переваги до реєстрації. </target>
       </segment>
     </unit>
@@ -716,6 +716,12 @@
       <segment state="initial">
         <source>No card required</source>
         <target>Картка не потрібна</target>
+      </segment>
+    </unit>
+    <unit id="2084616398735915562">
+      <segment state="initial">
+        <source> Try free demo access to the online customer order management service - an easy and convenient solution without registration. </source>
+        <target> Try free demo access to the online customer order management service - an easy and convenient solution without registration. </target>
       </segment>
     </unit>
   </file>

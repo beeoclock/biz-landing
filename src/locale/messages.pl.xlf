@@ -244,9 +244,9 @@
         <target> Usługa dla firm: Prosta rejestracja klientów online. </target>
       </segment>
     </unit>
-    <unit id="7350882108412130859">
+    <unit id="6981695245326594120">
       <segment state="initial">
-        <source> Try free demo access to the online customer recording service, a convenient solution without registration. </source>
+        <source> Try free demo access to the online customer order management service – an easy and convenient solution without registration. </source>
         <target> Spróbuj darmowego demo usługi umożliwiającej koordynowanie zamówień online - prosty i wygodny sposób na obsługę klientów bez konieczności rejestracji. </target>
       </segment>
     </unit>
@@ -716,6 +716,12 @@
       <segment state="initial">
         <source>No card required</source>
         <target>Karta nie jest wymagana</target>
+      </segment>
+    </unit>
+    <unit id="2084616398735915562">
+      <segment state="initial">
+        <source> Try free demo access to the online customer order management service - an easy and convenient solution without registration. </source>
+        <target> Try free demo access to the online customer order management service - an easy and convenient solution without registration. </target>
       </segment>
     </unit>
   </file>

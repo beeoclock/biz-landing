@@ -152,9 +152,9 @@
         <source> Service for business: Simple online customer registration. </source>
       </segment>
     </unit>
-    <unit id="7350882108412130859">
+    <unit id="6981695245326594120">
       <segment>
-        <source> Try free demo access to the online customer recording service, a convenient solution without registration. </source>
+        <source> Try free demo access to the online customer order management service – an easy and convenient solution without registration. </source>
       </segment>
     </unit>
     <unit id="4223732254391797153">
@@ -590,6 +590,11 @@
     <unit id="8324571248496127784">
       <segment>
         <source>No card required</source>
+      </segment>
+    </unit>
+    <unit id="2084616398735915562">
+      <segment>
+        <source> Try free demo access to the online customer order management service - an easy and convenient solution without registration. </source>
       </segment>
     </unit>
   </file>
