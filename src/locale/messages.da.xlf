@@ -244,10 +244,10 @@
         <target> Service til virksomheder: Enkel online kunderegistrering. </target>
       </segment>
     </unit>
-    <unit id="844020319655550932">
+    <unit id="6981695245326594120">
       <segment state="initial">
-        <source> Order a demo access to the online customer recording service, a convenient solution without registration. </source>
-        <target> Bestil en demoadgang til online-kundeoptagelsestjenesten, en praktisk løsning uden registrering. </target>
+        <source> Try free demo access to the online customer order management service – an easy and convenient solution without registration. </source>
+        <target> Prøv gratis demoadgang til online kunderegistreringstjenesten, en bekvem løsning uden registrering. </target>
       </segment>
     </unit>
     <unit id="4223732254391797153">
@@ -716,6 +716,12 @@
       <segment state="initial">
         <source>No card required</source>
         <target>Intet kort påkrævet</target>
+      </segment>
+    </unit>
+    <unit id="2084616398735915562">
+      <segment state="initial">
+        <source> Try free demo access to the online customer order management service - an easy and convenient solution without registration. </source>
+        <target> Try free demo access to the online customer order management service - an easy and convenient solution without registration. </target>
       </segment>
     </unit>
   </file>
