@@ -152,9 +152,9 @@
         <source> Service for business: Simple online customer registration. </source>
       </segment>
     </unit>
-    <unit id="844020319655550932">
+    <unit id="6981695245326594120">
       <segment>
-        <source> Order a demo access to the online customer recording service, a convenient solution without registration. </source>
+        <source> Try free demo access to the online customer order management service – an easy and convenient solution without registration. </source>
       </segment>
     </unit>
     <unit id="4223732254391797153">
@@ -479,12 +479,12 @@
     </unit>
     <unit id="811367694795533818">
       <segment>
-        <source>Manage your recordings: conveniently change your schedule, track activity, and get notified about changes.</source>
+        <source>Manage your recordings: Conveniently change your schedule, track activity, and get notified about changes.</source>
       </segment>
     </unit>
     <unit id="4470730349165597654">
       <segment>
-        <source>Analysis and development: view statistics to evaluate performance and improve your service.</source>
+        <source>Analysis and development: View statistics to evaluate performance and improve your service.</source>
       </segment>
     </unit>
     <unit id="2840247853133963034">
@@ -590,6 +590,11 @@
     <unit id="8324571248496127784">
       <segment>
         <source>No card required</source>
+      </segment>
+    </unit>
+    <unit id="2084616398735915562">
+      <segment>
+        <source> Try free demo access to the online customer order management service - an easy and convenient solution without registration. </source>
       </segment>
     </unit>
   </file>
